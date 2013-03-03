@@ -13,7 +13,7 @@
 
       <div class="jumbotron">
         <h1>Bake your own site!</h1>
-        <p class="lead">JBake is a Java based static site/blog generator for developers.</p>
+        <p class="lead">JBake is a Java based open source static site/blog generator for developers.</p>
         <a class="btn btn-large btn-success" href="/files/jbake-v2.0.zip">Download</a>
         <a class="btn btn-large btn-success" href="http://github.com/jonbullock/JBake">Get Source</a>
       </div>
@@ -22,6 +22,9 @@
 
       <div class="row-fluid marketing">
         <div class="span6">
+          <h4>Open Source</h4>
+          <p>Source available on GitHub, licensed under MIT License</p>
+          
           <h4>Formatting support</h4>
           <p>Supports both HTML & Markdown formatted content.</p>
 
