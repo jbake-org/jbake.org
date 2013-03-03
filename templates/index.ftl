@@ -21,15 +21,24 @@
       <hr>
 
       <div class="row-fluid marketing">
-        <div class="span12">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+        <div class="span6">
+          <h4>Formatting support</h4>
+          <p>Supports both HTML & Markdown formatted content.</p>
 
-          <h4>Subheading</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+          <h4>Open structure</h4>
+          <p>Structure your content any way you see fit.</p>
 
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+          <h4>Blow aware</h4>
+          <p>RSS feed, archive, tags support.</p>
+          
+          <h4>Customisable templates</h4>
+          <p>Templating support thanks to Freemarker.</p>
+          
+          <h4>Custom metadata</h4>
+          <p>Add as much metadata to content as you like, also exposed to templates.</p>
+          
+          <h4>Storage support</h4>
+          <p>Store your site content in Dropbox, CVS, SVN, Git or whatever you want.</p>
         </div>
 
       </div>
