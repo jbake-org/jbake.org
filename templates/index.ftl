@@ -4,7 +4,7 @@
         <ul class="nav nav-pills pull-right">
           <li><a href="/">Home</a></li>
           <li><a href="/usage.html">Usage</a></li>
-          <li><a href="#">Contact</a></li>
+          <!--<li><a href="#">Contact</a></li>-->
         </ul>
         <h3 class="muted">JBake</h3>
       </div>
@@ -13,7 +13,7 @@
 
       <div class="jumbotron">
         <h1>Bake your own site!</h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <p class="lead">JBake is a Java based static site/blog generator for developers.</p>
         <a class="btn btn-large btn-success" href="/files/jbake-v2.0.zip">Download</a>
         <a class="btn btn-large btn-success" href="http://github.com/jonbullock/JBake">View Source</a>
       </div>

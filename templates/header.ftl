@@ -5,7 +5,7 @@
     <title>JBake</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Jonathan Bullock">
 
     <!-- Le styles -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
