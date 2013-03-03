@@ -6,7 +6,9 @@ status=published
 
 ## Usage
 
-Example source structure:
+- Run `java -jar <jar-file-with-dependencies> <source_folder> <destination_folder>` to do some baking
+
+Example source folder structure:
 
 <pre>
 .
@@ -29,7 +31,9 @@ Example source structure:
 |-- custom.properties
 </pre>
 
-Provide link to exmaple site with templates (maybe my site?).
+A full example source folder is provided with the [source code](https://github.com/jonbullock/JBake/tree/master/misc).
+
+Both [http://jonathanbullock.com](http://jonathanbullock.com) and [http://jbake.org](http://jbake.org) are built using JBake.
 
 ### assets
 
@@ -67,7 +71,7 @@ And access it from the template like so:
 
 `<p>${content.summary}</p>`
 
-Drafts ........
+Drafts are rendered along with published posts however they are given a "-draft" suffix, for example `first-post-draft.html`.
 
 ### templates
 
