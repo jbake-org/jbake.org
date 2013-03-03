@@ -15,7 +15,7 @@
         <h1>Bake your own site!</h1>
         <p class="lead">JBake is a Java based static site/blog generator for developers.</p>
         <a class="btn btn-large btn-success" href="/files/jbake-v2.0.zip">Download</a>
-        <a class="btn btn-large btn-success" href="http://github.com/jonbullock/JBake">View Source</a>
+        <a class="btn btn-large btn-success" href="http://github.com/jonbullock/JBake">Get Source</a>
       </div>
 
       <hr>
