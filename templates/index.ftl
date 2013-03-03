@@ -30,7 +30,8 @@
 
           <h4>Blow aware</h4>
           <p>RSS feed, archive, tags support.</p>
-          
+        </div>
+        <div class="span6">
           <h4>Customisable templates</h4>
           <p>Templating support thanks to Freemarker.</p>
           
