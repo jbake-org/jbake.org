@@ -3,7 +3,7 @@
       <div class="masthead">
         <ul class="nav nav-pills pull-right">
           <li><a href="/">Home</a></li>
-          <li><a href="/about.html">About</a></li>
+          <li><a href="/usage.html">Usage</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
         <h3 class="muted">JBake</h3>
