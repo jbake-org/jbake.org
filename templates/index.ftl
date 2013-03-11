@@ -47,6 +47,10 @@
           <h4>Storage Support</h4>
           <p>Store your site content in Dropbox, CVS, SVN, Git or whatever you want.</p>
         </div>
+        
+        <div class="span12">
+        	<script type="text/javascript" src="http://www.ohloh.net/p/634040/widgets/project_users_logo.js"></script>
+        </div>
 
       </div>
 
