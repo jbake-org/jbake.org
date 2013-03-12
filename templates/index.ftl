@@ -31,8 +31,11 @@
           <h4>Open Structure</h4>
           <p>Structure your content any way you see fit.</p>
 
-          <h4>Blow Aware</h4>
+          <h4>Blog Aware</h4>
           <p>RSS feed, archive and tag support.</p>
+          
+          <h4>Draft support</h4>
+          <p>View your draft content before publishing it and making it available to the world.</p>
         </div>
         <div class="span6">
           <h4>Template Support</h4>
