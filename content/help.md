@@ -1,10 +1,10 @@
-title=Usage
+title=Help
 date=2013-02-27
 type=page
 status=published
 ~~~~~~
 
-## Usage
+## Help
 
 - Run `java -jar <jar-file-with-dependencies> <source_folder> <destination_folder>` to do some baking
 
