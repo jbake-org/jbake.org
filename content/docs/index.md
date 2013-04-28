@@ -1,12 +1,21 @@
-title=Usage
+title=Documentation
 date=2013-02-27
 type=page
 status=published
 ~~~~~~
 
+## Installation
+
+- Make sure you have a Java JRE of at least version 6 or above and that the java command is available in your path
+- Download and unzip JBake into a folder on your hard disk
+- Add the JBake folder to your path
+- Open a command prompt and run `jbake -h` (or `jbake.bat -h` if you are on Windows) to confirm everything works, you should see usage help
+
 ## Usage
 
-- Run `java -jar <jar-file-with-dependencies> <source_folder> <destination_folder>` to do some baking
+- Run `jbake` to do some baking, this will use the current folder as the source and place any baked output into an `output` 
+folder in the current folder
+- Or you can run `jbake <source_folder> <destination_folder>` if you want full control of the source & destination
 
 Example source folder structure:
 

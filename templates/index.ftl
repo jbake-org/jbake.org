@@ -1,21 +1,18 @@
 <#include "header.ftl">
-
-      <div class="masthead">
-        <ul class="nav nav-pills pull-right">
-          <li><a href="/">Home</a></li>
-          <li><a href="/help.html">Help</a></li>
-          <li><a href="/sites.html">Sites</a></li>
-        </ul>
-        <h3 class="muted">JBake</h3>
-      </div>
+	
+	<#include "menu.ftl">
 
       <hr>
 
       <div class="jumbotron">
         <h1>Bake your own site!</h1>
         <p class="lead">JBake is a Java based open source static site/blog generator for developers.</p>
-        <a class="btn btn-large btn-success" href="/files/jbake.zip">Download</a>
+        <a class="btn btn-large btn-success" href="/files/jbake-2.1-bin.zip">Download</a>
         <a class="btn btn-large btn-success" href="http://github.com/jonbullock/JBake">Get Source</a>
+        <p></p>
+        <div class="alert alert-info">
+			<strong>News:</strong> <a href="/news/jbake-v2-1-released.html">JBake v2.1 released!</a>
+		</div>
       </div>
 
       <hr>
