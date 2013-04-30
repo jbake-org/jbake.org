@@ -1,5 +1,5 @@
 title=JBake v2.1 released
-date=2013-03-28
+date=2013-03-30
 type=post
 category=news
 status=published
@@ -7,7 +7,7 @@ status=published
 
 ## JBake v2.1 released! 
 
-*2013-04-28*
+*2013-04-30*
 
 * Added unit tests
 * Added post baking stats
