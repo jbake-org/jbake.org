@@ -1,5 +1,5 @@
 title=Changelog
-date=2013-03-27
+date=2013-03-30
 type=page
 status=published
 ~~~~~~
@@ -8,7 +8,7 @@ status=published
 
 ### v2.1
 
-*2013-04-28*
+*2013-04-30*
 
 * Added unit tests
 * Added post baking stats
@@ -19,9 +19,9 @@ status=published
 
 Thanks to [mismatch](https://github.com/mismatch) for contributions.
 
-### [v2.0](https://github.com/jonbullock/JBake/tree/v2.0)
+### v2.0
 
-*2013-03-09*
+*2013-03-09* - [Source](https://github.com/jonbullock/JBake/tree/v2.0)
 
 * Refactored code structure
 * Added Markdown format support
