@@ -55,6 +55,10 @@
         <div class="span6">
         	<a href="https://travis-ci.org/jonbullock/JBake"><img src="https://travis-ci.org/jonbullock/JBake.png?branch=master" /></a>
         </div>
+        
+        <div class="span6">
+        	IRC Chat: <a href="irc://irc.freenode.org/#jbake">#jbake on Freenode</a>
+        </div>
 
       </div>
 

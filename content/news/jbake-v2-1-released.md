@@ -1,5 +1,5 @@
 title=JBake v2.1 released
-date=2013-03-30
+date=2013-04-30
 type=post
 category=news
 status=published
@@ -19,3 +19,5 @@ status=published
 See the [documentation](/docs) for updated usage information of this release.
 
 Thanks to [mismatch](https://github.com/mismatch) for contributions in this release.
+
+Download [JBake v2.1](http://jbake.org/files/jbake-2.1-bin.zip).
