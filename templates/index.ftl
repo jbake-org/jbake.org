@@ -7,7 +7,7 @@
       <div class="jumbotron">
         <h1>Bake your own site!</h1>
         <p class="lead">JBake is a Java based open source static site/blog generator for developers.</p>
-        <a class="btn btn-large btn-success" href="/files/jbake-2.1-bin.zip">Download</a>
+        <a class="btn btn-large btn-success" href="http://hash.to/2F">Download</a>
         <a class="btn btn-large btn-success" href="http://github.com/jonbullock/JBake">Get Source</a>
         <p></p>
         <div class="alert alert-info">
