@@ -11,7 +11,7 @@
         <a class="btn btn-large btn-success" href="http://github.com/jonbullock/JBake">Get Source</a>
         <p></p>
         <div class="alert alert-info">
-			<strong>News:</strong> <a href="/news/jbake-v2-1-released.html">JBake v2.1 released!</a>
+			<strong>News:</strong> <a href="/news/mailing-lists.html">Mailing lists</a>
 		</div>
       </div>
 
