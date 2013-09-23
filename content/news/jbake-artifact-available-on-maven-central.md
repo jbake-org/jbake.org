@@ -12,10 +12,12 @@ Thanks go to [Aldrin Neal](https://twitter.com/aldrinleal) for helping guide me 
 
 If you'd like to use JBake in your project then here's the dependency information you'll need:
 
-`<dependency>
-    <groupId>org.jbake</groupId>
-    <artifactId>jbake-core</artifactId>
-    <version>2.1.1</version>
-</dependency>`
+<pre>
+&lt;dependency&gt;
+    &lt;groupId&gt;org.jbake&lt;/groupId&gt;
+    &lt;artifactId&gt;jbake-core&lt;/artifactId&gt;
+    &lt;version&gt;2.1.1&lt;/version&gt;
+&lt;/dependency&gt;
+</pre>
 
 More news soon about the upcoming v2.2 release and maybe a little more on Maven.
