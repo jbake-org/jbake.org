@@ -14,9 +14,9 @@ If you'd like to use JBake in your project then here's the dependency informatio
 
 <pre>
 &lt;dependency&gt;
-    &lt;groupId&gt;org.jbake&lt;/groupId&gt;
-    &lt;artifactId&gt;jbake-core&lt;/artifactId&gt;
-    &lt;version&gt;2.1.1&lt;/version&gt;
+&lt;groupId&gt;org.jbake&lt;/groupId&gt;
+&lt;artifactId&gt;jbake-core&lt;/artifactId&gt;
+&lt;version&gt;2.1.1&lt;/version&gt;
 &lt;/dependency&gt;
 </pre>
 
