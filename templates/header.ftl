@@ -8,7 +8,8 @@
     <meta name="author" content="Jonathan Bullock">
     <meta name="keywords" content="java, baking, open source, generator, web site">
     <meta name="google-site-verification" content="Fy5-c09PlgYztOz2_xH6-FsoQ7K0jpprkk4cyJHCRh8" />
-
+	
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
 	<link rel="shortcut icon" href="/favicon.ico" />
 	
     <!-- Le styles -->

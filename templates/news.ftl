@@ -13,6 +13,7 @@
           		</#if>
           	</#list>
           </ul>
+          <p>Subscribe to JBake updates using the <a href="/${config.feed_file}">feed</a>.</p>
         </div>        
       </div>
 
