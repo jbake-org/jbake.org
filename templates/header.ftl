@@ -9,7 +9,7 @@
     <meta name="keywords" content="java, baking, open source, generator, web site">
     <meta name="google-site-verification" content="Fy5-c09PlgYztOz2_xH6-FsoQ7K0jpprkk4cyJHCRh8" />
 	
-	<link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="/${config.feed_file}" />
 	<link rel="shortcut icon" href="/favicon.ico" />
 	
     <!-- Le styles -->
@@ -51,6 +51,9 @@
         margin-top: 28px;
       }
       
+      .navbar .btn-navbar {
+      	float: left;
+      }
     </style>
     <link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
 

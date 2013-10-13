@@ -2,8 +2,6 @@
 	
 	<#include "menu.ftl">
 
-      <hr>
-
       <div class="jumbotron">
         <h1>Bake your own site!</h1>
         <p class="lead">JBake is a Java based open source static site/blog generator for developers.</p>
