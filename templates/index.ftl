@@ -11,7 +11,7 @@
         <a class="btn btn-large btn-success" href="http://github.com/jonbullock/JBake">Get Source</a>
         <p></p>
         <div class="alert alert-info">
-			<strong>News:</strong> <a href="/news/jbake-artifact-available-on-maven-central.html">JBake on Maven Central</a>
+			<strong>News:</strong> <a href="/news/jbake-now-has-a-logo.html">JBake now has a logo</a>
 		</div>
       </div>
 
