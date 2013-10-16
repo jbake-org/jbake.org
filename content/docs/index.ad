@@ -1,0 +1,23 @@
+= Index
+Jonathan Bullock
+2013-10-15
+:jbake-type: page
+:jbake-tags: documentation
+:jbake-status: published
+:idprefix:
+
+== Documentation Index
+
+* link:/docs/getting-started.html[Getting Started]
+** link:/docs/getting-started.html#installation[Installation]
+** link:/docs/getting-started.html#usage[Usage]
+* link:/docs/project-structure.html[Project Structure]
+** link:/docs/project-structure.html#assets[Assets]
+** link:/docs/project-structure.html#content[Content]
+** link:/docs/project-structure.html#templates[Templates]
+* link:/docs/data-variables.html[Data Variables]
+** link:/docs/data-variables.html#global[Global Variables]
+** link:/docs/data-variables.html#pagepost[Page / Post Variables]
+** link:/docs/data-variables.html#blog[Blog Variables]
+** link:/docs/data-variables.html#tag[Tag Variables]
+* link:/docs/configuration.html[Configuration]

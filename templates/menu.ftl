@@ -29,7 +29,7 @@
                   	<li><a href="/docs/">Index</a></li>
                     <li><a href="/docs/getting-started.html">Getting Started</a></li>
                     <li><a href="/docs/project-structure.html">Project Structure</a></li>
-                    <li><a href="/docs/templates.html">Templates</a></li>
+                    <li><a href="/docs/data-variables.html">Data Variables</a></li>
                     <li><a href="/docs/configuration.html">Configuration</a></li>
                     <!--<li class="divider"></li>
                     <li class="nav-header">Nav header</li>-->
