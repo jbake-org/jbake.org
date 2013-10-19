@@ -1,0 +1,15 @@
+= Community
+Jonathan Bullock
+2013-10-19
+:jbake-type: page
+:jbake-tags: community
+:jbake-status: published
+:idprefix:
+
+== Community
+
+* https://github.com/jonbullock/JBake/issues[Issue tracker]
+* http://groups.google.com/group/jbake-user[Forum for users]
+* http://groups.google.com/group/jbake-dev[Mailing list for developers]
+* irc://irc.freenode.net/#jbake[IRC - #jbake on Freenode]
+* link:/community/sites.html[Sites using JBake]

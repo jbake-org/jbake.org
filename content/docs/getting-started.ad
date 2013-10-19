@@ -15,7 +15,66 @@ Jonathan Bullock
 . Add the JBake folder to your path
 . Open a command prompt and run `jbake -h` (or `jbake.bat -h` if you are on Windows) to confirm everything works, you should see usage help text
 
+----
+JBake v2.2.0-SNAPSHOT (2013-10-12 22:43) [http://jbake.org]
+
+Usage: jbake ...
+----
+
 === Usage
 
 * Run `jbake` to do some baking, this will use the current folder as the source and place any baked output into an `output` folder in the current folder
 * Or you can run `jbake <source_folder> <destination_folder>` if you want full control over the source & destination folders
+
+=== Quick Start
+
+To get up and running quickly with JBake you can use its default template as a starting point for your site.
+
+----
+$ mkdir project
+$ cd project
+$ jbake -i
+----
+
+The `-i` option initialises the current folder with the nescessary folder structure along with a default template 
+to get you started.
+
+Once you have customised the content of your site you can bake your site by running the following commands:
+
+----
+$ cd project
+$ jbake
+----
+
+This will place your baked site in the `output` folder by default. You can then see what it looks like 
+immediately by running JBake in server mode:
+
+----
+$ cd project
+$ jbake -s
+JBake v2.2.0-SNAPSHOT (2013-10-12 22:43) [http://jbake.org]
+
+Serving out contents of: [output] on http://localhost:8080/
+(To stop server hit CTRL-C)
+----
+
+You can then preview your site in your browser at http://localhost:8080. You can configure what port the server 
+runs via your link:/docs/configuration.html[configuration file].
+
+You can also specify the folder to serve out along with the `-s` option like so:
+
+----
+$ jbake -s /home/user/site/output/
+JBake v2.2.0-SNAPSHOT (2013-10-12 22:43) [http://jbake.org]
+
+Serving out contents of: [/home/user/site/output/] on http://localhost:8080/
+(To stop server hit CTRL-C)
+----
+
+That's all there is to it, to getting your own baked site! 
+
+=== Default Template
+
+The default template and structure is contained in `base.zip` in the JBake installation folder. If you'd like to 
+change the default template in some way extract the contents of this file, update the files, then ZIP them back 
+up and replace the `base.zip` file with your updated file.
