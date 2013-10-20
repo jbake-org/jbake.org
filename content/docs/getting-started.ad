@@ -54,11 +54,11 @@ $ cd project
 $ jbake -s
 JBake v2.2.0-SNAPSHOT (2013-10-12 22:43) [http://jbake.org]
 
-Serving out contents of: [output] on http://localhost:8080/
+Serving out contents of: [output] on http://localhost:8820/
 (To stop server hit CTRL-C)
 ----
 
-You can then preview your site in your browser at http://localhost:8080. You can configure what port the server 
+You can then preview your site in your browser at http://localhost:8820. You can configure what port the server 
 runs via your link:/docs/configuration.html[configuration file].
 
 You can also specify the folder to serve out along with the `-s` option like so:
@@ -67,7 +67,7 @@ You can also specify the folder to serve out along with the `-s` option like so:
 $ jbake -s /home/user/site/output/
 JBake v2.2.0-SNAPSHOT (2013-10-12 22:43) [http://jbake.org]
 
-Serving out contents of: [/home/user/site/output/] on http://localhost:8080/
+Serving out contents of: [/home/user/site/output/] on http://localhost:8820/
 (To stop server hit CTRL-C)
 ----
 
