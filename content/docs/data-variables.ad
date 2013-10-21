@@ -1,0 +1,58 @@
+= Data Variables
+Jonathan Bullock
+2013-10-17
+:jbake-type: page
+:jbake-tags: documentation
+:jbake-status: published
+:idprefix:
+
+== Data Variables
+
+Data variables are exposed to the Freemarker templates allowing you to get access to the data contained within 
+the content files, they can also be used to apply logic to the output. 
+
+=== Global
+
+This data is available to all templates regardless.
+
+- `${version}` = version of JBake
+- `${posts}` = collection of all posts (files that don't have `type=page`)
+- `${pages}` = collection of all pages (files that have `type=page`)
+- `${config.[options]}` = map of configuration data
+
+All the configuration options are available with any `.` in the property being replaced with `_`.
+For example `template.index.file=index.ftl` is available via `${config.template_index_file}`.
+
+You can loop through the above collections using:
+
+----
+<#list posts as post>
+	..
+</#list>
+----
+
+Within the loop you can then access the options for each post or page: `${post.[options]}` or `${page.[options]}`
+
+All of the header fields are available such as `${post.title}` and the body of the file is available via `${post.body}`.
+
+=== Page / Post
+
+These templates (`page.ftl` & `post.ftl`) as well as any custom templates you create yourself have the following data available to them:
+
+- `${content.[options]}` = map of file contents
+
+All of the header fields are available such as `${content.title}` and the body of the file is available via `${content.body}`.
+
+=== Index / Feed / Archive
+
+These templates (`index.ftl`, `feed.ftl` & `archive.ftl`) have the following extra data available to them:
+
+- `${published_posts}` = collection of just published posts
+- `${published_date}` = date when file is generated (only available to Feed)
+
+=== Tags
+
+This template (`tags.ftl`) has the following extra data available to it:
+
+- `${tag}` = tag being rendered
+- `${tag_posts}` = collection posts for tag

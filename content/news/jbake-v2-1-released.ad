@@ -1,0 +1,22 @@
+= JBake v2.1 released
+Jonathan Bullock
+2013-04-30
+:jbake-type: post
+:jbake-status: published
+:category: news
+:idprefix:
+
+== JBake v2.1 released
+
+* Added unit tests
+* Added post baking stats
+* Command line arguments are now optional
+* Standardised the data model available to templates
+* Changed packaging
+* Added OS specific launch scripts
+
+See the link:/docs/[documentation] for updated usage information of this release.
+
+Thanks to https://github.com/mismatch[mismatch] for contributions in this release.
+
+Download http://hash.to/2F.info[JBake v2.1].

@@ -2,16 +2,14 @@
 	
 	<#include "menu.ftl">
 
-      <hr>
-
       <div class="jumbotron">
         <h1>Bake your own site!</h1>
         <p class="lead">JBake is a Java based open source static site/blog generator for developers.</p>
-        <a class="btn btn-large btn-success" href="http://hash.to/2F">Download</a>
-        <a class="btn btn-large btn-success" href="http://github.com/jonbullock/JBake">Get Source</a>
+        <a class="btn btn-large btn-success" href="http://hash.to/2F">Download v2.1</a>
+        <!--<a class="btn btn-large btn-success" href="http://github.com/jonbullock/JBake">Get Source</a>-->
         <p></p>
         <div class="alert alert-info">
-			<strong>News:</strong> <a href="/news/jbake-now-has-a-logo.html">JBake now has a logo</a>
+			<strong>Latest News:</strong> <a href="/news/jbake-now-has-a-logo.html">JBake now has a logo</a>
 		</div>
       </div>
 

@@ -1,14 +1,16 @@
-title=Changelog
-date=2013-03-30
-type=page
-status=published
-~~~~~~
+= Changelog
+Jonathan Bullock
+2013-10-19
+:jbake-type: page
+:jbake-tags: changelog
+:jbake-status: published
+:idprefix:
 
-## Changelog
+== Changelog
 
 ### v2.1
 
-*2013-04-30*
+*2013-04-30* - https://github.com/jonbullock/JBake/tree/v2.1[Source]
 
 * Added unit tests
 * Added post baking stats
@@ -17,18 +19,18 @@ status=published
 * Changed packaging
 * Added OS specific launch scripts
 
-Thanks to [mismatch](https://github.com/mismatch) for contributions.
+Thanks to https://github.com/mismatch[mismatch] for contributions.
 
 ### v2.0
 
-*2013-03-09* - [Source](https://github.com/jonbullock/JBake/tree/v2.0)
+*2013-03-09* - https://github.com/jonbullock/JBake/tree/v2.0[Source]
 
 * Refactored code structure
 * Added Markdown format support
 * Added tag page rendering support
 * Added configuration system
 
-Thanks to [xiujunma](https://github.com/xiujunma) for contributions.
+Thanks to https://github.com/xiujunma[xiujunma] for contributions.
 
 ### v1.0
 

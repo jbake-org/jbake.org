@@ -1,0 +1,34 @@
+= JBake v2.2.0 released
+Jonathan Bullock
+2013-10-19
+:jbake-type: post
+:jbake-tags: community
+:jbake-status: draft
+:category: news
+:idprefix:
+
+== JBake v2.2.0 released
+
+I'm pleased to announce that JBake v2.2.0 is now available for download! The big addition in this release 
+is support for http://asciidoc.org/[AsciiDoc] formatted content, thanks to the http://asciidoctor.org[Asciidoctor project].
+
+Here's the full release notes for this version...
+
+*Enhancements:*
+
+* Add support for AsciiDoc format
+* Add support for serving up baked site locally
+* Add automatic publishing based on date
+* Look for jbake.properties as well
+* Add command line option to create required structure
+* Add version ouput when JBake is ran
+* Speed up AsciiDoc rendering be reusing Asciidoctor object
+
+*Bugs:*
+
+* Content header is being picked up from middle of content file but it shouldn't be
+
+Updated link:/docs/[documentation] is also available for this release along with a refresh of this site. From 
+this release onwards the project will be adopting the http://semver.org/[Semantic Versioning] system.
+
+Download http://hash.to/XX[JBake v2.1] now and get baking!
