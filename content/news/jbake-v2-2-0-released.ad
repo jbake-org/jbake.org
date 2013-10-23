@@ -1,6 +1,6 @@
 = JBake v2.2.0 released
 Jonathan Bullock
-2013-10-19
+2013-10-23
 :jbake-type: post
 :jbake-tags: community
 :jbake-status: published
@@ -37,4 +37,4 @@ system.
 
 This new release should also be available via Maven Central in the next few days.
 
-Download *http://hash.to/XX[JBake v2.2.0]* now and get baking!
+Download *http://hash.to/2L[JBake v2.2.0]* now and get baking!
