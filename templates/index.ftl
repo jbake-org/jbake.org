@@ -9,7 +9,7 @@
         <!--<a class="btn btn-large btn-success" href="http://github.com/jonbullock/JBake">Get Source</a>-->
         <p></p>
         <div class="alert alert-info">
-			<strong>Latest News:</strong> <a href="/news/jbake-now-has-a-logo.html">JBake now has a logo</a>
+			<strong>Latest News:</strong> <a href="/news/jbake-v2-2-0-released.html">JBake v2.2.0 released</a>
 		</div>
       </div>
 
