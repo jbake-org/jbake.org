@@ -46,6 +46,7 @@ The extension of the file determines what content it contains:
 * `.html` = raw HTML content
 * `.md` = http://daringfireball.net/projects/markdown/syntax[Markdown] formatted content
 * `.ad` = http://www.methods.co.nz/asciidoc/[AsciiDoc] formatted content
+* `.adoc` = http://www.methods.co.nz/asciidoc/[AsciiDoc] formatted content
 * `.asciidoc` = http://www.methods.co.nz/asciidoc/[AsciiDoc] formatted content
 
 JBake uses the http://asciidoctor.org/docs/install-and-use-asciidoctor-java-integration/[Java integration library] 

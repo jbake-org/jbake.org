@@ -23,12 +23,18 @@ Here's the full release notes for this version...
 * Add command line option to create required structure
 * Add version ouput when JBake is ran
 * Speed up AsciiDoc rendering be reusing Asciidoctor object
+* Add support for .adoc extension
 
 *Bugs:*
 
 * Content header is being picked up from middle of content file but it shouldn't be
+* Date for AsciiDoc formatted files is last modified date instead of revision date
+* Baking is considerably slow on large site (~250 pages across many sub-folders)
 
-Updated link:/docs/[documentation] is also available for this release along with a refresh of this site. From 
-this release onwards the project will be adopting the http://semver.org/[Semantic Versioning] system.
+Updated link:/docs/[documentation] has also been released for this release along with a refresh of 
+this site. From this release onwards the project will be adopting the http://semver.org/[Semantic Versioning] 
+system.
 
-Download http://hash.to/XX[JBake v2.1] now and get baking!
+This new release should also be available via Maven Central in the next few days.
+
+Download *http://hash.to/XX[JBake v2.2.0]* now and get baking!
