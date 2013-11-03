@@ -11,7 +11,7 @@ Jonathan Bullock
 === Installation
 
 . Make sure you have a http://www.oracle.com/technetwork/java/javase/downloads/index.html[Java 6+ JRE] and that the `java` command is available in your path
-. link:/download.html[Download] and unzip JBake into a folder on your hard disk
+. http://hash.to/2L[Download] and unzip JBake into a folder on your hard disk
 . Add the JBake folder to your path
 . Open a command prompt and run `jbake -h` (or `jbake.bat -h` if you are on Windows) to confirm everything works, you should see usage help text
 
