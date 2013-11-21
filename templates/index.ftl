@@ -21,7 +21,7 @@
           <p>Source available on <a href="http://github.com">GitHub</a>, licensed under MIT License</p>
           
           <h4>Content Formatting</h4>
-          <p>Supports both HTML & Markdown formatted content.</p>
+          <p>Supports AsciiDoc, Markdown and good old HTML formatted content.</p>
 
           <h4>Open Structure</h4>
           <p>Structure your content any way you see fit.</p>
