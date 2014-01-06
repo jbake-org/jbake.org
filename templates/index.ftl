@@ -45,17 +45,24 @@
           <h4>Storage Support</h4>
           <p>Store your site content in Dropbox, CVS, SVN, Git or whatever you want.</p>
         </div>
-        
-        <div class="span6">
-        	<script type="text/javascript" src="http://www.ohloh.net/p/634040/widgets/project_users_logo.js"></script>
+      </div>
+      
+      <div class="row-fluid marketing">          
+		<div class="span3 text-center">
+			<a href="https://twitter.com/javabake" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @javabake</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+		</div>
+
+        <div class="span3 text-center">
+        	<script type="text/javascript" src="http://www.ohloh.net/p/634040/widgets/project_thin_badge.js"></script>
         </div>
         
-        <div class="span6">
+        <div class="span3 text-center">
         	<a href="https://travis-ci.org/jonbullock/JBake"><img src="https://travis-ci.org/jonbullock/JBake.png?branch=master" /></a>
         </div>
         
-        <div class="span6">
-        	IRC Chat: <a href="irc://irc.freenode.org/#jbake">#jbake on Freenode</a>
+        <div class="span3 text-center">
+        	IRC: <a href="irc://irc.freenode.org/#jbake">#jbake on Freenode</a>
         </div>
 
       </div>
