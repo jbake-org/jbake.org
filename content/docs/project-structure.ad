@@ -79,7 +79,7 @@ Jonathan Bullock
 :jbake-status: published
 ----
 
-Note JBake meta data attributes requires the `jbake-` prefix.
+Note: JBake related attributes included in the AsciiDoc header require the `jbake-` prefix.
 
 ===== Status
 
@@ -113,4 +113,4 @@ And access it from the template like so:
 
 This is the folder where your http://freemarker.sourceforge.net[Freemarker] templates go. Each template file 
 must have a `.ftl` extension. For more information on what you can do in Freemarker templates see the 
-http://freemarker.sourceforge.net/docs/index.html[Manual].
+http://freemarker.org/docs/index.html[Manual].
