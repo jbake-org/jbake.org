@@ -9,6 +9,6 @@ Jonathan Bullock
 == Configuration
 
 The `jbake.properties` (or `custom.properties`) file allows you to override the default configuration of JBake. 
-You can change the name of the folder that stores your content or templates, decide whether to generate a an 
+You can change the name of the folder that stores your content or templates, decide whether to generate a 
 RSS feed or not. See https://github.com/jonbullock/JBake/blob/master/src/main/resources/default.properties[default.properties] 
 for what options you can override.
