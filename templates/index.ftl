@@ -5,11 +5,11 @@
       <div class="jumbotron">
         <h1>Bake your own site!</h1>
         <p class="lead">JBake is a Java based open source static site/blog generator for developers.</p>
-        <a class="btn btn-large btn-success" href="http://hash.to/2L">Download v2.2.0</a>
+        <a class="btn btn-large btn-success" href="http://hash.to/2L">Download v2.2.1</a>
         <!--<a class="btn btn-large btn-success" href="http://github.com/jonbullock/JBake">Get Source</a>-->
         <p></p>
         <div class="alert alert-info">
-			<strong>Latest News:</strong> <a href="/news/jbake-v2-2-0-released.html">JBake v2.2.0 released</a>
+			<strong>Latest News:</strong> <a href="/news/jbake-v2-2-1-released.html">JBake v2.2.1 released</a>
 		</div>
       </div>
 
