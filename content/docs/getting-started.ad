@@ -12,7 +12,7 @@ Jonathan Bullock
 
 . Make sure you have a http://www.oracle.com/technetwork/java/javase/downloads/index.html[Java 6+ JRE] and that the `java` command is available in your path
 . http://hash.to/2L[Download] and unzip JBake into a folder on your hard disk
-. Add the JBake folder to your path
+. Add the JBake folder to your path environment variable
 . Open a command prompt and run `jbake -h` (or `jbake.bat -h` if you are on Windows) to confirm everything works, you should see usage help text
 
 ----
@@ -28,7 +28,7 @@ Usage: jbake ...
 
 === Quick Start
 
-To get up and running quickly with JBake you can use its default template as a starting point for your site.
+To get up and running quickly with JBake you can use its base project structure as a starting point for your site.
 
 ----
 $ mkdir project
@@ -36,10 +36,10 @@ $ cd project
 $ jbake -i
 ----
 
-The `-i` option initialises the current folder with the nescessary folder structure along with a default template 
+The `-i` option initialises the current folder with the necessary folder structure along with a default set of templates 
 to get you started.
 
-Once you have customised the content of your site you can bake your site by running the following commands:
+Once you have added some real content to your site and customised the templates you can bake your site by running the following commands:
 
 ----
 $ cd project
@@ -73,8 +73,8 @@ Serving out contents of: [/home/user/site/output/] on http://localhost:8820/
 
 That's all there is to it, to getting your own baked site! 
 
-=== Default Template
+=== Base Project Structure
 
-The default template and structure is contained in `base.zip` in the JBake installation folder. If you'd like to 
-change the default template in some way extract the contents of this file, update the files, then ZIP them back 
-up and replace the `base.zip` file with your updated file.
+The base project structure and sample templates are contained in `base.zip` in your JBake installation folder. If you'd like to 
+change the structure or sample templates in some way then extract the contents of this file, update as required, then ZIP them back 
+up and replace the `base.zip` file with your updated file. Then JBake will use your updated file when ever it initialises a new folder. 
