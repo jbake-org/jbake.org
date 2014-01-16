@@ -1,0 +1,28 @@
+= JBake v2.2.1 released
+Jonathan Bullock
+2014-01-16
+:jbake-type: post
+:jbake-tags: community
+:jbake-status: published
+:category: news
+:idprefix:
+
+== JBake v2.2.1 released
+
+I'm pleased to announce that JBake v2.2.1 is now available for download! This is mainly a maintenance release that addresses a couple 
+of issues, specifically with AsciiDoc support and character encoding.
+
+Here's the full release notes for this version...
+
+* Allow date format used to be customised via configuration
+* Switched to Pegdown Markdown processor
+* Added support for rendering sitemap.xml
+* Added character encoding to configuration which is used for rendering 
+* AsciiDoc related improvements
+* Addressed issues in default templates
+
+A big thank you goes to the community as this release includes 5 pull requests from https://github.com/jonbullock/JBake/graphs/contributors[contributors].   
+
+This release should also be available via Maven Central in the next few days.
+
+Download *http://hash.to/2L[JBake v2.2.1]* now and get baking!
