@@ -8,10 +8,10 @@ Jonathan Bullock
 
 == Manual
 
-include::docs/getting-started.ad[lines=9..100]
+include::getting-started.ad[lines=9..100]
 
-include::docs/project-structure.ad[lines=9..100]
+include::project-structure.ad[lines=9..100]
 
-include::docs/data-variables.ad[lines=9..100]
+include::data-variables.ad[lines=9..100]
 
-include::docs/configuration.ad[lines=9..100]
+include::configuration.ad[lines=9..100]
