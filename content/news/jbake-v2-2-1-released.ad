@@ -1,6 +1,6 @@
 = JBake v2.2.1 released
 Jonathan Bullock
-2014-01-16
+2014-01-23
 :jbake-type: post
 :jbake-tags: community
 :jbake-status: published
@@ -19,10 +19,13 @@ Here's the full release notes for this version...
 * Added support for rendering sitemap.xml
 * Added character encoding to configuration which is used for rendering 
 * AsciiDoc related improvements
-* Addressed issues in default templates
+* Addressed multiple issues in default templates
+* Cleaned up imports and unused variables
 
-A big thank you goes to the community as this release includes 5 pull requests from https://github.com/jonbullock/JBake/graphs/contributors[contributors].   
+A big thank you goes out to https://github.com/Vad1mo[Vad1mo], https://github.com/kurochenko[Andrej Kuročenko], 
+https://github.com/ksclarke[Kevin S. Clarke], https://github.com/w32blaster[w32blaster], https://github.com/yarixxx[Yaroslav Karandashev] 
+and https://github.com/lefou[Tobias Roeser] for contributions included in this release.
 
 This release should also be available via Maven Central in the next few days.
 
-Download *http://hash.to/2L[JBake v2.2.1]* now and get baking!
+Download *http://hash.to/XX[JBake v2.2.1]* now and get baking!
