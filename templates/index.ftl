@@ -58,7 +58,7 @@
         </div>
         
         <div class="span3 text-center">
-        	<a href="https://travis-ci.org/jonbullock/JBake"><img src="https://travis-ci.org/jonbullock/JBake.png?branch=master" /></a>
+        	<a href="https://travis-ci.org/jbake-org/jbake"><img src="https://travis-ci.org/jbake-org/jbake.png?branch=master" /></a>
         </div>
         
         <div class="span3 text-center">
