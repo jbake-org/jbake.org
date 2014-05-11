@@ -1,0 +1,38 @@
+= JBake v2.3.0 released
+Jonathan Bullock
+2014-05-11
+:jbake-type: post
+:jbake-tags: community
+:jbake-status: published
+:category: news
+:idprefix:
+
+== JBake v2.3.0 released
+
+I'm pleased to announce that JBake v2.3.0 has finally been made available for download. This is a big release packed full of new features and
+enhancements.
+
+Here are the release notes for this version...
+
+* Incremental rendering support has been added to this release but been disabled by default (note: this feature is considered experimental at 
+the moment)
+* Support for subdirectory projects has been added
+* Parsing & Rendering code has been modularised allowing more to added more easily
+* Default status can now be defined in configuration
+* Fixed URI bug on Windows
+* Added explicit bake command line option allowing bake+serve in one command
+* Configuration options now available from within AsciiDoc formatted files
+* Logging framework support has been added
+* Added support for http://groovy.codehaus.org/Groovy+Templates[Groovy] based templates
+* Added support for http://www.thymeleaf.org/[Thymeleaf] based templates
+* Fixed base directory for AsciiDoc includes
+* Expanded data model made available to templates
+* Improved error reporting
+
+I have to thank https://github.com/lefou[Tobias Roeser], https://github.com/RainerW[Rainer Weinhold], 
+https://github.com/yarixxx[Yaroslav Karandashev] and especially https://github.com/melix[Cédric Champeau] for a massive amount of 
+work that's been included in this release. Thank you all!
+
+This release should also be available via Maven Central in the next few days.
+
+Download *link:/download.html[JBake v2.3.0]* now and get baking!
