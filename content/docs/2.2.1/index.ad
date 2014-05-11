@@ -1,0 +1,37 @@
+= Documentation v2.2.1
+Jonathan Bullock
+2013-10-15
+:jbake-type: page
+:jbake-tags: documentation
+:jbake-status: published
+:idprefix:
+
+toc::[]
+
+////
+== Documentation Index
+
+* link:/docs/getting-started.html[Getting Started]
+** link:/docs/getting-started.html#installation[Installation]
+** link:/docs/getting-started.html#usage[Usage]
+** link:/docs/getting-started.html#quick_start[Quick Start]
+** link:/docs/getting-started.html#default_template[Default Template]
+* link:/docs/project-structure.html[Project Structure]
+** link:/docs/project-structure.html#assets_folder[Assets]
+** link:/docs/project-structure.html#content_folder[Content]
+** link:/docs/project-structure.html#templates_folder[Templates]
+* link:/docs/data-variables.html[Data Variables]
+** link:/docs/data-variables.html#global[Global]
+** link:/docs/data-variables.html#page_post[Page / Post]
+** link:/docs/data-variables.html#index_feed_archive[Index / Feed / Archive]
+** link:/docs/data-variables.html#tags[Tags]
+* link:/docs/configuration.html[Configuration]
+////
+
+include::getting-started.ad[lines=9..250]
+
+include::project-structure.ad[lines=9..250]
+
+include::data-variables.ad[lines=9..250]
+
+include::configuration.ad[lines=9..250]

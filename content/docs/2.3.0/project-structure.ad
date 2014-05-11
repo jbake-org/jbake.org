@@ -65,7 +65,8 @@ status=published
 ~~~~~~
 ----
 
-In the header you *must* have at least the **status** & **type** fields, the rest are optional.
+In the header you *must* have at least the **status** & **type** fields, the rest are optional. The only exception to this rule is if 
+you define a default status in your link:#configuration[configuration] file.
 
 For an AsciiDoc content file the meta-data header section is optional, the JBake meta-data can be included 
 in the AsciiDoc header itself like so:
@@ -111,6 +112,17 @@ And access it from the template like so:
 
 === Templates Folder
 
-This is the folder where your http://freemarker.sourceforge.net[Freemarker] templates go. Each template file 
-must have a `.ftl` extension. For more information on what you can do in Freemarker templates see the 
-http://freemarker.org/docs/index.html[Manual].
+This is the folder where your http://freemarker.org[Freemarker], http://www.groovy-lang.org/[Groovy] or http://www.thymeleaf.org/[Thymeleaf] 
+templates go. The following template extensions are supported:
+
+* `.ftl` = Freemarker
+* `.gsp` = Groovy
+* `.groovy` = Groovy
+* `.gxml` = Groovy
+* `.thyme` = Thymeleaf
+
+It is recommended that you don't mix different template types, try to stick to just 1 type of templates.
+
+For more information on what you can do in each template engine have a look at the example templates provided with JBake and their 
+respective documentation: http://freemarker.org/docs/index.html[Freemarker], http://groovy.codehaus.org/Groovy+Templates[Groovy] & 
+http://www.thymeleaf.org/doc/html/Using-Thymeleaf.html[Thymeleaf].

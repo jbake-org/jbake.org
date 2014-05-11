@@ -1,12 +1,10 @@
-= Sites
+= Sites using JBake
 Jonathan Bullock
 2013-10-19
 :jbake-type: page
 :jbake-tags: community
 :jbake-status: published
 :idprefix:
-
-== Sites using JBake
 
 To help others see what's possible with JBake add your JBake powered site to the list below by making a https://github.com/jbake-org/jbake.org/blob/master/content/community/sites.ad[pull request].
 

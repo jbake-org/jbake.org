@@ -7,7 +7,7 @@
           <ul>
           	<#list posts as post>
           		<#if (post.status == "published") && (post.category??) && (post.category == "news")>
-          			<p>${post.date?string("dd MMMM yyyy")} - <a href="${post.uri}">${post.title}</a></p>
+          			<p>${post.date?string("dd MMMM yyyy")} - <a href="/${post.uri}">${post.title}</a></p>
           		</#if>
           	</#list>
           </ul>

@@ -3,13 +3,14 @@
 	<#include "menu.ftl">
 
       <div class="jumbotron">
-        <h1>Bake your own site!</h1>
-        <p class="lead">JBake is a Java based open source static site/blog generator for developers.</p>
-        <a class="btn btn-large btn-success" href="http://hash.to/2R">Download v2.2.1</a>
-        <!--<a class="btn btn-large btn-success" href="http://github.com/jonbullock/JBake">Get Source</a>-->
+        <!--<h1>Bake your own site!</h1>-->
+        <h1>"Jekyll of the JVM"</h1>
+        <p class="lead text-right">- <em>Dan Allen</em></p>
+        <p class="lead">JBake is a Java based, open source, static site/blog generator for developers & designers</p>
+        <a class="btn btn-large btn-success" href="/download.html">Download</a>
         <p></p>
         <div class="alert alert-info">
-			<strong>Latest News:</strong> <a href="/news/jbake-v2-2-1-released.html">JBake v2.2.1 released</a>
+			<strong>Latest News:</strong> <a href="/news/jbake-v2-3-0-released.html">JBake v2.3.0 released</a>
 		</div>
       </div>
 
@@ -37,7 +38,7 @@
           <p><a href="http://freemarker.org/">Freemarker</a> based templates & scripting support.</p>
           
           <h4>CSS Framework Support</h4>
-          <p>Easily integrate CSS frameworks such as <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>.</p>
+          <p>Easily integrate CSS frameworks such as <a href="http://getbootstrap.com/">Bootstrap</a> and <a href="http://foundation.zurb.com/">Foundation</a>.</p>
           
           <h4>Custom Metadata</h4>
           <p>Add as much metadata to content as you like, also exposed to templates.</p>
@@ -67,6 +68,6 @@
 
       </div>
 
-      <hr>
+      <hr />
 
 <#include "footer.ftl">

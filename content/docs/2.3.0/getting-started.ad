@@ -1,6 +1,6 @@
 = Getting Started
 Jonathan Bullock
-2013-10-16
+2014-05-10
 :jbake-type: page
 :jbake-tags: documentation
 :jbake-status: published
@@ -11,12 +11,12 @@ Jonathan Bullock
 === Installation
 
 . Make sure you have a http://www.oracle.com/technetwork/java/javase/downloads/index.html[Java 6+ JRE] and that the `java` command is available in your path
-. http://hash.to/2R[Download] and unzip JBake into a folder on your hard disk
+. link:/download.html[Download] and unzip JBake into a folder on your hard disk
 . Add the JBake folder to your path environment variable
 . Open a command prompt and run `jbake -h` (or `jbake.bat -h` if you are on Windows) to confirm everything works, you should see usage help text
 
 ----
-JBake v2.2.0-SNAPSHOT (2013-10-12 22:43) [http://jbake.org]
+JBake v2.3.0-SNAPSHOT (2013-10-12 22:43) [http://jbake.org]
 
 Usage: jbake ...
 ----
@@ -28,7 +28,7 @@ Usage: jbake ...
 
 === Quick Start
 
-To get up and running quickly with JBake you can use its base project structure as a starting point for your site.
+To get up and running quickly with JBake you can use its example project structure as a starting point for your site.
 
 ----
 $ mkdir project
@@ -36,8 +36,14 @@ $ cd project
 $ jbake -i
 ----
 
-The `-i` option initialises the current folder with the necessary folder structure along with a default set of templates 
-to get you started.
+The `-i` option initialises the current folder with the necessary folder structure along with a default set of Freemarker templates 
+to get you started. You can also get a set of http://www.groovy-lang.org/[Groovy] or http://www.thymeleaf.org/[Thymeleaf] based 
+templates by supplying an extra parameter:
+
+----
+$ jbake -i groovy
+$ jbake -i thymeleaf
+----
 
 Once you have added some real content to your site and customised the templates you can bake your site by running the following commands:
 
@@ -52,20 +58,20 @@ immediately by running JBake in server mode:
 ----
 $ cd project
 $ jbake -s
-JBake v2.2.0-SNAPSHOT (2013-10-12 22:43) [http://jbake.org]
+JBake v2.3.0-SNAPSHOT (2013-10-12 22:43) [http://jbake.org]
 
 Serving out contents of: [output] on http://localhost:8820/
 (To stop server hit CTRL-C)
 ----
 
 You can then preview your site in your browser at http://localhost:8820. You can configure what port the server 
-runs via your link:/docs/configuration.html[configuration file].
+runs via your link:#configuration[configuration file].
 
 You can also specify the folder to serve out along with the `-s` option like so:
 
 ----
 $ jbake -s /home/user/site/output/
-JBake v2.2.0-SNAPSHOT (2013-10-12 22:43) [http://jbake.org]
+JBake v2.3.0-SNAPSHOT (2013-10-12 22:43) [http://jbake.org]
 
 Serving out contents of: [/home/user/site/output/] on http://localhost:8820/
 (To stop server hit CTRL-C)
@@ -73,8 +79,14 @@ Serving out contents of: [/home/user/site/output/] on http://localhost:8820/
 
 That's all there is to it, to getting your own baked site! 
 
-=== Base Project Structure
+=== Example Project Structures
 
-The base project structure and sample templates are contained in `base.zip` in your JBake installation folder. If you'd like to 
-change the structure or sample templates in some way then extract the contents of this file, update as required, then ZIP them back 
-up and replace the `base.zip` file with your updated file. Then JBake will use your updated file when ever it initialises a new folder. 
+The example project structure and sample templates are stored in your JBake installation folder in the files:
+
+* `example_project_freemarker.zip`
+* `example_project_groovy.zip` 
+* `example_project_thymeleaf.zip`
+
+If you'd like to change the structure or sample templates in some way then you can extract the contents of these files, update 
+as required, then ZIP them back up and replace the original files with your updated files. Then JBake will use your updated 
+project structure and templates when ever it initialises a new folder from then on. 

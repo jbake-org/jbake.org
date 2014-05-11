@@ -1,0 +1,36 @@
+= Download
+Jonathan Bullock
+2014-05-10
+:jbake-type: page
+:jbake-tags: download
+:jbake-status: published
+:idprefix:
+
+== Latest Release
+
+[options="header"]
+|===
+|Version |SHA1 |Link |Release Notes
+|v2.3.0 |... |http://hash.to/XX[Download] 41.6MB |https://github.com/jbake-org/jbake/issues?milestone=3&state=closed[Changelog]
+|===
+
+== Previous Releases
+
+[options="header"]
+|===
+|Version |SHA1 |Link |Release Notes
+|v2.2.1 |0e225ab850cb98b7451082f818e991c1cfb7defb |http://hash.to/2R[Download] 27.5MB |https://github.com/jbake-org/jbake/issues?milestone=7&state=closed[Changelog]
+|v2.2.0 |fe8d557a562ef9da2b9fea092ac7b5ab524a69db |http://hash.to/2L[Download] 27.1MB |https://github.com/jbake-org/jbake/issues?milestone=2&state=closed[Changelog]
+|===
+
+== Maven
+
+JBake artifacts are available from the Maven central repository:
+
+----
+<dependency>
+	<groupId>org.jbake</groupId>
+	<artifactId>jbake-core</artifactId>
+	<version>2.3.0</version>
+</dependency>
+---- 

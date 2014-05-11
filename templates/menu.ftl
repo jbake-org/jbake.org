@@ -22,8 +22,8 @@
             <div class="nav-collapse collapse">
               <ul class="nav">
                 <li><a href="/news/">News</a></li>
-                <!--<li><a href="/download.html">Download</a></li>-->
-                <li class="dropdown">
+                <li><a href="/download.html">Download</a></li>
+                <!--<li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation <b class="caret"></b></a>
                   <ul class="dropdown-menu">
                   	<li><a href="/docs/">Index</a></li>
@@ -31,15 +31,14 @@
                     <li><a href="/docs/project-structure.html">Project Structure</a></li>
                     <li><a href="/docs/data-variables.html">Data Variables</a></li>
                     <li><a href="/docs/configuration.html">Configuration</a></li>
-                    <!--<li class="divider"></li>
-                    <li class="nav-header">Nav header</li>-->
                   </ul>
-                </li>
+                </li>-->
+                <li><a href="/docs/">Documentation</a></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Development <b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                    <li><a href="https://github.com/jonbullock/JBake/">Source Code</a></li>
-                    <li><a href="/dev/changelog.html">Changelog</a></li>
+                    <li><a href="https://github.com/jbake-org/jbake/">Source Code</a></li>
+                    <li><a href="https://github.com/jbake-org/jbake/issues">Issue Tracker</a></li>
                   </ul>
                 </li>
                 <li><a href="/community/index.html">Community</a></li>

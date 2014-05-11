@@ -1,0 +1,80 @@
+= Getting Started
+Jonathan Bullock
+2013-10-16
+:jbake-type: page
+:jbake-tags: documentation
+:jbake-status: published
+:idprefix:
+
+== Getting Started
+
+=== Installation
+
+. Make sure you have a http://www.oracle.com/technetwork/java/javase/downloads/index.html[Java 6+ JRE] and that the `java` command is available in your path
+. link:/download.html[Download] and unzip JBake into a folder on your hard disk
+. Add the JBake folder to your path environment variable
+. Open a command prompt and run `jbake -h` (or `jbake.bat -h` if you are on Windows) to confirm everything works, you should see usage help text
+
+----
+JBake v2.2.0-SNAPSHOT (2013-10-12 22:43) [http://jbake.org]
+
+Usage: jbake ...
+----
+
+=== Usage
+
+* Run `jbake` to do some baking, this will use the current folder as the source and place any baked output into an `output` folder in the current folder
+* Or you can run `jbake <source_folder> <destination_folder>` if you want full control over the source & destination folders
+
+=== Quick Start
+
+To get up and running quickly with JBake you can use its base project structure as a starting point for your site.
+
+----
+$ mkdir project
+$ cd project
+$ jbake -i
+----
+
+The `-i` option initialises the current folder with the necessary folder structure along with a default set of templates 
+to get you started.
+
+Once you have added some real content to your site and customised the templates you can bake your site by running the following commands:
+
+----
+$ cd project
+$ jbake
+----
+
+This will place your baked site in the `output` folder by default. You can then see what it looks like 
+immediately by running JBake in server mode:
+
+----
+$ cd project
+$ jbake -s
+JBake v2.2.0-SNAPSHOT (2013-10-12 22:43) [http://jbake.org]
+
+Serving out contents of: [output] on http://localhost:8820/
+(To stop server hit CTRL-C)
+----
+
+You can then preview your site in your browser at http://localhost:8820. You can configure what port the server 
+runs via your link:#configuration[configuration file].
+
+You can also specify the folder to serve out along with the `-s` option like so:
+
+----
+$ jbake -s /home/user/site/output/
+JBake v2.2.0-SNAPSHOT (2013-10-12 22:43) [http://jbake.org]
+
+Serving out contents of: [/home/user/site/output/] on http://localhost:8820/
+(To stop server hit CTRL-C)
+----
+
+That's all there is to it, to getting your own baked site! 
+
+=== Base Project Structure
+
+The base project structure and sample templates are contained in `base.zip` in your JBake installation folder. If you'd like to 
+change the structure or sample templates in some way then extract the contents of this file, update as required, then ZIP them back 
+up and replace the `base.zip` file with your updated file. Then JBake will use your updated file when ever it initialises a new folder. 
