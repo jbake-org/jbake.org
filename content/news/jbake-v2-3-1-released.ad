@@ -19,6 +19,4 @@ Here are the release notes for this version...
 * Freemarker updated to v2.3.20
 * Execution scripts are now located underneath a `/bin` folder, so make sure to update your path references
 
-The release should also be available via Maven Central shortly.
-
-This release is dedicated to the memory of my daughter Jessica.
+_This release is dedicated to the memory of my daughter Jessica._
