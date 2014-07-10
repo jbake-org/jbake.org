@@ -1,0 +1,51 @@
+= Data Variables
+Jonathan Bullock
+2013-10-17
+:jbake-type: page
+:jbake-tags: documentation
+:jbake-status: published
+:idprefix:
+
+== Data Model
+
+A data model is exposed to each of the template engines allowing you to get access to the data contained within 
+the content files, the model can also be used to apply logic to the output from the templates.
+
+=== Global
+
+This data is available to all templates regardless.
+
+- `${version}` = version of JBake being used
+- `${published_date}` = date baking took place
+- `${[type]s}` = collection of all content of <type> (e.g. posts = all of type=post & pages = all of type=page)
+- `${published_content}` = collection of all published content (regardless of type)
+- `${all_content}` = collection of all content (regardless of type)
+- `${config.[options]}` = map of configuration data
+
+All the configuration options are available with any `.` in the property being replaced with `_`.
+For example `template.index.file=index.ftl` is available via `${config.template_index_file}`.
+
+You can loop through any of the collections above in the templates, and access the map of options for each element like so: `${post.[option]}` 
+all of the header fields are available such as `${post.title}` or `${post.body}`.
+
+=== Page / Post / Custom
+
+These predefined templates as well as any custom templates you create yourself have the following data available to them:
+
+- `${content.[options]}` = map of file contents
+
+All of the header fields are available such as `${content.title}` and the body of the file is available via `${content.body}`.
+
+=== Index / Feed / Archive
+
+These predefined templates have the following extra data available to them:
+
+- `${published_posts}` = collection of just published posts in date descending order
+- `${published_pages}` = collection of just published pages in date descending order
+
+=== Tags
+
+This predefined template has the following extra data available to it:
+
+- `${tag}` = tag being rendered
+- `${tag_posts}` = collection of published posts for tag in date descending order
