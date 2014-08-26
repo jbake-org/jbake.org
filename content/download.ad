@@ -6,7 +6,7 @@ Jonathan Bullock
 :jbake-status: published
 :idprefix:
 
-== Latest Release
+== Latest Distribution
 
 [options="header"]
 |===
@@ -14,15 +14,17 @@ Jonathan Bullock
 |v2.3.1 |b429a89a66c021a70394e0207d71a703de58d85b |http://hash.to/AE[Download] 42.4MB | https://github.com/jbake-org/jbake/issues?milestone=8&state=closed[Changelog]
 |===
 
-== Previous Releases
+== GVM
 
-[options="header"]
-|===
-|Version |SHA1 |Link |Release Notes
-|v2.3.0 |ea4c676ca59a9dcdc84727410ab01c88c21ec917 |http://hash.to/36[Download] 41.6MB |https://github.com/jbake-org/jbake/issues?milestone=3&state=closed[Changelog]
-|v2.2.1 |0e225ab850cb98b7451082f818e991c1cfb7defb |http://hash.to/2R[Download] 27.5MB |https://github.com/jbake-org/jbake/issues?milestone=7&state=closed[Changelog]
-|v2.2.0 |fe8d557a562ef9da2b9fea092ac7b5ab524a69db |http://hash.to/2L[Download] 27.1MB |https://github.com/jbake-org/jbake/issues?milestone=2&state=closed[Changelog]
-|===
+You can also install JBake via GVM[http://gvmtool.net/] (Groovy enVironment Manager) if you are running a Bash based platform (Mac OSX, Unix, Linux, Cygwin or Solaris etc.).
+GVM will take care of downloading the latest distribution, installing it and configuring your environment for you. Once you have GVM installed enter the following command 
+to install the latest version of JBake:
+
+----
+$ gvm install jbake
+----
+
+Once complete you can then get baking!
 
 == Maven
 
@@ -32,6 +34,16 @@ JBake artifacts are available from the Maven central repository:
 <dependency>
 	<groupId>org.jbake</groupId>
 	<artifactId>jbake-core</artifactId>
-	<version>2.3.0</version>
+	<version>2.3.1</version>
 </dependency>
 ---- 
+
+== Archived Distributions
+
+[options="header"]
+|===
+|Version |SHA1 |Link |Release Notes
+|v2.3.0 |ea4c676ca59a9dcdc84727410ab01c88c21ec917 |http://hash.to/36[Download] 41.6MB |https://github.com/jbake-org/jbake/issues?milestone=3&state=closed[Changelog]
+|v2.2.1 |0e225ab850cb98b7451082f818e991c1cfb7defb |http://hash.to/2R[Download] 27.5MB |https://github.com/jbake-org/jbake/issues?milestone=7&state=closed[Changelog]
+|v2.2.0 |fe8d557a562ef9da2b9fea092ac7b5ab524a69db |http://hash.to/2L[Download] 27.1MB |https://github.com/jbake-org/jbake/issues?milestone=2&state=closed[Changelog]
+|===
