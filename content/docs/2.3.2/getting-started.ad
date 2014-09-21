@@ -1,6 +1,6 @@
 = Getting Started
 Jonathan Bullock
-2014-07-10
+2014-09-20
 :jbake-type: page
 :jbake-tags: documentation
 :jbake-status: published
@@ -16,7 +16,7 @@ Jonathan Bullock
 . Open a command prompt and run `jbake -h` (or `jbake.bat -h` if you are on Windows) to confirm everything works, you should see usage help text
 
 ----
-JBake v2.3.1-SNAPSHOT (2014-07-10 19:20) [http://jbake.org]
+JBake v2.3.2 (2014-09-20 19:20) [http://jbake.org]
 
 Usage: jbake ...
 ----
@@ -58,7 +58,7 @@ immediately by running JBake in server mode:
 ----
 $ cd project
 $ jbake -s
-JBake v2.3.1-SNAPSHOT (2014-07-10 19:20) [http://jbake.org]
+JBake v2.3.2 (2014-09-20 19:20) [http://jbake.org]
 
 Serving out contents of: [output] on http://localhost:8820/
 (To stop server hit CTRL-C)
@@ -71,7 +71,7 @@ You can also specify the folder to serve out along with the `-s` option like so:
 
 ----
 $ jbake -s /home/user/site/output/
-JBake v2.3.1-SNAPSHOT (2014-07-10 19:20) [http://jbake.org]
+JBake v2.3.2 (2014-09-20 19:20) [http://jbake.org]
 
 Serving out contents of: [/home/user/site/output/] on http://localhost:8820/
 (To stop server hit CTRL-C)
