@@ -1,0 +1,42 @@
+= JBake v2.3.2 released
+Jonathan Bullock
+2014-09-20
+:jbake-type: post
+:jbake-tags: community
+:jbake-status: published
+:category: news
+:idprefix:
+
+== JBake v2.3.2 released
+
+I'm happy to announce that link:/download.html[JBake v2.3.2] is now available for download. This is a bug fix version and includes updated 
+dependencies including Asciidoctor v1.5.0.
+
+Here are the release notes for this version...
+
+* Project badges now use http://shields.io
+* Support for Asciidoctor v1.5.0
+* Fixes bug when tags has null value
+* Adds support for controlling Markdown parsing timeout
+* Fixes issue with files being kept open on Windows
+* Fixes issue with Orient DB not being shut down correctly after baking
+* Fixes issue with batch file on Windows when installed in folder with spaces
+* Fixes issue with leading & trailing spaces when parsing tags
+* Fixes issue with using relative paths with Asciidoctor v1.5.0
+* Reduced Groovy based dependencies
+* Asciidoctor updated to v1.5.0
+* Groovy updated to v2.3.6
+* Args4j updated to v2.0.36
+* JUnit updated to v4.11
+* SLF4J upgdated to v1.7.6
+* Logback updated to v1.1.1
+* AssertJ updated to v1.6.0
+* OrientDB updated to v1.6.4
+
+I'd like to thank https://github.com/aalmiray[Andres Almiray], https://github.com/Riduidel[Nicolas Delsaux], https://github.com/dernasherbrezon[dernasherbrezon], 
+https://github.com/aldrinleal[Aldrin Leal], https://github.com/pditommaso[Paolo Di Tommaso], https://github.com/mismatch[Vitaly] and https://github.com/Fisiu[Mariusz Fik] 
+for contributions in this release.
+
+This release should also be available via Maven Central in the next few days.
+
+Download *link:/download.html[JBake v2.3.2]* now and get baking!

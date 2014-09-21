@@ -1,0 +1,29 @@
+= Configuration
+Jonathan Bullock
+2014-09-20
+:jbake-type: page
+:jbake-tags: documentation
+:jbake-status: published
+:idprefix:
+
+== Configuration
+
+The `jbake.properties` (or `custom.properties`) file allows you to override the default configuration of JBake. 
+You can change the name of the folder that stores your content or templates, decide whether to generate a 
+RSS feed or not. See https://github.com/jbake-org/jbake/blob/master/src/main/resources/default.properties[default.properties] 
+for what options you can override.
+
+=== Export to Asciidoctor
+
+If `asciidoctor.attributes.export` is set to true then the JBake configuration options are made available from within Asciidoctor 
+formatted pages. You can also set a prefix for the JBake configuration options by defining a value for `asciidoctor.attributes.export.prefix`.
+
+=== Default Status
+
+You can avoid having to include a status value in every content file by setting a default using the option `default.status`. The default is 
+only used if one hasn't been defined in the content file itself.
+
+=== Markdown Parsing Timeout
+
+You can set the Markdown parsing timeout value by using the option `markdown.maxParsingTimeInMillis`, the value should be in milliseconds and is set
+to 2 seconds by default.
