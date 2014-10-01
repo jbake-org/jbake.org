@@ -5,6 +5,7 @@ Jonathan Bullock
 :jbake-tags: documentation
 :jbake-status: published
 :idprefix:
+:toc-placement!:
 
 toc::[]
 
