@@ -8,29 +8,30 @@ Jonathan Bullock
 
 To help others see what's possible with JBake add your JBake powered site to the list below by making a https://github.com/jbake-org/jbake.org/blob/master/content/community/sites.ad[pull request].
 
+* http://www.crashub.org/[CRaSH the shell for the Java Platform]
+* http://juzuweb.org[Juzu Web Framework]
 * http://jfairy.org/[jFairy] (https://github.com/Codearte/jfairy-site/tree/master[source])
 * http://mariuszs.github.io/[http://mariuszs.github.io/] (https://github.com/mariuszs/mariuszs.github.com/tree/jbake[source])
-* http://www.orany.cz/[http://www.orany.cz/] (https://github.com/musketyr/www.orany.cz[source])
+* http://www.orany.cz/[Vladimír Oraný] (https://github.com/musketyr/www.orany.cz[source])
 * http://akhikhl.github.io/gretty-doc[Gretty Documentation]
 * http://new.griffon-framework.org/[Griffon Framework]
-* http://reqt.org/[http://reqt.org/]
-* http://www.ybonnel.fr/[http://www.ybonnel.fr/]
-* http://mperry.github.io/[http://mperry.github.io/]
+* http://reqt.org/[reqT]
+* http://www.ybonnel.fr/[JustAnOtherDevBlog]
+* http://mperry.github.io/[Software Matters!]
 * http://javamoney.org[JavaMoney | JSR 354] (https://github.com/JavaMoney/JavaMoney.github.io[source])
 * http://jonathanpearlin.com[Jonathan Pearlin] (https://github.com/jdpgrailsdev/blog/[source])
-* http://sbuild.org[http://sbuild.org] (https://github.com/SBuild-org/site-sbuild-org[source])
-* http://fisiu.github.io/[http://fisiu.github.io/] (https://github.com/Fisiu/fisiu.github.io[source])
-* http://moandjiezana.com/[http://moandjiezana.com/]
-* http://clairtonluz.github.io/[http://clairtonluz.github.io/] (https://github.com/clairtonluz/tp_blog[source])
-* http://timyates.github.io/groovy-stream/[http://timyates.github.io/groovy-stream/] (https://github.com/timyates/groovy-stream/tree/master/docs[source])
-* http://melix.github.io/blog/[http://melix.github.io/blog/] (https://github.com/melix/blog/[source])
-* http://blog.ackx.net/[http://blog.ackx.net/]
-* http://lhuet.github.io/blog/[http://lhuet.github.io/blog/] (https://github.com/lhuet/blog[source])
-* http://konik.io/[http://konik.io/]
-* http://ingramchen.io[http://ingramchen.io]
-* http://kcm85.fr/[http://kcm85.fr/]
-* http://www.nappysack.co.uk[http://www.nappysack.co.uk]
-* http://eprogramming.github.io/[http://eprogramming.github.io/]
+* http://sbuild.org[SBuild] (https://github.com/SBuild-org/site-sbuild-org[source])
+* http://fisiu.github.io/[System.out.println] (https://github.com/Fisiu/fisiu.github.io[source])
+* http://moandjiezana.com/[Moandji Ezana]
+* http://clairtonluz.github.io/[Clairton Luz] (https://github.com/clairtonluz/tp_blog[source])
+* http://timyates.github.io/groovy-stream/[Groovy-stream] (https://github.com/timyates/groovy-stream/tree/master/docs[source])
+* http://melix.github.io/blog/[Cédric Champeau's blog] (https://github.com/melix/blog/[source])
+* http://blog.ackx.net/[foo::bar @YouriAckx/]
+* http://lhuet.github.io/blog/[Java dans le hard(ware)] (https://github.com/lhuet/blog[source])
+* http://konik.io/[Konik]
+* http://ingramchen.io[Xexex's Java]
+* http://kcm85.fr/[Karaté Club Montaigu]
+* http://www.nappysack.co.uk[nappysack]
 * http://docs.ingenieux.com.br/[Ingenieux Labs] (https://bitbucket.org/ingenieux/docs.ingenieux.com.br[source])
 * http://jbake.org[JBake.org] (https://github.com/jbake-org/jbake.org[source])
 * http://jonathanbullock.com[Jonathan Bullock]
