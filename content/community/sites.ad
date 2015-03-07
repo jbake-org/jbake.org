@@ -8,6 +8,10 @@ Jonathan Bullock
 
 To help others see what's possible with JBake add your JBake powered site to the list below by making a https://github.com/jbake-org/jbake.org/blob/master/content/community/sites.ad[pull request].
 
+* http://unitsofmeasurement.github.io/[Units of Measurement | JSR 363] (https://github.com/unitsofmeasurement/unitsofmeasurement-jbake[source])
+* http://matthurne.com/[Matt Hurne]
+* http://marisarias.org[Mari Arias]
+* http://auprefs.info[Visualise Your Vote]
 * http://jprante.github.io/[Jörg Prante]
 * http://www.jug-berlin-brandenburg.de[JUG Berlin-Brandenburg]
 * http://davesmith.me[Dave Smith]
@@ -26,7 +30,7 @@ To help others see what's possible with JBake add your JBake powered site to the
 * http://reqt.org/[reqT]
 * http://www.ybonnel.fr/[JustAnOtherDevBlog]
 * http://mperry.github.io/[Software Matters!]
-* http://javamoney.org[JavaMoney | JSR 354] (https://github.com/JavaMoney/JavaMoney.github.io[source])
+* http://javamoney.org[JavaMoney | JSR 354] (https://github.com/JavaMoney/JavaMoney-template-bootstrap[source])
 * http://jonathanpearlin.com[Jonathan Pearlin] (https://github.com/jdpgrailsdev/blog/[source])
 * http://sbuild.org[SBuild] (https://github.com/SBuild-org/site-sbuild-org[source])
 * http://fisiu.github.io/[System.out.println] (https://github.com/Fisiu/fisiu.github.io[source])
