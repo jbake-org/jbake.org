@@ -6,7 +6,17 @@ Jonathan Bullock
 :jbake-status: published
 :idprefix:
 
-[options="header"]
+== Current
+
+[cols="50,50", options="header"]
+|===
+|Version |Format 
+|v2.4.0  |link:/docs/2.4.0/[HTML]
+|===
+
+== Archived
+
+[cols="50,50", options="header"]
 |===
 |Version |Format 
 |v2.3.2  |link:/docs/2.3.2/[HTML]
