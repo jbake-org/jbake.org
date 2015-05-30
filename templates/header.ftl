@@ -17,6 +17,7 @@
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/asciidoctor.css" rel="stylesheet">
     <link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="/css/prettify.css" rel="stylesheet">
     <style type="text/css">
       body {
         padding-top: 20px;
@@ -78,6 +79,6 @@
     <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="../assets/ico/favicon.png">-->
   </head>
-  <body>
+  <body onload="prettyPrint()">
     <div class="container-narrow">
    
