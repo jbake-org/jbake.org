@@ -17,6 +17,7 @@ There is a http://maven.apache.org[Maven] plugin that allows you to run JBake fr
 
 The plugin is available from the Maven Central repository using the following coordinates:
 
+[source,xml]
 ----
 <dependency>
     <groupId>br.com.ingenieux</groupId>
@@ -45,6 +46,7 @@ There is a http://sbuild.org/[SBuild] plugin that allows you to run JBake from y
 
 The plugin is available from the Maven Central repository using the following coordinates:
 
+[source,xml]
 ----
 <dependency>
     <groupId>org.sbuild</groupId>

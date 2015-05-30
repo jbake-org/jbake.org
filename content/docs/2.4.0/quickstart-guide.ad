@@ -20,7 +20,7 @@ jbake -h
 You should then see the following output:
 
 ----
-JBake v2.3.2 (2014-09-20 19:20) [http://jbake.org]
+JBake v2.4.0 (2015-05-30 17:56) [http://jbake.org]
 
 Usage: jbake ...
 ----
@@ -62,7 +62,7 @@ You can then see what your baked project looks like immediately by running JBake
 $ cd project
 $ jbake -s
 
-JBake v2.3.2 (2014-09-20 19:20) [http://jbake.org]
+JBake v2.4.0 (2015-05-30 17:56) [http://jbake.org]
 
 Serving out contents of: [output] on http://localhost:8820/
 (To stop server hit CTRL-C)
@@ -110,7 +110,7 @@ immediately by running JBake in server mode:
 ----
 $ cd project
 $ jbake -s
-JBake v2.3.2 (2014-09-20 19:20) [http://jbake.org]
+JBake v2.4.0 (2015-05-30 17:56) [http://jbake.org]
 
 Serving out contents of: [output] on http://localhost:8820/
 (To stop server hit CTRL-C)
@@ -123,7 +123,7 @@ You can also specify the folder to serve out along with the `-s` option like so:
 
 ----
 $ jbake -s /home/user/site/output/
-JBake v2.3.2 (2014-09-20 19:20) [http://jbake.org]
+JBake v2.4.0 (2015-05-30 17:56) [http://jbake.org]
 
 Serving out contents of: [/home/user/site/output/] on http://localhost:8820/
 (To stop server hit CTRL-C)

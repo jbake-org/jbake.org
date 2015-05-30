@@ -20,7 +20,7 @@ the `java` command is available in your path.
 . Open a command prompt and run `jbake -h` (or `jbake.bat -h` if you are on Windows) to confirm everything works, you should see usage help text
 
 ----
-JBake v2.3.2 (2014-09-20 19:20) [http://jbake.org]
+JBake v2.4.0 (2015-05-30 17:56) [http://jbake.org]
 
 Usage: jbake ...
 ----
