@@ -1,0 +1,145 @@
+= Quickstart Guide
+Jonathan Bullock
+2015-05-20
+:jbake-type: page
+:jbake-tags: documentation
+:jbake-status: published
+:idprefix:
+
+== Quickstart Guide
+
+=== Setup
+
+First link:/download.html[download JBake] and follow the <<installation>> instructions. After that open a command prompt and run the following command to make 
+sure everything is working:
+
+----
+jbake -h
+----
+
+You should then see the following output:
+
+----
+JBake v2.3.2 (2014-09-20 19:20) [http://jbake.org]
+
+Usage: jbake ...
+----
+
+=== Create a Project
+
+To get up and running quickly with JBake you can use it's example project structure along with sample templates as a starting point for you project or site. To do so 
+first you will need to create a new directory and change into it:
+
+----
+$ mkdir project
+$ cd project
+----
+
+Then you can use JBake to initialise this directory with it's example project structure and templates by executing the following command:
+
+----
+$ jbake -i
+----
+
+NOTE: This will use http://freemarker.org[Freemarker] templates by default, see the <<usage>> section on how to specify the template engine you prefer.
+
+=== Bake
+
+Once you have added some real content to your project and customised your templates you can bake your project by executing the following commands:	
+
+----
+$ cd project
+$ jbake -b
+----
+
+NOTE: This will place the baked project into a directory called `output` in the current directory by default.
+
+=== Preview
+
+You can then see what your baked project looks like immediately by running JBake in server mode:
+
+----
+$ cd project
+$ jbake -s
+
+JBake v2.3.2 (2014-09-20 19:20) [http://jbake.org]
+
+Serving out contents of: [output] on http://localhost:8820/
+(To stop server hit CTRL-C)
+----
+
+You can then preview it in your browser at http://localhost:8820.
+
+That's all there is to it, you can go from nothing to a fully baked site in minutes.
+
+////
+=== Usage
+
+* Run `jbake` to do some baking, this will use the current folder as the source and place any baked output into an `output` folder in the current folder
+* Or you can run `jbake <source_folder> <destination_folder>` if you want full control over the source & destination folders
+
+=== Quick Start
+
+To get up and running quickly with JBake you can use its example project structure as a starting point for your site.
+
+----
+$ mkdir project
+$ cd project
+$ jbake -i
+----
+
+The `-i` option initialises the current folder with the necessary folder structure along with a default set of Freemarker templates 
+to get you started. You can also get a set of http://www.groovy-lang.org/[Groovy] or http://www.thymeleaf.org/[Thymeleaf] based 
+templates by supplying an extra parameter:
+
+----
+$ jbake -i groovy
+$ jbake -i thymeleaf
+----
+
+Once you have added some real content to your site and customised the templates you can bake your site by running the following commands:
+
+----
+$ cd project
+$ jbake
+----
+
+This will place your baked site in the `output` folder by default. You can then see what it looks like 
+immediately by running JBake in server mode:
+
+----
+$ cd project
+$ jbake -s
+JBake v2.3.2 (2014-09-20 19:20) [http://jbake.org]
+
+Serving out contents of: [output] on http://localhost:8820/
+(To stop server hit CTRL-C)
+----
+
+You can then preview your site in your browser at http://localhost:8820. You can configure what port the server 
+runs via your link:#configuration[configuration file].
+
+You can also specify the folder to serve out along with the `-s` option like so:
+
+----
+$ jbake -s /home/user/site/output/
+JBake v2.3.2 (2014-09-20 19:20) [http://jbake.org]
+
+Serving out contents of: [/home/user/site/output/] on http://localhost:8820/
+(To stop server hit CTRL-C)
+----
+
+That's all there is to it, to getting your own baked site! 
+
+=== Example Project Structures
+
+The example project structure and sample templates are stored in your JBake installation folder in the files:
+
+* `example_project_freemarker.zip`
+* `example_project_groovy.zip` 
+* `example_project_thymeleaf.zip`
+
+If you'd like to change the structure or sample templates in some way then you can extract the contents of these files, update 
+as required, then ZIP them back up and replace the original files with your updated files. Then JBake will use your updated 
+project structure and templates when ever it initialises a new folder from then on. 
+////
