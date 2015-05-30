@@ -1,0 +1,66 @@
+= JBake v2.4.0 released
+Jonathan Bullock
+2015-05-30
+:jbake-type: post
+:jbake-tags: community
+:jbake-status: published
+:category: news
+:idprefix:
+
+== JBake v2.4.0 released
+
+I'm extremely happy to announce that link:/download.html[JBake v2.4.0] has finally been released. This is a feature release that includes a number of 
+new features and in terms of issues/pull requests the largest release in terms of changes.
+
+Here are the release notes for this version...
+
+*New features:*
+
+* New and improved documentation for project https://github.com/jbake-org/jbake/issues/196[#196]
+* Metadata header now supports JSON format being used https://github.com/jbake-org/jbake/pull/114[#114]
+* Init option now allows folder to be specified https://github.com/jbake-org/jbake/issues/147[#147], https://github.com/jbake-org/jbake/pull/151[#151] & https://github.com/jbake-org/jbake/pull/156[#156]
+* Allow custom file extension to be specified for custom templates https://github.com/jbake-org/jbake/pull/152[#152] & https://github.com/jbake-org/jbake/issues/155[#155]
+* Locate output directory in source folder by default https://github.com/jbake-org/jbake/pull/157[#157] & https://github.com/jbake-org/jbake/pull/158[#158]
+* Thymeleaf templates can now use the .html extension https://github.com/jbake-org/jbake/pull/163[#163]
+* Improved use of JBake as library by removing System.exit calls https://github.com/jbake-org/jbake/issues/167[#167] & https://github.com/jbake-org/jbake/pull/168[#168]
+* Markdown extension: STRIKETHROUGH added and allowed some extensions to be disabled https://github.com/jbake-org/jbake/pull/171[#171]
+* Added `tag.sanitize` configuration option https://github.com/jbake-org/jbake/issues/181[#181]
+* Added `asset.ignore` configuration option https://github.com/jbake-org/jbake/pull/193[#193]
+* Added ConditionalCommentsDialect support for Thymeleaf https://github.com/jbake-org/jbake/issues/195[#195] & https://github.com/jbake-org/jbake/pull/200[#200]
+
+*Bugs fixed:*
+
+* Make sure no null tag list could break process https://github.com/jbake-org/jbake/pull/129[#129]
+* The href of stylesheet in generated "tag".html is wrong https://github.com/jbake-org/jbake/issues/148[#148]
+* Asset directory name was hard coded https://github.com/jbake-org/jbake/pull/162[#162]
+* Colon in Asciidoctor based post prevents proper title rendering https://github.com/jbake-org/jbake/issues/164[#164]
+* Broken link to /archive in index.gsp https://github.com/jbake-org/jbake/issues/172[#172]
+* Special character in the title field of the metadata header are not escaped https://github.com/jbake-org/jbake/issues/173[#173] & https://github.com/jbake-org/jbake/pull/192[#192]
+* "Unable to convert object to String[] error shown multiple times with no explanation https://github.com/jbake-org/jbake/issues/174[#174]
+* Redundant slash in the example project structures https://github.com/jbake-org/jbake/issues/187[#187]
+* Leading spaces in tags defined in AsciiDoc format are not removed https://github.com/jbake-org/jbake/issues/191[#191]
+* Discrepancy in numbers output when baking jbake.org https://github.com/jbake-org/jbake/issues/204[#204]
+
+*Changes:*
+
+* Update AsciidoctorJ to v1.5.2 https://github.com/jbake-org/jbake/issues/153[#153], https://github.com/jbake-org/jbake/issues/197[#197] & https://github.com/jbake-org/jbake/issues/203[#203]
+* Update Jacoco to 0.7.X https://github.com/jbake-org/jbake/pull/142[#142]
+* `custom.properties` is now deprecated and a warning shown if used https://github.com/jbake-org/jbake/issues/50[#50] & https://github.com/jbake-org/jbake/pull/134[#134]
+* Extract all config constants in one interface https://github.com/jbake-org/jbake/issues/132[#132]
+* Make sure `content.rootpath` returns empty string instead of null https://github.com/jbake-org/jbake/issues/150[#150]
+* All DB related code moved to behind a facade - ContentStore https://github.com/jbake-org/jbake/pull/169[#169]
+* Reclassified ERRORS to WARNINGS when invalid metadata header is detected and display relevant file https://github.com/jbake-org/jbake/issues/179[#179]
+* Added delegating constructor to Oven to maintain existing API https://github.com/jbake-org/jbake/issues/194[#194] & https://github.com/jbake-org/jbake/pull/198[#198]
+* Removed debug statements from AsciidoctorJ library https://github.com/jbake-org/jbake/issues/199[#199]
+* Made sure OrientDB logging is piped through so it can be controlled via JBake logging configuration https://github.com/jbake-org/jbake/issues/205[#205] & https://github.com/jbake-org/jbake/pull/207[#207]
+
+I'd like to say thanks to everyone who has contributed something to this new release, so in no particular order: https://github.com/ybonnel[Yan Bonnel], 
+https://github.com/Riduidel[Nicolas Delsaux], https://github.com/Vad1mo[Vadim], https://github.com/mariuszs[Mariusz Smykuła], https://github.com/flyisland[flyisland], 
+https://github.com/grdryn[Gerard Ryan], https://github.com/HuguesH[HuguesH], https://github.com/christianbauer[Christian Bauer], 
+https://github.com/obfischer[Oliver B. Fischer], https://github.com/lefou[Tobias Roeser], https://github.com/jasondlee[Jason Lee], 
+https://github.com/uli-heller[uli-heller], https://github.com/gilbertoca[Gilberto Caetano de Andrade], https://github.com/dknight[Dmitri Smirnov], 
+https://github.com/ancho[Frank Becker] and https://github.com/pitpalme[pitpalme].
+
+This release should also be available via Maven Central in the next few days.
+
+Download *link:/download.html[JBake v2.4.0]* now and get baking!
