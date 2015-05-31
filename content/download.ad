@@ -42,6 +42,7 @@ Once complete you can then get baking!
 
 JBake artifacts are available from the Maven central repository:
 
+[source,xml]
 ----
 <dependency>
 	<groupId>org.jbake</groupId>
