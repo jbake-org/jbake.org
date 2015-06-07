@@ -13,22 +13,22 @@ Jonathan Bullock
 
 toc::[]
 
-include::installation.ad[lines=9..250]
+include::installation.ad[lines=9..1000]
 
-include::quickstart-guide.ad[lines=9..250]
+include::quickstart-guide.ad[lines=9..1000]
 
-include::usage.ad[lines=9..250]
+include::usage.ad[lines=9..1000]
 
-include::project-structure.ad[lines=9..250]
+include::project-structure.ad[lines=9..1000]
 
-include::content-files.ad[lines=9..250]
+include::content-files.ad[lines=9..1000]
 
-include::template.ad[lines=9..250]
+include::template.ad[lines=9..1000]
 
-include::data-variables.ad[lines=9..250]
+include::data-variables.ad[lines=9..1000]
 
-include::configuration.ad[lines=9..750]
+include::configuration.ad[lines=9..1000]
 
-include::use-as-library.ad[lines=9..250]
+include::use-as-library.ad[lines=9..1000]
 
-include::build-tool-integration.ad[lines=9..250]
+include::build-tool-integration.ad[lines=9..1000]
