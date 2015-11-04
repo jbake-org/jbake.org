@@ -308,8 +308,7 @@ This option defines a set of default Asciidoctor attributes that are used whenev
 asciidoctor.attributes=source-highlighter=prettify
 ----
 
-The value for this configuration option is a key-value pair separated by spaces, the default value defines the source highlighter that will be 
-used is Prettify.
+The value for this configuration option is a comma separated list of key-value pairs. The default value defines Prettify as the source highlighter to be used.
 
 ==== Export JBake configuration to Asciidoctor content
 
