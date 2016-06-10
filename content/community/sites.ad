@@ -7,6 +7,8 @@ Jonathan Bullock
 :idprefix:
 
 To help others see what's possible with JBake add your JBake powered site to the list below by making a https://github.com/jbake-org/jbake.org/blob/master/content/community/sites.ad[pull request].
+
+* http://www.nextflow.io[Nextflow] (https://github.com/nextflow-io/website[source])
 * http://farahnaj.github.io/[Farahnaj Inamdar]
 * http://there4.co/sabina/[Sabina - A small web framework for Java]
 * http://joshlong.com/[Josh Long's Blog]
