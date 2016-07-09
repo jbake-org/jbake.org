@@ -25,15 +25,15 @@ JBake v2.4.0 (2015-05-30 17:56) [http://jbake.org]
 Usage: jbake ...
 ----
 
-=== GVM
+=== SDKMAN
 
-You can also install JBake via http://gvmtool.net/[GVM] (Groovy enVironment Manager) if you are running a Bash based platform (Mac OSX, Unix, Linux, Cygwin or Solaris etc.).
-GVM will take care of downloading the latest distribution, installing it and configuring your environment for you. 
+You can also install JBake via http://sdkman.io//[SDKMAN] (Software Development Kit Manager - formerly known as GVM) if you are running a Bash based platform (Mac OSX, Unix, Linux, Cygwin or Solaris etc.).
+SDKMAN will take care of downloading the latest distribution, installing it and configuring your environment for you. 
 
-After you have GVM installed enter the following command to install the latest version of JBake:
+After you have SDKMAN installed enter the following command to install the latest version of JBake:
 
 ----
-$ gvm install jbake
+$ sdk install jbake
 ----
 
 === Homebrew
