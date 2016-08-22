@@ -7,7 +7,7 @@ Jonathan Bullock
 :idprefix:
 
 To help others see what's possible with JBake add your JBake powered site to the list below by making a https://github.com/jbake-org/jbake.org/blob/master/content/community/sites.ad[pull request].
-
+* http://manik.magar.me[Manik's Blog - Proudly Baked with JBake]
 * http://www.nextflow.io[Nextflow] (https://github.com/nextflow-io/website[source])
 * http://app-southcitychurch.rhcloud.com/[SouthCityChurch, Spring Boot & Gradle & Travis CI with to Openshift 2.x ]
 * http://luistrigueiros.com/[Luis Trigueiros, Gradle & GitHub Pages host]
