@@ -16,7 +16,7 @@ Jonathan Bullock
 
 == SDKMAN
 
-You can also install JBake via http://sdkman.io//[SDKMAN] (Software Development Kit Manager - formerly known as GVM) if you are running a Bash based platform (Mac OSX, Unix, Linux, Cygwin or Solaris etc.).
+You can also install JBake via http://sdkman.io/[SDKMAN] (Software Development Kit Manager - formerly known as GVM) if you are running a Bash based platform (Mac OSX, Unix, Linux, Cygwin or Solaris etc.).
 SDKMAN will take care of downloading the latest distribution, installing it and configuring your environment for you.
 
 After you have SDKMAN installed enter the following command to install the latest version of JBake:
