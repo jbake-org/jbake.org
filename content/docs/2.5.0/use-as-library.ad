@@ -6,7 +6,7 @@ Jonathan Bullock
 :jbake-status: published
 :idprefix:
 
-== Use as Libary
+== Use as Library
 
 JBake can be used as a library from other software systems allowing you to programmatically bake a site.
 
