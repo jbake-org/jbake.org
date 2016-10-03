@@ -1,0 +1,103 @@
+= Usage
+Jonathan Bullock
+2015-05-20
+:jbake-type: page
+:jbake-tags: documentation
+:jbake-status: published
+:idprefix:
+
+== Usage
+
+=== Bake command
+
+The bake command mixes your source content with your templates and cooks it all into a fully baked web site. You have a number of different ways to execute the bake 
+command to suite your requirements.
+
+Running jbake without arguments is equivalent to running jbake with `-h`, and will display the usage instructions.
+
+----
+$ jbake
+----
+
+The `-b` option without any parameters will assume your source content is in the current working directory and will place the baked output into a directory named `output` 
+in the current directory:
+
+----
+$ jbake -b
+----
+
+NOTE: JBake will create this `output` directory if it does not already exist.
+
+If you specify only the source directory as a parameter then the output directory will automatically be generated inside the source directory:
+
+----
+$ jbake -b <source>
+----
+
+You can also specify your source directory and output directory to enable you to have full control over the baking process:
+
+----
+$ jbake -b <source> <output>
+----
+
+You can even omit the `-b` option as bake is the default command for the command line interface of JBake:
+
+----
+$ jbake <source> <output>
+----
+
+
+=== Initialisation command
+
+The initialisation command will seed your project directory with the required project structure along with a number of sample content files and templates. You do have the 
+option to choose what template engine is used though.
+
+The `-i` option will seed the current working directory and use the http://freemarker.org[Freemarker] template engine by default:
+
+----
+$ jbake -i
+----
+
+You can also specify the directory to initialise by supplying an additional parameter:
+
+----
+$ jbake -i <directory>
+----
+
+To specify the template engine you can use the `-t` option along with another parameter:
+
+----
+$ jbake -i -t <freemarker|groovy|thymeleaf>
+----
+
+NOTE: The template engines available are http://freemarker.org[Freemarker], http://www.groovy-lang.org/[Groovy] and http://www.thymeleaf.org/[Thymeleaf].
+
+=== Server command
+
+The server command will allow you to see what your baked site looks like when served out by a HTTP web server, great for when you want to preview your site using 
+your local web browser.
+
+The `-s` option will start JBake in server mode allowing you to preview your baked site at http://localhost:8820/ by default it will serve out the contents of the 
+`output` directory in the current working directory:
+
+----
+$ jbake -s
+----
+
+NOTE: The local port used can be changed via the configuration file.
+
+You can specify the directory to serve out by supplying an additional parameter:
+
+----
+$ jbake -s <directory>
+----
+
+=== Combining commands
+
+It is possible to combine certain JBake commands together like so:
+
+----
+$ jbake -b -s
+----
+
+This will bake your site first and then serve the output out using the built in server, using the defaults mentioned above.

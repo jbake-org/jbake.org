@@ -1,0 +1,146 @@
+= Project Structure
+Jonathan Bullock
+2013-10-17
+:jbake-type: page
+:jbake-tags: documentation
+:jbake-status: published
+:idprefix:
+
+== Project Structure
+
+Here is an example source directory structure for a project:
+
+----
+.
+|-- assets
+|   |-- favicon.gif
+|   |-- robots.txt
+|   |-- img
+|   |   |-- logo.png
+|   |-- js
+|   |   |-- custom.js
+|   |-- css
+|       |-- style.css
+|
+|-- content
+|   |-- about.html
+|   |-- 2013
+|       |-- 01
+|       |   |-- hello-world.html
+|       |-- 02 
+|           |-- weekly-links-1.ad
+|           |-- weekly-links-2.md
+|
+|-- templates
+|   |-- index.ftl
+|   |-- page.ftl
+|   |-- post.ftl
+|   |-- feed.ftl
+|
+|-- jbake.properties
+----
+
+=== Assets Directory
+
+The assets directory is where you should place your static files such as images, CSS files and JavaScript files etc. These files are copied over to the 
+baked output as is. You can create any directory structure you like in the assets directory and this structure will be maintained when copied.
+
+=== Content Directory
+
+The content directory is where your content files should be placed, these files will be "mixed" with the templates to generate the baked output. Again 
+you can create any directory structure you like for your content, this structure will be maintained when the baked output is created.
+
+The extension of the content file determines what type of content it contains:
+
+* `.html` = raw HTML content
+* `.md` = http://daringfireball.net/projects/markdown/syntax[Markdown] formatted content
+* `.ad` = http://www.methods.co.nz/asciidoc/[AsciiDoc] formatted content
+* `.adoc` = http://www.methods.co.nz/asciidoc/[AsciiDoc] formatted content
+* `.asciidoc` = http://www.methods.co.nz/asciidoc/[AsciiDoc] formatted content
+
+NOTE: JBake uses http://pegdown.org[Pegdown] to support Markdown format and http://asciidoctor.org/[Asciidoctor] to support AsciiDoc format.
+
+=== Templates Directory
+
+The templates directory is where your templates files go, these files are "mixed" with your content files to generate the baked output. You should place your 
+templates into the root of this directory.
+
+The extension of the template file determines the template engine:
+
+* `.ftl` = http://freemarker.org[Freemarker]
+* `.gsp` = http://www.groovy-lang.org/[Groovy's SimpleTemplateEngine]
+* `.groovy` = http://www.groovy-lang.org/[Groovy's SimpleTemplateEngine]
+* `.gxml` = http://www.groovy-lang.org/[Groovy's XmlTemplateEngine]
+* `.thyme` = http://www.thymeleaf.org/[Thymeleaf] 
+* `.html` = http://www.thymeleaf.org/[Thymeleaf] 
+
+It is recommended that you don't mix different template types, try to stick to just 1 type of templates in your project.
+
+For more information on what you can do in each template engine have a look at the example templates provided with JBake and their 
+respective documentation: http://freemarker.org/docs/index.html[Freemarker], http://docs.groovy-lang.org/latest/html/documentation/template-engines.html[Groovy] & 
+http://www.thymeleaf.org/doc/html/Using-Thymeleaf.html[Thymeleaf].
+
+=== Project Configuration
+
+Your project specific configuration is held within the `jbake.properties` file which should be located in the root directory of the project. This file controls 
+how your project is baked.
+
+////
+==== Content Header
+
+Each raw HTML or Markdown content file *must* have a metadata header in it:
+
+----
+title=Weekly Links #2
+date=2013-02-01
+type=post
+tags=weekly links, java
+status=published
+~~~~~~
+----
+
+In the header you *must* have at least the **status** & **type** fields, the rest are optional. The only exception to this rule is if 
+you define a default status in your link:#configuration[configuration] file.
+
+For an AsciiDoc content file the meta-data header section is optional, the JBake meta-data can be included 
+in the AsciiDoc header itself like so:
+
+----
+= Project Structure
+Jonathan Bullock
+2013-10-17
+:jbake-type: page
+:jbake-tags: documentation, manual
+:jbake-status: published
+----
+
+NOTE: JBake related attributes included in the AsciiDoc header require the `jbake-` prefix to avoid any collisions.
+
+===== Status
+
+You have 3 options for the status field:
+
+* `draft` - drafts are rendered along with published posts however they are given a "-draft" suffix, for example `first-post-draft.html`, but not included in the published posts or pages arrays
+* `published`  - published content is rendered and included in the published posts or pages arrays
+* `published-date` - providing content date is equal to or past current date content will be included in published posts or pages array
+
+===== Type
+
+You can choose what template file your content file will be rendered or mixed with by changing the value 
+of the `type` field:
+
+* `type=post` will use post.ftl
+* `type=page` will use page.ftl
+
+==== Expandable Header
+
+You can also include extra meta data in the header that is also exposed to the templates:
+
+----
+summary=This is a summary of the larger post
+----
+
+And access it from the template like so:
+
+`<p>${content.summary}</p>`
+////
