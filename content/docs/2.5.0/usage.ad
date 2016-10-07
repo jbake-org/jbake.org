@@ -71,7 +71,7 @@ $ jbake -i -t <freemarker|groovy|groovy-mte|thymeleaf|jade>
 ----
 
 NOTE: The template engines available are http://freemarker.org[Freemarker], http://www.groovy-lang.org/[Groovy Simple and Markup], http://www.thymeleaf.org/[Thymeleaf] 
-and Jade[https://github.com/neuland/jade4j].
+and https://github.com/neuland/jade4j[Jade].
 
 ==== Example Project Structures
 
