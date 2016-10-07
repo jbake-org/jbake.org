@@ -1,6 +1,6 @@
 = Use as Library
 Jonathan Bullock
-2015-05-20
+2016-10-03
 :jbake-type: page
 :jbake-tags: documentation
 :jbake-status: published
@@ -19,7 +19,7 @@ The main JBake artifact is available from the Maven Central repository, these ar
 <dependency>
 	<groupId>org.jbake</groupId>
 	<artifactId>jbake-core</artifactId>
-	<version>2.4.0</version>
+	<version>2.5.0</version>
 </dependency>
 ----
 
@@ -88,6 +88,17 @@ For Thymeleaf template support add the following dependencies:
 	<groupId>org.thymeleaf.extras</groupId>
 	<artifactId>thymeleaf-extras-conditionalcomments</artifactId>
 	<version>2.1.1.RELEASE</version>
+</dependency>
+----
+
+For Jade template support add the following dependencies:
+
+[source,xml]
+----
+<dependency>
+	<groupId>de.neuland-bfi</groupId>
+	<artifactId>jade4j</artifactId>
+	<version>1.2.3</version>
 </dependency>
 ----
 

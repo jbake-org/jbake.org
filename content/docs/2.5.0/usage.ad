@@ -1,6 +1,6 @@
 = Usage
 Jonathan Bullock
-2015-05-20
+2016-10-03
 :jbake-type: page
 :jbake-tags: documentation
 :jbake-status: published
@@ -67,10 +67,25 @@ $ jbake -i <directory>
 To specify the template engine you can use the `-t` option along with another parameter:
 
 ----
-$ jbake -i -t <freemarker|groovy|thymeleaf>
+$ jbake -i -t <freemarker|groovy|groovy-mte|thymeleaf|jade>
 ----
 
-NOTE: The template engines available are http://freemarker.org[Freemarker], http://www.groovy-lang.org/[Groovy] and http://www.thymeleaf.org/[Thymeleaf].
+NOTE: The template engines available are http://freemarker.org[Freemarker], http://www.groovy-lang.org/[Groovy Simple and Markup], http://www.thymeleaf.org/[Thymeleaf] 
+and Jade[https://github.com/neuland/jade4j].
+
+==== Example Project Structures
+
+The example project structure and sample templates are stored in your JBake installation folder in the files:
+
+* `example_project_freemarker.zip`
+* `example_project_groovy.zip`
+* `example_project_groovy-mte.zip`
+* `example_project_thymeleaf.zip`
+* `example_project_jade.zip`
+
+If you'd like to change the structure or sample templates in some way then you can extract the contents of these files, update 
+as required, then ZIP them back up and replace the original ZIP file with your updated file. Then JBake will use your updated 
+project structure and templates when ever it initialises a new folder from then on.
 
 === Server command
 
@@ -91,6 +106,13 @@ You can specify the directory to serve out by supplying an additional parameter:
 ----
 $ jbake -s <directory>
 ----
+
+==== Watch mode
+
+While the server is running JBake will watch the content folder for any changes (new files as well as changes to existing content) and automatically trigger a bake. So 
+you can refresh your browser to see the changes to the output.
+
+This mode is best used in conjunction with incremental rendering, for details on how to enable this please see the <<persistent_content_store>> configuration option.
 
 === Combining commands
 

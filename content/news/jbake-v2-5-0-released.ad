@@ -1,0 +1,79 @@
+= JBake v2.5.0 released
+Jonathan Bullock
+2016-10-04
+:jbake-type: post
+:jbake-tags: community
+:jbake-status: published
+:category: news
+:idprefix:
+
+== JBake v2.5.0 released
+
+I'm extremely happy (and relieved) to announce that link:/download.html[JBake v2.5.0] has finally been released. This is a big release that includes a number of 
+new features as well as numerous bug fixes and in terms of issues/pull requests closed it is the largest release ever.
+
+Here are the release notes for this version...
+
+*New features:*
+
+* New options from Pegdown 1.6 https://github.com/jbake-org/jbake/pull/299[#299]
+* Support for Cygwin https://github.com/jbake-org/jbake/issues/225[#225]
+* Added support for Groovy's MarkupTemplateEngine https://github.com/jbake-org/jbake/pull/282[#282], https://github.com/jbake-org/jbake/issues/244[#244] & https://github.com/jbake-org/jbake/pull/185[#185]
+* Allow gemPath to be specified for the AsciidoctorEngine https://github.com/jbake-org/jbake/issues/267[#267] & https://github.com/jbake-org/jbake/pull/269[#269]
+* Detailed errors with stack trace of the original problem https://github.com/jbake-org/jbake/pull/219[#219]
+* Last modification date as alternative to date header https://github.com/jbake-org/jbake/pull/217[#217]
+* Added support for pagination https://github.com/jbake-org/jbake/pull/186[#186], https://github.com/jbake-org/jbake/issues/101[#101] & https://github.com/jbake-org/jbake/issues/115[#115]
+* Watch mode added to auto bake when content file changes https://github.com/jbake-org/jbake/issues/253[#253] & https://github.com/jbake-org/jbake/issues/183[#183]
+* Changed default behavior of jbake https://github.com/jbake-org/jbake/pull/236[#236]
+* Added support for Jade template engine https://github.com/jbake-org/jbake/pull/154[#154] & https://github.com/jbake-org/jbake/pull/166[#166]
+* Added support for extensionless URI's https://github.com/jbake-org/jbake/pull/104[#104]
+
+*Bugs fixed:*
+
+* Exec script issues on Mac OS X https://github.com/jbake-org/jbake/issues/307[#307]
+* OrientDB is now correctly shutdown after baking https://github.com/jbake-org/jbake/pull/296[#296]
+* Blog posts get duplicated when `db.store=local` is used https://github.com/jbake-org/jbake/issues/290[#290]
+* Register model extractors for custom types https://github.com/jbake-org/jbake/pull/286[#286]
+* Custom types are broken https://github.com/jbake-org/jbake/issues/283[#283]
+* "alltags" does not contain tags from custom template types https://github.com/jbake-org/jbake/issues/266[#266]
+* Setting asciidoctor.option.template_dirs in jbake.properties causes an error https://github.com/jbake-org/jbake/issues/252[#252]
+* Fixed loading of RenderingTool Providers https://github.com/jbake-org/jbake/pull/248[#248]
+* tag_posts: Contains draft posts as well as published posts https://github.com/jbake-org/jbake/issues/213[#213] & https://github.com/jbake-org/jbake/pull/214[#214]
+* Rendering appears to be broken in master https://github.com/jbake-org/jbake/issues/254[#254]
+* Incremental rendering feature is broken in v2.4.0 https://github.com/jbake-org/jbake/issues/226[#226]
+* Empty output.extension causes NPE https://github.com/jbake-org/jbake/issues/234[#234]
+* Setting output.extension to an empty string causes errors when rendering https://github.com/jbake-org/jbake/issues/233[#233]
+
+*Changes:*
+
+* Update AsciidoctorJ to v1.5.4.1
+* Upgrade Thymeleaf to 3.0 https://github.com/jbake-org/jbake/issues/262[#262] & https://github.com/jbake-org/jbake/pull/263[#263]
+* Pegdown upgraded to v1.6.0 https://github.com/jbake-org/jbake/issues/222[#222]
+* Updated Apache Commons IO to v2.5 https://github.com/jbake-org/jbake/pull/304[#304]
+* Updates to versions of maven dependency and plugins https://github.com/jbake-org/jbake/pull/270[#270]
+* Small code improvements https://github.com/jbake-org/jbake/pull/306[#306]
+* Add tests for DocumentsRenderer https://github.com/jbake-org/jbake/pull/298[#298]
+* Improve error messages when required folders are missing https://github.com/jbake-org/jbake/issues/235[#235]
+* Remove org.jbake.app.SortUtil class as it's no longer used https://github.com/jbake-org/jbake/issues/258[#258] & https://github.com/jbake-org/jbake/pull/239[#239]
+* (GroovyTemplates) Use English Locale in the date formatter https://github.com/jbake-org/jbake/pull/256[#256]
+* Clean up and Asciidoctorj version change https://github.com/jbake-org/jbake/pull/255[#255]
+* Add tests to (most of) the rendering layer https://github.com/jbake-org/jbake/pull/250[#250]
+* Minor refactoring https://github.com/jbake-org/jbake/pull/249[#249]
+* Fixed broken template engine unit tests https://github.com/jbake-org/jbake/pull/247[#247]
+* Superfast baking with Thymeleaf https://github.com/jbake-org/jbake/pull/220[#220]
+* Extracted various rendering modes to allow their customization https://github.com/jbake-org/jbake/pull/138[#138]
+* Preliminary refactoring https://github.com/jbake-org/jbake/pull/135[#135]
+* Simplify and aggregate rendering testing https://github.com/jbake-org/jbake/pull/175[#175]
+
+I'd like to say thanks to everyone who has contributed something to this new release, so in no particular order: https://github.com/ancho[Frank Becker], https://github.com/obfischer[Oliver B. Fischer], 
+https://github.com/jjkavalam[Jobin Jacob Kavalam], https://github.com/ottlinger[P. Ottlinger], https://github.com/jhrom[jhrom], https://github.com/gilbertoca[Gilberto Caetano de Andrade], 
+https://github.com/atao60[atao60], https://github.com/mkobit[Mike Kobit], https://github.com/mtolk[Marco Tolk], https://github.com/abelsromero[Abel Salgado Romero], https://github.com/stevenemrick[Steve E.], 
+https://github.com/bodiam[Erik Pragt], https://github.com/ubala[Uma Bala], https://github.com/aalmiray[Andres Almiray], https://github.com/oliverlietz[Oliver Lietz], https://github.com/jmini[Jérémie Bresson], 
+https://github.com/danielgrycman[Daniel Grycman], https://github.com/SwamWithTurtles[David Simons], https://github.com/thehereward[Hereward], https://github.com/haumacher[Bernhard Haumacher], 
+https://github.com/uli-heller[uli-heller], https://github.com/huima[Heimo Laukkanen], https://github.com/Fisiu[Mariusz Fik], https://github.com/sengopal[Senthilkumar Gopal], 
+https://github.com/cloudtu[cloudtu], https://github.com/mariuszs[Mariusz Smykuła], https://github.com/Riduidel[Nicolas Delsaux], https://github.com/jasondlee[Jason Lee], 
+https://github.com/mbosecke[Mitchell Bösecke], https://github.com/vidakovic[Aleksandar Vidakovic], https://github.com/mwanji[Moandji Ezana] & https://github.com/puredanger[Alex Miller].
+
+This release should also be available via Maven Central, SDKMAN and Homebrew in the next few days.
+
+Download *link:/download.html[JBake v2.5.0]* now and get baking!

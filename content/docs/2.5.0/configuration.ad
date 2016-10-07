@@ -1,6 +1,6 @@
 = Configuration
 Jonathan Bullock
-2014-09-20
+2016-10-03
 :jbake-type: page
 :jbake-tags: documentation
 :jbake-status: published
@@ -281,13 +281,22 @@ This option defines the filename of the ZIP containing the example project that 
 example.project.freemarker=example_project_freemarker.zip
 ----
 
-==== Default Groovy project file
+==== Default Groovy SimpleTemplateEngine project file
 
-This option defines the filename of the ZIP containing the example project that uses Groovy templates
+This option defines the filename of the ZIP containing the example project that uses Groovy SimpleTemplateEngine templates
 
 ----
 # zip file containing example project structure using groovy templates
 example.project.groovy=example_project_groovy.zip
+----
+
+==== Default Groovy MarkupTempateEngine project file
+
+This option defines the filename of the ZIP containing the example project that uses Groovy MarkupTemplateEngine templates
+
+----
+# zip file containing example project structure using groovy markup templates
+example.project.groovy-mte=example_project_groovy-mte.zip
 ----
 
 ==== Default Thymeleaf project file
@@ -357,7 +366,7 @@ date.format=yyyy-MM-dd
 ==== Markdown extensions
 
 This option defines what Markdown extensions are enabled when content created in the Markdown format is rendered. Each extension required should be separated by a comma. 
-For details on what extensions are available please see the http://www.decodified.com/pegdown/api/org/pegdown/Extensions.html[Pegdown API docs].
+For details on what extensions are available please see the https://github.com/sirthias/pegdown[Pegdown docs].
 
 ----
 # comma delimited default markdown extensions
@@ -404,6 +413,15 @@ This option defines the directory that is used to persist the content store to d
 db.path=cache
 ----
 
+==== Thymeleaf Locale
+
+This option defines the locale to be used when rendering Thymeleaf templates.
+
+----
+# thymeleaf locale
+thymeleaf.locale=en
+----
+
 ==== Ignore hidden asset files
 
 This option defines whether hidden asset files should be ignored or not as part of the baking process. When set to `true` it means files such as `.DS_Store` or 
@@ -411,6 +429,41 @@ This option defines whether hidden asset files should be ignored or not as part 
 
 ----
 asset.ignore=false
+----
+
+==== Enable paging on index page
+
+This option enables paging on the index page output when set to `true`. To be used in conjunction with the next option.
+
+----
+index.paginate=false
+----
+
+==== Posts per page
+
+This option defines how many posts will be output on each index page.
+
+----
+index.posts_per_page=10
+----
+
+==== Enable extensionless URI's
+
+This option enables extensionless URI's, so instead of /blog/2014/03/26/post.html JBake will output to /blog/2014/03/26/post/index.html allowing you to 
+refer to the URI without an extension. 
+
+----
+uri.noExtension=false
+----
+
+NOTE: Requires the following option to be set to define a prefix.
+
+==== Enable extensionless URI's prefix
+
+This option defines the prefix to apply extensionless URI's for.
+
+----
+uri.noExtension.prefix=/blog/
 ----
 
 === Custom configuration options

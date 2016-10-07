@@ -1,6 +1,6 @@
 = Content Files
 Jonathan Bullock
-2015-05-24
+2016-10-03
 :jbake-type: page
 :jbake-tags: documentation
 :jbake-status: published
@@ -25,6 +25,8 @@ status=published
 
 In the header you *must* have at least the **status** & **type** fields, the rest are optional. The only exception to this rule is if 
 you define a default status in your link:#configuration[configuration] file.
+
+If you leave the **date** field out then the files last modified timestamp will be used instead.
 
 For an AsciiDoc formatted content file the metadata header section is optional, the JBake metadata can be defined in the AsciiDoc document header itself like so:
 

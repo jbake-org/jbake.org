@@ -1,6 +1,6 @@
 = Project Structure
 Jonathan Bullock
-2013-10-17
+2016-10-03
 :jbake-type: page
 :jbake-tags: documentation
 :jbake-status: published
@@ -71,76 +71,19 @@ The extension of the template file determines the template engine:
 * `.gsp` = http://www.groovy-lang.org/[Groovy's SimpleTemplateEngine]
 * `.groovy` = http://www.groovy-lang.org/[Groovy's SimpleTemplateEngine]
 * `.gxml` = http://www.groovy-lang.org/[Groovy's XmlTemplateEngine]
+* `.tpl = http://www.groovy-lang.org/[Groovy's MarkupTemplateEngine]
 * `.thyme` = http://www.thymeleaf.org/[Thymeleaf] 
-* `.html` = http://www.thymeleaf.org/[Thymeleaf] 
+* `.html` = http://www.thymeleaf.org/[Thymeleaf]
+* `.jade` = https://github.com/neuland/jade4j[Jade]
+
 
 It is recommended that you don't mix different template types, try to stick to just 1 type of templates in your project.
 
 For more information on what you can do in each template engine have a look at the example templates provided with JBake and their 
-respective documentation: http://freemarker.org/docs/index.html[Freemarker], http://docs.groovy-lang.org/latest/html/documentation/template-engines.html[Groovy] & 
-http://www.thymeleaf.org/doc/html/Using-Thymeleaf.html[Thymeleaf].
+respective documentation: http://freemarker.org/docs/index.html[Freemarker], http://docs.groovy-lang.org/latest/html/documentation/template-engines.html[Groovy], 
+http://www.thymeleaf.org/doc/html/Using-Thymeleaf.html[Thymeleaf] & https://github.com/neuland/jade4j[Jade].
 
 === Project Configuration
 
 Your project specific configuration is held within the `jbake.properties` file which should be located in the root directory of the project. This file controls 
 how your project is baked.
-
-////
-==== Content Header
-
-Each raw HTML or Markdown content file *must* have a metadata header in it:
-
-----
-title=Weekly Links #2
-date=2013-02-01
-type=post
-tags=weekly links, java
-status=published
-~~~~~~
-----
-
-In the header you *must* have at least the **status** & **type** fields, the rest are optional. The only exception to this rule is if 
-you define a default status in your link:#configuration[configuration] file.
-
-For an AsciiDoc content file the meta-data header section is optional, the JBake meta-data can be included 
-in the AsciiDoc header itself like so:
-
-----
-= Project Structure
-Jonathan Bullock
-2013-10-17
-:jbake-type: page
-:jbake-tags: documentation, manual
-:jbake-status: published
-----
-
-NOTE: JBake related attributes included in the AsciiDoc header require the `jbake-` prefix to avoid any collisions.
-
-===== Status
-
-You have 3 options for the status field:
-
-* `draft` - drafts are rendered along with published posts however they are given a "-draft" suffix, for example `first-post-draft.html`, but not included in the published posts or pages arrays
-* `published`  - published content is rendered and included in the published posts or pages arrays
-* `published-date` - providing content date is equal to or past current date content will be included in published posts or pages array
-
-===== Type
-
-You can choose what template file your content file will be rendered or mixed with by changing the value 
-of the `type` field:
-
-* `type=post` will use post.ftl
-* `type=page` will use page.ftl
-
-==== Expandable Header
-
-You can also include extra meta data in the header that is also exposed to the templates:
-
-----
-summary=This is a summary of the larger post
-----
-
-And access it from the template like so:
-
-`<p>${content.summary}</p>`
-////

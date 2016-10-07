@@ -10,7 +10,7 @@
         <a class="btn btn-large btn-success" href="/download.html">Download</a>
         <p></p>
         <div class="alert alert-info">
-			<strong>Latest News:</strong> <a href="/news/jre-support-for-jbake.html">JRE Support for JBake</a>
+			<strong>Latest News:</strong> <a href="/news/jbake-v2-5-0-released.html">JBake v2.5.0 released</a>
 		</div>
       </div>
 
@@ -22,7 +22,7 @@
           <p>Source available on <a href="http://github.com">GitHub</a>, licensed under MIT License</p>
           
           <h4>Content Formatting</h4>
-          <p>Supports <a href="http://asciidoc.org/">AsciiDoc</a>, <a href="http://daringfireball.net/projects/markdown/">Markdown</a> and good old HTML formatted content.</p>
+          <p>Supports <a href="http://asciidoctor.org/">AsciiDoc</a>, <a href="http://daringfireball.net/projects/markdown/">Markdown</a> and good old HTML formatted content.</p>
 
           <h4>Open Structure</h4>
           <p>Structure your content any way you see fit.</p>
@@ -35,7 +35,7 @@
         </div>
         <div class="span6">
           <h4>Template Support</h4>
-          <p><a href="http://freemarker.org/">Freemarker</a>, <a href="http://www.groovy-lang.org/">Groovy</a> and <a href="http://www.thymeleaf.org/">Thymeleaf</a> based templates & scripting support.</p>
+          <p><a href="http://freemarker.org/">Freemarker</a>, <a href="http://www.groovy-lang.org/">Groovy</a>, <a href="http://www.thymeleaf.org/">Thymeleaf</a> and <a href="https://github.com/neuland/jade4j">Jade</a> based templates & scripting support.</p>
           
           <h4>CSS Framework Support</h4>
           <p>Easily integrate CSS frameworks such as <a href="http://getbootstrap.com/">Bootstrap</a> and <a href="http://foundation.zurb.com/">Foundation</a>.</p>
