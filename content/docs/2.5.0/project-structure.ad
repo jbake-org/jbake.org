@@ -71,7 +71,7 @@ The extension of the template file determines the template engine:
 * `.gsp` = http://www.groovy-lang.org/[Groovy's SimpleTemplateEngine]
 * `.groovy` = http://www.groovy-lang.org/[Groovy's SimpleTemplateEngine]
 * `.gxml` = http://www.groovy-lang.org/[Groovy's XmlTemplateEngine]
-* `.tpl = http://www.groovy-lang.org/[Groovy's MarkupTemplateEngine]
+* `.tpl` = http://www.groovy-lang.org/[Groovy's MarkupTemplateEngine]
 * `.thyme` = http://www.thymeleaf.org/[Thymeleaf] 
 * `.html` = http://www.thymeleaf.org/[Thymeleaf]
 * `.jade` = https://github.com/neuland/jade4j[Jade]
