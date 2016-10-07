@@ -40,7 +40,7 @@ You can also specify your source directory and output directory to enable you to
 $ jbake -b <source> <output>
 ----
 
-You can even omit the `-b` option as bake is the default command for the command line interface of JBake:
+You can even omit the `-b` option if you supply the source directory and output directory parameters:
 
 ----
 $ jbake <source> <output>
