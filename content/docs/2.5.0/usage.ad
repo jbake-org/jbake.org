@@ -8,16 +8,16 @@ Jonathan Bullock
 
 == Usage
 
-=== Bake command
-
-The bake command mixes your source content with your templates and cooks it all into a fully baked web site. You have a number of different ways to execute the bake 
-command to suite your requirements.
-
 Running jbake without arguments is equivalent to running jbake with `-h`, and will display the usage instructions.
 
 ----
 $ jbake
 ----
+
+=== Bake command
+
+The bake command mixes your source content with your templates and cooks it all into a fully baked web site. You have a number of different ways to execute the bake 
+command to suite your requirements.
 
 The `-b` option without any parameters will assume your source content is in the current working directory and will place the baked output into a directory named `output` 
 in the current directory:
