@@ -1,14 +1,3 @@
-	<!--<div class="masthead">
-		<ul class="nav nav-pills pull-right">
-			<li><a href="/">Home</a></li>
-			<li><a href="/news/">News</a></li>
-			<li><a href="/docs/">Documentation</a></li>
-			<li><a href="/changelog.html">Changelog</a></li>
-			<li><a href="/community.html">Community</a></li>
-			<li><a href="http://github.com/jonbullock/JBake">Source</a></li>
-        </ul>
-        <h3 class="muted">JBake</h3>
-	</div>-->
 	<div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
           <div class="container">
@@ -23,16 +12,6 @@
               <ul class="nav">
                 <li><a href="/news/">News</a></li>
                 <li><a href="/download.html">Download</a></li>
-                <!--<li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation <b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                  	<li><a href="/docs/">Index</a></li>
-                    <li><a href="/docs/getting-started.html">Getting Started</a></li>
-                    <li><a href="/docs/project-structure.html">Project Structure</a></li>
-                    <li><a href="/docs/data-variables.html">Data Variables</a></li>
-                    <li><a href="/docs/configuration.html">Configuration</a></li>
-                  </ul>
-                </li>-->
                 <li><a href="/docs/">Documentation</a></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Development <b class="caret"></b></a>
