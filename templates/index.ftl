@@ -10,7 +10,7 @@
         <a class="btn btn-large btn-success" href="/download.html">Download</a>
         <p></p>
         <div class="alert alert-info">
-			<strong>Latest News:</strong> <a href="/news/jbake-v2-5-0-released.html">JBake v2.5.0 released</a>
+			<strong>Latest News:</strong> <a href="/news/interview-on-cynical-developer-podcast.html">Interview on Cynical Developer podcast</a>
 		</div>
       </div>
 

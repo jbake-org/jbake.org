@@ -1,0 +1,18 @@
+= Interview on Cynical Developer podcast
+Jonathan Bullock
+2016-12-18
+:jbake-type: post
+:jbake-tags: jbake, podcast, interview, cynical developer, baking
+:jbake-status: published
+:category: news
+:idprefix:
+
+== Interview on Cynical Developer podcast
+
+I got the opportunity recently to be interviewed on the http://cynicaldeveloper.com/[Cynical Developer] http://cynicaldeveloper.com/feed/podcast[podcast] by 
+James Studdart who I discovered through the local https://www.meetup.com/Chester-Devs/[Chester Devs] group.
+
+The interview covered what static site generation is, where it came from, why it's called baking, what the benefits are of static sites and how JBake fits into it all.
+
+You can listen to the interview http://cynicaldeveloper.com/podcast/4/[here] and make sure you subscribe to the http://cynicaldeveloper.com/feed/podcast[podcast] as well 
+to find out more about a range of development technologies.
