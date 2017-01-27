@@ -51,6 +51,8 @@ This predefined template has the following extra data variables available to it 
 
 - `nextFileName` = if this variable exists it provides the filename of the next page
 - `previousFileName` = if this variable exists it provides the filename of the previous page
+- `numberOfPages` = if this variable exists it provides the total number of pages (_since 2.5.1_)
+- `currentPageNumber` = if this variable exists it provides the current number of the page (_since 2.5.1_)
 
 These variables allow you provide next and previous links in your template to navigate through the pages.
 
