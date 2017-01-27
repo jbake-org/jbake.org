@@ -1,0 +1,73 @@
+= Quickstart Guide
+Jonathan Bullock
+2016-10-03
+:jbake-type: page
+:jbake-tags: documentation
+:jbake-status: published
+:idprefix:
+
+== Quickstart Guide
+
+=== Setup
+
+First link:/download.html[download JBake] and follow the <<installation>> instructions. After that open a command prompt and run the following command to make 
+sure everything is working:
+
+----
+jbake -h
+----
+
+You should then see the following output:
+
+----
+JBake v2.5.0 (2015-05-30 17:56) [http://jbake.org]
+
+Usage: jbake ...
+----
+
+=== Create a Project
+
+To get up and running quickly with JBake you can use it's example project structure along with sample templates as a starting point for you project or site. To do so 
+first you will need to create a new directory and change into it:
+
+----
+$ mkdir project
+$ cd project
+----
+
+Then you can use JBake to initialise this directory with it's example project structure and templates by executing the following command:
+
+----
+$ jbake -i
+----
+
+NOTE: This will use http://freemarker.org[Freemarker] templates by default, see the <<usage>> section on how to specify the template engine you prefer.
+
+=== Bake
+
+Once you have added some real content to your project and customised your templates you can bake your project by executing the following commands:	
+
+----
+$ cd project
+$ jbake -b
+----
+
+NOTE: This will place the baked project into a directory called `output` in the current directory by default.
+
+=== Preview
+
+You can then see what your baked project looks like immediately by running JBake in server mode:
+
+----
+$ cd project
+$ jbake -s
+
+JBake v2.5.0 (2016-10-03 17:56) [http://jbake.org]
+
+Serving out contents of: [output] on http://localhost:8820/
+(To stop server hit CTRL-C)
+----
+
+You can then preview it in your browser at http://localhost:8820.
+
+That's all there is to it, you can go from nothing to a fully baked site in minutes.

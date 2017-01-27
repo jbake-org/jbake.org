@@ -1,0 +1,46 @@
+= Installation
+Jonathan Bullock
+2016-10-03
+:jbake-type: page
+:jbake-tags: documentation
+:jbake-status: published
+:idprefix:
+
+== Installation
+
+=== Prerequisites
+
+The only prerequisite for JBake is that you have a http://www.oracle.com/technetwork/java/javase/downloads/index.html[Java 6+ JRE] installed and that 
+the `java` command is available in your path.
+
+=== Binary Distribution
+
+. link:/download.html[Download] the main binary distribution and unzip JBake into a folder on your hard disk, this folder will be known as `JBAKE_HOME`
+. Add a entry for `JBAKE_HOME/bin` to your path environment variable
+. Open a command prompt and run `jbake -h` (or `jbake.bat -h` if you are on Windows) to confirm everything works, you should see usage help text
+
+----
+JBake v2.5.0 (2016-10-03 17:56) [http://jbake.org]
+
+Usage: jbake ...
+----
+
+=== SDKMAN
+
+You can also install JBake via http://sdkman.io//[SDKMAN] (Software Development Kit Manager - formerly known as GVM) if you are running a Bash based platform (Mac OSX, Unix, Linux, Cygwin or Solaris etc.).
+SDKMAN will take care of downloading the latest distribution, installing it and configuring your environment for you. 
+
+After you have SDKMAN installed enter the following command to install the latest version of JBake:
+
+----
+$ sdk install jbake
+----
+
+=== Homebrew
+
+You can also install JBake via http://brew.sh/[Homebrew] if you are running OS X. After you have installed Homebrew enter the following command to install the 
+latest version of JBake:
+
+----
+$ brew install jbake
+----
