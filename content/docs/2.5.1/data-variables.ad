@@ -1,6 +1,6 @@
 = Data Variables
 Jonathan Bullock
-2016-10-03
+2017-01-30
 :jbake-type: page
 :jbake-tags: documentation
 :jbake-status: published
@@ -64,3 +64,4 @@ This predefined template has the following extra data available to it:
 
 - `tag` = tag being rendered
 - `tag_posts` = collection of published posts for tag in date descending order
+- `tagged_documents` = collection of published documents (regardless of type) for tag in date descending order
