@@ -1,6 +1,6 @@
 = Quickstart Guide
 Jonathan Bullock
-2016-10-03
+2017-01-30
 :jbake-type: page
 :jbake-tags: documentation
 :jbake-status: published
@@ -20,7 +20,7 @@ jbake -h
 You should then see the following output:
 
 ----
-JBake v2.5.0 (2015-05-30 17:56) [http://jbake.org]
+JBake v2.5.1 (2017-01-30 17:56) [http://jbake.org]
 
 Usage: jbake ...
 ----
@@ -62,7 +62,7 @@ You can then see what your baked project looks like immediately by running JBake
 $ cd project
 $ jbake -s
 
-JBake v2.5.0 (2016-10-03 17:56) [http://jbake.org]
+JBake v2.5.1 (2017-01-30 17:56) [http://jbake.org]
 
 Serving out contents of: [output] on http://localhost:8820/
 (To stop server hit CTRL-C)
