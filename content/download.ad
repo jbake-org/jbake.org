@@ -1,6 +1,6 @@
 = Download
 Jonathan Bullock
-2016-10-03
+2017-01-31
 :jbake-type: page
 :jbake-tags: download
 :jbake-status: published
@@ -8,10 +8,12 @@ Jonathan Bullock
 
 == Latest Distribution
 
+The binary distribution runs on Windows, Linux and Mac and only requires a JRE (6 and above) to run.
+
 [options="header"]
 |===
 |Version |SHA1 |Link |Release Notes
-|v2.5.0 |13f7a2b9fd064fcfe16a6862947364bb1c62d3d9 |http://hash.to/5HQ[Download] 40MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.5.0[Changelog]
+|v2.5.1 |91c00c4eb94a25ca11b6f72792e8ed02707f57bc |http://hash.to/5tc[Download] 40MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.5.1[Changelog]
 |===
 
 == SDKMAN
@@ -47,7 +49,7 @@ JBake artifacts are available from the Maven central repository:
 <dependency>
 	<groupId>org.jbake</groupId>
 	<artifactId>jbake-core</artifactId>
-	<version>2.5.0</version>
+	<version>2.5.1</version>
 </dependency>
 ---- 
 
@@ -56,6 +58,7 @@ JBake artifacts are available from the Maven central repository:
 [options="header"]
 |===
 |Version |SHA1 |Link |Release Notes
+|v2.5.0 |13f7a2b9fd064fcfe16a6862947364bb1c62d3d9 |http://hash.to/5HQ[Download] 40MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.5.0[Changelog]
 |v2.4.0 |e53633c6cd6ba714a8876cadc02fe41e7790c5db |http://hash.to/11M[Download] 39.1MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.4.0[Changelog]
 |v2.3.2 |8daa2603b0277ee92ba216cf1d7e2d706f489382 |http://hash.to/HM[Download] 65.3MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.3.2+is%3Aclosed[Changelog]
 |v2.3.1 |b429a89a66c021a70394e0207d71a703de58d85b |http://hash.to/AE[Download] 42.4MB |https://github.com/jbake-org/jbake/issues?milestone=8&state=closed[Changelog]
