@@ -1,0 +1,48 @@
+= JBake v2.5.1 released
+Jonathan Bullock
+2017-02-01
+:jbake-type: post
+:jbake-tags: community
+:jbake-status: published
+:category: news
+:idprefix:
+
+== JBake v2.5.1 released
+
+I'm happy to announce that link:/download.html[JBake v2.5.1] has been released. This is a minor release that includes a number of bug fixes, some small enhancements and 
+a couple of changes.
+
+Here are the release notes for this version...
+
+*Bugs fixed:*
+
+* When a directory has a dot (".") in it, but the filename doesn't, FileNotFoundException results. https://github.com/jbake-org/jbake/issues/300[#300]
+* Index variables don‘t exist despite enabled pagination https://github.com/jbake-org/jbake/issues/310[#310] & https://github.com/jbake-org/jbake/pull/312[#312]
+* JBake JettyServer doesn't work with custom destination https://github.com/jbake-org/jbake/issues/314[#314] & https://github.com/jbake-org/jbake/pull/316[#316]
+* Regression on issue #181 https://github.com/jbake-org/jbake/issues/315[#315]
+* Tag pages are created for documents of type post only https://github.com/jbake-org/jbake/pull/323[#323]
+* Index template is not rendered regardless of config if no content of type post exists in site/project https://github.com/jbake-org/jbake/issues/325[#325]
+* jbake: "-b" is not the default action any more https://github.com/jbake-org/jbake/issues/331[#331]
+* jbake-master: "jbake -b" shows java.util.NoSuchElementException: 'index.paginate'... https://github.com/jbake-org/jbake/issues/332[#332] & https://github.com/jbake-org/jbake/pull/336[#336]
+* Bake fails on jbake.org due to duplicate SHA1 hashes in index https://github.com/jbake-org/jbake/issues/339[#339]
+
+*New features:*
+
+* Add support for symbolically linked launcher https://github.com/jbake-org/jbake/pull/311[#311]
+* Expand allowed characters for template type name https://github.com/jbake-org/jbake/issues/317[#317]
+* Added new data model variable 'tagged_documents' https://github.com/jbake-org/jbake/pull/323[#323]
+* jbake-master: realpath: command not found on Ubuntu-14.04 https://github.com/jbake-org/jbake/issues/329[#329] & https://github.com/jbake-org/jbake/issues/330[#330]
+
+*Changes:*
+
+* Ignore javadoc error on package https://github.com/jbake-org/jbake/pull/309[#309]
+* Use StringBuilder more consistently https://github.com/jbake-org/jbake/pull/328[#328]
+
+I'd like to say thanks to everyone who has contributed something to this new release, so in no particular order: https://github.com/ancho[Frank Becker], 
+https://github.com/uli-heller[uli-heller], https://github.com/ottlinger[P. Ottlinger], https://github.com/oliverlietz[Oliver Lietz], 
+https://github.com/beikov[Christian Beikov], https://github.com/jmcgarr[Mike McGarr], https://github.com/gilbertoca[Gilberto Caetano de Andrade], 
+https://github.com/lamvak[lamvak], https://github.com/nerdcoding[Tobias] and https://github.com/mtnygard[Michael Nygard].
+
+This release should also be available via Maven Central, SDKMAN and Homebrew in the next few days.
+
+Download *link:/download.html[JBake v2.5.1]* now and get baking!
