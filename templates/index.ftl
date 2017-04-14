@@ -34,6 +34,9 @@
           <p>View your draft content before publishing it and making it available to the world.</p>
         </div>
         <div class="span6">
+          <h4>Self contained</h4>
+          <p>Binary distribution contains everything you need apart from a JRE, no complicated environment setup with 3rd party dependencies.</p>
+        
           <h4>Template Support</h4>
           <p><a href="http://freemarker.org/">Freemarker</a>, <a href="http://www.groovy-lang.org/">Groovy</a>, <a href="http://www.thymeleaf.org/">Thymeleaf</a> and <a href="https://github.com/neuland/jade4j">Jade</a> based templates & scripting support.</p>
           
