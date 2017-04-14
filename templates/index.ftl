@@ -19,6 +19,9 @@
           <h4>Open Source</h4>
           <p>Source available on <a href="http://github.com">GitHub</a>, licensed under MIT License</p>
           
+          <h4>Cross platform support</h4>
+          <p>The binary distribution runs on Windows, Unix/Linux and Mac OS X.</p>
+          
           <h4>Content Formatting</h4>
           <p>Supports <a href="http://asciidoctor.org/">AsciiDoc</a>, <a href="http://daringfireball.net/projects/markdown/">Markdown</a> and good old HTML formatted content.</p>
 
