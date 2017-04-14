@@ -3,9 +3,7 @@
 	<#include "menu.ftl">
 
       <div class="jumbotron">
-        <!--<h1>Bake your own site!</h1>-->
-        <h1>"Jekyll of the JVM"</h1>
-        <p class="lead text-right">- <em>Dan Allen</em></p>
+        <h1>Bake your own site!</h1>
         <p class="lead">JBake is a Java based, open source, static site/blog generator for developers & designers</p>
         <a class="btn btn-large btn-success" href="/download.html">Download</a>
         <p></p>
