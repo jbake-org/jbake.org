@@ -22,7 +22,7 @@
           <h4>Cross platform support</h4>
           <p>The binary distribution runs on Windows, Unix/Linux and Mac OS X.</p>
           
-          <h4>Content Formatting</h4>
+          <h4>Content Formats</h4>
           <p>Supports <a href="http://asciidoctor.org/">AsciiDoc</a>, <a href="http://daringfireball.net/projects/markdown/">Markdown</a> and good old HTML formatted content.</p>
 
           <h4>Open Structure</h4>
@@ -37,7 +37,10 @@
         <div class="span6">
           <h4>Self contained</h4>
           <p>Binary distribution contains everything you need apart from a JRE, no complicated environment setup with 3rd party dependencies.</p>
-        
+
+          <h4>Build tools</h4>
+          <p>Plugins available for <a href="https://gradle.org/">Gradle</a>, <a href="https://maven.apache.org/">Maven</a> and <a href="http://sbuild.org/">SBuild</a>.</p>
+
           <h4>Template Support</h4>
           <p><a href="http://freemarker.org/">Freemarker</a>, <a href="http://www.groovy-lang.org/">Groovy</a>, <a href="http://www.thymeleaf.org/">Thymeleaf</a> and <a href="https://github.com/neuland/jade4j">Jade</a> based templates & scripting support.</p>
           
