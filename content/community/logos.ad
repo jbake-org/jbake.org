@@ -1,0 +1,18 @@
+= Logos for JBake
+Jonathan Bullock
+2017-04-20
+:jbake-type: page
+:jbake-tags: community, logos
+:jbake-status: published
+:idprefix:
+
+Here is the JBake logo in various resolutions for use in materials such as presentations.
+
+[cols="50,50", options="header"]
+|===
+|Size |Link 
+|75x75 px  |link:/img/jbake_75x75.png[open]
+|128x128 px  |link:/img/jbake_128x128.png[open]
+|1024x1024 px  |link:/img/jbake_1024x1024.png[open]
+|===
+
