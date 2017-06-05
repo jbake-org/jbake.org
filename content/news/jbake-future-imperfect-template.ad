@@ -1,0 +1,34 @@
+= New HTML5 based Template - JBake Future Imperfect
+Manik Magar
+2017-06-02
+:jbake-type: post
+:jbake-tags: community
+:jbake-status: published
+:category: news
+:idprefix:
+
+== New HTML5 based Template - JBake Future Imperfect
+
+I am happy to announce that, I have ported a beautiful HTML5 based template for JBake.
+
+Here is how the baked site looks like:
+
+image::https://github.com/manikmagar/jbake-future-imperfect-template/blob/master/jbake_future_imperfect_blog.png?raw=true[JBake Future Imperfect]
+
+*Demo*: https://manikmagar.github.io/jbake-future-imperfect-template/[See this^]
+
+## Features
+This template provides many features out of the box i.e. no need to modify any template files. Just configure the jbake.properties and bake your site.
+
+* Disqus comments
+* Google Analytics
+* Estimated Time to read for posts
+* Social Links
+* Configurable Site menus
+* Featured Images for posts
+* 404 error handling on Github/Gitlab pages
+* Social Share menu on posts
+
+To know more about installing, configuring and using this template, check the *https://github.com/manikmagar/jbake-future-imperfect-template[github repository^]*.
+
+Hope you will like it. Keep Baking!
