@@ -110,7 +110,7 @@ try {
 	Oven oven = new Oven(source, destination, true); //<3>
 	oven.setupPaths(); //<4>
 	oven.bake(); //<5>
-} catch (JBakeException e) { //<6>
+} catch (Exception e) { //<6>
 	// do something with exception here
 }
 ----
@@ -120,7 +120,7 @@ try {
 <3> The third parameter defines if the local cache (persistent content store) should be cleared and therefore trigger a full bake
 <4> This method checks the paths supplied exist and content the required elements
 <5> This method performs the actual baking
-<6> If any exceptions are thrown during the path checks or baking they are wrapped in a JBakeException
+<6> If any exceptions are thrown during the path checks or baking they are wrapped in a Exception
 
 === Logging
 
