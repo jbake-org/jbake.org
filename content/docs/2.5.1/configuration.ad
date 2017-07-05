@@ -319,6 +319,30 @@ asciidoctor.attributes=source-highlighter=prettify
 
 The value for this configuration option is a comma separated list of key-value pairs. The default value defines Prettify as the source highlighter to be used.
 
+==== Asciidoctor options
+
+Define options passed to asciidoctor.
+
+===== gem path
+
+Configure the http://asciidoctor.org/docs/asciidoctorj/#gem_path[gem path] to load gems from an external folder.
+
+----
+asciidoctor.option.gemPath=/var/lib/gems/2.1.0
+----
+
+NOTE: To get the current gem path from your environment execute `gem environment gempath`
+
+===== requires
+
+To configure required libraries add the following to your config file.
+
+----
+asciidoctor.option.requires=asciidoctor-diagram
+----
+
+NOTE: You can add multiple libraries as comma separated list
+
 ==== Export JBake configuration to Asciidoctor content
 
 This option defines if the JBake configuration options should be exported to Asciidoctor as attributes so they are accessible from within AsciiDoc formatted content.
