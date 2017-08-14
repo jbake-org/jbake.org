@@ -9,12 +9,12 @@ Jonathan Bullock
 == Configuration
 
 The `jbake.properties` file (or legacy file custom.properties) allows you to customise the configuration of JBake for your project.
-For example you can change the name of the folder that stores your content or templates, decide whether to generate a 
-RSS feed or not. The following sections detail the complete list of configuration options available to you. JBake ships 
-with a default configuration file (https://github.com/jbake-org/jbake/blob/master/src/main/resources/default.properties[default.properties]) 
+For example you can change the name of the folder that stores your content or templates, decide whether to generate a
+RSS feed or not. The following sections detail the complete list of configuration options available to you. JBake ships
+with a default configuration file (https://github.com/jbake-org/jbake/blob/master/src/main/resources/default.properties[default.properties])
 that defines the defaults for these options however you can choose to override these by defining options in your `jbake.properties` file.
 
-So in the absence of these options in your jbake.properties the default value provided by JBake will be used. 
+So in the absence of these options in your jbake.properties the default value provided by JBake will be used.
 
 You can also comment out any configuration options by adding a hash or number sign as the first character on a line in your file.
 
@@ -230,7 +230,7 @@ This option defines whether the tag value should be santized before being used a
 
 ----
 # sanitize tag value before it is used as filename (i.e. replace spaces with hyphens)
-tag.sanitize=false 
+tag.sanitize=false
 ----
 
 When this option is set to true it will mean a tag value of `west wing` will be changed to `west-wing`, the tag file generated will be `west-wing.html`.
@@ -243,7 +243,7 @@ This option defines the character encoding that should be used when rendering fi
 # character encoding MIME name used for rendering.
 # use one of http://www.iana.org/assignments/character-sets/character-sets.xhtml
 render.encoding=UTF-8
----- 
+----
 
 ==== Default output file extension
 
@@ -319,6 +319,12 @@ asciidoctor.attributes=source-highlighter=prettify
 
 The value for this configuration option is a comma separated list of key-value pairs. The default value defines Prettify as the source highlighter to be used.
 
+To use asciidoc http://asciidoctor.org/docs/user-manual/#admonition-icons[admonition-icons^], `:icons: font` attribute needs to be added to document header. Instead of adding it to every document, it can be added/appended to the asciidoctor.attributes property.
+----
+#default asciidoctor options
+asciidoctor.attributes=icons=font
+----
+
 ==== Asciidoctor options
 
 Define options passed to asciidoctor.
@@ -379,17 +385,17 @@ NOTE: By default this option is disabled in default.properties
 
 This option defines the default date format that is used when JBake tries to parse the date defined in the metadata header of content files.
 
-The format is specified using pattern letters, details of what is available can be found in the 
+The format is specified using pattern letters, details of what is available can be found in the
 https://docs.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html[Java API docs].
 
 ----
 # default date format used in content files
 date.format=yyyy-MM-dd
----- 
+----
 
 ==== Markdown extensions
 
-This option defines what Markdown extensions are enabled when content created in the Markdown format is rendered. Each extension required should be separated by a comma. 
+This option defines what Markdown extensions are enabled when content created in the Markdown format is rendered. Each extension required should be separated by a comma.
 For details on what extensions are available please see the https://github.com/sirthias/pegdown[Pegdown docs].
 
 ----
@@ -406,7 +412,7 @@ markdown.extensions=ALL,-HARDWRAPS
 
 ==== Markdown parsing timeout
 
-This option defines the parsing timeout value in milliseconds for the Pegdown parser that is used for Markdown format support. This value limits the time spent 
+This option defines the parsing timeout value in milliseconds for the Pegdown parser that is used for Markdown format support. This value limits the time spent
 parsing each piece of Markdown content.
 
 ----
@@ -416,8 +422,8 @@ markdown.maxParsingTimeInMillis=2000
 
 ==== Persistent content store
 
-This option defines whether the content store built while parsing your content files is persisted to disk or not. When it is persisted to disk the next time you 
-perform a bake only those content files that have changed will be rendered speeding up the process. When it is not persisted to disk, i.e. kept in memory, a full bake 
+This option defines whether the content store built while parsing your content files is persisted to disk or not. When it is persisted to disk the next time you
+perform a bake only those content files that have changed will be rendered speeding up the process. When it is not persisted to disk, i.e. kept in memory, a full bake
 of all content is performed every time.
 
 ----
@@ -448,7 +454,7 @@ thymeleaf.locale=en
 
 ==== Ignore hidden asset files
 
-This option defines whether hidden asset files should be ignored or not as part of the baking process. When set to `true` it means files such as `.DS_Store` or 
+This option defines whether hidden asset files should be ignored or not as part of the baking process. When set to `true` it means files such as `.DS_Store` or
 `desktop.ini` won't be included in your baked output.
 
 ----
@@ -473,8 +479,8 @@ index.posts_per_page=10
 
 ==== Enable extensionless URI's
 
-This option enables extensionless URI's, so instead of /blog/2014/03/26/post.html JBake will output to /blog/2014/03/26/post/index.html allowing you to 
-refer to the URI without an extension. 
+This option enables extensionless URI's, so instead of /blog/2014/03/26/post.html JBake will output to /blog/2014/03/26/post/index.html allowing you to
+refer to the URI without an extension.
 
 ----
 uri.noExtension=false
@@ -492,7 +498,7 @@ uri.noExtension.prefix=/blog/
 
 === Custom configuration options
 
-You can also define additional options in your `jbake.properties` file for use in your project, especially in your template files. A great example is provided in the 
+You can also define additional options in your `jbake.properties` file for use in your project, especially in your template files. A great example is provided in the
 sample projects that have an option called `site.host` which defines the host URL for the site:
 
 ----
