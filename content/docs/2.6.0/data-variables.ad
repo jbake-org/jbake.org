@@ -25,6 +25,9 @@ These data variables are available to all templates regardless.
 - `alltags` = collection of all tags used across all published content
 - `content.rootpath` = path to root of project (to be used for relative path to assets)
 - `config.[option]` = map of configuration data
+- `db` = alias for direct access to https://github.com/jbake-org/jbake/blob/master/src/main/java/org/jbake/app/ContentStore.java[ContentStore] class
+
+WARNING: The `db` variable provides direct access to the methods of the class which are subject to change without warning!
 
 All the configuration options are available with any `.` in the property being replaced with `_`.
 For example `template.index.file=index.ftl` is available via `config.template_index_file`.
