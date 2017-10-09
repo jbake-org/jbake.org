@@ -1,6 +1,6 @@
 = Configuration
 Jonathan Bullock
-2016-10-03
+2017-10-09
 :jbake-type: page
 :jbake-tags: documentation
 :jbake-status: published
@@ -420,6 +420,16 @@ This option defines the locale to be used when rendering Thymeleaf templates.
 ----
 # thymeleaf locale
 thymeleaf.locale=en
+----
+
+==== Thymeleaf Template Mode
+
+This option defines the http://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#textual-template-modes[Thymeleaf Template Mode] to be used when rendering 
+Thymeleaf templates for the specified `type` which is set in the content files themselves, e.g. `type=page`. Defaults to `HTML` if not set.
+
+----
+# thymeleaf template mode
+template_<type>_thymeleaf_mode=HTML
 ----
 
 ==== Ignore hidden asset files
