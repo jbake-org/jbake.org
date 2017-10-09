@@ -1,0 +1,15 @@
+= Overview
+Jonathan Bullock
+2017-10-09
+:jbake-type: page
+:jbake-tags: documentation
+:jbake-status: published
+:idprefix:
+
+== Overview
+
+The following diagram provides an overview of the baking process JBake performs.
+
+=== Process
+
+image::/img/process.png[Process]
