@@ -1,0 +1,89 @@
+= Project Structure
+Jonathan Bullock
+2016-10-03
+:jbake-type: page
+:jbake-tags: documentation
+:jbake-status: published
+:idprefix:
+
+== Project Structure
+
+Here is an example source directory structure for a project:
+
+----
+.
+|-- assets
+|   |-- favicon.gif
+|   |-- robots.txt
+|   |-- img
+|   |   |-- logo.png
+|   |-- js
+|   |   |-- custom.js
+|   |-- css
+|       |-- style.css
+|
+|-- content
+|   |-- about.html
+|   |-- 2013
+|       |-- 01
+|       |   |-- hello-world.html
+|       |-- 02 
+|           |-- weekly-links-1.ad
+|           |-- weekly-links-2.md
+|
+|-- templates
+|   |-- index.ftl
+|   |-- page.ftl
+|   |-- post.ftl
+|   |-- feed.ftl
+|
+|-- jbake.properties
+----
+
+=== Assets Directory
+
+The assets directory is where you should place your static files such as images, CSS files and JavaScript files etc. These files are copied over to the 
+baked output as is. You can create any directory structure you like in the assets directory and this structure will be maintained when copied.
+
+=== Content Directory
+
+The content directory is where your content files should be placed, these files will be "mixed" with the templates to generate the baked output. Again 
+you can create any directory structure you like for your content, this structure will be maintained when the baked output is created.
+
+The extension of the content file determines what type of content it contains:
+
+* `.html` = raw HTML content
+* `.md` = http://daringfireball.net/projects/markdown/syntax[Markdown] formatted content
+* `.ad` = http://www.methods.co.nz/asciidoc/[AsciiDoc] formatted content
+* `.adoc` = http://www.methods.co.nz/asciidoc/[AsciiDoc] formatted content
+* `.asciidoc` = http://www.methods.co.nz/asciidoc/[AsciiDoc] formatted content
+
+NOTE: JBake uses http://pegdown.org[Pegdown] to support Markdown format and http://asciidoctor.org/[Asciidoctor] to support AsciiDoc format.
+
+=== Templates Directory
+
+The templates directory is where your templates files go, these files are "mixed" with your content files to generate the baked output. You should place your 
+templates into the root of this directory.
+
+The extension of the template file determines the template engine:
+
+* `.ftl` = http://freemarker.org[Freemarker]
+* `.gsp` = http://www.groovy-lang.org/[Groovy's SimpleTemplateEngine]
+* `.groovy` = http://www.groovy-lang.org/[Groovy's SimpleTemplateEngine]
+* `.gxml` = http://www.groovy-lang.org/[Groovy's XmlTemplateEngine]
+* `.tpl` = http://www.groovy-lang.org/[Groovy's MarkupTemplateEngine]
+* `.thyme` = http://www.thymeleaf.org/[Thymeleaf] 
+* `.html` = http://www.thymeleaf.org/[Thymeleaf]
+* `.jade` = https://github.com/neuland/jade4j[Jade]
+
+
+It is recommended that you don't mix different template types, try to stick to just 1 type of templates in your project.
+
+For more information on what you can do in each template engine have a look at the example templates provided with JBake and their 
+respective documentation: http://freemarker.org/docs/index.html[Freemarker], http://docs.groovy-lang.org/latest/html/documentation/template-engines.html[Groovy], 
+http://www.thymeleaf.org/doc/html/Using-Thymeleaf.html[Thymeleaf] & https://github.com/neuland/jade4j[Jade].
+
+=== Project Configuration
+
+Your project specific configuration is held within the `jbake.properties` file which should be located in the root directory of the project. This file controls 
+how your project is baked.
