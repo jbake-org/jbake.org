@@ -1,0 +1,38 @@
+= Team
+Jonathan Bullock
+2017-10-10
+:jbake-type: page
+:jbake-tags: community, team, members, contributors
+:jbake-status: published
+:idprefix:
+:icons: font
+
+The JBake team is made up of Members and Contributors. Members have direct access to the source code of a project and actively evolve the code-base. Contributors 
+improve the project through the submission of changes and suggestions to the Members. Get involved today by becoming a contributor, all changes and suggestions 
+are greatly appreciated.
+
+== Members
+
+[cols="20,20,25,15,20", options="header"]
+|===
+|Project |Name |Role |Location |Links 
+|jbake-core  |Jonathan Bullock |Founder and Developer |UK |icon:twitter[link="https://twitter.com/jonbullock",size="2x"] icon:github[link="https://github.com/jonbullock",size="2x"] icon:globe[link="http://jonathanbullock.com",size="2x"]
+|jbake-core  |Frank Becker |Developer |Germany |icon:twitter[link="https://twitter.com/knarfancho",size="2x"] icon:github[link="https://github.com/ancho",size="2x"]
+|jbake-core  |Manik Magar |Developer |USA |icon:twitter[link="https://twitter.com/manikmagar",size="2x"] icon:github[link="https://github.com/manikmagar",size="2x"]
+|jbake-core  |Tobias Roeser |Developer |Germany |icon:twitter[link="https://twitter.com/TobiasRoeser",size="2x"] icon:github[link="https://github.com/lefou",size="2x"]
+|===
+
+////
+Add details for build plugins members here and past members (i.e. original authors of build plugins)
+////
+
+Please avoid contacting members directly about JBake, use the link:/community/[forum or mailing list] instead.
+
+
+== Contributors
+
+Full list of contributors coming soon, in the meantime check out link:https://github.com/jbake-org/jbake/graphs/contributors[GitHub].
+
+////
+Include details of sponsors such as JetBrains here...?
+////
