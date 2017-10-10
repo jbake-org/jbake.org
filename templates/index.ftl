@@ -14,6 +14,20 @@
 
       <hr>
 
+      <h2>Get started with just 5 commands</h2>
+      <p>The following 5 commands will install the latest version of JBake and get you started with a simple static site you can work with.</p>
+<pre>
+$ curl -s "https://get.sdkman.io" | bash
+$ sdk install jbake
+$ mkdir awesome-jbake && cd awesome-jbake
+$ jbake -i
+$ jbake -b -s
+</pre>
+      <p>Then browse to <a href="http://localhost:8820">http://localhost:8820</a> in your web browser to see your static site</p>
+
+      <hr>
+
+      <h2>Features</h2>
       <div class="row-fluid marketing">
         <div class="span6">
           <h4>Open Source</h4>
