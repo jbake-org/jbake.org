@@ -476,6 +476,14 @@ This option defines the prefix to apply extensionless URI's for.
 uri.noExtension.prefix=/blog/
 ----
 
+==== Default type value for content files
+
+This option allows you to set a default type for content files that's used when content files don't explicity set the value.
+
+----
+default.type=page
+----
+
 === Custom configuration options
 
 You can also define additional options in your `jbake.properties` file for use in your project, especially in your template files. A great example is provided in the 
