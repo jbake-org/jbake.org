@@ -8,7 +8,7 @@ Jonathan Bullock
 
 == Data Model
 
-A data model is exposed to each of the templates (regardless of what template engine you use) allowing you to get access to the data parsed from within 
+A data model is exposed to each of the templates (regardless of what template engine you use) allowing you to get access to the data parsed from within
 the content files, the model can also be used to apply logic to the output from the templates.
 
 === Global
@@ -32,7 +32,7 @@ WARNING: The `db` variable provides direct access to the methods of the class wh
 All the configuration options are available with any `.` in the property being replaced with `_`.
 For example `template.index.file=index.ftl` is available via `config.template_index_file`.
 
-In your templates you can loop through any of the collections above in the templates, and access a map of values for each element like so: `content.[value]` 
+In your templates you can loop through any of the collections above in the templates, and access a map of values for each element like so: `content.[value]`
 all of the metadata header fields are available such as `content.title` along with the body of the content file `content.body`.
 
 === Page / Post / Custom
@@ -47,6 +47,15 @@ In the map you also have access to:
 
 - `content.file` = the full path to the source file
 - `content.uri` = the URI for the baked file
+
+Two navigational metadata fields are available in `content`. Both of these fields hold a map with three attributes to represent previous/next post/page/custom entry - `noExtensionUri`, `uri` and `title`.
+
+- `content.previousContent`
+- `content.nextContent`
+
+For example, uri of next post can be accessed as `content.nextContent.uri`.
+
+WARNING: `previousContent` and `nextContent` can be `null` when there is no previous/next content, e.g. on very first entry or last entry. `uri` and `noExtensionUri` are relative to the `rootPath`.
 
 === Index
 
