@@ -123,3 +123,11 @@ $ jbake -b -s
 ----
 
 This will bake your site first and then serve the output out using the built in server, using the defaults mentioned above.
+
+=== Environment Variable
+
+You can use the JBake environment variable `JBAKE_OPTS` to set JVM system properties such as `user.language` for when JBake executes:
+
+----
+$ export JBAKE_OPTS="-Duser.language=DE"
+----
