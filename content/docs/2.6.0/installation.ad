@@ -10,7 +10,7 @@ Jonathan Bullock
 
 === Prerequisites
 
-The only prerequisite for JBake is that you have a http://www.oracle.com/technetwork/java/javase/downloads/index.html[Java 6+ JRE] installed and that 
+The only prerequisite for JBake is that you have a http://www.oracle.com/technetwork/java/javase/downloads/index.html[Java 7+ Runtime Environment] installed and that 
 the `java` command is available in your path.
 
 === Binary Distribution
