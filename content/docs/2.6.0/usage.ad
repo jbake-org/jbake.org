@@ -107,6 +107,16 @@ You can specify the directory to serve out by supplying an additional parameter:
 $ jbake -s <directory>
 ----
 
+==== Overriding `site.host`
+
+The `site.host` property in your `jbake.properties` will be automatically be overridden with the following value when using the server command:
+
+----
+site.host=http://localhost:8820
+----
+
+NOTE: If you have altered the port from the default it will be reflected in this value too.
+
 ==== Watch mode
 
 While the server is running JBake will watch the content, assets and templates folders for any changes (new files as well as changes to existing content) and automatically trigger a bake. So
