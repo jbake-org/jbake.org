@@ -16,10 +16,10 @@ $ jbake
 
 === Bake command
 
-The bake command mixes your source content with your templates and cooks it all into a fully baked web site. You have a number of different ways to execute the bake 
+The bake command mixes your source content with your templates and cooks it all into a fully baked web site. You have a number of different ways to execute the bake
 command to suite your requirements.
 
-The `-b` option without any parameters will assume your source content is in the current working directory and will place the baked output into a directory named `output` 
+The `-b` option without any parameters will assume your source content is in the current working directory and will place the baked output into a directory named `output`
 in the current directory:
 
 ----
@@ -49,7 +49,7 @@ $ jbake <source> <output>
 
 === Initialisation command
 
-The initialisation command will seed your project directory with the required project structure along with a number of sample content files and templates. You do have the 
+The initialisation command will seed your project directory with the required project structure along with a number of sample content files and templates. You do have the
 option to choose what template engine is used though.
 
 The `-i` option will seed the current working directory and use the http://freemarker.org[Freemarker] template engine by default:
@@ -70,7 +70,7 @@ To specify the template engine you can use the `-t` option along with another pa
 $ jbake -i -t <freemarker|groovy|groovy-mte|thymeleaf|jade>
 ----
 
-NOTE: The template engines available are http://freemarker.org[Freemarker], http://www.groovy-lang.org/[Groovy Simple and Markup], http://www.thymeleaf.org/[Thymeleaf] 
+NOTE: The template engines available are http://freemarker.org[Freemarker], http://www.groovy-lang.org/[Groovy Simple and Markup], http://www.thymeleaf.org/[Thymeleaf]
 and https://github.com/neuland/jade4j[Jade].
 
 ==== Example Project Structures
@@ -83,16 +83,16 @@ The example project structure and sample templates are stored in your JBake inst
 * `example_project_thymeleaf.zip`
 * `example_project_jade.zip`
 
-If you'd like to change the structure or sample templates in some way then you can extract the contents of these files, update 
-as required, then ZIP them back up and replace the original ZIP file with your updated file. Then JBake will use your updated 
+If you'd like to change the structure or sample templates in some way then you can extract the contents of these files, update
+as required, then ZIP them back up and replace the original ZIP file with your updated file. Then JBake will use your updated
 project structure and templates when ever it initialises a new folder from then on.
 
 === Server command
 
-The server command will allow you to see what your baked site looks like when served out by a HTTP web server, great for when you want to preview your site using 
+The server command will allow you to see what your baked site looks like when served out by a HTTP web server, great for when you want to preview your site using
 your local web browser.
 
-The `-s` option will start JBake in server mode allowing you to preview your baked site at http://localhost:8820/ by default it will serve out the contents of the 
+The `-s` option will start JBake in server mode allowing you to preview your baked site at http://localhost:8820/ by default it will serve out the contents of the
 `output` directory in the current working directory:
 
 ----
@@ -109,7 +109,7 @@ $ jbake -s <directory>
 
 ==== Watch mode
 
-While the server is running JBake will watch the content folder for any changes (new files as well as changes to existing content) and automatically trigger a bake. So 
+While the server is running JBake will watch the content, assets and templates folders for any changes (new files as well as changes to existing content) and automatically trigger a bake. So
 you can refresh your browser to see the changes to the output.
 
 This mode is best used in conjunction with incremental rendering, for details on how to enable this please see the <<persistent_content_store>> configuration option.
