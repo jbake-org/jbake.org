@@ -23,6 +23,7 @@ These data variables are available to all templates regardless.
 - `published_pages` = collection of just published pages in date descending order
 - `all_content` = collection of all content (regardless of type)
 - `alltags` = collection of all tags used across all published content
+- `tags` = collection of all tags as `tag` data model. See <<Tag Data model>>.
 - `content.rootpath` = path to root of project (to be used for relative path to assets)
 - `config.[option]` = map of configuration data
 - `db` = alias for direct access to https://github.com/jbake-org/jbake/blob/master/src/main/java/org/jbake/app/ContentStore.java[ContentStore] class
@@ -34,6 +35,15 @@ For example `template.index.file=index.ftl` is available via `config.template_in
 
 In your templates you can loop through any of the collections above in the templates, and access a map of values for each element like so: `content.[value]`
 all of the metadata header fields are available such as `content.title` along with the body of the content file `content.body`.
+
+==== Tag Data model
+Global variable `tags` represent a collection of all tags. Each tag in this collection is represented by a map containing following attributes -
+
+- `name` : Name of the tag, as specified in source file.
+- `uri` : Relative path starting <<Default tag output directory>>. For example, if tag output directory is defined as `tags` then uri for a sample tag `java` would be `tags/java.html`.
+- `tagged_posts` : Represents subset of `published_posts` collection with posts tagged with this tag.
+- `tagged_documents` : Represents subset of `published_content` collection with documents tagged with this tag.
+
 
 === Page / Post / Custom
 
@@ -77,3 +87,9 @@ This predefined template has the following extra data available to it:
 - `tag` = tag being rendered
 - `tag_posts` = collection of published posts for tag in date descending order
 - `tagged_documents` = collection of published documents (regardless of type) for tag in date descending order
+
+==== Tags Index
+
+It is possible to generate Index page for the <<Default tag output directory>> by setting `render.tagsindex` to `true` (default is `false`) in jbake.properties file.
+
+When enabled, JBake will use the template file defined by `template.tagsindex.file` to generate tags index. This can be helpful to render a all tags home page, like http://localhost:8820/tags/.
