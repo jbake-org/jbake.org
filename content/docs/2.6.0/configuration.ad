@@ -22,7 +22,7 @@ You can also comment out any configuration options by adding a hash or number si
 
 ==== Default assets directory
 
-This option defines the name of the directory that holds the assets for your project.
+This option defines the folder that holds the assets for your project. This can be a relative path from the root of your project or an absolute path reference.
 
 ----
 # folder that contains all asset files
@@ -31,7 +31,7 @@ asset.folder=assets
 
 ==== Default content directory
 
-This option defines the name of the directory that holds the content files for your project.
+This option defines the folder that holds the content files for your project. This can be a relative path from the root of your project or an absolute path reference.
 
 ----
 # folder that contains all content files
@@ -49,7 +49,7 @@ destination.folder=output
 
 ==== Default template directory
 
-This option defines the name of the directory that holds the template files for your project.
+This option defines the folder that holds the template files for your project. This can be a relative path from the root of your project or an absolute path reference.
 
 ----
 # folder that contains all template files

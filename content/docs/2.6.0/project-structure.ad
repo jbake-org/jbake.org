@@ -104,4 +104,49 @@ All hidden files from content directory are ignored by JBake.
 === Project Configuration
 
 Your project specific configuration is held within the `jbake.properties` file which should be located in the root directory of the project. This file controls
-how your project is baked.
+how your project is baked. See <<configuration>> section for more details.
+
+=== Altering Default Structure
+
+You can also alter the default structure by setting some specific configuration options in your `jbake.properties` file. So you could have the following structure:
+
+----
+.
+|-- site
+|   |-- assets
+|   |   |-- favicon.gif
+|   |   |-- robots.txt
+|   |   |-- img
+|   |   |   |-- logo.png
+|   |   |-- js
+|   |   |   |-- custom.js
+|   |   |-- css
+|   |       |-- style.css
+|   |-- content
+|   |   |-- about.html
+|   |   |-- 2013
+|   |       |-- 01
+|   |       |   |-- hello-world.html
+|   |       |-- 02
+|   |           |-- weekly-links-1.ad
+|   |           |-- weekly-links-2.md
+|   |-- templates
+|       |-- index.ftl
+|       |-- page.ftl
+|       |-- post.ftl
+|       |-- feed.ftl
+|
+|-- jbake.properties
+----
+
+By defining the following configuration options:
+
+----
+...
+asset.folder=site/assets
+content.folder=site/content
+template.folder=site/templates
+...
+----
+
+You can also use absolute path references for each option too as well as relative path references.
