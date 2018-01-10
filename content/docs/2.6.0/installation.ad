@@ -44,3 +44,8 @@ latest version of JBake:
 ----
 $ brew install jbake
 ----
+
+=== Extend classpath
+
+JBake will include any JAR files you place into the `/lib` folder (this can be found underneath the install location) onto the classpath. This allows you to 
+include additional libraries.
