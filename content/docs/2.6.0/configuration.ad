@@ -366,7 +366,7 @@ date.format=yyyy-MM-dd
 ==== Markdown extensions
 
 This option defines what Markdown extensions are enabled when content created in the Markdown format is rendered. Each extension required should be separated by a comma. 
-For details on what extensions are available please see the https://github.com/sirthias/pegdown[Pegdown docs].
+For details on what extensions are available please see the https://github.com/vsch/flexmark-java[flexmark-java docs].
 
 ----
 # comma delimited default markdown extensions
@@ -381,6 +381,8 @@ markdown.extensions=ALL,-HARDWRAPS
 ----
 
 ==== Markdown parsing timeout
+
+WARNING: This option is now obsolete as flexmark-java is used.
 
 This option defines the parsing timeout value in milliseconds for the Pegdown parser that is used for Markdown format support. This value limits the time spent 
 parsing each piece of Markdown content.

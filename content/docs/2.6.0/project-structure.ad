@@ -58,7 +58,7 @@ The extension of the content file determines what type of content it contains:
 * `.adoc` = http://www.methods.co.nz/asciidoc/[AsciiDoc] formatted content
 * `.asciidoc` = http://www.methods.co.nz/asciidoc/[AsciiDoc] formatted content
 
-NOTE: JBake uses http://pegdown.org[Pegdown] to support Markdown format and http://asciidoctor.org/[Asciidoctor] to support AsciiDoc format.
+NOTE: JBake uses https://github.com/vsch/flexmark-java[flexmark-java] to support Markdown format and http://asciidoctor.org/[Asciidoctor] to support AsciiDoc format.
 
 ==== Static files in Content
 Any files other than above listed content files, will be treated as static files. When site is baked, all these files will be copied as-is to output folder, while maintaining their directory structure.

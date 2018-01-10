@@ -31,9 +31,9 @@ For Markdown content support add the following dependency:
 [source,xml]
 ----
 <dependency>
-	<groupId>org.pegdown</groupId>
-	<artifactId>pegdown</artifactId>
-	<version>1.6.0</version>
+	<groupId>com.vladsch.flexmark</groupId>
+	<artifactId>flexmark-all</artifactId>
+	<version>0.27.0</version>
 </dependency>
 ----
 
