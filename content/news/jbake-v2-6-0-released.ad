@@ -1,0 +1,33 @@
+= JBake v2.6.0 released
+Jonathan Bullock
+2018-01-16
+:jbake-type: post
+:jbake-tags: community
+:jbake-status: draft
+:category: news
+:idprefix:
+
+== JBake v2.6.0 released
+
+I'm happy to announce that link:/download.html[JBake v2.6.0] has been released. This is a major release that includes a number of new features as well as bug fixes and changes.
+
+Here are a few of the major changes included in this release:
+
+* Java 7 is now required to run JBake
+* Project has switched to Gradle for build
+* Improved execution scripts inc. support for additional JAR files
+* Asset and Content directories can be marked to be ignored from processing
+* Static files such as images can be included in the Content directory tree
+* Server mode now watches for changes to Asset and Template directories
+* Relative image src values are now automatically updated
+* Added more data variables for use in templates when paging
+* AsciidoctorJ-Diagram is included in binary distribution (not declared as a dependency though) so you can include diagrams in your AsciiDoc content
+
+You can find the complete changelog for this release here: https://github.com/jbake-org/jbake/milestone/14?closed=1
+
+Thanks to everyone who has contributed something to this new release, and especially to https://github.com/ancho[Frank Becker] and https://github.com/manikmagar[Manik Magar] 
+who put a tremendous amount of work into this release. I'm also pleased to say they have recently joined the link:/community/team.html[JBake team].
+
+This release should also be available via Maven Central, SDKMAN and Homebrew in the next few days.
+
+Download *link:/download.html[JBake v2.6.0]* now and get baking!
