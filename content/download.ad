@@ -1,6 +1,6 @@
 = Download
 Jonathan Bullock
-2017-01-31
+2018-03-04
 :jbake-type: page
 :jbake-tags: download
 :jbake-status: published
@@ -13,7 +13,7 @@ The binary distribution runs on Windows, Linux and Mac and only requires a Java 
 [options="header"]
 |===
 |Version |SHA1 |Download Link |Release Notes
-|v2.5.1 |91c00c4eb94a25ca11b6f72792e8ed02707f57bc |https://dl.bintray.com/jbake/binary/:jbake-2.5.1-bin.zip[Bintray] 40MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.5.1[Changelog]
+|v2.6.0 |7bfc0760d826b608793b6d4e90db4dd5198bc37d |https://dl.bintray.com/jbake/binary/:jbake-2.6.0-bin.zip[Bintray] 69MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.6.0[Changelog]
 |===
 
 == SDKMAN
@@ -58,6 +58,7 @@ JBake artifacts are available from the Maven central repository:
 [options="header"]
 |===
 |Version |SHA1 |Download Link |Release Notes
+|v2.5.1 |91c00c4eb94a25ca11b6f72792e8ed02707f57bc |https://dl.bintray.com/jbake/binary/:jbake-2.5.1-bin.zip[Bintray] 40MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.5.1[Changelog]
 |v2.5.0 |13f7a2b9fd064fcfe16a6862947364bb1c62d3d9 |https://dl.bintray.com/jbake/binary/:jbake-2.5.0-bin.zip[Bintray] 40MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.5.0[Changelog]
 |v2.4.0 |e53633c6cd6ba714a8876cadc02fe41e7790c5db |https://dl.bintray.com/jbake/binary/:jbake-2.4.0-bin.zip[Bintray] 39.1MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.4.0[Changelog]
 |v2.3.2 |8daa2603b0277ee92ba216cf1d7e2d706f489382 |https://dl.bintray.com/jbake/binary/:jbake-2.3.2-bin.zip[Bintray] 65.3MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.3.2+is%3Aclosed[Changelog]

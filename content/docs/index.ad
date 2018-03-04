@@ -1,6 +1,6 @@
 = Documentation
 Jonathan Bullock
-2017-01-30
+2018-03-04
 :jbake-type: page
 :jbake-tags: documentation
 :jbake-status: published
@@ -11,7 +11,7 @@ Jonathan Bullock
 [cols="50,50", options="header"]
 |===
 |Version |Format 
-|v2.5.1  |link:/docs/2.5.1/[HTML]
+|v2.6.0  |link:/docs/2.6.0/[HTML]
 |===
 
 == Archived
@@ -19,6 +19,7 @@ Jonathan Bullock
 [cols="50,50", options="header"]
 |===
 |Version |Format 
+|v2.5.1  |link:/docs/2.5.1/[HTML]
 |v2.5.0  |link:/docs/2.5.0/[HTML]
 |v2.4.0  |link:/docs/2.4.0/[HTML]
 |v2.3.2  |link:/docs/2.3.2/[HTML]

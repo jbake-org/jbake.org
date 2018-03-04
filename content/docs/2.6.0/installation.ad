@@ -1,6 +1,6 @@
 = Installation
 Jonathan Bullock
-2017-01-30
+2018-03-04
 :jbake-type: page
 :jbake-tags: documentation
 :jbake-status: published
@@ -20,7 +20,7 @@ the `java` command is available in your path.
 . Open a command prompt and run `jbake -h` (or `jbake.bat -h` if you are on Windows) to confirm everything works, you should see usage help text
 
 ----
-JBake v2.5.1 (2017-01-30 17:56) [http://jbake.org]
+JBake v2.6.0 (2018-03-04 17:56) [http://jbake.org]
 
 Usage: jbake ...
 ----
