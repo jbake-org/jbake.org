@@ -32,9 +32,9 @@ The plugin has been developed by https://github.com/aldrinleal[Aldrin Leal].
 
 There is a http://gradle.org/[Gradle] plugin that allows you to run JBake from your Gradle build.
 
-* https://plugins.gradle.org/plugin/me.champeau.jbake[Plugin Page on Gradle.org]
+* https://plugins.gradle.org/plugin/org.jbake.site[Plugin Page on Gradle.org]
 * https://github.com/jbake-org/jbake-gradle-plugin[Plugin on GitHub]
-* https://bintray.com/melix/gradle-plugins/jbake-gradle-plugin/view[Plugin on Bintray]
+* https://bintray.com/jbake/maven/jbake-gradle-plugin[Plugin on Bintray]
 
 The plugin has been developed by http://melix.github.io/blog/[Cédric Champeau].
 
