@@ -1,0 +1,9 @@
+image: javastreets/jbake:base-2.6.0
+
+# This build job produced the output directory of your site
+pages:
+ script:
+   - jbake . public
+ artifacts:
+   paths:
+     - public
