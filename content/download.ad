@@ -13,7 +13,7 @@ The binary distribution runs on Windows, Linux and Mac and only requires a Java 
 [options="header"]
 |===
 |Version |SHA1 |Download Link |Release Notes
-|v2.6.0 |7bfc0760d826b608793b6d4e90db4dd5198bc37d |https://dl.bintray.com/jbake/binary/:jbake-2.6.0-bin.zip[Bintray] 69MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.6.0[Changelog]
+|v2.6.0 |7bfc0760d826b608793b6d4e90db4dd5198bc37d |https://dl.bintray.com/jbake/binary/jbake-2.6.0-bin.zip[Bintray] 69MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.6.0[Changelog]
 |===
 
 == SDKMAN
@@ -31,7 +31,7 @@ Once complete you can then get baking!
 
 == Homebrew
 
-You can also install JBake via http://brew.sh/[Homebrew] if you are running OS X. After you have installed Homebrew enter the following command to install the 
+You can also install JBake via http://brew.sh/[Homebrew] if you are running OS X. After you have installed Homebrew enter the following command to install the
 latest version of JBake:
 
 ----
@@ -51,7 +51,7 @@ JBake artifacts are available from the Maven central repository:
 	<artifactId>jbake-core</artifactId>
 	<version>2.5.1</version>
 </dependency>
----- 
+----
 
 == Archived Distributions
 
