@@ -76,7 +76,7 @@ $ jbake -b -s
 		</div>
 
         <div class="span3 text-center">
-        	<script type="text/javascript" src="http://www.ohloh.net/p/634040/widgets/project_thin_badge.js"></script>
+        	<script type="text/javascript" src="https://www.ohloh.net/p/634040/widgets/project_thin_badge.js"></script>
         </div>
         
         <div class="span3 text-center">
