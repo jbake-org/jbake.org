@@ -58,12 +58,12 @@ JBake artifacts are available from the Maven central repository:
 [options="header"]
 |===
 |Version |SHA1 |Download Link |Release Notes
-|v2.5.1 |91c00c4eb94a25ca11b6f72792e8ed02707f57bc |https://dl.bintray.com/jbake/binary/:jbake-2.5.1-bin.zip[Bintray] 40MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.5.1[Changelog]
-|v2.5.0 |13f7a2b9fd064fcfe16a6862947364bb1c62d3d9 |https://dl.bintray.com/jbake/binary/:jbake-2.5.0-bin.zip[Bintray] 40MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.5.0[Changelog]
-|v2.4.0 |e53633c6cd6ba714a8876cadc02fe41e7790c5db |https://dl.bintray.com/jbake/binary/:jbake-2.4.0-bin.zip[Bintray] 39.1MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.4.0[Changelog]
-|v2.3.2 |8daa2603b0277ee92ba216cf1d7e2d706f489382 |https://dl.bintray.com/jbake/binary/:jbake-2.3.2-bin.zip[Bintray] 65.3MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.3.2+is%3Aclosed[Changelog]
-|v2.3.1 |b429a89a66c021a70394e0207d71a703de58d85b |https://dl.bintray.com/jbake/binary/:jbake-2.3.1-bin.zip[Bintray] 42.4MB |https://github.com/jbake-org/jbake/issues?milestone=8&state=closed[Changelog]
-|v2.3.0 |ea4c676ca59a9dcdc84727410ab01c88c21ec917 |https://dl.bintray.com/jbake/binary/:jbake-2.3.0-bin.zip[Bintray] 41.6MB |https://github.com/jbake-org/jbake/issues?milestone=3&state=closed[Changelog]
-|v2.2.1 |0e225ab850cb98b7451082f818e991c1cfb7defb |https://dl.bintray.com/jbake/binary/:jbake-2.2.1-bin.zip[Bintray] 27.5MB |https://github.com/jbake-org/jbake/issues?milestone=7&state=closed[Changelog]
-|v2.2.0 |fe8d557a562ef9da2b9fea092ac7b5ab524a69db |https://dl.bintray.com/jbake/binary/:jbake-2.2.0-bin.zip[Bintray] 27.1MB |https://github.com/jbake-org/jbake/issues?milestone=2&state=closed[Changelog]
+|v2.5.1 |91c00c4eb94a25ca11b6f72792e8ed02707f57bc |https://dl.bintray.com/jbake/binary/jbake-2.5.1-bin.zip[Bintray] 40MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.5.1[Changelog]
+|v2.5.0 |13f7a2b9fd064fcfe16a6862947364bb1c62d3d9 |https://dl.bintray.com/jbake/binary/jbake-2.5.0-bin.zip[Bintray] 40MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.5.0[Changelog]
+|v2.4.0 |e53633c6cd6ba714a8876cadc02fe41e7790c5db |https://dl.bintray.com/jbake/binary/jbake-2.4.0-bin.zip[Bintray] 39.1MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.4.0[Changelog]
+|v2.3.2 |8daa2603b0277ee92ba216cf1d7e2d706f489382 |https://dl.bintray.com/jbake/binary/jbake-2.3.2-bin.zip[Bintray] 65.3MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.3.2+is%3Aclosed[Changelog]
+|v2.3.1 |b429a89a66c021a70394e0207d71a703de58d85b |https://dl.bintray.com/jbake/binary/jbake-2.3.1-bin.zip[Bintray] 42.4MB |https://github.com/jbake-org/jbake/issues?milestone=8&state=closed[Changelog]
+|v2.3.0 |ea4c676ca59a9dcdc84727410ab01c88c21ec917 |https://dl.bintray.com/jbake/binary/jbake-2.3.0-bin.zip[Bintray] 41.6MB |https://github.com/jbake-org/jbake/issues?milestone=3&state=closed[Changelog]
+|v2.2.1 |0e225ab850cb98b7451082f818e991c1cfb7defb |https://dl.bintray.com/jbake/binary/jbake-2.2.1-bin.zip[Bintray] 27.5MB |https://github.com/jbake-org/jbake/issues?milestone=7&state=closed[Changelog]
+|v2.2.0 |fe8d557a562ef9da2b9fea092ac7b5ab524a69db |https://dl.bintray.com/jbake/binary/jbake-2.2.0-bin.zip[Bintray] 27.1MB |https://github.com/jbake-org/jbake/issues?milestone=2&state=closed[Changelog]
 |===
