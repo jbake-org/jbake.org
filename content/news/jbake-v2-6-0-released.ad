@@ -25,6 +25,8 @@ Here are a few of the major changes included in this release:
 
 NOTE: If you are using pagination for the index page i.e. `index.paginate=true`, then please verify that you are using `published_posts` or equivalent `published_{contentType}` model instead of `posts` model. See this https://github.com/jbake-org/jbake/issues/389[bug fix^] for details.
 
+NOTE: The value to persist the content store to disk has changed from `local` to `plocal`, so the configuration option should be: `db.store=plocal`
+
 You can find the complete changelog for this release here: https://github.com/jbake-org/jbake/milestone/14?closed=1
 
 Thanks to everyone who has contributed something to this new release, and especially to https://github.com/ancho[Frank Becker] and https://github.com/manikmagar[Manik Magar]

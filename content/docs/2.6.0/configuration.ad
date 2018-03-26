@@ -399,11 +399,11 @@ perform a bake only those content files that have changed will be rendered speed
 of all content is performed every time.
 
 ----
-# database store (local, memory)
+# database store (plocal, memory)
 db.store=memory
 ----
 
-* local = content store is persisted to disk
+* plocal = content store is persisted to disk
 * memory = content store is held only in memory during bake
 
 ==== Persistent content store path
