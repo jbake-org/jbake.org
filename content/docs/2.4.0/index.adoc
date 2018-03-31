@@ -1,0 +1,34 @@
+= Documentation v2.4.0
+Jonathan Bullock
+2015-05-14
+:jbake-type: page
+:jbake-tags: documentation
+:jbake-status: published
+:idprefix:
+:numbered:
+:sectanchors:
+:icons: font
+:toc:
+:toc-placement!:
+
+toc::[]
+
+include::installation.adoc[lines=9..1000]
+
+include::quickstart-guide.adoc[lines=9..1000]
+
+include::usage.adoc[lines=9..1000]
+
+include::project-structure.adoc[lines=9..1000]
+
+include::content-files.adoc[lines=9..1000]
+
+include::template.adoc[lines=9..1000]
+
+include::data-variables.adoc[lines=9..1000]
+
+include::configuration.adoc[lines=9..1000]
+
+include::use-as-library.adoc[lines=9..1000]
+
+include::build-tool-integration.adoc[lines=9..1000]
