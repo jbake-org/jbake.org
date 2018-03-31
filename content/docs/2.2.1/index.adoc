@@ -29,10 +29,10 @@ toc::[]
 * link:/docs/configuration.html[Configuration]
 ////
 
-include::getting-started.ad[lines=9..250]
+include::getting-started.adoc[lines=9..250]
 
-include::project-structure.ad[lines=9..250]
+include::project-structure.adoc[lines=9..250]
 
-include::data-variables.ad[lines=9..250]
+include::data-variables.adoc[lines=9..250]
 
-include::configuration.ad[lines=9..250]
+include::configuration.adoc[lines=9..250]

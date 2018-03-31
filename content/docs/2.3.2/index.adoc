@@ -1,0 +1,19 @@
+= Documentation v2.3.2
+Jonathan Bullock
+2014-09-20
+:jbake-type: page
+:jbake-tags: documentation
+:jbake-status: published
+:idprefix:
+:toc:
+:toc-placement!:
+
+toc::[]
+
+include::getting-started.adoc[lines=9..250]
+
+include::project-structure.adoc[lines=9..250]
+
+include::data-variables.adoc[lines=9..250]
+
+include::configuration.adoc[lines=9..250]
