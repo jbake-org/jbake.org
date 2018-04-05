@@ -406,6 +406,8 @@ db.store=memory
 * plocal = content store is persisted to disk
 * memory = content store is held only in memory during bake
 
+WARNING: Prior to v2.6.0 the option to persist to disk was `local`
+
 ==== Persistent content store path
 
 This option defines the directory that is used to persist the content store to disk. It is only relevant when the content store is persisted to disk.
