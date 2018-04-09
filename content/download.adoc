@@ -53,6 +53,8 @@ JBake artifacts are available from the Maven central repository:
 </dependency>
 ----
 
+NOTE: When using the core library make sure you declare the https://jbake.org/docs/2.6.0/#use_as_library[optional dependencies] you require.
+
 == Archived Distributions
 
 [options="header"]
