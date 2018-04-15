@@ -1,0 +1,18 @@
+= JBake v2.6.1 released
+Jonathan Bullock
+2018-04-15
+:jbake-type: post
+:jbake-tags: community
+:jbake-status: published
+:category: news
+:idprefix:
+
+== JBake v2.6.1 released
+
+I'm happy to announce that link:/download.html[JBake v2.6.1] has been released. This is a bug fix release.
+
+You can find the complete changelog for this release here: https://github.com/jbake-org/jbake/milestone/16?closed=1
+
+This release should also be available via Maven Central, SDKMAN and Homebrew in the next few days.
+
+Download *link:/download.html[JBake v2.6.1]* now and get baking!

@@ -1,6 +1,6 @@
 = Download
 Jonathan Bullock
-2018-03-04
+2018-04-15
 :jbake-type: page
 :jbake-tags: download
 :jbake-status: published
@@ -13,7 +13,7 @@ The binary distribution runs on Windows, Linux and Mac and only requires a Java 
 [options="header"]
 |===
 |Version |SHA1 |Download Link |Release Notes
-|v2.6.0 |7bfc0760d826b608793b6d4e90db4dd5198bc37d |https://dl.bintray.com/jbake/binary/jbake-2.6.0-bin.zip[Bintray] 69MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.6.0[Changelog]
+|v2.6.1 |ba29c2fbf4090042fc8ffb16165255680621cb32 |https://dl.bintray.com/jbake/binary/jbake-2.6.1-bin.zip[Bintray] 53.3MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.6.1[Changelog]
 |===
 
 == SDKMAN
@@ -49,17 +49,18 @@ JBake artifacts are available from the Maven central repository:
 <dependency>
 	<groupId>org.jbake</groupId>
 	<artifactId>jbake-core</artifactId>
-	<version>2.6.0</version>
+	<version>2.6.1</version>
 </dependency>
 ----
 
-NOTE: When using the core library make sure you declare the https://jbake.org/docs/2.6.0/#use_as_library[optional dependencies] you require.
+NOTE: When using the core library make sure you declare the https://jbake.org/docs/2.6.1/#use_as_library[optional dependencies] you require.
 
 == Archived Distributions
 
 [options="header"]
 |===
 |Version |SHA1 |Download Link |Release Notes
+|v2.6.0 |7bfc0760d826b608793b6d4e90db4dd5198bc37d |https://dl.bintray.com/jbake/binary/jbake-2.6.0-bin.zip[Bintray] 69MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.6.0[Changelog]
 |v2.5.1 |91c00c4eb94a25ca11b6f72792e8ed02707f57bc |https://dl.bintray.com/jbake/binary/jbake-2.5.1-bin.zip[Bintray] 40MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.5.1[Changelog]
 |v2.5.0 |13f7a2b9fd064fcfe16a6862947364bb1c62d3d9 |https://dl.bintray.com/jbake/binary/jbake-2.5.0-bin.zip[Bintray] 40MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.5.0[Changelog]
 |v2.4.0 |e53633c6cd6ba714a8876cadc02fe41e7790c5db |https://dl.bintray.com/jbake/binary/jbake-2.4.0-bin.zip[Bintray] 39.1MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.4.0[Changelog]

@@ -8,7 +8,7 @@
         <a class="btn btn-large btn-success" href="/download.html">Download</a>
         <p></p>
         <div class="alert alert-info">
-			<strong>Latest News:</strong> <a href="/news/jbake-v2-6-0-released.html">JBake v2.6.0 released</a>
+			<strong>Latest News:</strong> <a href="/news/jbake-v2-6-1-released.html">JBake v2.6.1 released</a>
 		</div>
       </div>
 
