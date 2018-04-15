@@ -11,14 +11,15 @@ Jonathan Bullock
 [cols="50,50", options="header"]
 |===
 |Version |Format 
-|v2.6.0  |link:/docs/2.6.0/[HTML]
+|v2.6.1  |link:/docs/2.6.1/[HTML]
 |===
 
 == Archived
 
 [cols="50,50", options="header"]
 |===
-|Version |Format 
+|Version |Format
+|v2.6.0  |link:/docs/2.6.0/[HTML]
 |v2.5.1  |link:/docs/2.5.1/[HTML]
 |v2.5.0  |link:/docs/2.5.0/[HTML]
 |v2.4.0  |link:/docs/2.4.0/[HTML]
