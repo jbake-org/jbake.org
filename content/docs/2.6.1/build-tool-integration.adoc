@@ -12,21 +12,20 @@ Jonathan Bullock
 
 There is a http://maven.apache.org[Maven] plugin that allows you to run JBake from your Maven build.
 
-* http://docs.ingenieux.com.br/project/jbake/walkthrough.html[Plugin walkthrough]
-* https://github.com/ingenieux/jbake-maven-plugin[Plugin on GitHub]
+* https://github.com/jbake-org/jbake-maven-plugin[Plugin on GitHub]
 
 The plugin is available from the Maven Central repository using the following coordinates:
 
 [source,xml]
 ----
 <dependency>
-    <groupId>br.com.ingenieux</groupId>
+    <groupId>org.jbake</groupId>
     <artifactId>jbake-maven-plugin</artifactId>
-    <version>0.0.9</version>
+    <version>0.3.1</version>
 </dependency>
 ----
 
-The plugin has been developed by https://github.com/aldrinleal[Aldrin Leal].
+The plugin was originally created by https://github.com/aldrinleal[Aldrin Leal].
 
 === Gradle Plugin
 
@@ -36,7 +35,7 @@ There is a http://gradle.org/[Gradle] plugin that allows you to run JBake from y
 * https://github.com/jbake-org/jbake-gradle-plugin[Plugin on GitHub]
 * https://bintray.com/jbake/maven/jbake-gradle-plugin[Plugin on Bintray]
 
-The plugin has been developed by http://melix.github.io/blog/[Cédric Champeau].
+The plugin was originally created by http://melix.github.io/blog/[Cédric Champeau].
 
 === SBuild Plugin
 
