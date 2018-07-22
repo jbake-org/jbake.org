@@ -339,6 +339,13 @@ asciidoctor.attributes.export.prefix=
 
 NOTE: By default this option is disabled in default.properties
 
+==== Header Separator
+
+Specifies a string that demarcates the end of the document metadata header and the start of the document content (the body). The default value is `+~~~~~~~~+`. Supported since JBake 2.6.1.
+
+ header.separator=---------
+
+
 ==== Default Content Status
 
 This option defines a default status for content files, allowing you to avoid having to define the status value in each of your content files. This value is ONLY
@@ -346,7 +353,7 @@ used if a status value hasn't been defined in the metadata header though.
 
 ----
 # default status
-#default.status=published
+default.status=published
 ----
 
 NOTE: By default this option is disabled in default.properties
