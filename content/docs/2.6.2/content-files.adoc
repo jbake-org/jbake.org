@@ -1,0 +1,120 @@
+= Content Files
+Jonathan Bullock
+2018-10-02
+:jbake-type: page
+:jbake-tags: documentation
+:jbake-status: published
+:idprefix:
+
+== Content Files
+
+=== Metadata Header
+
+The metadata header defines some basic information that JBake uses when baking the content file.
+
+Each raw HTML or Markdown content file *must* have a metadata header in it which looks like this:
+
+----
+title=Weekly Links #2
+date=2013-02-01
+type=post
+tags=weekly links, java
+status=published
+~~~~~~
+----
+
+In the header you *must* have at least the **status** & **type** fields, the rest are optional. The only exception to this rule is if
+you define a default status in your link:#configuration[configuration] file.
+
+If you leave the **date** field out then the files last modified timestamp will be used instead.
+
+For an AsciiDoc formatted content file the metadata header section is optional, the JBake metadata can be defined in the AsciiDoc document header itself like so:
+
+----
+= Project Structure
+Jonathan Bullock
+2013-10-17
+:jbake-type: page
+:jbake-tags: documentation, manual
+:jbake-status: published
+----
+
+NOTE: JBake related attributes included in the AsciiDoc header require the `jbake-` prefix to avoid any collisions.
+
+==== Status
+
+You have 3 options for the status field:
+
+* `draft` - drafts are rendered the same as published content however they are given a "-draft" suffix, for example `first-post-draft.html`, but not included in any published collections
+* `published`  - published content is rendered and included in the published collections
+* `published-date` - providing content date is equal to or past current date content will be considered published and included in the published collections
+
+==== Type
+
+You can choose what template file your content file will be mixed with by changing the value of the `type` field. By default there are 2 standard types:
+
+* `type=post` will mean the content file will be mixed with the template: post.ftl
+* `type=page` will mean the content file will be mixed with the template: page.ftl
+
+You can also define more types in your project configuration to give you more flexibility in your project, for details of this please see <<custom_templates>>.
+
+==== Custom Metadata
+
+You can also define custom metadata in the header that can be exposed to the templates, for example:
+
+----
+summary=This is a summary of the larger post
+----
+
+And access it in the templates like so:
+
+----
+<p>${content.summary}</p>
+----
+
+This feature is extremely useful when you want to control the rendering of extra market in the templates such as https://disqus.com/[Disqus] for comments
+on certain posts/pages or to display images using some JavaScript library like https://jquery.com/[jQuery].
+
+==== Complex Custom Metadata
+
+If you need to define a complex structure of metadata you can use JSON format to achieve this, here's an example:
+
+----
+type=page
+og={"description": "Something"}
+----
+
+WARNING: The JSON content must be contained within a single line and cannot span multiple lines.
+
+This complex data is then accessible from the templates like this:
+
+----
+<#if content?? && content.og??> <1>
+	<meta property="og:description" content="${content.og.description}"/> <2>
+</#if>
+----
+
+<1> Checks the `content` map is not null and that the `content.og` map is not null
+<2> Outputs the `description` value from the `content.og` map
+
+=== Content Body
+
+Everything after the metadata header is considered the content body and made available to the templates, after being converted to HTML if required in the case of
+Markdown or AsciiDoc.
+
+==== Images Path
+
+You have the option to update any relative image paths included in your content to absolute image paths. The value specified in the config property `site.host` is used as the FQDN for the absolute path, unless
+you are running server mode locally.
+
+To enable this update of relative image paths set the config property `img.path.update` to `true`. You can also control whether the `site.host` value is used in the absolute path or not by setting `img.path.prepend.host` to `false`.
+
+NOTE: Any image paths that already absolute will not be altered.
+
+Assuming the content URI is `blog/2017/05/first_post.html` and `site.host` is `http://example.com`, below are some examples to show how the image paths will be updated -
+
+* `./first.png` -> `http://example.com/blog/2017/05/first.png` (when `img.path.prepend.host` is set to `true`)
+* `./first.png` -> `blog/2017/05/first.png` (when `img.path.prepend.host` is set to `false`)
+* `/blog/2017/05/first.jpg` -> `http://example.com/blog/2017/05/first.png` (when `img.path.prepend.host` is set to `true`)
+* `/blog/2017/05/first.jpg` -> `/blog/2017/05/first.png` (when `img.path.prepend.host` is set to `false`)
+* `http://example.com/common/images/second.png` -> `http://example.com/common/images/second.png` (Nothing changed as the URL is absolute already.)
