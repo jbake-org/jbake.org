@@ -1,6 +1,6 @@
 = JBake v2.6.2 released
 Jonathan Bullock
-2018-10-06
+2018-10-07
 :jbake-type: post
 :jbake-tags: community
 :jbake-status: published
@@ -10,6 +10,9 @@ Jonathan Bullock
 == JBake v2.6.2 released
 
 I'm happy to announce that link:/download.html[JBake v2.6.2] has been released. This is a primarily a bug fix release.
+
+One change that you should be aware of is that the automatic image path update feature introduced in v2.6.0 has been wrapped
+in a feature flag (`img.path.update`) and disabled by default.
 
 You can find the complete changelog for this release here: https://github.com/jbake-org/jbake/milestone/17?closed=1
 
