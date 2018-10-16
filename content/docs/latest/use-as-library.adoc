@@ -1,6 +1,6 @@
 = Use as Library
 Jonathan Bullock
-2018-10-06
+2018-10-16
 :jbake-type: page
 :jbake-tags: documentation
 :jbake-status: published
@@ -19,7 +19,7 @@ The main JBake artifact is available from the Maven Central repository, these ar
 <dependency>
 	<groupId>org.jbake</groupId>
 	<artifactId>jbake-core</artifactId>
-	<version>2.6.2</version>
+	<version>2.6.3</version>
 </dependency>
 ----
 
@@ -52,7 +52,14 @@ For AsciiDoc content support add the following dependency:
 	<artifactId>asciidoctorj</artifactId>
 	<version>1.5.7</version>
 </dependency>
+<dependency>
+	<groupId>org.jruby</groupId>
+	<artifactId>jruby-complete</artifactId>
+	<version>9.1.17.0</version>
+</dependency>
 ----
+
+NOTE: There is a bug in AsciidoctorJ 1.5.7 which is why a specific version of JRuby has to be declared as a dependency.
 
 For Freemarker template support add the following dependency:
 
@@ -72,12 +79,12 @@ For Groovy template support add the following dependencies:
 <dependency>
     <groupId>org.codehaus.groovy</groupId>
     <artifactId>groovy-templates</artifactId>
-    <version>2.5.2</version>
+    <version>2.5.3</version>
 </dependency>
 <dependency>
     <groupId>org.codehaus.groovy</groupId>
     <artifactId>groovy-dateutil</artifactId>
-    <version>2.5.2</version>
+    <version>2.5.3</version>
 </dependency>
 ----
 
