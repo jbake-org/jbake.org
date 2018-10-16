@@ -1,0 +1,57 @@
+= Build Tool Integration
+Jonathan Bullock
+2016-10-03
+:jbake-type: page
+:jbake-tags: documentation
+:jbake-status: published
+:idprefix:
+
+== Build Tool Integration
+
+=== Maven Plugin
+
+There is a http://maven.apache.org[Maven] plugin that allows you to run JBake from your Maven build.
+
+* https://github.com/jbake-org/jbake-maven-plugin[Plugin on GitHub]
+
+The plugin is available from the Maven Central repository using the following coordinates:
+
+[source,xml]
+----
+<dependency>
+    <groupId>org.jbake</groupId>
+    <artifactId>jbake-maven-plugin</artifactId>
+    <version>0.3.1</version>
+</dependency>
+----
+
+The plugin was originally created by https://github.com/aldrinleal[Aldrin Leal].
+
+=== Gradle Plugin
+
+There is a http://gradle.org/[Gradle] plugin that allows you to run JBake from your Gradle build.
+
+* https://plugins.gradle.org/plugin/org.jbake.site[Plugin Page on Gradle.org]
+* https://github.com/jbake-org/jbake-gradle-plugin[Plugin on GitHub]
+* https://bintray.com/jbake/maven/jbake-gradle-plugin[Plugin on Bintray]
+
+The plugin was originally created by http://melix.github.io/blog/[Cédric Champeau].
+
+=== SBuild Plugin
+
+There is a http://sbuild.org/[SBuild] plugin that allows you to run JBake from your SBuild build.
+
+* https://github.com/SBuild-org/sbuild-jbake[Plugin on GitHub]
+
+The plugin is available from the Maven Central repository using the following coordinates:
+
+[source,xml]
+----
+<dependency>
+    <groupId>org.sbuild</groupId>
+    <artifactId>org.sbuild.plugins.jbake</artifactId>
+    <version>0.1.2</version>
+</dependency>
+----
+
+The plugin has been developed by https://github.com/lefou[Tobias Roeser].
