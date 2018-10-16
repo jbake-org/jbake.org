@@ -1,0 +1,24 @@
+= JBake v2.6.3 released
+Jonathan Bullock
+2018-10-14
+:jbake-type: post
+:jbake-tags: community
+:jbake-status: draft
+:category: news
+:idprefix:
+
+== JBake v2.6.3 released
+
+I'm happy to announce that link:/download.html[JBake v2.6.3] has been released. This is primarily a bug fix release.
+
+* https://github.com/jbake-org/jbake/issues/542[switched temporarily to jruby 9.1.17.0]
++
+There is a bug in asciidoctorj 1.5.7 https://github.com/asciidoctor/asciidoctorj/issues/680[rendering many documents on the same asciidoctor instance].
+
+* update to groovy 2.5.3 to get everything working with JDK 11
+
+You can find the complete changelog for this release here: https://github.com/jbake-org/jbake/milestone/18?closed=1
+
+This release should also be available via Maven Central, SDKMAN and Homebrew in the next few days.
+
+Download *link:/download.html[JBake v2.6.3]* now and get baking!
