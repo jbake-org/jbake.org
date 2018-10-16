@@ -1,0 +1,145 @@
+= Use as Library
+Jonathan Bullock
+2018-10-16
+:jbake-type: page
+:jbake-tags: documentation
+:jbake-status: published
+:idprefix:
+
+== Use as Library
+
+JBake can be used as a library from other software systems allowing you to programmatically bake a site.
+
+=== Maven coordinates
+
+The main JBake artifact is available from the Maven Central repository, these are the coordinates:
+
+[source,xml]
+----
+<dependency>
+	<groupId>org.jbake</groupId>
+	<artifactId>jbake-core</artifactId>
+	<version>2.6.3</version>
+</dependency>
+----
+
+The 3rd party libraries that provide support for Markdown content or the Freemarker template engine etc. are defined as optional dependencies in `jbake-core` so if 
+you plan on using them you will have to include them as a dependency in your project as well.
+
+For Markdown content support add the following dependency:
+
+[source,xml]
+----
+<dependency>
+	<groupId>com.vladsch.flexmark</groupId>
+	<artifactId>flexmark</artifactId>
+	<version>0.34.48</version>
+</dependency>
+
+<dependency>
+	<groupId>com.vladsch.flexmark</groupId>
+	<artifactId>flexmark-profile-pegdown</artifactId>
+	<version>0.34.48</version>
+</dependency>
+----
+
+For AsciiDoc content support add the following dependency:
+
+[source,xml]
+----
+<dependency>
+	<groupId>org.asciidoctor</groupId>
+	<artifactId>asciidoctorj</artifactId>
+	<version>1.5.7</version>
+</dependency>
+<dependency>
+	<groupId>org.jruby</groupId>
+	<artifactId>jruby-complete</artifactId>
+	<version>9.1.17.0</version>
+</dependency>
+----
+
+NOTE: There is a bug in AsciidoctorJ 1.5.7 which is why a specific version of JRuby has to be declared as a dependency.
+
+For Freemarker template support add the following dependency:
+
+[source,xml]
+----
+<dependency>
+	<groupId>org.freemarker</groupId>
+	<artifactId>freemarker</artifactId>
+	<version>2.3.28</version>
+</dependency>
+----
+
+For Groovy template support add the following dependencies:
+
+[source,xml]
+----
+<dependency>
+    <groupId>org.codehaus.groovy</groupId>
+    <artifactId>groovy-templates</artifactId>
+    <version>2.5.3</version>
+</dependency>
+<dependency>
+    <groupId>org.codehaus.groovy</groupId>
+    <artifactId>groovy-dateutil</artifactId>
+    <version>2.5.3</version>
+</dependency>
+----
+
+For Thymeleaf template support add the following dependencies:
+
+[source,xml]
+----
+<dependency>
+	<groupId>org.thymeleaf</groupId>
+	<artifactId>thymeleaf</artifactId>
+	<version>3.0.9.RELEASE</version>
+</dependency>
+----
+
+For Jade template support add the following dependencies:
+
+[source,xml]
+----
+<dependency>
+	<groupId>de.neuland-bfi</groupId>
+	<artifactId>jade4j</artifactId>
+	<version>1.2.7</version>
+</dependency>
+----
+
+=== API
+
+The main class you should be focusing on using is `Oven`, this class provides the main functionality via a `.bake()` method that requires some parameters to be 
+passed to it. Here's an example:
+
+[source, java, subs="attributes,verbatim"]
+----
+try {
+	File source = new File("/path/to/project_source"); //<1>
+	File destination = new File("/path/to/project_output"); //<2>
+	Oven oven = new Oven(source, destination, true); //<3>
+	oven.setupPaths(); //<4>
+	oven.bake(); //<5>
+} catch (ConfigurationException e) { //<6>
+	// do something with exception here
+} catch (JBakeException e) { //<7>
+	// do something with exception here
+}
+----
+
+<1> Defines the project source, this should be the root directory of the project, JBake will look in this directory for `jbake.properties`
+<2> Defines where the baked output should be placed
+<3> The third parameter defines if the local cache (persistent content store) should be cleared and therefore trigger a full bake
+<4> This method checks the paths supplied exist and content the required elements
+<5> This method performs the actual baking
+<6> A ConfigurationException is thrown if there is an issue loading the project configuration from `jbake.properties`
+<7> If any exceptions are thrown during the path checks or baking process they are wrapped in a JBakeException
+
+=== Logging
+
+All output is generated using LogBack apart from certain elements of the command line interface. You can control the output by making sure there is a logback.xml 
+on the classpath. The binary distribution includes a pre-defined https://github.com/jbake-org/jbake/blob/master/src/main/logging/logback.xml[logback.xml] that is 
+a good reference point.
