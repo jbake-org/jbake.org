@@ -1,6 +1,6 @@
 = JBake v2.6.3 released
-Jonathan Bullock
-2018-10-14
+Frank Becker
+2018-10-16
 :jbake-type: post
 :jbake-tags: community
 :jbake-status: draft
