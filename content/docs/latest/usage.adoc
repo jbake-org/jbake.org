@@ -141,3 +141,12 @@ You can use the JBake environment variable `JBAKE_OPTS` to set JVM system proper
 ----
 $ export JBAKE_OPTS="-Duser.language=DE"
 ----
+
+=== Logging and other libraries
+
+jbake by default will use its logging configuration from its bundled https://github.com/jbake-org/jbake/blob/master/src/main/logging/logback.xml[logback.xml] file.
+
+To override the bundled `logback.xml` and have your own logging setup add a `./lib/logging/logback.xml` to the directory you launch jbake from. 
+
+Likewise any file in `./lib` will be added to the classpath which can be used to override or add additional libraries.
+
