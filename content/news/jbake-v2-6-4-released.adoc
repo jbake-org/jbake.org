@@ -1,0 +1,49 @@
+= JBake v2.6.4 released
+Frank Becker
+2019-01-20
+:jbake-type: post
+:jbake-tags: community
+:jbake-status: draft
+:category: news
+:idprefix:
+
+== JBake v2.6.4 released
+
+I'm happy to announce that link:/download.html[JBake v2.6.4] has been released. This is primarily a bug fix release.
+
+You can find the complete changelog for this release here: https://github.com/jbake-org/jbake/milestone/19?closed=1
+
+This release should also be available via Maven Central, SDKMAN and Homebrew in the next few days.
+
+Download *link:/download.html[JBake v2.6.4]* now and get baking!
+
+=== Fixes
+
+* https://github.com/jbake-org/jbake/pull/554[fix relative image source transformation]
+* https://github.com/jbake-org/jbake/issues/566[fix jbake serve on Windows 10 using jdk 8]
+* https://github.com/jbake-org/jbake/pull/569[fix using nested paths tag.path result in wrong content.root value]
+
+=== Enhancements
+
+* https://github.com/jbake-org/jbake/pull/564[Add current dir lib/* and lib/logging to classpath]
+* https://github.com/jbake-org/jbake/pull/580[Parse "jbake-" prefixed asciidoc headers like normal metadata]
+* https://github.com/jbake-org/jbake/pull/583[Incremental asset baking while serving]
+
+=== Updates
+
+* https://github.com/jbake-org/jbake/pull/560[asciidoctorj from 2.5.7 to 2.5.8.1]
+* https://github.com/jbake-org/jbake/pull/577[Upgrade Jetty to 9.2.26.v20180806]
+
+=== Contributors
+
+In no particular order:
+
+* https://github.com/OndraZizka[Ondrej Zizka]
+* https://github.com/maxandersen[Max Rydahl Andersen]
+* https://github.com/kwin[Konrad Windszus]
+* https://github.com/jmcgarr[Mike McGarr]
+* https://github.com/matthiasblaesing[Matthias Bläsing]
+
+Thank you for your time and patience.
+
+A warm thank you to all people we missed to mention who spread the word and open issues.
