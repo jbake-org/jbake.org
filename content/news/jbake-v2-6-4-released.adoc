@@ -33,6 +33,10 @@ Download *link:/download.html[JBake v2.6.4]* now and get baking!
 
 * https://github.com/jbake-org/jbake/pull/560[asciidoctorj from 2.5.7 to 2.5.8.1]
 * https://github.com/jbake-org/jbake/pull/577[Upgrade Jetty to 9.2.26.v20180806]
+* asciidoctorj-diagram 1.5.10 to 1.5.11
+* flexmark 0.34.48 to 0.40.8
+* groovy 2.5.3 to 2.5.5
+* thymeleaf 3.0.9.RELEASE to 3.0.11.RELEASE
 
 === Contributors
 
