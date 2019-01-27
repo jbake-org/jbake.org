@@ -1,6 +1,6 @@
 = Download
 Jonathan Bullock
-2019-01-21
+2019-01-27
 :jbake-type: page
 :jbake-tags: download
 :jbake-status: published
@@ -13,7 +13,7 @@ The binary distribution runs on Windows, Linux and Mac and only requires a Java 
 [options="header"]
 |===
 |Version |SHA1 |Download Link |Release Notes
-|v2.6.4 |xxx |https://dl.bintray.com/jbake/binary/jbake-2.6.4-bin.zip[Bintray] XX.XXMB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.6.4[Changelog]
+|v2.6.4 |df6926721202e036f84079b830859d176a2c1a32 |https://dl.bintray.com/jbake/binary/jbake-2.6.4-bin.zip[Bintray] 53.34MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.6.4[Changelog]
 |===
 
 == SDKMAN
