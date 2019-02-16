@@ -37,6 +37,25 @@ There is a http://gradle.org/[Gradle] plugin that allows you to run JBake from y
 
 The plugin was originally created by http://melix.github.io/blog/[Cédric Champeau].
 
+
+=== mill Plugin
+
+There is a https://www.lihaoyi.com/mill/[mill] plugin that integrates site generation with JBake into mill.
+
+* https://github.com/lefou/mill-jbake[Plugin on GitHub]
+
+The plugin was developed and is maintained by https://github.com/lefou[Tobias Roeser].
+
+
+=== sbt Plugin
+
+There is a https://www.scala-sbt.org/[sbt] plugin that integrates site generation with JBake into sbt.
+
+* https://github.com/woq-blended/sbt-jbake[Plugin on GitHub]
+
+The plugin was developed and is maintained by https://github.com/lefou[Tobias Roeser].
+
+
 === SBuild Plugin
 
 There is a http://sbuild.org/[SBuild] plugin that allows you to run JBake from your SBuild build.
@@ -54,4 +73,5 @@ The plugin is available from the Maven Central repository using the following co
 </dependency>
 ----
 
-The plugin has been developed by https://github.com/lefou[Tobias Roeser].
+The plugin was developed by https://github.com/lefou[Tobias Roeser].
+
