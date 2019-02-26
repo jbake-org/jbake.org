@@ -53,7 +53,13 @@ $ jbake -b -s
           <p>Binary distribution contains everything you need apart from a JRE, no complicated environment setup with 3rd party dependencies.</p>
 
           <h4>Build tools</h4>
-          <p>Plugins available for <a href="https://gradle.org/">Gradle</a>, <a href="https://maven.apache.org/">Maven</a> and <a href="http://sbuild.org/">SBuild</a>.</p>
+          <p>
+          Plugins available for <a href="https://gradle.org/">Gradle</a>, 
+          <a href="https://maven.apache.org/">Maven</a>,
+          <a href="https://www.lihaoyi.com/mill/">mill</a>,
+          <a href="http://sbuild.org/">SBuild</a>
+          and <a href="https://https://www.scala-sbt.org/">sbt.</a>
+          </p>
 
           <h4>Template Support</h4>
           <p><a href="http://freemarker.org/">Freemarker</a>, <a href="http://www.groovy-lang.org/">Groovy</a>, <a href="http://www.thymeleaf.org/">Thymeleaf</a> and <a href="https://github.com/neuland/jade4j">Jade</a> based templates & scripting support.</p>
