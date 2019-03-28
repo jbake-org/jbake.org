@@ -13,24 +13,28 @@ Jonathan Bullock
 
 toc::[]
 
-include::installation.adoc[lines=9..1000]
+:leveloffset: +1
 
-include::quickstart-guide.adoc[lines=9..1000]
+include::installation.adoc[]
 
-include::usage.adoc[lines=9..1000]
+include::quickstart-guide.adoc[]
 
-include::overview.adoc[lines=9..1000]
+include::usage.adoc[]
 
-include::project-structure.adoc[lines=9..1000]
+include::overview.adoc[]
 
-include::content-files.adoc[lines=9..1000]
+include::project-structure.adoc[]
 
-include::template.adoc[lines=9..1000]
+include::content-files.adoc[]
 
-include::data-variables.adoc[lines=9..1000]
+include::template.adoc[]
 
-include::configuration.adoc[lines=9..1000]
+include::data-variables.adoc[]
 
-include::use-as-library.adoc[lines=9..1000]
+include::configuration.adoc[]
 
-include::build-tool-integration.adoc[lines=9..1000]
+include::use-as-library.adoc[]
+
+include::build-tool-integration.adoc[]
+
+:leveloffset: -1

@@ -1,14 +1,10 @@
 = Templates
-Jonathan Bullock
-2019-01-21
 :jbake-type: page
 :jbake-tags: documentation
 :jbake-status: published
 :idprefix:
 
-== Templates
-
-=== Default Templates
+== Default Templates
 
 There are default template files defined in JBake that are used to render a number of special pages that require no content files to be present, these are:
 
@@ -36,7 +32,7 @@ There are also two default templates files defined in JBake that are used to ren
 * `page` - used to render any content file marked with a type of 'page'
 * `post` - used to render any content file marked with a type of 'post'
 
-=== Custom Templates
+== Custom Templates
 
 You also have the ability to define new custom templates that can be used when rendering different types of content files.
 

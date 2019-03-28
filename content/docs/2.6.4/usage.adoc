@@ -1,12 +1,8 @@
 = Usage
-Jonathan Bullock
-2019-01-21
 :jbake-type: page
 :jbake-tags: documentation
 :jbake-status: published
 :idprefix:
-
-== Usage
 
 Running jbake without arguments is equivalent to running jbake with `-h`, and will display the usage instructions.
 
@@ -14,7 +10,7 @@ Running jbake without arguments is equivalent to running jbake with `-h`, and wi
 $ jbake
 ----
 
-=== Bake command
+== Bake command
 
 The bake command mixes your source content with your templates and cooks it all into a fully baked web site. You have a number of different ways to execute the bake
 command to suite your requirements.
@@ -47,7 +43,7 @@ $ jbake <source> <output>
 ----
 
 
-=== Initialisation command
+== Initialisation command
 
 The initialisation command will seed your project directory with the required project structure along with a number of sample content files and templates. You do have the
 option to choose what template engine is used though.
@@ -73,7 +69,7 @@ $ jbake -i -t <freemarker|groovy|groovy-mte|thymeleaf|jade>
 NOTE: The template engines available are http://freemarker.org[Freemarker], http://www.groovy-lang.org/[Groovy Simple and Markup], http://www.thymeleaf.org/[Thymeleaf]
 and https://github.com/neuland/jade4j[Jade].
 
-==== Example Project Structures
+=== Example Project Structures
 
 The example project structure and sample templates are stored in your JBake installation folder in the files:
 
@@ -87,7 +83,7 @@ If you'd like to change the structure or sample templates in some way then you c
 as required, then ZIP them back up and replace the original ZIP file with your updated file. Then JBake will use your updated
 project structure and templates when ever it initialises a new folder from then on.
 
-=== Server command
+== Server command
 
 The server command will allow you to see what your baked site looks like when served out by a HTTP web server, great for when you want to preview your site using
 your local web browser.
@@ -107,7 +103,7 @@ You can specify the directory to serve out by supplying an additional parameter:
 $ jbake -s <directory>
 ----
 
-==== Overriding `site.host`
+=== Overriding `site.host`
 
 The `site.host` property in your `jbake.properties` will be automatically be overridden with the following value when using the server command:
 
@@ -117,14 +113,14 @@ site.host=http://localhost:8820
 
 NOTE: If you have altered the port from the default it will be reflected in this value too.
 
-==== Watch mode
+=== Watch mode
 
 While the server is running JBake will watch the content, assets and templates folders for any changes (new files as well as changes to existing content) and automatically trigger a bake. So
 you can refresh your browser to see the changes to the output.
 
 This mode is best used in conjunction with incremental rendering, for details on how to enable this please see the <<persistent_content_store>> configuration option.
 
-=== Combining commands
+== Combining commands
 
 It is possible to combine certain JBake commands together like so:
 
@@ -134,7 +130,7 @@ $ jbake -b -s
 
 This will bake your site first and then serve the output out using the built in server, using the defaults mentioned above.
 
-=== Environment Variable
+== Environment Variable
 
 You can use the JBake environment variable `JBAKE_OPTS` to set JVM system properties such as `user.language` for when JBake executes:
 
@@ -142,7 +138,7 @@ You can use the JBake environment variable `JBAKE_OPTS` to set JVM system proper
 $ export JBAKE_OPTS="-Duser.language=DE"
 ----
 
-=== Logging and other libraries
+== Logging and other libraries
 
 jbake by default will use its logging configuration from its bundled https://github.com/jbake-org/jbake/blob/master/src/main/logging/logback.xml[logback.xml] file.
 

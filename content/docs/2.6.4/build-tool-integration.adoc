@@ -1,14 +1,10 @@
 = Build Tool Integration
-Jonathan Bullock
-2019-01-21
 :jbake-type: page
 :jbake-tags: documentation
 :jbake-status: published
 :idprefix:
 
-== Build Tool Integration
-
-=== Maven Plugin
+== Maven Plugin
 
 There is a http://maven.apache.org[Maven] plugin that allows you to run JBake from your Maven build.
 
@@ -27,7 +23,7 @@ The plugin is available from the Maven Central repository using the following co
 
 The plugin was originally created by https://github.com/aldrinleal[Aldrin Leal].
 
-=== Gradle Plugin
+== Gradle Plugin
 
 There is a http://gradle.org/[Gradle] plugin that allows you to run JBake from your Gradle build.
 
@@ -38,7 +34,7 @@ There is a http://gradle.org/[Gradle] plugin that allows you to run JBake from y
 The plugin was originally created by http://melix.github.io/blog/[Cédric Champeau].
 
 
-=== mill Plugin
+== mill Plugin
 
 There is a https://www.lihaoyi.com/mill/[mill] plugin that integrates site generation with JBake into mill.
 
@@ -47,7 +43,7 @@ There is a https://www.lihaoyi.com/mill/[mill] plugin that integrates site gener
 The plugin was developed and is maintained by https://github.com/lefou[Tobias Roeser].
 
 
-=== sbt Plugin
+== sbt Plugin
 
 There is a https://www.scala-sbt.org/[sbt] plugin that integrates site generation with JBake into sbt.
 
@@ -56,7 +52,7 @@ There is a https://www.scala-sbt.org/[sbt] plugin that integrates site generatio
 The plugin was developed and is maintained by https://github.com/lefou[Tobias Roeser].
 
 
-=== SBuild Plugin
+== SBuild Plugin
 
 There is a http://sbuild.org/[SBuild] plugin that allows you to run JBake from your SBuild build.
 

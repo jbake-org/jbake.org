@@ -1,17 +1,13 @@
-= Data Variables
-Jonathan Bullock
-2019-01-21
+= Data Model
 :jbake-type: page
 :jbake-tags: documentation
 :jbake-status: published
 :idprefix:
 
-== Data Model
-
 A data model is exposed to each of the templates (regardless of what template engine you use) allowing you to get access to the data parsed from within
 the content files, the model can also be used to apply logic to the output from the templates.
 
-=== Global
+== Global
 
 These data variables are available to all templates regardless.
 
@@ -36,7 +32,7 @@ For example `template.index.file=index.ftl` is available via `config.template_in
 In your templates you can loop through any of the collections above in the templates, and access a map of values for each element like so: `content.[value]`
 all of the metadata header fields are available such as `content.title` along with the body of the content file `content.body`.
 
-==== Tag Data model
+=== Tag Data model
 Global variable `tags` represent a collection of all tags. Each tag in this collection is represented by a map containing following attributes -
 
 - `name` : Name of the tag, as specified in source file.
@@ -45,7 +41,7 @@ Global variable `tags` represent a collection of all tags. Each tag in this coll
 - `tagged_documents` : Represents subset of `published_content` collection with documents tagged with this tag.
 
 
-=== Page / Post / Custom
+== Page / Post / Custom
 
 These predefined templates as well as any custom templates you create yourself have the following data available to them:
 
@@ -67,7 +63,7 @@ For example, uri of next post can be accessed as `content.nextContent.uri`.
 
 WARNING: `previousContent` and `nextContent` can be `null` when there is no previous/next content, e.g. on very first entry or last entry. `uri` and `noExtensionUri` are relative to the `rootPath`.
 
-=== Index
+== Index
 
 This predefined template has the following extra data variables available to it related to paging:
 
@@ -80,7 +76,7 @@ These variables allow you provide next and previous links in your template to na
 
 NOTE: As indicated, these variables may not exist so you should check first before referring to it.
 
-=== Tags
+== Tags
 
 This predefined template has the following extra data available to it:
 
@@ -88,7 +84,7 @@ This predefined template has the following extra data available to it:
 - `tag_posts` = collection of published posts for tag in date descending order
 - `tagged_documents` = collection of published documents (regardless of type) for tag in date descending order
 
-==== Tags Index
+=== Tags Index
 
 It is possible to generate Index page for the <<Default tag output directory>> by setting `render.tagsindex` to `true` (default is `false`) in jbake.properties file.
 

@@ -1,14 +1,10 @@
 = Build Tool Integration
-Jonathan Bullock
-2019-01-21
 :jbake-type: page
 :jbake-tags: documentation
 :jbake-status: published
 :idprefix:
 
-== Build Tool Integration
-
-=== Maven Plugin
+== Maven Plugin
 
 There is a http://maven.apache.org[Maven] plugin that allows you to run JBake from your Maven build.
 
@@ -27,7 +23,7 @@ The plugin is available from the Maven Central repository using the following co
 
 The plugin was originally created by https://github.com/aldrinleal[Aldrin Leal].
 
-=== Gradle Plugin
+== Gradle Plugin
 
 There is a http://gradle.org/[Gradle] plugin that allows you to run JBake from your Gradle build.
 
@@ -37,7 +33,7 @@ There is a http://gradle.org/[Gradle] plugin that allows you to run JBake from y
 
 The plugin was originally created by http://melix.github.io/blog/[Cédric Champeau].
 
-=== SBuild Plugin
+== SBuild Plugin
 
 There is a http://sbuild.org/[SBuild] plugin that allows you to run JBake from your SBuild build.
 

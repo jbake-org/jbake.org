@@ -1,12 +1,8 @@
 = Project Structure
-Jonathan Bullock
-2019-01-21
 :jbake-type: page
 :jbake-tags: documentation
 :jbake-status: published
 :idprefix:
-
-== Project Structure
 
 Here is an example source directory structure for a project:
 
@@ -40,12 +36,12 @@ Here is an example source directory structure for a project:
 |-- jbake.properties
 ----
 
-=== Assets Directory
+== Assets Directory
 
 The assets directory is where you should place your static files such as images, CSS files and JavaScript files etc. These files are copied over to the
 baked output as is. You can create any directory structure you like in the assets directory and this structure will be maintained when copied.
 
-=== Content Directory
+== Content Directory
 
 The content directory is where your content files should be placed, these files will be "mixed" with the templates to generate the baked output. Again
 you can create any directory structure you like for your content, this structure will be maintained when the baked output is created.
@@ -60,12 +56,12 @@ The extension of the content file determines what type of content it contains:
 
 NOTE: JBake uses https://github.com/vsch/flexmark-java[flexmark-java] to support Markdown format and http://asciidoctor.org/[Asciidoctor] to support AsciiDoc format.
 
-==== Static files in Content
+=== Static files in Content
 
 Any files other than above listed content files, will be treated as static files. When site is baked, all these files will be copied as-is to output folder, while maintaining their directory structure.
 For example, /content/blog/2013/images/abc.jpg will be copied to to /output/blog/2013/images/abc.jpg.
 
-=== Templates Directory
+== Templates Directory
 
 The templates directory is where your templates files go, these files are "mixed" with your content files to generate the baked output. You should place your
 templates into the root of this directory.
@@ -88,10 +84,10 @@ For more information on what you can do in each template engine have a look at t
 respective documentation: http://freemarker.org/docs/index.html[Freemarker], http://docs.groovy-lang.org/latest/html/documentation/template-engines.html[Groovy],
 http://www.thymeleaf.org/doc/html/Using-Thymeleaf.html[Thymeleaf] & https://github.com/neuland/jade4j[Jade].
 
-=== Ignoring Files and Directories
+== Ignoring Files and Directories
 It is possible to ignore certain folders or files in content and assets dirctory to be ignored by JBake.
 
-==== Ignore Directories
+=== Ignore Directories
 If you add a file named `.jbakeignore` in a folder then JBake will ignore contents of that folder and all of its sub-folders.
 
 - If ignored folder is in content, then none of the source files will be rendered/copied by JBake.
@@ -99,15 +95,15 @@ If you add a file named `.jbakeignore` in a folder then JBake will ignore conten
 
 WARNING: If you are referring resources from ignored folder in non-ignored source content, then that might result in broken links.
 
-==== Ignore files
+=== Ignore files
 All hidden files from content directory are ignored by JBake.
 
-=== Project Configuration
+== Project Configuration
 
 Your project specific configuration is held within the `jbake.properties` file which should be located in the root directory of the project. This file controls
 how your project is baked. See <<configuration>> section for more details.
 
-=== Altering Default Structure
+== Altering Default Structure
 
 You can also alter the default structure by setting some specific configuration options in your `jbake.properties` file. So you could have the following structure:
 

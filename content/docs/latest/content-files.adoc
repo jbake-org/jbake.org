@@ -1,14 +1,10 @@
 = Content Files
-Jonathan Bullock
-2019-01-21
 :jbake-type: page
 :jbake-tags: documentation
 :jbake-status: published
 :idprefix:
 
-== Content Files
-
-=== Metadata Header
+== Metadata Header
 
 The metadata header defines some basic information that JBake uses when baking the content file.
 
@@ -31,7 +27,7 @@ If you leave the **date** field out then the files last modified timestamp will 
 For an AsciiDoc formatted content file the metadata header section is optional, the JBake metadata can be defined in the AsciiDoc document header itself like so:
 
 ----
-= Project Structure
+ Project Structure
 Jonathan Bullock
 2013-10-17
 :jbake-type: page
@@ -41,7 +37,7 @@ Jonathan Bullock
 
 NOTE: JBake related attributes included in the AsciiDoc header require the `jbake-` prefix to avoid any collisions.
 
-==== Status
+=== Status
 
 You have 3 options for the status field:
 
@@ -49,7 +45,7 @@ You have 3 options for the status field:
 * `published`  - published content is rendered and included in the published collections
 * `published-date` - providing content date is equal to or past current date content will be considered published and included in the published collections
 
-==== Type
+=== Type
 
 You can choose what template file your content file will be mixed with by changing the value of the `type` field. By default there are 2 standard types:
 
@@ -58,7 +54,7 @@ You can choose what template file your content file will be mixed with by changi
 
 You can also define more types in your project configuration to give you more flexibility in your project, for details of this please see <<custom_templates>>.
 
-==== Custom Metadata
+=== Custom Metadata
 
 You can also define custom metadata in the header that can be exposed to the templates, for example:
 
@@ -75,7 +71,7 @@ And access it in the templates like so:
 This feature is extremely useful when you want to control the rendering of extra market in the templates such as https://disqus.com/[Disqus] for comments
 on certain posts/pages or to display images using some JavaScript library like https://jquery.com/[jQuery].
 
-==== Complex Custom Metadata
+=== Complex Custom Metadata
 
 If you need to define a complex structure of metadata you can use JSON format to achieve this, here's an example:
 
@@ -97,12 +93,12 @@ This complex data is then accessible from the templates like this:
 <1> Checks the `content` map is not null and that the `content.og` map is not null
 <2> Outputs the `description` value from the `content.og` map
 
-=== Content Body
+== Content Body
 
 Everything after the metadata header is considered the content body and made available to the templates, after being converted to HTML if required in the case of
 Markdown or AsciiDoc.
 
-==== Images Path
+=== Images Path
 
 You have the option to update any relative image paths included in your content to absolute image paths. The value specified in the config property `site.host` is used as the FQDN for the absolute path, unless
 you are running server mode locally.

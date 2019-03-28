@@ -1,13 +1,9 @@
 = Configuration
-Jonathan Bullock
-2019-01-21
 :jbake-type: page
 :jbake-tags: documentation
 :jbake-status: published
 :idprefix:
 :url-defaultProperties: https://github.com/jbake-org/jbake/blob/master/jbake-core/src/main/resources/default.properties
-
-== Configuration
 
 The `jbake.properties` file (or legacy file custom.properties) allows you to customise the configuration of JBake for your project.
 For example you can change the name of the folder that stores your content or templates, decide whether to generate a
@@ -19,9 +15,9 @@ So in the absence of these options in your jbake.properties the default value pr
 
 You can also comment out any configuration options by adding a hash or number sign as the first character on a line in your file.
 
-=== Built in options
+== Built in options
 
-==== Default assets directory
+=== Default assets directory
 
 This option defines the folder that holds the assets for your project. This can be a relative path from the root of your project or an absolute path reference.
 
@@ -30,7 +26,7 @@ This option defines the folder that holds the assets for your project. This can 
 asset.folder=assets
 ----
 
-==== Default content directory
+=== Default content directory
 
 This option defines the folder that holds the content files for your project. This can be a relative path from the root of your project or an absolute path reference.
 
@@ -39,7 +35,7 @@ This option defines the folder that holds the content files for your project. Th
 content.folder=content
 ----
 
-==== Default output/destination directory
+=== Default output/destination directory
 
 This option defines the name of the directory that will be used for the baked output to be placed in.
 
@@ -48,7 +44,7 @@ This option defines the name of the directory that will be used for the baked ou
 destination.folder=output
 ----
 
-==== Default template directory
+=== Default template directory
 
 This option defines the folder that holds the template files for your project. This can be a relative path from the root of your project or an absolute path reference.
 
@@ -57,7 +53,7 @@ This option defines the folder that holds the template files for your project. T
 template.folder=templates
 ----
 
-==== Default index template file
+=== Default index template file
 
 This option defines the default template file that will be used to render the index file
 
@@ -68,7 +64,7 @@ template.masterindex.file=index.ftl
 
 WARNING: In past releases this option was known as: `template.index.file`
 
-==== Default archive template file
+=== Default archive template file
 
 This option defines the default template file that will be used to render an archive file
 
@@ -77,7 +73,7 @@ This option defines the default template file that will be used to render an arc
 template.archive.file=archive.ftl
 ----
 
-==== Default feed template file
+=== Default feed template file
 
 This option defines the default template file that will be used to render a feed file
 
@@ -86,7 +82,7 @@ This option defines the default template file that will be used to render a feed
 template.feed.file=feed.ftl
 ----
 
-==== Default sitemap template file
+=== Default sitemap template file
 
 This option defines the default template file that will be used to render a sitemap file
 
@@ -95,7 +91,7 @@ This option defines the default template file that will be used to render a site
 template.sitemap.file=sitemap.ftl
 ----
 
-==== Default tags template file
+=== Default tags template file
 
 This option defines the default template file that will be used when rendering a file for each tag
 
@@ -104,7 +100,7 @@ This option defines the default template file that will be used when rendering a
 template.tag.file=tags.ftl
 ----
 
-==== Default page template file
+=== Default page template file
 
 This option defines the default template file that will be used when rendering a file of type=page
 
@@ -113,7 +109,7 @@ This option defines the default template file that will be used when rendering a
 template.page.file=page.ftl
 ----
 
-==== Default post template file
+=== Default post template file
 
 This option defines the default template file that will be used when rendering a file of type=post
 
@@ -122,7 +118,7 @@ This option defines the default template file that will be used when rendering a
 template.post.file=post.ftl
 ----
 
-==== Default encoding for templates
+=== Default encoding for templates
 
 This option defines the character encoding that should be used when reading in the template files
 
@@ -132,7 +128,7 @@ This option defines the character encoding that should be used when reading in t
 template.encoding=UTF-8
 ----
 
-==== Render index file
+=== Render index file
 
 This option defines whether an index file should be rendered or not
 
@@ -144,7 +140,7 @@ render.index=true
 TIP: This option is useful when you want to use a content file as your index file allowing you to define specific content for the page instead of just using
 the template.
 
-==== Render archive file
+=== Render archive file
 
 This option defines whether an archive file should be rendered or not
 
@@ -153,7 +149,7 @@ This option defines whether an archive file should be rendered or not
 render.archive=true
 ----
 
-==== Render feed file
+=== Render feed file
 
 This option defines whether a feed file should be rendered or not
 
@@ -162,7 +158,7 @@ This option defines whether a feed file should be rendered or not
 render.feed=true
 ----
 
-==== Render sitemap file
+=== Render sitemap file
 
 This option defines whether a sitemap file should be rendered or not
 
@@ -171,7 +167,7 @@ This option defines whether a sitemap file should be rendered or not
 render.sitemap=false
 ----
 
-==== Render tag files
+=== Render tag files
 
 This option defines whether tag files are rendered or not
 
@@ -180,7 +176,7 @@ This option defines whether tag files are rendered or not
 render.tags=true
 ----
 
-==== Default index output filename
+=== Default index output filename
 
 This option defines the output filename to be used when rendering the index file
 
@@ -189,7 +185,7 @@ This option defines the output filename to be used when rendering the index file
 index.file=index.html
 ----
 
-==== Default archive output filename
+=== Default archive output filename
 
 This option defines the output filename to be used when rendering the archive file
 
@@ -198,7 +194,7 @@ This option defines the output filename to be used when rendering the archive fi
 archive.file=archive.html
 ----
 
-==== Default feed output filename
+=== Default feed output filename
 
 This option defines the output filename to be used when rendering the feed file
 
@@ -207,7 +203,7 @@ This option defines the output filename to be used when rendering the feed file
 feed.file=feed.xml
 ----
 
-==== Default sitemap output filename
+=== Default sitemap output filename
 
 This option defines the output filename to be used when rendering the sitemap file
 
@@ -216,7 +212,7 @@ This option defines the output filename to be used when rendering the sitemap fi
 sitemap.file=sitemap.xml
 ----
 
-==== Default tag output directory
+=== Default tag output directory
 
 This option defines the output directory to be used when rendering the tag files
 
@@ -225,7 +221,7 @@ This option defines the output directory to be used when rendering the tag files
 tag.path=tags
 ----
 
-==== Sanitize tag value
+=== Sanitize tag value
 
 This option defines whether the tag value should be santized before being used as a filename (i.e. replace spaces with hypens)
 
@@ -236,7 +232,7 @@ tag.sanitize=false
 
 When this option is set to true it will mean a tag value of `west wing` will be changed to `west-wing`, the tag file generated will be `west-wing.html`.
 
-==== Default encoding when rendering
+=== Default encoding when rendering
 
 This option defines the character encoding that should be used when rendering files
 
@@ -246,7 +242,7 @@ This option defines the character encoding that should be used when rendering fi
 render.encoding=UTF-8
 ----
 
-==== Default output file extension
+=== Default output file extension
 
 This option defines the default file extension that should be used when rendering content files
 
@@ -255,7 +251,7 @@ This option defines the default file extension that should be used when renderin
 output.extension=.html
 ----
 
-==== Default suffix for draft content
+=== Default suffix for draft content
 
 This option defines the default suffix to be used when rendering draft content files
 
@@ -264,7 +260,7 @@ This option defines the default suffix to be used when rendering draft content f
 draft.suffix=-draft
 ----
 
-==== Default port for server mode
+=== Default port for server mode
 
 This option defines the default port the server will listen on
 
@@ -273,7 +269,7 @@ This option defines the default port the server will listen on
 server.port=8820
 ----
 
-==== Default Freemarker project file
+=== Default Freemarker project file
 
 This option defines the filename of the ZIP containing the example project that uses Freemarker templates
 
@@ -282,7 +278,7 @@ This option defines the filename of the ZIP containing the example project that 
 example.project.freemarker=example_project_freemarker.zip
 ----
 
-==== Default Groovy SimpleTemplateEngine project file
+=== Default Groovy SimpleTemplateEngine project file
 
 This option defines the filename of the ZIP containing the example project that uses Groovy SimpleTemplateEngine templates
 
@@ -291,7 +287,7 @@ This option defines the filename of the ZIP containing the example project that 
 example.project.groovy=example_project_groovy.zip
 ----
 
-==== Default Groovy MarkupTempateEngine project file
+=== Default Groovy MarkupTempateEngine project file
 
 This option defines the filename of the ZIP containing the example project that uses Groovy MarkupTemplateEngine templates
 
@@ -300,7 +296,7 @@ This option defines the filename of the ZIP containing the example project that 
 example.project.groovy-mte=example_project_groovy-mte.zip
 ----
 
-==== Default Thymeleaf project file
+=== Default Thymeleaf project file
 
 This option defines the filename of the ZIP containing the example project that uses Thymeleaf templates
 
@@ -309,7 +305,7 @@ This option defines the filename of the ZIP containing the example project that 
 example.project.thymeleaf=example_project_thymeleaf.zip
 ----
 
-==== Default Asciidoctor attributes
+=== Default Asciidoctor attributes
 
 This option defines a set of default Asciidoctor attributes that are used whenever AsciiDoc formatted content is rendered
 
@@ -320,7 +316,7 @@ asciidoctor.attributes=source-highlighter=prettify
 
 The value for this configuration option is a comma separated list of key-value pairs. The default value defines Prettify as the source highlighter to be used.
 
-==== Export JBake configuration to Asciidoctor content
+=== Export JBake configuration to Asciidoctor content
 
 This option defines if the JBake configuration options should be exported to Asciidoctor as attributes so they are accessible from within AsciiDoc formatted content.
 
@@ -340,7 +336,7 @@ asciidoctor.attributes.export.prefix=
 
 NOTE: By default this option is disabled in default.properties
 
-==== Default Content Status
+=== Default Content Status
 
 This option defines a default status for content files, allowing you to avoid having to define the status value in each of your content files. This value is ONLY
 used if a status value hasn't been defined in the metadata header though.
@@ -352,7 +348,7 @@ used if a status value hasn't been defined in the metadata header though.
 
 NOTE: By default this option is disabled in default.properties
 
-==== Default date format for content files
+=== Default date format for content files
 
 This option defines the default date format that is used when JBake tries to parse the date defined in the metadata header of content files.
 
@@ -364,7 +360,7 @@ https://docs.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html[Java A
 date.format=yyyy-MM-dd
 ----
 
-==== Markdown extensions
+=== Markdown extensions
 
 This option defines what Markdown extensions are enabled when content created in the Markdown format is rendered. Each extension required should be separated by a comma.
 For details on what extensions are available please see the https://github.com/vsch/flexmark-java[flexmark-java docs].
@@ -381,7 +377,7 @@ You can use the alias `ALL` to enable all available extensions. You can also dis
 markdown.extensions=ALL,-HARDWRAPS
 ----
 
-==== Markdown parsing timeout
+=== Markdown parsing timeout
 
 WARNING: This option is now obsolete as flexmark-java is used.
 
@@ -393,7 +389,7 @@ parsing each piece of Markdown content.
 markdown.maxParsingTimeInMillis=2000
 ----
 
-==== Persistent content store
+=== Persistent content store
 
 This option defines whether the content store built while parsing your content files is persisted to disk or not. When it is persisted to disk the next time you
 perform a bake only those content files that have changed will be rendered speeding up the process. When it is not persisted to disk, i.e. kept in memory, a full bake
@@ -409,7 +405,7 @@ db.store=memory
 
 WARNING: Prior to v2.6.0 the option to persist to disk was `local`
 
-==== Persistent content store path
+=== Persistent content store path
 
 This option defines the directory that is used to persist the content store to disk. It is only relevant when the content store is persisted to disk.
 
@@ -418,7 +414,7 @@ This option defines the directory that is used to persist the content store to d
 db.path=cache
 ----
 
-==== Thymeleaf Locale
+=== Thymeleaf Locale
 
 This option defines the locale to be used when rendering Thymeleaf templates.
 
@@ -427,7 +423,7 @@ This option defines the locale to be used when rendering Thymeleaf templates.
 thymeleaf.locale=en
 ----
 
-==== Thymeleaf Template Mode
+=== Thymeleaf Template Mode
 
 This option defines the http://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#textual-template-modes[Thymeleaf Template Mode] to be used when rendering
 Thymeleaf templates for the specified `type` which is set in the content files themselves, e.g. `type=page`. Defaults to `HTML` if not set.
@@ -437,7 +433,7 @@ Thymeleaf templates for the specified `type` which is set in the content files t
 template_<type>_thymeleaf_mode=HTML
 ----
 
-==== Ignore hidden asset files
+=== Ignore hidden asset files
 
 This option defines whether hidden asset files should be ignored or not as part of the baking process. When set to `true` it means files such as `.DS_Store` or
 `desktop.ini` won't be included in your baked output.
@@ -446,7 +442,7 @@ This option defines whether hidden asset files should be ignored or not as part 
 asset.ignore=false
 ----
 
-==== Enable paging on index page
+=== Enable paging on index page
 
 This option enables paging on the index page output when set to `true`. To be used in conjunction with the next option.
 
@@ -454,7 +450,7 @@ This option enables paging on the index page output when set to `true`. To be us
 index.paginate=false
 ----
 
-==== Posts per page
+=== Posts per page
 
 This option defines how many posts will be output on each index page.
 
@@ -462,7 +458,7 @@ This option defines how many posts will be output on each index page.
 index.posts_per_page=10
 ----
 
-==== Enable extensionless URI's
+=== Enable extensionless URI's
 
 This option enables extensionless URI's, so instead of /blog/2014/03/26/post.html JBake will output to /blog/2014/03/26/post/index.html allowing you to
 refer to the URI without an extension.
@@ -473,7 +469,7 @@ uri.noExtension=false
 
 NOTE: Requires the following option to be set to define a prefix.
 
-==== Enable extensionless URI's prefix
+=== Enable extensionless URI's prefix
 
 This option defines the prefix to apply extensionless URI's for.
 
@@ -481,7 +477,7 @@ This option defines the prefix to apply extensionless URI's for.
 uri.noExtension.prefix=/blog/
 ----
 
-==== Default type value for content files
+=== Default type value for content files
 
 This option allows you to set a default type for content files that's used when content files don't explicity set the value.
 
@@ -489,7 +485,7 @@ This option allows you to set a default type for content files that's used when 
 default.type=page
 ----
 
-==== Image Path Update
+=== Image Path Update
 
 This option enables relative image paths to be automatically updated when value is set to `true`. See <<images_path>> for more information.
 
@@ -497,7 +493,7 @@ This option enables relative image paths to be automatically updated when value 
 img.path.update=true
 ----
 
-==== Image Path Prepend Host
+=== Image Path Prepend Host
 
 This option enables the use of the `site.host` value in the construction of the absolute image path to be used. See <<images_path>> for more information.
 
@@ -507,7 +503,7 @@ img.path.prepend.host=true
 
 NOTE: Needs `img.path.update` to be set to `true` otherwise this has no effect.
 
-=== Custom configuration options
+== Custom configuration options
 
 You can also define additional options in your `jbake.properties` file for use in your project, especially in your template files. A great example is provided in the
 sample projects that have an option called `site.host` which defines the host URL for the site:
