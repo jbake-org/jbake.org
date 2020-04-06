@@ -27,7 +27,7 @@ If you leave the **date** field out then the files last modified timestamp will 
 For an AsciiDoc formatted content file the metadata header section is optional, the JBake metadata can be defined in the AsciiDoc document header itself like so:
 
 ----
- Project Structure
+= Project Structure
 Jonathan Bullock
 2013-10-17
 :jbake-type: page
