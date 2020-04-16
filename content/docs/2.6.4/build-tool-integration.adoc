@@ -17,7 +17,7 @@ The plugin is available from the Maven Central repository using the following co
 <dependency>
     <groupId>org.jbake</groupId>
     <artifactId>jbake-maven-plugin</artifactId>
-    <version>0.3.1</version>
+    <version>0.3.2</version>
 </dependency>
 ----
 
