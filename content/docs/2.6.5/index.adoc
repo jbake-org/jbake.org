@@ -1,0 +1,40 @@
+= Documentation v2.6.4
+Jonathan Bullock
+2019-01-21
+:jbake-type: page
+:jbake-tags: documentation
+:jbake-status: published
+:idprefix:
+:numbered:
+:sectanchors:
+:icons: font
+:toc:
+
+
+toc::[]
+
+:leveloffset: +1
+
+include::installation.adoc[]
+
+include::quickstart-guide.adoc[]
+
+include::usage.adoc[]
+
+include::overview.adoc[]
+
+include::project-structure.adoc[]
+
+include::content-files.adoc[]
+
+include::template.adoc[]
+
+include::data-variables.adoc[]
+
+include::configuration.adoc[]
+
+include::use-as-library.adoc[]
+
+include::build-tool-integration.adoc[]
+
+:leveloffset: -1

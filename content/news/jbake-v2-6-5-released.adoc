@@ -1,0 +1,41 @@
+= JBake v2.6.5 released
+Jonathan Bullock
+2020-04-19
+:jbake-type: post
+:jbake-tags: community
+:jbake-status: published
+:category: news
+:idprefix:
+
+== JBake v2.6.5 released
+
+I'm happy to announce that link:/download.html[JBake v2.6.5] has been released. This is primarily a bug fix release.
+
+You can find the complete changelog for this release here: https://github.com/jbake-org/jbake/milestone/20?closed=1
+
+This release should also be available via Maven Central, SDKMAN and Homebrew over the next few days.
+
+Download *link:/download.html[JBake v2.6.5]* now and get baking!
+
+=== Fixes
+
+* https://github.com/jbake-org/jbake/issues/612[jbake command does not work on MSYS(GitBash)]
+* https://github.com/jbake-org/jbake/issues/617[OrientDB error messages while using OpenJDK]
+* https://github.com/jbake-org/jbake/issues/606[Baking content files doesn't work with UTF-8 encoding and changed metadata]
+
+=== Enhancements
+
+* https://github.com/jbake-org/jbake/issues/602[Suppress "unable to load engine" warning for optional template engines]
+* https://github.com/jbake-org/jbake/issues/626[Enable dependabot (or similar) to manage dependencies?]
+* https://github.com/jbake-org/jbake/pull/629[Add asciidoctor parser tests]
+
+=== Updates/Changes
+
+* https://github.com/jbake-org/jbake/pull/632[Cleanup and added build against openjdk 14]
+* https://github.com/jbake-org/jbake/pull/603[Update dependencies and gradle wrapper]
+* https://github.com/jbake-org/jbake/issues/462[Upgrade to AsciidoctorJ 1.5.7 (so JRuby dependency is also updated to enable use with Java 9)]
+* https://github.com/jbake-org/jbake/issues/608[Remove empty ConfigUtil class in org.jbake.app package]
+
+Thanks goes to all those who have taken a moment of their time to open issues.
+
+I'd also like to personally say a big thanks to everyone for their patience over the past year while I was busy studying!
