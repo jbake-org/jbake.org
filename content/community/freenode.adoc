@@ -1,0 +1,9 @@
+= Freenode
+Jonathan Bullock
+2020-05-13
+:jbake-type: page
+:jbake-tags: community
+:jbake-status: published
+:idprefix:
+
+Page added to confirm my (jonbullock) involvement in this FOSS project.
