@@ -58,7 +58,7 @@ $ jbake -b -s
           <a href="https://maven.apache.org/">Maven</a>,
           <a href="https://www.lihaoyi.com/mill/">mill</a>,
           <a href="http://sbuild.org/">SBuild</a>
-          and <a href="https://https://www.scala-sbt.org/">sbt.</a>
+          and <a href="https://www.scala-sbt.org/">sbt.</a>
           </p>
 
           <h4>Template Support</h4>
