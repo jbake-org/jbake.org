@@ -1,6 +1,6 @@
-= Documentation v2.6.4
+= Documentation SNAPSHOT
 Jonathan Bullock
-2019-01-21
+2021-03-17
 :jbake-type: page
 :jbake-tags: documentation
 :jbake-status: published
@@ -9,6 +9,7 @@ Jonathan Bullock
 :sectanchors:
 :icons: font
 :toc:
+:version: 2.6.6-SNAPSHOT
 
 
 toc::[]

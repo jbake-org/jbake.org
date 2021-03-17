@@ -15,7 +15,7 @@ the `java` command is available in your path.
 . Open a command prompt and run `jbake -h` (or `jbake.bat -h` if you are on Windows) to confirm everything works, you should see usage help text
 
 ----
-JBake v2.6.4 (2018-10-16 17:56) [http://jbake.org]
+JBake v{version} (2018-10-16 17:56) [http://jbake.org]
 
 Usage: jbake ...
 ----
@@ -23,7 +23,7 @@ Usage: jbake ...
 == SDKMAN
 
 You can also install JBake via http://sdkman.io/[SDKMAN] (Software Development Kit Manager - formerly known as GVM) if you are running a Bash based platform (Mac OSX, Unix, Linux, Cygwin or Solaris etc.).
-SDKMAN will take care of downloading the latest distribution, installing it and configuring your environment for you. 
+SDKMAN will take care of downloading the latest distribution, installing it and configuring your environment for you.
 
 After you have SDKMAN installed enter the following command to install the latest version of JBake:
 
@@ -33,7 +33,7 @@ $ sdk install jbake
 
 == Homebrew
 
-You can also install JBake via http://brew.sh/[Homebrew] if you are running OS X. After you have installed Homebrew enter the following command to install the 
+You can also install JBake via http://brew.sh/[Homebrew] if you are running OS X. After you have installed Homebrew enter the following command to install the
 latest version of JBake:
 
 ----
@@ -42,5 +42,5 @@ $ brew install jbake
 
 == Extend classpath
 
-JBake will include any JAR files you place into the `/lib` folder (this can be found underneath the install location) onto the classpath. This allows you to 
+JBake will include any JAR files you place into the `/lib` folder (this can be found underneath the install location) onto the classpath. This allows you to
 include additional libraries.

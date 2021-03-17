@@ -15,11 +15,11 @@ The main JBake artifact is available from the Maven Central repository, these ar
 <dependency>
     <groupId>org.jbake</groupId>
     <artifactId>jbake-core</artifactId>
-    <version>2.6.4</version>
+    <version>{version}</version>
 </dependency>
 ----
 
-The 3rd party libraries that provide support for Markdown content or the Freemarker template engine etc. are defined as optional dependencies in `jbake-core` so if 
+The 3rd party libraries that provide support for Markdown content or the Freemarker template engine etc. are defined as optional dependencies in `jbake-core` so if
 you plan on using them you will have to include them as a dependency in your project as well.
 
 For Markdown content support add the following dependency:
@@ -101,7 +101,7 @@ For Jade template support add the following dependencies:
 
 == API
 
-The main class you should be focusing on using is `Oven`, this class provides the main functionality via a `.bake()` method that requires some parameters to be 
+The main class you should be focusing on using is `Oven`, this class provides the main functionality via a `.bake()` method that requires some parameters to be
 passed to it. Here's an example:
 
 [source, java, subs="attributes,verbatim"]
@@ -129,6 +129,6 @@ try {
 
 == Logging
 
-All output is generated using LogBack apart from certain elements of the command line interface. You can control the output by making sure there is a logback.xml 
-on the classpath. The binary distribution includes a pre-defined https://github.com/jbake-org/jbake/blob/master/src/main/logging/logback.xml[logback.xml] that is 
+All output is generated using LogBack apart from certain elements of the command line interface. You can control the output by making sure there is a logback.xml
+on the classpath. The binary distribution includes a pre-defined https://github.com/jbake-org/jbake/blob/master/src/main/logging/logback.xml[logback.xml] that is
 a good reference point.
