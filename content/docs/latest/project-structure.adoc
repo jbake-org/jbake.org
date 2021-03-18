@@ -76,8 +76,8 @@ The extension of the template file determines the template engine:
 * `.thyme` = http://www.thymeleaf.org/[Thymeleaf]
 * `.html` = http://www.thymeleaf.org/[Thymeleaf]
 * `.jade` = https://github.com/neuland/jade4j[Jade]
-* '.pebble' = https://pebbletemplates.io/[Pebble]
-* '.peb' = https://pebbletemplates.io/[Pebble]
+* `.pebble` = https://pebbletemplates.io/[Pebble]
+* `.peb` = https://pebbletemplates.io/[Pebble]
 
 
 It is recommended that you don't mix different template types, try to stick to just 1 type of templates in your project.
