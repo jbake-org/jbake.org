@@ -84,7 +84,7 @@ It is recommended that you don't mix different template types, try to stick to j
 
 For more information on what you can do in each template engine have a look at the example templates provided with JBake and their
 respective documentation: http://freemarker.org/docs/index.html[Freemarker], http://docs.groovy-lang.org/latest/html/documentation/template-engines.html[Groovy],
-http://www.thymeleaf.org/doc/html/Using-Thymeleaf.html[Thymeleaf] & https://github.com/neuland/jade4j[Jade].
+http://www.thymeleaf.org/doc/html/Using-Thymeleaf.html[Thymeleaf], https://github.com/neuland/jade4j[Jade] & https://pebbletemplates.io/wiki/guide/basic-usage/[Pebble].
 
 == Ignoring Files and Directories
 It is possible to ignore certain folders or files in content and assets dirctory to be ignored by JBake.

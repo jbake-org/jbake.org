@@ -62,7 +62,7 @@ $ jbake -b -s
           </p>
 
           <h4>Template Support</h4>
-          <p><a href="http://freemarker.org/">Freemarker</a>, <a href="http://www.groovy-lang.org/">Groovy</a>, <a href="http://www.thymeleaf.org/">Thymeleaf</a> and <a href="https://github.com/neuland/jade4j">Jade</a> based templates & scripting support.</p>
+          <p><a href="http://freemarker.org/">Freemarker</a>, <a href="http://www.groovy-lang.org/">Groovy</a>, <a href="http://www.thymeleaf.org/">Thymeleaf</a>, <a href="https://github.com/neuland/jade4j">Jade</a> and <a href="https://pebbletemplates.io/">Pebble</a> based templates & scripting support.</p>
 
           <h4>CSS Framework Support</h4>
           <p>Easily integrate CSS frameworks such as <a href="http://getbootstrap.com/">Bootstrap</a> and <a href="http://foundation.zurb.com/">Foundation</a>.</p>
