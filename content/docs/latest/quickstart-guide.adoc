@@ -15,8 +15,9 @@ jbake -h
 
 You should then see the following output:
 
+[subs="attributes"]
 ----
-JBake v{version} (2018-10-16 17:56) [http://jbake.org]
+JBake v{core-version} (2018-10-16 17:56) [http://jbake.org]
 
 Usage: jbake ...
 ----
@@ -54,11 +55,12 @@ NOTE: This will place the baked project into a directory called `output` in the 
 
 You can then see what your baked project looks like immediately by running JBake in server mode:
 
+[subs="attributes"]
 ----
 $ cd project
 $ jbake -s
 
-JBake v{version} (2018-10-16 17:56) [http://jbake.org]
+JBake v{core-version} (2018-10-16 17:56) [http://jbake.org]
 
 Serving out contents of: [output] on http://localhost:8820/
 (To stop server hit CTRL-C)

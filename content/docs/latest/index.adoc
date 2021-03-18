@@ -9,7 +9,7 @@ Jonathan Bullock
 :sectanchors:
 :icons: font
 :toc:
-:version: 2.6.6-SNAPSHOT
+:core-version: 2.6.6-SNAPSHOT
 
 
 toc::[]

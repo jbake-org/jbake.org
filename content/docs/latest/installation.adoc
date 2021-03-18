@@ -14,8 +14,9 @@ the `java` command is available in your path.
 . Add a entry for `JBAKE_HOME/bin` to your path environment variable
 . Open a command prompt and run `jbake -h` (or `jbake.bat -h` if you are on Windows) to confirm everything works, you should see usage help text
 
+[subs="attributes"]
 ----
-JBake v{version} (2018-10-16 17:56) [http://jbake.org]
+JBake v{core-version} (2018-10-16 17:56) [http://jbake.org]
 
 Usage: jbake ...
 ----
