@@ -50,9 +50,9 @@ The extension of the content file determines what type of content it contains:
 
 * `.html` = raw HTML content
 * `.md` = http://daringfireball.net/projects/markdown/syntax[Markdown] formatted content
-* `.ad` = http://www.methods.co.nz/asciidoc/[AsciiDoc] formatted content
-* `.adoc` = http://www.methods.co.nz/asciidoc/[AsciiDoc] formatted content
-* `.asciidoc` = http://www.methods.co.nz/asciidoc/[AsciiDoc] formatted content
+* `.ad` = https://asciidoc.org[AsciiDoc] formatted content
+* `.adoc` = https://asciidoc.org[AsciiDoc] formatted content
+* `.asciidoc` = https://asciidoc.org[AsciiDoc] formatted content
 
 NOTE: JBake uses https://github.com/vsch/flexmark-java[flexmark-java] to support Markdown format and http://asciidoctor.org/[Asciidoctor] to support AsciiDoc format.
 
@@ -76,6 +76,8 @@ The extension of the template file determines the template engine:
 * `.thyme` = http://www.thymeleaf.org/[Thymeleaf]
 * `.html` = http://www.thymeleaf.org/[Thymeleaf]
 * `.jade` = https://github.com/neuland/jade4j[Jade]
+* '.pebble' = https://pebbletemplates.io/[Pebble]
+* '.peb' = https://pebbletemplates.io/[Pebble]
 
 
 It is recommended that you don't mix different template types, try to stick to just 1 type of templates in your project.
