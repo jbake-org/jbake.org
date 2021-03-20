@@ -269,6 +269,24 @@ This option defines the default port the server will listen on
 server.port=8820
 ----
 
+=== Default hostname for server mode
+
+This option defines the default hostname the server listen on
+
+----
+# default server hostname
+server.hostname=localhost
+----
+
+=== Default context path for server mode
+
+This option defaults the default context path the server will use
+
+----
+# default server context path
+server.contextPath=/
+----
+
 === Default Freemarker project file
 
 This option defines the filename of the ZIP containing the example project that uses Freemarker templates

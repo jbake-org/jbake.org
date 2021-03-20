@@ -10,16 +10,16 @@ JBake can be used as a library from other software systems allowing you to progr
 
 The main JBake artifact is available from the Maven Central repository, these are the coordinates:
 
-[source,xml]
+[source,xml,subs="attributes+"]
 ----
 <dependency>
     <groupId>org.jbake</groupId>
     <artifactId>jbake-core</artifactId>
-    <version>2.6.4</version>
+    <version>{core-version}</version>
 </dependency>
 ----
 
-The 3rd party libraries that provide support for Markdown content or the Freemarker template engine etc. are defined as optional dependencies in `jbake-core` so if 
+The 3rd party libraries that provide support for Markdown content or the Freemarker template engine etc. are defined as optional dependencies in `jbake-core` so if
 you plan on using them you will have to include them as a dependency in your project as well.
 
 For Markdown content support add the following dependency:
@@ -29,13 +29,13 @@ For Markdown content support add the following dependency:
 <dependency>
     <groupId>com.vladsch.flexmark</groupId>
     <artifactId>flexmark</artifactId>
-    <version>0.40.8</version>
+    <version>0.62.2</version>
 </dependency>
 
 <dependency>
     <groupId>com.vladsch.flexmark</groupId>
     <artifactId>flexmark-profile-pegdown</artifactId>
-    <version>0.40.8</version>
+    <version>0.62.2</version>
 </dependency>
 ----
 
@@ -46,7 +46,7 @@ For AsciiDoc content support add the following dependency:
 <dependency>
     <groupId>org.asciidoctor</groupId>
     <artifactId>asciidoctorj</artifactId>
-    <version>1.5.8.1</version>
+    <version>2.4.3</version>
 </dependency>
 ----
 
@@ -57,7 +57,7 @@ For Freemarker template support add the following dependency:
 <dependency>
     <groupId>org.freemarker</groupId>
     <artifactId>freemarker</artifactId>
-    <version>2.3.28</version>
+    <version>2.3.31</version>
 </dependency>
 ----
 
@@ -68,12 +68,12 @@ For Groovy template support add the following dependencies:
 <dependency>
     <groupId>org.codehaus.groovy</groupId>
     <artifactId>groovy-templates</artifactId>
-    <version>2.5.5</version>
+    <version>3.0.7</version>
 </dependency>
 <dependency>
     <groupId>org.codehaus.groovy</groupId>
     <artifactId>groovy-dateutil</artifactId>
-    <version>2.5.5</version>
+    <version>3.0.7</version>
 </dependency>
 ----
 
@@ -84,7 +84,7 @@ For Thymeleaf template support add the following dependencies:
 <dependency>
     <groupId>org.thymeleaf</groupId>
     <artifactId>thymeleaf</artifactId>
-    <version>3.0.11.RELEASE</version>
+    <version>3.0.12.RELEASE</version>
 </dependency>
 ----
 
@@ -95,13 +95,24 @@ For Jade template support add the following dependencies:
 <dependency>
     <groupId>de.neuland-bfi</groupId>
     <artifactId>jade4j</artifactId>
-    <version>1.2.7</version>
+    <version>1.3.2</version>
+</dependency>
+----
+
+For Pebble template support add the following dependencies:
+
+[source,xml]
+----
+<dependency>
+    <groupId>io.pebbletemplates</groupId>
+    <artifactId>pebble</artifactId>
+    <version>3.1.5</version>
 </dependency>
 ----
 
 == API
 
-The main class you should be focusing on using is `Oven`, this class provides the main functionality via a `.bake()` method that requires some parameters to be 
+The main class you should be focusing on using is `Oven`, this class provides the main functionality via a `.bake()` method that requires some parameters to be
 passed to it. Here's an example:
 
 [source, java, subs="attributes,verbatim"]
@@ -129,6 +140,6 @@ try {
 
 == Logging
 
-All output is generated using LogBack apart from certain elements of the command line interface. You can control the output by making sure there is a logback.xml 
-on the classpath. The binary distribution includes a pre-defined https://github.com/jbake-org/jbake/blob/master/src/main/logging/logback.xml[logback.xml] that is 
+All output is generated using LogBack apart from certain elements of the command line interface. You can control the output by making sure there is a logback.xml
+on the classpath. The binary distribution includes a pre-defined https://github.com/jbake-org/jbake/blob/master/src/main/logging/logback.xml[logback.xml] that is
 a good reference point.

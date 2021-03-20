@@ -6,7 +6,7 @@
 
 == Setup
 
-First link:/download.html[download JBake] and follow the <<installation>> instructions. After that open a command prompt and run the following command to make 
+First link:/download.html[download JBake] and follow the <<installation>> instructions. After that open a command prompt and run the following command to make
 sure everything is working:
 
 ----
@@ -15,15 +15,16 @@ jbake -h
 
 You should then see the following output:
 
+[subs="attributes"]
 ----
-JBake v2.6.4 (2018-10-16 17:56) [http://jbake.org]
+JBake v{core-version} (2018-10-16 17:56) [http://jbake.org]
 
 Usage: jbake ...
 ----
 
 == Create a Project
 
-To get up and running quickly with JBake you can use it's example project structure along with sample templates as a starting point for you project or site. To do so 
+To get up and running quickly with JBake you can use it's example project structure along with sample templates as a starting point for you project or site. To do so
 first you will need to create a new directory and change into it:
 
 ----
@@ -54,11 +55,12 @@ NOTE: This will place the baked project into a directory called `output` in the 
 
 You can then see what your baked project looks like immediately by running JBake in server mode:
 
+[subs="attributes"]
 ----
 $ cd project
 $ jbake -s
 
-JBake v2.6.4 (2018-10-16 17:56) [http://jbake.org]
+JBake v{core-version} (2018-10-16 17:56) [http://jbake.org]
 
 Serving out contents of: [output] on http://localhost:8820/
 (To stop server hit CTRL-C)

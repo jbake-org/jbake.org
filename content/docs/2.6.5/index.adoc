@@ -1,4 +1,4 @@
-= Documentation v2.6.4
+= Documentation v2.6.5
 Jonathan Bullock
 2019-01-21
 :jbake-type: page
