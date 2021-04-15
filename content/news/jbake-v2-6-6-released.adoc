@@ -1,0 +1,38 @@
+= JBake v2.6.6 released
+Jonathan Bullock
+2021-04-15
+:jbake-type: post
+:jbake-tags: community
+:jbake-status: published
+:category: news
+:idprefix:
+
+== JBake v2.6.6 released
+
+I'm happy to announce that link:/download.html[JBake v2.6.6] has been released. This is primarily a bug fix release.
+
+You can find the complete changelog for this release here: https://github.com/jbake-org/jbake/milestone/21?closed=1
+
+This release should also be available via Maven Central, SDKMAN and Homebrew over the next few days.
+
+Download *link:/download.html[JBake v2.6.6]* now and get baking!
+
+=== Fixes
+
+* https://github.com/jbake-org/jbake/pull/648[Don't assume document types are valid identifies in OrientDB]
+* https://github.com/jbake-org/jbake/issues/643[Custom paths configuration do not work]
+
+=== Enhancements
+
+* https://github.com/jbake-org/jbake/pull/642[make jetty server context path and host configurable]
+* https://github.com/jbake-org/jbake/pull/672[produce reproducible archives (distribution zip and jar files)]
+
+=== Updates/Changes
+
+* https://github.com/jbake-org/jbake/pull/654[use svg for gitter shield]
+* https://github.com/jbake-org/jbake/issue/658[Handle travis-ci.org shutdown]
+* https://github.com/jbake-org/jbake/pull/671[publish to sonatype nexus instead of bintray]
+* https://github.com/jbake-org/jbake/pull/650[Update gradle, dependencies and plugins]
+
+Thanks goes to all those who have taken a moment of their time to open issues or submit contributions.
+

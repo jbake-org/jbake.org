@@ -1,4 +1,4 @@
-= Documentation SNAPSHOT
+= Documentation v2.6.6
 Jonathan Bullock
 2021-04-15
 :jbake-type: page
@@ -9,7 +9,7 @@ Jonathan Bullock
 :sectanchors:
 :icons: font
 :toc:
-:core-version: 2.7.0-SNAPSHOT
+:core-version: 2.6.6
 
 
 toc::[]
