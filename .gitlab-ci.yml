@@ -3,7 +3,7 @@ image: jonbullock/jbake:2.6.6
 # This build job produced the output directory of your site
 pages:
  script:
-   - jbake . public
+   - . public
  artifacts:
    paths:
      - public
