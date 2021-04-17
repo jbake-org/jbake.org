@@ -1,9 +1,11 @@
-image: jonbullock/jbake:2.6.6
+image:
+    name: jonbullock/jbake:2.6.6
+    entrypoint: [ "" ]
 
 # This build job produced the output directory of your site
 pages:
  script:
-   - . public
+   - jbake . public
  artifacts:
    paths:
      - public
