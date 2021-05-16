@@ -1,0 +1,11 @@
+= Overview
+:jbake-type: page
+:jbake-tags: documentation
+:jbake-status: published
+:idprefix:
+
+The following diagram provides an overview of the baking process JBake performs.
+
+== Process
+
+image::/img/process.png[Process]

@@ -1,6 +1,6 @@
 = Download
 Jonathan Bullock
-2021-04-15
+2021-05-14
 :jbake-type: page
 :jbake-tags: download
 :jbake-status: published
@@ -13,7 +13,7 @@ The binary distribution runs on Windows, Linux and Mac and only requires a Java 
 [options="header"]
 |===
 |Version |SHA1 |Download Link |Release Notes
-|v2.6.6 |42240ddf03111fa74cd8be6198b917bdac23a462 |https://github.com/jbake-org/jbake/releases/download/v2.6.6/jbake-2.6.6-bin.zip[GitHub] 71.6MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.6.6[Changelog]
+|v2.6.7 |fd07b833104f2889fde9a07d0c0bf09f0fdecbf6 |https://github.com/jbake-org/jbake/releases/download/v2.6.7/jbake-2.6.7-bin.zip[GitHub] 72.3MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.6.7[Changelog]
 |===
 
 == SDKMAN
@@ -68,7 +68,7 @@ JBake artifacts are available from the Maven central repository:
 <dependency>
 	<groupId>org.jbake</groupId>
 	<artifactId>jbake-core</artifactId>
-	<version>2.6.6</version>
+	<version>2.6.7</version>
 </dependency>
 ----
 
@@ -79,6 +79,7 @@ NOTE: When using the core library make sure you declare the https://jbake.org/do
 [options="header"]
 |===
 |Version |SHA1 |Download Link |Release Notes
+|v2.6.6 |42240ddf03111fa74cd8be6198b917bdac23a462 |https://github.com/jbake-org/jbake/releases/download/v2.6.6/jbake-2.6.6-bin.zip[GitHub] 71.6MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.6.6[Changelog]
 |v2.6.5 |c7eadd00afc768383a7b1482fdefa3cba180cdf1 |https://github.com/jbake-org/jbake/releases/download/v2.6.5/jbake-2.6.5-bin.zip[GitHub] 69.32MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.6.5[Changelog]
 |v2.6.4 |df6926721202e036f84079b830859d176a2c1a32 |https://github.com/jbake-org/jbake/releases/download/v2.6.4/jbake-2.6.4-bin.zip[GitHub] 53.34MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.6.4[Changelog]
 |v2.6.3 |4f661742db1bb82d24ee370d387e8c77f2d2d57d |https://github.com/jbake-org/jbake/releases/download/v2.6.3/jbake-2.6.3-bin.zip[GitHub] 52.8MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.6.3[Changelog]

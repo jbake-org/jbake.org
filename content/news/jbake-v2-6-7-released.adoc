@@ -1,0 +1,32 @@
+= JBake v2.6.7 released
+Jonathan Bullock
+2021-05-15
+:jbake-type: post
+:jbake-tags: community
+:jbake-status: published
+:category: news
+:idprefix:
+
+== JBake v2.6.7 released
+
+I'm happy to announce that link:/download.html[JBake v2.6.7] has been released. This is primarily a bug fix release.
+
+You can find the complete changelog for this release here: https://github.com/jbake-org/jbake/milestone/22?closed=1
+
+This release should also be available via Maven Central, SDKMAN and Homebrew over the next few days.
+
+Download *link:/download.html[JBake v2.6.7]* now and get baking!
+
+=== Fixes
+
+* https://github.com/jbake-org/jbake/pull/687[add index.html to the list of known welcome files for jetty]
+
+=== Updates/Changes
+
+* https://github.com/jbake-org/jbake/pull/681[Added Dockerfile and updated README]
+* https://github.com/jbake-org/jbake/pull/682[User lower log level to report missing template engine]
+* https://github.com/jbake-org/jbake/pull/646[Wrap usage at 80 characters instead of 100]
+* https://github.com/jbake-org/jbake/issues/686[Add images to blog posts in example projects]
+
+Thanks goes to all those who have taken a moment of their time to open issues or submit contributions.
+
