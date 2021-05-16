@@ -1,5 +1,5 @@
 image:
-    name: jonbullock/jbake:2.6.6
+    name: jbake/jbake:latest
     entrypoint: [ "" ]
 
 # This build job produced the output directory of your site
