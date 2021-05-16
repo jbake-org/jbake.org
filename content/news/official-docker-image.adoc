@@ -1,0 +1,16 @@
+= Official Docker Image Released
+Jonathan Bullock
+2021-05-16
+:jbake-type: post
+:jbake-tags: community, docker
+:jbake-status: published
+:category: news
+:idprefix:
+
+== Official Docker Image Released
+
+Along with the recent link:/news/jbake-v2-6-7-released.html[JBake v2.6.7] release I'm happy to announce that an official https://hub.docker.com/r/jbake/jbake[Docker image] is now available for JBake.
+Allowing you to execute JBake without needing to install JBake on your local system.
+
+Details on how to use the Docker image are available on the link:/download.html[download] page.
+
