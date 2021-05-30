@@ -82,15 +82,15 @@ $ jbake -b -s
 		</div>
 
         <div class="span3 text-center">
-        	<script type="text/javascript" src="https://www.ohloh.net/p/634040/widgets/project_thin_badge.js"></script>
+            <a href="https://travis-ci.com/github/jbake-org/jbake"><img src="https://img.shields.io/travis/com/jbake-org/jbake/master.svg" /></a>
         </div>
 
         <div class="span3 text-center">
-        	<a href="https://travis-ci.org/jbake-org/jbake"><img src="https://travis-ci.org/jbake-org/jbake.png?branch=master" /></a>
+        	<a href="https://ci.appveyor.com/project/jbake-org/jbake"><img src="https://ci.appveyor.com/api/projects/status/2q7hvg03wsjx953b?svg=true" /></a>
         </div>
 
         <div class="span3 text-center">
-        	IRC: <a href="irc://irc.freenode.org/#jbake">#jbake on Freenode</a>
+        	<a href="https://gitter.im/jbake-org/jbake"><img src="https://badges.gitter.im/jbake-org/jbake.svg" /></a>
         </div>
 
       </div>
