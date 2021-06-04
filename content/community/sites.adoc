@@ -87,3 +87,4 @@ To help others see what's possible with JBake add your JBake powered site to the
 * http://jonathanbullock.com[Jonathan Bullock]
 * https://jconfdominicana.org[JConf Dominicana] (https://github.com/JavaDominicano/conference[source])
 * https://clojure.org[Clojure] (https://github.com/clojure/clojure-site[source])
+* https://www.optaplanner.org[OptaPlanner AI] (https://github.com/kiegroup/optaplanner-website[source])
