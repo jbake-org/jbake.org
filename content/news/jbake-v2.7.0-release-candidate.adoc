@@ -1,0 +1,17 @@
+= JBake v2.7.0 release candidate available
+Jonathan Bullock
+2021-06-07
+:jbake-type: post
+:jbake-tags: community
+:jbake-status: published
+:category: news
+:idprefix:
+
+== JBake v2.7.0 release candidate available
+
+We're getting close to the release of JBake v2.7.0, and given the scale of code changes that have been made recently we thought it was prudent to make a release candidate available.
+
+So JBake v2.7.0-rc.2 is now available from https://github.com/jbake-org/jbake/releases[GitHub Releases]
+
+We'd be really grateful if you could try this release candidate out against any JBake sites/projects you have. If you encounter any issues please https://github.com/jbake-org/jbake/issues[let us know] so we can address them prior to the final release of v2.7.0
+
