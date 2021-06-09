@@ -1,28 +1,25 @@
 = Documentation
 Jonathan Bullock
-2021-05-15
+2021-06-09
 :jbake-type: page
 :jbake-tags: documentation
 :jbake-status: published
 :idprefix:
 
-== Latest Release
-
-[cols="50,50", options="header"]
-|===
-|Version |Format
-|v2.6.7  |link:/docs/2.6.7/[HTML]
-|===
-
-== Current
+== Reference Manual
 
 [cols="50,50", options="header"]
 |===
 |Version   |Format
+|v2.6.7    |link:/docs/2.6.7/[HTML]
 |SNAPSHOT  |link:/docs/latest/[HTML]
 |===
 
-== Archived
+== Guides
+
+Coming soon...
+
+== Reference Manual Archive
 
 [cols="50,50", options="header"]
 |===
