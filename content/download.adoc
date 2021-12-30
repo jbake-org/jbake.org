@@ -68,7 +68,7 @@ JBake artifacts are available from the Maven central repository:
 <dependency>
 	<groupId>org.jbake</groupId>
 	<artifactId>jbake-core</artifactId>
-	<version>2.6.7</version>
+	<version>${jbakeVersion}</version>
 </dependency>
 ----
 
