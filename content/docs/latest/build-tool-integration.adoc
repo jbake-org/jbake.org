@@ -6,11 +6,8 @@
 
 == Maven Plugin
 
-There is a http://maven.apache.org[Maven] plugin that allows you to run JBake from your Maven build.
-
-* https://github.com/jbake-org/jbake-maven-plugin[Plugin on GitHub]
-
-The plugin is available from the Maven Central repository using the following coordinates:
+The JBake Maven plugin allows you to run JBake from your http://maven.apache.org[Maven] build.
+It is available from the Maven Central repository using the following coordinates:
 
 [source,xml]
 ----
