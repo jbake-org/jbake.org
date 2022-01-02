@@ -6,22 +6,81 @@
 
 == Maven Plugin
 
-There is a http://maven.apache.org[Maven] plugin that allows you to run JBake from your Maven build.
-
-* https://github.com/jbake-org/jbake-maven-plugin[Plugin on GitHub]
-
-The plugin is available from the Maven Central repository using the following coordinates:
+The JBake Maven plugin allows you to run JBake from your http://maven.apache.org[Maven] build.
+It is available from the Maven Central repository using the following coordinates:
 
 [source,xml]
 ----
 <dependency>
     <groupId>org.jbake</groupId>
     <artifactId>jbake-maven-plugin</artifactId>
-    <version>0.3.2</version>
+    <version>${jbakeVersion}</version>
 </dependency>
 ----
 
 The plugin was originally created by https://github.com/aldrinleal[Aldrin Leal].
+
+=== Usage (maven plugin)
+
+To use JBake Maven Plugin, add the plugin in your `pom.xml`:
+
+----
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.jbake</groupId>
+            <artifactId>jbake-maven-plugin</artifactId>
+            <version>${jbakeVersion}</version>
+            <configuration>
+                <inputDirectory>${project.basedir}</inputDirectory>
+                <outputDirectory>${project.build.directory}/website</outputDirectory>
+            </configuration>
+            <executions>
+                <execution>
+                    <phase>generate-resources</phase>
+                    <goals>
+                        <goal>generate</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
+</build>
+----
+
+This configuration expects this directory structure:
+
+----
+my-project/
+    assets/
+        my-logo.png
+        ...
+    content/
+        my-page.adoc
+        ...
+    templates/
+        my-template.ftl
+        ...
+    jbake.properties
+    pom.xml
+----
+
+Run `mvn generate-resources` and open `my-project/target/website/index.html` in a browser to see the result.
+
+=== Goals (maven plugin)
+
+There are 4 goals provided by the maven plugin:
+
+* `jbake:seed` - seeds your project/site with example content and templates
+* `jbake:generate` - bakes your project/site
+* `jbake:watch` - watches to changes and bakes your site whenever a change is detected
+* `jbake:inline` - bakes, watches and serves out content on http://localhost:8820[http://localhost:8820]
+
+Get more details on each goal by running the help goal:
+
+----
+$ mvn jbake:help -Ddetail # -DgoalName=[seed|generate|watch|inline]
+----
 
 == Gradle Plugin
 
