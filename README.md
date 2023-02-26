@@ -1,3 +1,3 @@
 jbake.org
 =========
-Content behind http://jbake.org
+Content behind https://jbake.org
