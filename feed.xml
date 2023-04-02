@@ -6,8 +6,8 @@
     <atom:link href="http://jbake.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>JBake - Java based open source static site/blog generator for developers</description>
     <language>en-gb</language>
-    <pubDate>Sun, 2 Apr 2023 22:41:53 +0000</pubDate>
-    <lastBuildDate>Sun, 2 Apr 2023 22:41:53 +0000</lastBuildDate>
+    <pubDate>Sun, 2 Apr 2023 22:41:59 +0000</pubDate>
+    <lastBuildDate>Sun, 2 Apr 2023 22:41:59 +0000</lastBuildDate>
 
     <item>
       <title>JBake v2.7.0 release candidate available</title>
