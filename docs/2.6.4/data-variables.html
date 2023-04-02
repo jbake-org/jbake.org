@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JBake - Java based open source static site/blog generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="JBake is a Java based, open source, static site/blog generator for developers." />
+    <meta name="author" content="Jonathan Bullock" />
+    <meta name="keywords" content="java, baking, open source, generator, web site" />
+    <meta name="google-site-verification" content="Fy5-c09PlgYztOz2_xH6-FsoQ7K0jpprkk4cyJHCRh8" />
+    <meta name="generator" content="JBake"/>
+    <meta name="generation" content="Apr 2, 2023, 10:41:52 PM" />
+
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+
+    <!-- Le styles -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/asciidoctor.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="/css/prettify.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 20px;
+        padding-bottom: 40px;
+      }
+
+      /* Custom container */
+      .container-narrow {
+        margin: 0 auto;
+        max-width: 700px;
+      }
+      .container-narrow > hr {
+        margin: 30px 0;
+      }
+
+      /* Main marketing message and sign up button */
+      .jumbotron {
+        margin: 60px 0;
+        text-align: center;
+      }
+      .jumbotron h1 {
+        font-size: 72px;
+        line-height: 1;
+      }
+      .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+      }
+
+      /* Supporting marketing content */
+      .marketing {
+        margin: 30px 0;
+      }
+      .marketing p + h4 {
+        margin-top: 28px;
+      }
+
+      /*.navbar .btn-navbar {
+      	float: left;
+      }*/
+      .navbar-fixed-top .container {
+        width: 700px;
+      }
+      @media (max-width: 979px) {
+      .navbar-fixed-top .container {
+       width: auto;
+       }
+    </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <!--<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="../assets/ico/favicon.png">-->
+  </head>
+  <body onload="prettyPrint()">
+    <div class="container-narrow">
+
+	<div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <img style="display: block; float: left; padding: 5px 10px 0 0px" src="/img/jbake_logo.png" />
+            <a class="brand" href="/">JBake</a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li><a href="/news/">News</a></li>
+                <li><a href="/download.html">Download</a></li>
+                <li><a href="/docs/">Documentation</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Development <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="https://github.com/jbake-org/jbake/">Source Code</a></li>
+                    <li><a href="https://github.com/jbake-org/jbake/issues">Issue Tracker</a></li>
+                  </ul>
+                </li>
+                <li><a href="/community/index.html">Community</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid marketing">
+        <div class="span12">
+          <h1>Data Model</h1>
+          
+          <p><div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>A data model is exposed to each of the templates (regardless of what template engine you use) allowing you to get access to the data parsed from within
+the content files, the model can also be used to apply logic to the output from the templates.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="global">Global</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>These data variables are available to all templates regardless.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>version</code> = version of JBake being used</p>
+</li>
+<li>
+<p><code>published_date</code> = date baking took place</p>
+</li>
+<li>
+<p><code>[type]s</code> = collection of all content of [type] (e.g. posts = all content of type=post or snippets = all content of type=snippet)</p>
+</li>
+<li>
+<p><code>published_content</code> = collection of all published content (regardless of the type)</p>
+</li>
+<li>
+<p><code>published_posts</code> = collection of just published posts in date descending order</p>
+</li>
+<li>
+<p><code>published_pages</code> = collection of just published pages in date descending order</p>
+</li>
+<li>
+<p><code>all_content</code> = collection of all content (regardless of type)</p>
+</li>
+<li>
+<p><code>alltags</code> = collection of all tags used across all published content</p>
+</li>
+<li>
+<p><code>tags</code> = collection of all tags as <code>tag</code> data model. See <a href="#tag_data_model">Tag Data model</a>.</p>
+</li>
+<li>
+<p><code>content.rootpath</code> = path to root of project (to be used for relative path to assets)</p>
+</li>
+<li>
+<p><code>config.[option]</code> = map of configuration data</p>
+</li>
+<li>
+<p><code>db</code> = alias for direct access to <a href="https://github.com/jbake-org/jbake/blob/master/jbake-core/src/main/java/org/jbake/app/ContentStore.java">ContentStore</a> class</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+The <code>db</code> variable provides direct access to the methods of the class which are subject to change without warning!
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>All the configuration options are available with any <code>.</code> in the property being replaced with <code>_</code>.
+For example <code>template.index.file=index.ftl</code> is available via <code>config.template_index_file</code>.</p>
+</div>
+<div class="paragraph">
+<p>In your templates you can loop through any of the collections above in the templates, and access a map of values for each element like so: <code>content.[value]</code>
+all of the metadata header fields are available such as <code>content.title</code> along with the body of the content file <code>content.body</code>.</p>
+</div>
+<div class="sect2">
+<h3 id="tag_data_model">Tag Data model</h3>
+<div class="paragraph">
+<p>Global variable <code>tags</code> represent a collection of all tags. Each tag in this collection is represented by a map containing following attributes -</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>name</code> : Name of the tag, as specified in source file.</p>
+</li>
+<li>
+<p><code>uri</code> : Relative path starting <a href="#Default tag output directory">[Default tag output directory]</a>. For example, if tag output directory is defined as <code>tags</code> then uri for a sample tag <code>java</code> would be <code>tags/java.html</code>.</p>
+</li>
+<li>
+<p><code>tagged_posts</code> : Represents subset of <code>published_posts</code> collection with posts tagged with this tag.</p>
+</li>
+<li>
+<p><code>tagged_documents</code> : Represents subset of <code>published_content</code> collection with documents tagged with this tag.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="page_post_custom">Page / Post / Custom</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>These predefined templates as well as any custom templates you create yourself have the following data available to them:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>content.[value]</code> = map of file contents</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>All of the metadata header fields are available such as <code>content.title</code> and the body of the file is available via <code>content.body</code>.</p>
+</div>
+<div class="paragraph">
+<p>In the map you also have access to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>content.file</code> = the full path to the source file</p>
+</li>
+<li>
+<p><code>content.uri</code> = the URI for the baked file</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Two navigational metadata fields are available in <code>content</code>. Both of these fields hold a map with three attributes to represent previous/next post/page/custom entry - <code>noExtensionUri</code>, <code>uri</code> and <code>title</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>content.previousContent</code></p>
+</li>
+<li>
+<p><code>content.nextContent</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For example, uri of next post can be accessed as <code>content.nextContent.uri</code>.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+<code>previousContent</code> and <code>nextContent</code> can be <code>null</code> when there is no previous/next content, e.g. on very first entry or last entry. <code>uri</code> and <code>noExtensionUri</code> are relative to the <code>rootPath</code>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="index">Index</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This predefined template has the following extra data variables available to it related to paging:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>nextFileName</code> = if this variable exists it provides the filename of the next page</p>
+</li>
+<li>
+<p><code>previousFileName</code> = if this variable exists it provides the filename of the previous page</p>
+</li>
+<li>
+<p><code>numberOfPages</code> = if this variable exists it provides the total number of pages (<em>since 2.5.1</em>)</p>
+</li>
+<li>
+<p><code>currentPageNumber</code> = if this variable exists it provides the current number of the page (<em>since 2.5.1</em>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These variables allow you provide next and previous links in your template to navigate through the pages.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+As indicated, these variables may not exist so you should check first before referring to it.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="tags">Tags</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This predefined template has the following extra data available to it:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>tag</code> = tag being rendered</p>
+</li>
+<li>
+<p><code>tag_posts</code> = collection of published posts for tag in date descending order</p>
+</li>
+<li>
+<p><code>tagged_documents</code> = collection of published documents (regardless of type) for tag in date descending order</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="tags_index">Tags Index</h3>
+<div class="paragraph">
+<p>It is possible to generate Index page for the <a href="#Default tag output directory">[Default tag output directory]</a> by setting <code>render.tagsindex</code> to <code>true</code> (default is <code>false</code>) in jbake.properties file.</p>
+</div>
+<div class="paragraph">
+<p>When enabled, JBake will use the template file defined by <code>template.tagsindex.file</code> to generate tags index. This can be helpful to render a all tags home page, like <a href="http://localhost:8820/tags/" class="bare">http://localhost:8820/tags/</a>.</p>
+</div>
+</div>
+</div>
+</div></p>
+        </div>
+
+      </div>
+
+      <hr>
+
+      <div class="footer">
+        <p>&copy; <a href="/community/team.html">JBake Team</a> 2012-<script>document.write(new Date().getFullYear());</script> | <a href="/privacy.html">Privacy Policy</a> | Mixed with <a href="http://getbootstrap.com/">Bootstrap v2.3.1</a> | Baked with <a href="http://jbake.org">JBake v2.7.0-rc.6</a></p>
+      </div>
+
+    </div> <!-- /container -->
+
+	<div class="github hidden-phone hidden-tablet">
+		<a href="https://github.com/jbake-org/jbake"><img style="position: fixed; top: 0; right: 0; border: 0; z-index: 1050;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+	</div>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/js/jquery-1.9.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/prettify.js"></script>
+    
+    <script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-38992729-1']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	
+	</script>
+	
+	<script>
+	  ((window.gitter = {}).chat = {}).options = {
+	    room: 'jbake-org/jbake'
+	  };
+	</script>
+	<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+	
+  </body>
+</html>

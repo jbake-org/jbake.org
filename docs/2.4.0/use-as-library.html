@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JBake - Java based open source static site/blog generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="JBake is a Java based, open source, static site/blog generator for developers." />
+    <meta name="author" content="Jonathan Bullock" />
+    <meta name="keywords" content="java, baking, open source, generator, web site" />
+    <meta name="google-site-verification" content="Fy5-c09PlgYztOz2_xH6-FsoQ7K0jpprkk4cyJHCRh8" />
+    <meta name="generator" content="JBake"/>
+    <meta name="generation" content="Apr 2, 2023, 10:41:53 PM" />
+
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+
+    <!-- Le styles -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/asciidoctor.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="/css/prettify.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 20px;
+        padding-bottom: 40px;
+      }
+
+      /* Custom container */
+      .container-narrow {
+        margin: 0 auto;
+        max-width: 700px;
+      }
+      .container-narrow > hr {
+        margin: 30px 0;
+      }
+
+      /* Main marketing message and sign up button */
+      .jumbotron {
+        margin: 60px 0;
+        text-align: center;
+      }
+      .jumbotron h1 {
+        font-size: 72px;
+        line-height: 1;
+      }
+      .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+      }
+
+      /* Supporting marketing content */
+      .marketing {
+        margin: 30px 0;
+      }
+      .marketing p + h4 {
+        margin-top: 28px;
+      }
+
+      /*.navbar .btn-navbar {
+      	float: left;
+      }*/
+      .navbar-fixed-top .container {
+        width: 700px;
+      }
+      @media (max-width: 979px) {
+      .navbar-fixed-top .container {
+       width: auto;
+       }
+    </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <!--<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="../assets/ico/favicon.png">-->
+  </head>
+  <body onload="prettyPrint()">
+    <div class="container-narrow">
+
+	<div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <img style="display: block; float: left; padding: 5px 10px 0 0px" src="/img/jbake_logo.png" />
+            <a class="brand" href="/">JBake</a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li><a href="/news/">News</a></li>
+                <li><a href="/download.html">Download</a></li>
+                <li><a href="/docs/">Documentation</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Development <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="https://github.com/jbake-org/jbake/">Source Code</a></li>
+                    <li><a href="https://github.com/jbake-org/jbake/issues">Issue Tracker</a></li>
+                  </ul>
+                </li>
+                <li><a href="/community/index.html">Community</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid marketing">
+        <div class="span12">
+          <h1>Use as Library</h1>
+          
+          <p><div class="sect1">
+<h2 id="use_as_library">Use as Library</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>JBake can be used as a library from other software systems allowing you to programmatically bake a site.</p>
+</div>
+<div class="sect2">
+<h3 id="maven_coordinates">Maven coordinates</h3>
+<div class="paragraph">
+<p>The main JBake artifact is available from the Maven Central repository, these are the coordinates:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code data-lang="xml">&lt;dependency&gt;
+	&lt;groupId&gt;org.jbake&lt;/groupId&gt;
+	&lt;artifactId&gt;jbake-core&lt;/artifactId&gt;
+	&lt;version&gt;2.4.0&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The 3rd party libraries that provide support for Markdown content or the Freemarker template engine etc. are defined as optional dependencies in <code>jbake-core</code> so if
+you plan on using them you will have to include them as a dependency in your project as well.</p>
+</div>
+<div class="paragraph">
+<p>For Markdown content support add the following dependency:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code data-lang="xml">&lt;dependency&gt;
+	&lt;groupId&gt;org.pegdown&lt;/groupId&gt;
+	&lt;artifactId&gt;pegdown&lt;/artifactId&gt;
+	&lt;version&gt;1.4.2&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For AsciiDoc content support add the following dependency:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code data-lang="xml">&lt;dependency&gt;
+	&lt;groupId&gt;org.asciidoctor&lt;/groupId&gt;
+	&lt;artifactId&gt;asciidoctorj&lt;/artifactId&gt;
+	&lt;version&gt;1.5.2&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For Freemarker template support add the following dependency:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code data-lang="xml">&lt;dependency&gt;
+	&lt;groupId&gt;org.freemarker&lt;/groupId&gt;
+	&lt;artifactId&gt;freemarker&lt;/artifactId&gt;
+	&lt;version&gt;2.3.20&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For Groovy template support add the following dependencies:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code data-lang="xml">&lt;dependency&gt;
+    &lt;groupId&gt;org.codehaus.groovy&lt;/groupId&gt;
+    &lt;artifactId&gt;groovy&lt;/artifactId&gt;
+    &lt;version&gt;2.3.6&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;org.codehaus.groovy&lt;/groupId&gt;
+    &lt;artifactId&gt;groovy-templates&lt;/artifactId&gt;
+    &lt;version&gt;2.3.6&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For Thymeleaf template support add the following dependencies:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code data-lang="xml">&lt;dependency&gt;
+	&lt;groupId&gt;org.thymeleaf&lt;/groupId&gt;
+	&lt;artifactId&gt;thymeleaf&lt;/artifactId&gt;
+	&lt;version&gt;2.1.3.RELEASE&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+	&lt;groupId&gt;org.thymeleaf.extras&lt;/groupId&gt;
+	&lt;artifactId&gt;thymeleaf-extras-conditionalcomments&lt;/artifactId&gt;
+	&lt;version&gt;2.1.1.RELEASE&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="api">API</h3>
+<div class="paragraph">
+<p>The main class you should be focusing on using is <code>Oven</code>, this class provides the main functionality via a <code>.bake()</code> method that requires some parameters to be
+passed to it. Here&#8217;s an example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code data-lang="java">try {
+	File source = new File("/path/to/project_source"); //<b class="conum">(1)</b>
+	File destination = new File("/path/to/project_output"); //<b class="conum">(2)</b>
+	Oven oven = new Oven(source, destination, true); //<b class="conum">(3)</b>
+	oven.setupPaths(); //<b class="conum">(4)</b>
+	oven.bake(); //<b class="conum">(5)</b>
+} catch (JBakeException e) { //<b class="conum">(6)</b>
+	// do something with exception here
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Defines the project source, this should be the root directory of the project, JBake will look in this directory for <code>jbake.properties</code></p>
+</li>
+<li>
+<p>Defines where the baked output should be placed</p>
+</li>
+<li>
+<p>The third parameter defines if the local cache (persistent content store) should be cleared and therefore trigger a full bake</p>
+</li>
+<li>
+<p>This method checks the paths supplied exist and content the required elements</p>
+</li>
+<li>
+<p>This method performs the actual baking</p>
+</li>
+<li>
+<p>If any exceptions are thrown during the path checks or baking they are wrapped in a JBakeException</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="logging">Logging</h3>
+<div class="paragraph">
+<p>All output is generated using LogBack apart from certain elements of the command line interface. You can control the output by making sure there is a logback.xml
+on the classpath. The binary distribution includes a pre-defined <a href="https://github.com/jbake-org/jbake/blob/master/src/main/logging/logback.xml">logback.xml</a> that is
+a good reference point.</p>
+</div>
+</div>
+</div>
+</div></p>
+        </div>
+
+      </div>
+
+      <hr>
+
+      <div class="footer">
+        <p>&copy; <a href="/community/team.html">JBake Team</a> 2012-<script>document.write(new Date().getFullYear());</script> | <a href="/privacy.html">Privacy Policy</a> | Mixed with <a href="http://getbootstrap.com/">Bootstrap v2.3.1</a> | Baked with <a href="http://jbake.org">JBake v2.7.0-rc.6</a></p>
+      </div>
+
+    </div> <!-- /container -->
+
+	<div class="github hidden-phone hidden-tablet">
+		<a href="https://github.com/jbake-org/jbake"><img style="position: fixed; top: 0; right: 0; border: 0; z-index: 1050;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+	</div>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/js/jquery-1.9.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/prettify.js"></script>
+    
+    <script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-38992729-1']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	
+	</script>
+	
+	<script>
+	  ((window.gitter = {}).chat = {}).options = {
+	    room: 'jbake-org/jbake'
+	  };
+	</script>
+	<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+	
+  </body>
+</html>

@@ -1,0 +1,1634 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JBake</title>
+    <link>http://jbake.org</link>
+    <atom:link href="http://jbake.org/feed.xml" rel="self" type="application/rss+xml" />
+    <description>JBake - Java based open source static site/blog generator for developers</description>
+    <language>en-gb</language>
+    <pubDate>Sun, 2 Apr 2023 22:41:53 +0000</pubDate>
+    <lastBuildDate>Sun, 2 Apr 2023 22:41:53 +0000</lastBuildDate>
+
+    <item>
+      <title>JBake v2.7.0 release candidate available</title>
+      <link>http://jbake.org/news/jbake-v2.7.0-release-candidate.html</link>
+      <pubDate>Mon, 7 Jun 2021 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">news/jbake-v2.7.0-release-candidate.html</guid>
+      	<description>
+	&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;jbake_v2_7_0_release_candidate_available&quot;&gt;JBake v2.7.0 release candidate available&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;We&amp;#8217;re getting close to the release of JBake v2.7.0, and given the scale of code changes that have been made recently we thought it was prudent to make a release candidate available.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;So JBake v2.7.0-rc.7 is now available from &lt;a href=&quot;https://github.com/jbake-org/jbake/releases&quot;&gt;GitHub Releases&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;We&amp;#8217;d be really grateful if you could try this release candidate out against any JBake sites/projects you have. If you encounter any issues please &lt;a href=&quot;https://github.com/jbake-org/jbake/issues&quot;&gt;let us know&lt;/a&gt; so we can address them prior to the final release of v2.7.0&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;important_changes&quot;&gt;Important changes&lt;/h3&gt;
+&lt;div class=&quot;sect3&quot;&gt;
+&lt;h4 id=&quot;jbake_maven_plugin_v2_7_0_rc_7_or_higher&quot;&gt;JBake Maven Plugin (v2.7.0-rc.7 or higher)&lt;/h4&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The JBake Maven plugin version is now aligns to the JBake version
+and includes all optional JBake core dependencies.
+Every JBake release now also includes a jbake-maven-plugin release.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This makes it easier to upgrade JBake: no need to align the dependencies any more.
+It is now also easy to see which JBake version you&amp;#8217;re actually using.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Before in &lt;code&gt;pom.xml&lt;/code&gt;:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre&gt;      &amp;lt;plugin&amp;gt;
+        &amp;lt;groupId&amp;gt;org.jbake&amp;lt;/groupId&amp;gt;
+        &amp;lt;artifactId&amp;gt;jbake-maven-plugin&amp;lt;/artifactId&amp;gt;
+        &amp;lt;version&amp;gt;0.3.5&amp;lt;/version&amp;gt;&amp;lt;!-- 0.3.5 uses JBake 2.6.7 --&amp;gt;
+        ...
+        &amp;lt;dependencies&amp;gt;
+          &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.asciidoctor&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;asciidoctorj&amp;lt;/artifactId&amp;gt;
+            &amp;lt;version&amp;gt;2.4.3&amp;lt;/version&amp;gt;&amp;lt;!-- Adjust when upgrading JBake --&amp;gt;
+          &amp;lt;/dependency&amp;gt;
+          &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.freemarker&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;freemarker&amp;lt;/artifactId&amp;gt;
+            &amp;lt;version&amp;gt;2.3.31&amp;lt;/version&amp;gt;&amp;lt;!-- Adjust when upgrading JBake  --&amp;gt;
+          &amp;lt;/dependency&amp;gt;
+          ...
+        &amp;lt;/dependencies&amp;gt;
+      &amp;lt;/plugin&amp;gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;After in &lt;code&gt;pom.xml&lt;/code&gt;:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre&gt;      &amp;lt;plugin&amp;gt;
+        &amp;lt;groupId&amp;gt;org.jbake&amp;lt;/groupId&amp;gt;
+        &amp;lt;artifactId&amp;gt;jbake-maven-plugin&amp;lt;/artifactId&amp;gt;
+        &amp;lt;version&amp;gt;2.7.0&amp;lt;/version&amp;gt;&amp;lt;!-- Same as JBake version --&amp;gt;
+        ...
+        &amp;lt;!-- No need to maintain transitive dependencies --&amp;gt;
+      &amp;lt;/plugin&amp;gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+	</description>
+    </item>
+    <item>
+      <title>Official Docker Image Released</title>
+      <link>http://jbake.org/news/official-docker-image.html</link>
+      <pubDate>Sun, 16 May 2021 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">news/official-docker-image.html</guid>
+      	<description>
+	&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;official_docker_image_released&quot;&gt;Official Docker Image Released&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Along with the recent &lt;a href=&quot;/news/jbake-v2-6-7-released.html&quot;&gt;JBake v2.6.7&lt;/a&gt; release I&amp;#8217;m happy to announce that an official &lt;a href=&quot;https://hub.docker.com/r/jbake/jbake&quot;&gt;Docker image&lt;/a&gt; is now available for JBake.
+Allowing you to execute JBake without needing to install JBake on your local system.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Details on how to use the Docker image are available on the &lt;a href=&quot;/download.html&quot;&gt;download&lt;/a&gt; page.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+	</description>
+    </item>
+    <item>
+      <title>JBake v2.6.7 released</title>
+      <link>http://jbake.org/news/jbake-v2-6-7-released.html</link>
+      <pubDate>Sat, 15 May 2021 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">news/jbake-v2-6-7-released.html</guid>
+      	<description>
+	&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;jbake_v2_6_7_released&quot;&gt;JBake v2.6.7 released&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I&amp;#8217;m happy to announce that &lt;a href=&quot;/download.html&quot;&gt;JBake v2.6.7&lt;/a&gt; has been released. This is primarily a bug fix release.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;You can find the complete changelog for this release here: &lt;a href=&quot;https://github.com/jbake-org/jbake/milestone/22?closed=1&quot; class=&quot;bare&quot;&gt;https://github.com/jbake-org/jbake/milestone/22?closed=1&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This release should also be available via Maven Central, SDKMAN and Homebrew over the next few days.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Download &lt;strong&gt;&lt;a href=&quot;/download.html&quot;&gt;JBake v2.6.7&lt;/a&gt;&lt;/strong&gt; now and get baking!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;fixes&quot;&gt;Fixes&lt;/h3&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jbake-org/jbake/pull/687&quot;&gt;add index.html to the list of known welcome files for jetty&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;updateschanges&quot;&gt;Updates/Changes&lt;/h3&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jbake-org/jbake/pull/681&quot;&gt;Added Dockerfile and updated README&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jbake-org/jbake/pull/682&quot;&gt;User lower log level to report missing template engine&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jbake-org/jbake/pull/646&quot;&gt;Wrap usage at 80 characters instead of 100&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jbake-org/jbake/issues/686&quot;&gt;Add images to blog posts in example projects&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Thanks goes to all those who have taken a moment of their time to open issues or submit contributions.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+	</description>
+    </item>
+    <item>
+      <title>JBake v2.6.6 released</title>
+      <link>http://jbake.org/news/jbake-v2-6-6-released.html</link>
+      <pubDate>Thu, 15 Apr 2021 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">news/jbake-v2-6-6-released.html</guid>
+      	<description>
+	&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;jbake_v2_6_6_released&quot;&gt;JBake v2.6.6 released&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I&amp;#8217;m happy to announce that &lt;a href=&quot;/download.html&quot;&gt;JBake v2.6.6&lt;/a&gt; has been released. This is primarily a bug fix release.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;You can find the complete changelog for this release here: &lt;a href=&quot;https://github.com/jbake-org/jbake/milestone/21?closed=1&quot; class=&quot;bare&quot;&gt;https://github.com/jbake-org/jbake/milestone/21?closed=1&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This release should also be available via Maven Central, SDKMAN and Homebrew over the next few days.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Download &lt;strong&gt;&lt;a href=&quot;/download.html&quot;&gt;JBake v2.6.6&lt;/a&gt;&lt;/strong&gt; now and get baking!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;fixes&quot;&gt;Fixes&lt;/h3&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jbake-org/jbake/pull/648&quot;&gt;Don&amp;#8217;t assume document types are valid identifies in OrientDB&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jbake-org/jbake/issues/643&quot;&gt;Custom paths configuration do not work&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;enhancements&quot;&gt;Enhancements&lt;/h3&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jbake-org/jbake/pull/642&quot;&gt;make jetty server context path and host configurable&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jbake-org/jbake/pull/672&quot;&gt;produce reproducible archives (distribution zip and jar files)&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;updateschanges&quot;&gt;Updates/Changes&lt;/h3&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jbake-org/jbake/pull/654&quot;&gt;use svg for gitter shield&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jbake-org/jbake/issue/658&quot;&gt;Handle travis-ci.org shutdown&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jbake-org/jbake/pull/671&quot;&gt;publish to sonatype nexus instead of bintray&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jbake-org/jbake/pull/650&quot;&gt;Update gradle, dependencies and plugins&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Thanks goes to all those who have taken a moment of their time to open issues or submit contributions.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+	</description>
+    </item>
+    <item>
+      <title>JBake v2.6.5 released</title>
+      <link>http://jbake.org/news/jbake-v2-6-5-released.html</link>
+      <pubDate>Sun, 19 Apr 2020 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">news/jbake-v2-6-5-released.html</guid>
+      	<description>
+	&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;jbake_v2_6_5_released&quot;&gt;JBake v2.6.5 released&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I&amp;#8217;m happy to announce that &lt;a href=&quot;/download.html&quot;&gt;JBake v2.6.5&lt;/a&gt; has been released. This is primarily a bug fix release.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;You can find the complete changelog for this release here: &lt;a href=&quot;https://github.com/jbake-org/jbake/milestone/20?closed=1&quot; class=&quot;bare&quot;&gt;https://github.com/jbake-org/jbake/milestone/20?closed=1&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This release should also be available via Maven Central, SDKMAN and Homebrew over the next few days.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Download &lt;strong&gt;&lt;a href=&quot;/download.html&quot;&gt;JBake v2.6.5&lt;/a&gt;&lt;/strong&gt; now and get baking!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;fixes&quot;&gt;Fixes&lt;/h3&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jbake-org/jbake/issues/612&quot;&gt;jbake command does not work on MSYS(GitBash)&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jbake-org/jbake/issues/617&quot;&gt;OrientDB error messages while using OpenJDK&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jbake-org/jbake/issues/606&quot;&gt;Baking content files doesn&amp;#8217;t work with UTF-8 encoding and changed metadata&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;enhancements&quot;&gt;Enhancements&lt;/h3&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jbake-org/jbake/issues/602&quot;&gt;Suppress &quot;unable to load engine&quot; warning for optional template engines&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jbake-org/jbake/issues/626&quot;&gt;Enable dependabot (or similar) to manage dependencies?&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jbake-org/jbake/pull/629&quot;&gt;Add asciidoctor parser tests&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;updateschanges&quot;&gt;Updates/Changes&lt;/h3&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jbake-org/jbake/pull/632&quot;&gt;Cleanup and added build against openjdk 14&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jbake-org/jbake/pull/603&quot;&gt;Update dependencies and gradle wrapper&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jbake-org/jbake/issues/462&quot;&gt;Upgrade to AsciidoctorJ 1.5.7 (so JRuby dependency is also updated to enable use with Java 9)&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jbake-org/jbake/issues/608&quot;&gt;Remove empty ConfigUtil class in org.jbake.app package&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Thanks goes to all those who have taken a moment of their time to open issues.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I&amp;#8217;d also like to personally say a big thanks to everyone for their patience over the past year while I was busy studying!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+	</description>
+    </item>
+    <item>
+      <title>JBake v2.6.4 released</title>
+      <link>http://jbake.org/news/jbake-v2-6-4-released.html</link>
+      <pubDate>Sun, 27 Jan 2019 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">news/jbake-v2-6-4-released.html</guid>
+      	<description>
+	&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;jbake_v2_6_4_released&quot;&gt;JBake v2.6.4 released&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I&amp;#8217;m happy to announce that &lt;a href=&quot;/download.html&quot;&gt;JBake v2.6.4&lt;/a&gt; has been released. This is primarily a bug fix release.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;You can find the complete changelog for this release here: &lt;a href=&quot;https://github.com/jbake-org/jbake/milestone/19?closed=1&quot; class=&quot;bare&quot;&gt;https://github.com/jbake-org/jbake/milestone/19?closed=1&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This release should also be available via Maven Central, SDKMAN and Homebrew in the next few days.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Download &lt;strong&gt;&lt;a href=&quot;/download.html&quot;&gt;JBake v2.6.4&lt;/a&gt;&lt;/strong&gt; now and get baking!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;fixes&quot;&gt;Fixes&lt;/h3&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jbake-org/jbake/pull/554&quot;&gt;fix relative image source transformation&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jbake-org/jbake/issues/566&quot;&gt;fix jbake serve on Windows 10 using jdk 8&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jbake-org/jbake/pull/569&quot;&gt;fix using nested paths tag.path result in wrong content.root value&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;enhancements&quot;&gt;Enhancements&lt;/h3&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jbake-org/jbake/pull/564&quot;&gt;Add current dir lib/* and lib/logging to classpath&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jbake-org/jbake/pull/580&quot;&gt;Parse &quot;jbake-&quot; prefixed asciidoc headers like normal metadata&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jbake-org/jbake/pull/583&quot;&gt;Incremental asset baking while serving&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;updates&quot;&gt;Updates&lt;/h3&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jbake-org/jbake/pull/560&quot;&gt;asciidoctorj from 2.5.7 to 2.5.8.1&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jbake-org/jbake/pull/577&quot;&gt;Upgrade Jetty to 9.2.26.v20180806&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;asciidoctorj-diagram 1.5.10 to 1.5.11&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;flexmark 0.34.48 to 0.40.8&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;groovy 2.5.3 to 2.5.5&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;thymeleaf 3.0.9.RELEASE to 3.0.11.RELEASE&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;contributors&quot;&gt;Contributors&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/OndraZizka&quot;&gt;Ondrej Zizka&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/maxandersen&quot;&gt;Max Rydahl Andersen&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/kwin&quot;&gt;Konrad Windszus&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jmcgarr&quot;&gt;Mike McGarr&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/matthiasblaesing&quot;&gt;Matthias Bläsing&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Thank you for your time and patience.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;A warm thank you to all people we missed to mention who spread the word and open issues.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+	</description>
+    </item>
+    <item>
+      <title>JBake v2.6.3 released</title>
+      <link>http://jbake.org/news/jbake-v2-6-3-released.html</link>
+      <pubDate>Tue, 16 Oct 2018 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">news/jbake-v2-6-3-released.html</guid>
+      	<description>
+	&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;jbake_v2_6_3_released&quot;&gt;JBake v2.6.3 released&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I&amp;#8217;m happy to announce that &lt;a href=&quot;/download.html&quot;&gt;JBake v2.6.3&lt;/a&gt; has been released. This is primarily a bug fix release.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jbake-org/jbake/issues/542&quot;&gt;switched temporarily to jruby 9.1.17.0&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;There is a bug in asciidoctorj 1.5.7 &lt;a href=&quot;https://github.com/asciidoctor/asciidoctorj/issues/680&quot;&gt;rendering many documents on the same asciidoctor instance&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;update to groovy 2.5.3 to get everything working with JDK 11&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;You can find the complete changelog for this release here: &lt;a href=&quot;https://github.com/jbake-org/jbake/milestone/18?closed=1&quot; class=&quot;bare&quot;&gt;https://github.com/jbake-org/jbake/milestone/18?closed=1&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This release should also be available via Maven Central, SDKMAN and Homebrew in the next few days.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Download &lt;strong&gt;&lt;a href=&quot;/download.html&quot;&gt;JBake v2.6.3&lt;/a&gt;&lt;/strong&gt; now and get baking!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+	</description>
+    </item>
+    <item>
+      <title>JBake v2.6.2 released</title>
+      <link>http://jbake.org/news/jbake-v2-6-2-released.html</link>
+      <pubDate>Sun, 7 Oct 2018 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">news/jbake-v2-6-2-released.html</guid>
+      	<description>
+	&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;jbake_v2_6_2_released&quot;&gt;JBake v2.6.2 released&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I&amp;#8217;m happy to announce that &lt;a href=&quot;/download.html&quot;&gt;JBake v2.6.2&lt;/a&gt; has been released. This is a primarily a bug fix release.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;One change that you should be aware of is that the automatic image path update feature introduced in v2.6.0 has been wrapped
+in a feature flag (&lt;code&gt;img.path.update&lt;/code&gt;) and disabled by default.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;You can find the complete changelog for this release here: &lt;a href=&quot;https://github.com/jbake-org/jbake/milestone/17?closed=1&quot; class=&quot;bare&quot;&gt;https://github.com/jbake-org/jbake/milestone/17?closed=1&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This release should also be available via Maven Central, SDKMAN and Homebrew in the next few days.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Download &lt;strong&gt;&lt;a href=&quot;/download.html&quot;&gt;JBake v2.6.2&lt;/a&gt;&lt;/strong&gt; now and get baking!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+	</description>
+    </item>
+    <item>
+      <title>JBake v2.6.1 released</title>
+      <link>http://jbake.org/news/jbake-v2-6-1-released.html</link>
+      <pubDate>Sun, 15 Apr 2018 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">news/jbake-v2-6-1-released.html</guid>
+      	<description>
+	&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;jbake_v2_6_1_released&quot;&gt;JBake v2.6.1 released&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I&amp;#8217;m happy to announce that &lt;a href=&quot;/download.html&quot;&gt;JBake v2.6.1&lt;/a&gt; has been released. This is a bug fix release.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;You can find the complete changelog for this release here: &lt;a href=&quot;https://github.com/jbake-org/jbake/milestone/16?closed=1&quot; class=&quot;bare&quot;&gt;https://github.com/jbake-org/jbake/milestone/16?closed=1&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This release should also be available via Maven Central, SDKMAN and Homebrew in the next few days.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Download &lt;strong&gt;&lt;a href=&quot;/download.html&quot;&gt;JBake v2.6.1&lt;/a&gt;&lt;/strong&gt; now and get baking!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+	</description>
+    </item>
+    <item>
+      <title>JBake v2.6.0 released</title>
+      <link>http://jbake.org/news/jbake-v2-6-0-released.html</link>
+      <pubDate>Sun, 4 Mar 2018 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">news/jbake-v2-6-0-released.html</guid>
+      	<description>
+	&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;jbake_v2_6_0_released&quot;&gt;JBake v2.6.0 released&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I&amp;#8217;m happy to announce that &lt;a href=&quot;/download.html&quot;&gt;JBake v2.6.0&lt;/a&gt; has been released. This is a major release that includes a number of new features as well as bug fixes and changes.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Here are a few of the major changes included in this release:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Java 7 is now required to run JBake&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Project has switched to Gradle for build&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Improved execution scripts inc. support for additional JAR files&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Asset and Content directories can be marked to be ignored from processing&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Static files such as images can be included in the Content directory tree&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Server mode now watches for changes to Asset and Template directories&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Relative image src values are now automatically updated&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Added more data variables for use in templates when paging&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;AsciidoctorJ-Diagram is included in binary distribution (not declared as a dependency though) so you can include diagrams in your AsciiDoc content&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;admonitionblock note&quot;&gt;
+&lt;table&gt;
+&lt;tr&gt;
+&lt;td class=&quot;icon&quot;&gt;
+&lt;div class=&quot;title&quot;&gt;Note&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class=&quot;content&quot;&gt;
+If you are using pagination for the index page i.e. &lt;code&gt;index.paginate=true&lt;/code&gt;, then please verify that you are using &lt;code&gt;published_posts&lt;/code&gt; or equivalent &lt;code&gt;published_{contentType}&lt;/code&gt; model instead of &lt;code&gt;posts&lt;/code&gt; model. See this &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/389&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;bug fix&lt;/a&gt; for details.
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class=&quot;admonitionblock note&quot;&gt;
+&lt;table&gt;
+&lt;tr&gt;
+&lt;td class=&quot;icon&quot;&gt;
+&lt;div class=&quot;title&quot;&gt;Note&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class=&quot;content&quot;&gt;
+The value to persist the content store to disk has changed from &lt;code&gt;local&lt;/code&gt; to &lt;code&gt;plocal&lt;/code&gt;, so the configuration option should be: &lt;code&gt;db.store=plocal&lt;/code&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;You can find the complete changelog for this release here: &lt;a href=&quot;https://github.com/jbake-org/jbake/milestone/14?closed=1&quot; class=&quot;bare&quot;&gt;https://github.com/jbake-org/jbake/milestone/14?closed=1&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Thanks to everyone who has contributed something to this new release, and especially to &lt;a href=&quot;https://github.com/ancho&quot;&gt;Frank Becker&lt;/a&gt; and &lt;a href=&quot;https://github.com/manikmagar&quot;&gt;Manik Magar&lt;/a&gt;
+who put a tremendous amount of work into this release. I&amp;#8217;m also pleased to say they have recently joined the &lt;a href=&quot;/community/team.html&quot;&gt;JBake team&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This release should also be available via Maven Central, SDKMAN and Homebrew in the next few days.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Download &lt;strong&gt;&lt;a href=&quot;/download.html&quot;&gt;JBake v2.6.0&lt;/a&gt;&lt;/strong&gt; now and get baking!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+	</description>
+    </item>
+    <item>
+      <title>New HTML5 based Template - JBake Future Imperfect</title>
+      <link>http://jbake.org/news/jbake-future-imperfect-template.html</link>
+      <pubDate>Fri, 2 Jun 2017 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">news/jbake-future-imperfect-template.html</guid>
+      	<description>
+	&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;new_html5_based_template_jbake_future_imperfect&quot;&gt;New HTML5 based Template - JBake Future Imperfect&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I am happy to announce that, I have ported a beautiful HTML5 based template for JBake.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Here is how the baked site looks like:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;https://github.com/manikmagar/jbake-future-imperfect-template/blob/master/jbake_future_imperfect_blog.png?raw=true&quot; alt=&quot;JBake Future Imperfect&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Demo&lt;/strong&gt;: &lt;a href=&quot;https://manikmagar.github.io/jbake-future-imperfect-template/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;See this&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;features&quot;&gt;Features&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This template provides many features out of the box i.e. no need to modify any template files. Just configure the jbake.properties and bake your site.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Disqus comments&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Google Analytics&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Estimated Time to read for posts&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Social Links&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Configurable Site menus&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Featured Images for posts&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;404 error handling on Github/Gitlab pages&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Social Share menu on posts&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;To know more about installing, configuring and using this template, check the &lt;strong&gt;&lt;a href=&quot;https://github.com/manikmagar/jbake-future-imperfect-template&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;github repository&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Hope you will like it. Keep Baking!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+	</description>
+    </item>
+    <item>
+      <title>JBake v2.5.1 released</title>
+      <link>http://jbake.org/news/jbake-v2-5-1-released.html</link>
+      <pubDate>Wed, 1 Feb 2017 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">news/jbake-v2-5-1-released.html</guid>
+      	<description>
+	&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;jbake_v2_5_1_released&quot;&gt;JBake v2.5.1 released&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I&amp;#8217;m happy to announce that &lt;a href=&quot;/download.html&quot;&gt;JBake v2.5.1&lt;/a&gt; has been released. This is a minor release that includes a number of bug fixes, some small enhancements and
+a couple of changes.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Here are the release notes for this version&amp;#8230;&amp;#8203;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Bugs fixed:&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;When a directory has a dot (&quot;.&quot;) in it, but the filename doesn&amp;#8217;t, FileNotFoundException results. &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/300&quot;&gt;#300&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Index variables don‘t exist despite enabled pagination &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/310&quot;&gt;#310&lt;/a&gt; &amp;amp; &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/312&quot;&gt;#312&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;JBake JettyServer doesn&amp;#8217;t work with custom destination &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/314&quot;&gt;#314&lt;/a&gt; &amp;amp; &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/316&quot;&gt;#316&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Regression on issue #181 &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/315&quot;&gt;#315&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Tag pages are created for documents of type post only &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/323&quot;&gt;#323&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Index template is not rendered regardless of config if no content of type post exists in site/project &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/325&quot;&gt;#325&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;jbake: &quot;-b&quot; is not the default action any more &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/331&quot;&gt;#331&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;jbake-master: &quot;jbake -b&quot; shows java.util.NoSuchElementException: &apos;index.paginate&apos;&amp;#8230;&amp;#8203; &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/332&quot;&gt;#332&lt;/a&gt; &amp;amp; &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/336&quot;&gt;#336&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Bake fails on jbake.org due to duplicate SHA1 hashes in index &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/339&quot;&gt;#339&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;strong&gt;New features:&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Add support for symbolically linked launcher &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/311&quot;&gt;#311&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Expand allowed characters for template type name &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/317&quot;&gt;#317&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Added new data model variable &apos;tagged_documents&apos; &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/323&quot;&gt;#323&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;jbake-master: realpath: command not found on Ubuntu-14.04 &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/329&quot;&gt;#329&lt;/a&gt; &amp;amp; &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/330&quot;&gt;#330&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Changes:&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Ignore javadoc error on package &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/309&quot;&gt;#309&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use StringBuilder more consistently &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/328&quot;&gt;#328&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I&amp;#8217;d like to say thanks to everyone who has contributed something to this new release, so in no particular order: &lt;a href=&quot;https://github.com/ancho&quot;&gt;Frank Becker&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/uli-heller&quot;&gt;uli-heller&lt;/a&gt;, &lt;a href=&quot;https://github.com/ottlinger&quot;&gt;P. Ottlinger&lt;/a&gt;, &lt;a href=&quot;https://github.com/oliverlietz&quot;&gt;Oliver Lietz&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/beikov&quot;&gt;Christian Beikov&lt;/a&gt;, &lt;a href=&quot;https://github.com/jmcgarr&quot;&gt;Mike McGarr&lt;/a&gt;, &lt;a href=&quot;https://github.com/gilbertoca&quot;&gt;Gilberto Caetano de Andrade&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/lamvak&quot;&gt;lamvak&lt;/a&gt;, &lt;a href=&quot;https://github.com/nerdcoding&quot;&gt;Tobias&lt;/a&gt; and &lt;a href=&quot;https://github.com/mtnygard&quot;&gt;Michael Nygard&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This release should also be available via Maven Central, SDKMAN and Homebrew in the next few days.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Download &lt;strong&gt;&lt;a href=&quot;/download.html&quot;&gt;JBake v2.5.1&lt;/a&gt;&lt;/strong&gt; now and get baking!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+	</description>
+    </item>
+    <item>
+      <title>Interview on Cynical Developer podcast</title>
+      <link>http://jbake.org/news/interview-on-cynical-developer-podcast.html</link>
+      <pubDate>Sun, 18 Dec 2016 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">news/interview-on-cynical-developer-podcast.html</guid>
+      	<description>
+	&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;interview_on_cynical_developer_podcast&quot;&gt;Interview on Cynical Developer podcast&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I got the opportunity recently to be interviewed on the &lt;a href=&quot;http://cynicaldeveloper.com/&quot;&gt;Cynical Developer&lt;/a&gt; &lt;a href=&quot;http://cynicaldeveloper.com/feed/podcast&quot;&gt;podcast&lt;/a&gt; by
+James Studdart who I discovered through the local &lt;a href=&quot;https://www.meetup.com/Chester-Devs/&quot;&gt;Chester Devs&lt;/a&gt; group.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The interview covered what static site generation is, where it came from, why it&amp;#8217;s called baking, what the benefits are of static sites and how JBake fits into it all.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;You can listen to the interview &lt;a href=&quot;http://cynicaldeveloper.com/podcast/4/&quot;&gt;here&lt;/a&gt; and make sure you subscribe to the &lt;a href=&quot;http://cynicaldeveloper.com/feed/podcast&quot;&gt;podcast&lt;/a&gt; as well
+to find out more about a range of development technologies.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+	</description>
+    </item>
+    <item>
+      <title>JBake v2.5.0 released</title>
+      <link>http://jbake.org/news/jbake-v2-5-0-released.html</link>
+      <pubDate>Fri, 7 Oct 2016 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">news/jbake-v2-5-0-released.html</guid>
+      	<description>
+	&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;jbake_v2_5_0_released&quot;&gt;JBake v2.5.0 released&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I&amp;#8217;m extremely happy (and relieved) to announce that &lt;a href=&quot;/download.html&quot;&gt;JBake v2.5.0&lt;/a&gt; has finally been released. This is a big release that includes a number of
+new features as well as numerous bug fixes and in terms of issues/pull requests closed it is the largest release ever.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Here are the release notes for this version&amp;#8230;&amp;#8203;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;strong&gt;New features:&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;New options from Pegdown 1.6 &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/299&quot;&gt;#299&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Support for Cygwin &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/225&quot;&gt;#225&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Added support for Groovy&amp;#8217;s MarkupTemplateEngine &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/282&quot;&gt;#282&lt;/a&gt;, &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/244&quot;&gt;#244&lt;/a&gt; &amp;amp; &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/185&quot;&gt;#185&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Allow gemPath to be specified for the AsciidoctorEngine &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/267&quot;&gt;#267&lt;/a&gt; &amp;amp; &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/269&quot;&gt;#269&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Detailed errors with stack trace of the original problem &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/219&quot;&gt;#219&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Last modification date as alternative to date header &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/217&quot;&gt;#217&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Added support for pagination &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/186&quot;&gt;#186&lt;/a&gt;, &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/101&quot;&gt;#101&lt;/a&gt; &amp;amp; &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/115&quot;&gt;#115&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Watch mode added to auto bake when content file changes &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/253&quot;&gt;#253&lt;/a&gt; &amp;amp; &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/183&quot;&gt;#183&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Changed default behavior of jbake &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/236&quot;&gt;#236&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Added support for Jade template engine &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/154&quot;&gt;#154&lt;/a&gt; &amp;amp; &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/166&quot;&gt;#166&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Added support for extensionless URI&amp;#8217;s &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/104&quot;&gt;#104&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Bugs fixed:&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Exec script issues on Mac OS X &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/307&quot;&gt;#307&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;OrientDB is now correctly shutdown after baking &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/296&quot;&gt;#296&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Blog posts get duplicated when &lt;code&gt;db.store=local&lt;/code&gt; is used &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/290&quot;&gt;#290&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Register model extractors for custom types &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/286&quot;&gt;#286&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Custom types are broken &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/283&quot;&gt;#283&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&quot;alltags&quot; does not contain tags from custom template types &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/266&quot;&gt;#266&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Setting asciidoctor.option.template_dirs in jbake.properties causes an error &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/252&quot;&gt;#252&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Fixed loading of RenderingTool Providers &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/248&quot;&gt;#248&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;tag_posts: Contains draft posts as well as published posts &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/213&quot;&gt;#213&lt;/a&gt; &amp;amp; &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/214&quot;&gt;#214&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Rendering appears to be broken in master &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/254&quot;&gt;#254&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Incremental rendering feature is broken in v2.4.0 &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/226&quot;&gt;#226&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Empty output.extension causes NPE &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/234&quot;&gt;#234&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Setting output.extension to an empty string causes errors when rendering &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/233&quot;&gt;#233&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Changes:&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Update AsciidoctorJ to v1.5.4.1&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Upgrade Thymeleaf to 3.0 &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/262&quot;&gt;#262&lt;/a&gt; &amp;amp; &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/263&quot;&gt;#263&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Pegdown upgraded to v1.6.0 &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/222&quot;&gt;#222&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Updated Apache Commons IO to v2.5 &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/304&quot;&gt;#304&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Updates to versions of maven dependency and plugins &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/270&quot;&gt;#270&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Small code improvements &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/306&quot;&gt;#306&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add tests for DocumentsRenderer &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/298&quot;&gt;#298&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Improve error messages when required folders are missing &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/235&quot;&gt;#235&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Remove org.jbake.app.SortUtil class as it&amp;#8217;s no longer used &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/258&quot;&gt;#258&lt;/a&gt; &amp;amp; &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/239&quot;&gt;#239&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;(GroovyTemplates) Use English Locale in the date formatter &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/256&quot;&gt;#256&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Clean up and Asciidoctorj version change &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/255&quot;&gt;#255&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add tests to (most of) the rendering layer &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/250&quot;&gt;#250&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Minor refactoring &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/249&quot;&gt;#249&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Fixed broken template engine unit tests &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/247&quot;&gt;#247&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Superfast baking with Thymeleaf &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/220&quot;&gt;#220&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Extracted various rendering modes to allow their customization &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/138&quot;&gt;#138&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Preliminary refactoring &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/135&quot;&gt;#135&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Simplify and aggregate rendering testing &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/175&quot;&gt;#175&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I&amp;#8217;d like to say thanks to everyone who has contributed something to this new release, so in no particular order: &lt;a href=&quot;https://github.com/ancho&quot;&gt;Frank Becker&lt;/a&gt;, &lt;a href=&quot;https://github.com/obfischer&quot;&gt;Oliver B. Fischer&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/jjkavalam&quot;&gt;Jobin Jacob Kavalam&lt;/a&gt;, &lt;a href=&quot;https://github.com/ottlinger&quot;&gt;P. Ottlinger&lt;/a&gt;, &lt;a href=&quot;https://github.com/jhrom&quot;&gt;jhrom&lt;/a&gt;, &lt;a href=&quot;https://github.com/gilbertoca&quot;&gt;Gilberto Caetano de Andrade&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/atao60&quot;&gt;atao60&lt;/a&gt;, &lt;a href=&quot;https://github.com/mkobit&quot;&gt;Mike Kobit&lt;/a&gt;, &lt;a href=&quot;https://github.com/mtolk&quot;&gt;Marco Tolk&lt;/a&gt;, &lt;a href=&quot;https://github.com/abelsromero&quot;&gt;Abel Salgado Romero&lt;/a&gt;, &lt;a href=&quot;https://github.com/stevenemrick&quot;&gt;Steve E.&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/bodiam&quot;&gt;Erik Pragt&lt;/a&gt;, &lt;a href=&quot;https://github.com/ubala&quot;&gt;Uma Bala&lt;/a&gt;, &lt;a href=&quot;https://github.com/aalmiray&quot;&gt;Andres Almiray&lt;/a&gt;, &lt;a href=&quot;https://github.com/oliverlietz&quot;&gt;Oliver Lietz&lt;/a&gt;, &lt;a href=&quot;https://github.com/jmini&quot;&gt;Jérémie Bresson&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/danielgrycman&quot;&gt;Daniel Grycman&lt;/a&gt;, &lt;a href=&quot;https://github.com/SwamWithTurtles&quot;&gt;David Simons&lt;/a&gt;, &lt;a href=&quot;https://github.com/thehereward&quot;&gt;Hereward&lt;/a&gt;, &lt;a href=&quot;https://github.com/haumacher&quot;&gt;Bernhard Haumacher&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/uli-heller&quot;&gt;uli-heller&lt;/a&gt;, &lt;a href=&quot;https://github.com/huima&quot;&gt;Heimo Laukkanen&lt;/a&gt;, &lt;a href=&quot;https://github.com/Fisiu&quot;&gt;Mariusz Fik&lt;/a&gt;, &lt;a href=&quot;https://github.com/sengopal&quot;&gt;Senthilkumar Gopal&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/cloudtu&quot;&gt;cloudtu&lt;/a&gt;, &lt;a href=&quot;https://github.com/mariuszs&quot;&gt;Mariusz Smykuła&lt;/a&gt;, &lt;a href=&quot;https://github.com/Riduidel&quot;&gt;Nicolas Delsaux&lt;/a&gt;, &lt;a href=&quot;https://github.com/jasondlee&quot;&gt;Jason Lee&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/mbosecke&quot;&gt;Mitchell Bösecke&lt;/a&gt;, &lt;a href=&quot;https://github.com/vidakovic&quot;&gt;Aleksandar Vidakovic&lt;/a&gt;, &lt;a href=&quot;https://github.com/mwanji&quot;&gt;Moandji Ezana&lt;/a&gt; &amp;amp; &lt;a href=&quot;https://github.com/puredanger&quot;&gt;Alex Miller&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This release should also be available via Maven Central, SDKMAN and Homebrew in the next few days.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Download &lt;strong&gt;&lt;a href=&quot;/download.html&quot;&gt;JBake v2.5.0&lt;/a&gt;&lt;/strong&gt; now and get baking!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+	</description>
+    </item>
+    <item>
+      <title>JRE Support for JBake</title>
+      <link>http://jbake.org/news/jre-support-for-jbake.html</link>
+      <pubDate>Wed, 4 Nov 2015 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">news/jre-support-for-jbake.html</guid>
+      	<description>
+	&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;jre_support_for_jbake&quot;&gt;JRE Support for JBake&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;To help define the future roadmap for JBake we&amp;#8217;re after some feedback from users of JBake in regards to the JRE required to run JBake.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;If you could spare 2 minutes please complete the following form: &lt;a href=&quot;http://goo.gl/forms/YhPww3UyQE&quot; class=&quot;bare&quot;&gt;http://goo.gl/forms/YhPww3UyQE&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Thanks in advance!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+	</description>
+    </item>
+    <item>
+      <title>JBake v2.4.0 released</title>
+      <link>http://jbake.org/news/jbake-v2-4-0-released.html</link>
+      <pubDate>Sat, 30 May 2015 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">news/jbake-v2-4-0-released.html</guid>
+      	<description>
+	&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;jbake_v2_4_0_released&quot;&gt;JBake v2.4.0 released&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I&amp;#8217;m extremely happy to announce that &lt;a href=&quot;/download.html&quot;&gt;JBake v2.4.0&lt;/a&gt; has finally been released. This is a feature release that includes a number of
+new features as well as bug fixes and in terms of issues/pull requests closed it is the largest release ever.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Here are the release notes for this version&amp;#8230;&amp;#8203;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;strong&gt;New features:&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;New and improved documentation for project &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/196&quot;&gt;#196&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Metadata header now supports JSON format being used &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/114&quot;&gt;#114&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Init option now allows folder to be specified &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/147&quot;&gt;#147&lt;/a&gt;, &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/151&quot;&gt;#151&lt;/a&gt; &amp;amp; &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/156&quot;&gt;#156&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Allow custom file extension to be specified for custom templates &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/152&quot;&gt;#152&lt;/a&gt; &amp;amp; &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/155&quot;&gt;#155&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Locate output directory in source folder by default &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/157&quot;&gt;#157&lt;/a&gt; &amp;amp; &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/158&quot;&gt;#158&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Thymeleaf templates can now use the .html extension &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/163&quot;&gt;#163&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Improved use of JBake as library by removing System.exit calls &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/167&quot;&gt;#167&lt;/a&gt; &amp;amp; &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/168&quot;&gt;#168&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Markdown extension: STRIKETHROUGH added and allowed some extensions to be disabled &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/171&quot;&gt;#171&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Added &lt;code&gt;tag.sanitize&lt;/code&gt; configuration option &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/181&quot;&gt;#181&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Added &lt;code&gt;asset.ignore&lt;/code&gt; configuration option &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/193&quot;&gt;#193&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Added ConditionalCommentsDialect support for Thymeleaf &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/195&quot;&gt;#195&lt;/a&gt; &amp;amp; &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/200&quot;&gt;#200&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Bugs fixed:&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Make sure no null tag list could break process &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/129&quot;&gt;#129&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The href of stylesheet in generated &quot;tag&quot;.html is wrong &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/148&quot;&gt;#148&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Asset directory name was hard coded &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/162&quot;&gt;#162&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Colon in Asciidoctor based post prevents proper title rendering &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/164&quot;&gt;#164&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Broken link to /archive in index.gsp &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/172&quot;&gt;#172&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Special character in the title field of the metadata header are not escaped &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/173&quot;&gt;#173&lt;/a&gt; &amp;amp; &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/192&quot;&gt;#192&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&quot;Unable to convert object to String[] error shown multiple times with no explanation &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/174&quot;&gt;#174&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Redundant slash in the example project structures &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/187&quot;&gt;#187&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Leading spaces in tags defined in AsciiDoc format are not removed &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/191&quot;&gt;#191&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Discrepancy in numbers output when baking jbake.org &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/204&quot;&gt;#204&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Changes:&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Update AsciidoctorJ to v1.5.2 &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/153&quot;&gt;#153&lt;/a&gt;, &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/197&quot;&gt;#197&lt;/a&gt; &amp;amp; &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/203&quot;&gt;#203&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Update Jacoco to 0.7.X &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/142&quot;&gt;#142&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;custom.properties&lt;/code&gt; is now deprecated and a warning shown if used &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/50&quot;&gt;#50&lt;/a&gt; &amp;amp; &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/134&quot;&gt;#134&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Extract all config constants in one interface &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/132&quot;&gt;#132&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Make sure &lt;code&gt;content.rootpath&lt;/code&gt; returns empty string instead of null &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/150&quot;&gt;#150&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;All DB related code moved to behind a facade - ContentStore &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/169&quot;&gt;#169&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Reclassified ERRORS to WARNINGS when invalid metadata header is detected and display relevant file &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/179&quot;&gt;#179&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Added delegating constructor to Oven to maintain existing API &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/194&quot;&gt;#194&lt;/a&gt; &amp;amp; &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/198&quot;&gt;#198&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Removed debug statements from AsciidoctorJ library &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/199&quot;&gt;#199&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Made sure OrientDB logging is piped through so it can be controlled via JBake logging configuration &lt;a href=&quot;https://github.com/jbake-org/jbake/issues/205&quot;&gt;#205&lt;/a&gt; &amp;amp; &lt;a href=&quot;https://github.com/jbake-org/jbake/pull/207&quot;&gt;#207&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I&amp;#8217;d like to say thanks to everyone who has contributed something to this new release, so in no particular order: &lt;a href=&quot;https://github.com/ybonnel&quot;&gt;Yan Bonnel&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/Riduidel&quot;&gt;Nicolas Delsaux&lt;/a&gt;, &lt;a href=&quot;https://github.com/Vad1mo&quot;&gt;Vadim&lt;/a&gt;, &lt;a href=&quot;https://github.com/mariuszs&quot;&gt;Mariusz Smykuła&lt;/a&gt;, &lt;a href=&quot;https://github.com/flyisland&quot;&gt;flyisland&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/grdryn&quot;&gt;Gerard Ryan&lt;/a&gt;, &lt;a href=&quot;https://github.com/HuguesH&quot;&gt;HuguesH&lt;/a&gt;, &lt;a href=&quot;https://github.com/christianbauer&quot;&gt;Christian Bauer&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/obfischer&quot;&gt;Oliver B. Fischer&lt;/a&gt;, &lt;a href=&quot;https://github.com/lefou&quot;&gt;Tobias Roeser&lt;/a&gt;, &lt;a href=&quot;https://github.com/jasondlee&quot;&gt;Jason Lee&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/uli-heller&quot;&gt;uli-heller&lt;/a&gt;, &lt;a href=&quot;https://github.com/gilbertoca&quot;&gt;Gilberto Caetano de Andrade&lt;/a&gt;, &lt;a href=&quot;https://github.com/dknight&quot;&gt;Dmitri Smirnov&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/ancho&quot;&gt;Frank Becker&lt;/a&gt; and &lt;a href=&quot;https://github.com/pitpalme&quot;&gt;pitpalme&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This release should also be available via Maven Central, GVM and Homebrew in the next few days.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Download &lt;strong&gt;&lt;a href=&quot;/download.html&quot;&gt;JBake v2.4.0&lt;/a&gt;&lt;/strong&gt; now and get baking!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+	</description>
+    </item>
+    <item>
+      <title>JBake v2.3.2 released</title>
+      <link>http://jbake.org/news/jbake-v2-3-2-released.html</link>
+      <pubDate>Sat, 20 Sep 2014 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">news/jbake-v2-3-2-released.html</guid>
+      	<description>
+	&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;jbake_v2_3_2_released&quot;&gt;JBake v2.3.2 released&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I&amp;#8217;m happy to announce that &lt;a href=&quot;/download.html&quot;&gt;JBake v2.3.2&lt;/a&gt; is now available for download. This is a bug fix version and includes updated
+dependencies including Asciidoctor v1.5.0.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Here are the release notes for this version&amp;#8230;&amp;#8203;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Project badges now use &lt;a href=&quot;http://shields.io&quot; class=&quot;bare&quot;&gt;http://shields.io&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Support for Asciidoctor v1.5.0&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Fixes bug when tags has null value&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Adds support for controlling Markdown parsing timeout&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Fixes issue with files being kept open on Windows&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Fixes issue with Orient DB not being shut down correctly after baking&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Fixes issue with batch file on Windows when installed in folder with spaces&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Fixes issue with leading &amp;amp; trailing spaces when parsing tags&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Fixes issue with using relative paths with Asciidoctor v1.5.0&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Reduced Groovy based dependencies&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Asciidoctor updated to v1.5.0&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Groovy updated to v2.3.6&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Args4j updated to v2.0.36&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;JUnit updated to v4.11&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;SLF4J upgdated to v1.7.6&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Logback updated to v1.1.1&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;AssertJ updated to v1.6.0&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;OrientDB updated to v1.6.4&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I&amp;#8217;d like to thank &lt;a href=&quot;https://github.com/aalmiray&quot;&gt;Andres Almiray&lt;/a&gt;, &lt;a href=&quot;https://github.com/Riduidel&quot;&gt;Nicolas Delsaux&lt;/a&gt;, &lt;a href=&quot;https://github.com/dernasherbrezon&quot;&gt;dernasherbrezon&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/aldrinleal&quot;&gt;Aldrin Leal&lt;/a&gt;, &lt;a href=&quot;https://github.com/pditommaso&quot;&gt;Paolo Di Tommaso&lt;/a&gt;, &lt;a href=&quot;https://github.com/mismatch&quot;&gt;Vitaly&lt;/a&gt; and &lt;a href=&quot;https://github.com/Fisiu&quot;&gt;Mariusz Fik&lt;/a&gt;
+for contributions in this release.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This release should also be available via Maven Central in the next few days.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Download &lt;strong&gt;&lt;a href=&quot;/download.html&quot;&gt;JBake v2.3.2&lt;/a&gt;&lt;/strong&gt; now and get baking!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+	</description>
+    </item>
+    <item>
+      <title>JBake v2.3.1 released</title>
+      <link>http://jbake.org/news/jbake-v2-3-1-released.html</link>
+      <pubDate>Thu, 10 Jul 2014 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">news/jbake-v2-3-1-released.html</guid>
+      	<description>
+	&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;jbake_v2_3_1_released&quot;&gt;JBake v2.3.1 released&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I&amp;#8217;m pleased to announce that &lt;a href=&quot;/download.html&quot;&gt;JBake v2.3.1&lt;/a&gt; is now available for download. This version includes updated dependencies for
+Groovy, Thymeleaf &amp;amp; Freemarker as well as a slight change to the installation structure.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Here are the release notes for this version&amp;#8230;&amp;#8203;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Groovy updated to v2.3.4&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Thymeleaf updated to v2.1.3&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Freemarker updated to v2.3.20&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Execution scripts are now located underneath a &lt;code&gt;/bin&lt;/code&gt; folder, so make sure to update your path references&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;em&gt;This release is dedicated to the memory of my daughter Jessica.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+	</description>
+    </item>
+    <item>
+      <title>JBake v2.3.0 released</title>
+      <link>http://jbake.org/news/jbake-v2-3-0-released.html</link>
+      <pubDate>Sun, 11 May 2014 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">news/jbake-v2-3-0-released.html</guid>
+      	<description>
+	&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;jbake_v2_3_0_released&quot;&gt;JBake v2.3.0 released&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I&amp;#8217;m pleased to announce that JBake v2.3.0 has finally been made available for download. This is a big release packed full of new features and
+enhancements.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Here are the release notes for this version&amp;#8230;&amp;#8203;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Incremental rendering support has been added to this release but been disabled by default (note: this feature is considered experimental at
+the moment)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Support for subdirectory projects has been added&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Parsing &amp;amp; Rendering code has been modularised allowing more to added more easily&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Default status can now be defined in configuration&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Fixed URI bug on Windows&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Added explicit bake command line option allowing bake+serve in one command&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Configuration options now available from within AsciiDoc formatted files&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Logging framework support has been added&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Added support for &lt;a href=&quot;http://groovy.codehaus.org/Groovy+Templates&quot;&gt;Groovy&lt;/a&gt; based templates&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Added support for &lt;a href=&quot;http://www.thymeleaf.org/&quot;&gt;Thymeleaf&lt;/a&gt; based templates&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Fixed base directory for AsciiDoc includes&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Expanded data model made available to templates&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Improved error reporting&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Example templates upgraded to use Bootstrap v3.1.1 &amp;amp; jQuery v1.11.1&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I have to thank &lt;a href=&quot;https://github.com/lefou&quot;&gt;Tobias Roeser&lt;/a&gt;, &lt;a href=&quot;https://github.com/RainerW&quot;&gt;Rainer Weinhold&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/yarixxx&quot;&gt;Yaroslav Karandashev&lt;/a&gt; and especially &lt;a href=&quot;https://github.com/melix&quot;&gt;Cédric Champeau&lt;/a&gt; for a massive amount of
+work that they contributed to this release. Thank you all!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This release should also be available via Maven Central in the next few days.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Download &lt;strong&gt;&lt;a href=&quot;/download.html&quot;&gt;JBake v2.3.0&lt;/a&gt;&lt;/strong&gt; now and get baking!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+	</description>
+    </item>
+    <item>
+      <title>JBake v2.2.1 released</title>
+      <link>http://jbake.org/news/jbake-v2-2-1-released.html</link>
+      <pubDate>Thu, 23 Jan 2014 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">news/jbake-v2-2-1-released.html</guid>
+      	<description>
+	&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;jbake_v2_2_1_released&quot;&gt;JBake v2.2.1 released&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I&amp;#8217;m pleased to announce that JBake v2.2.1 is now available for download! This is mainly a maintenance release that addresses a couple
+of issues, specifically with AsciiDoc support and character encoding.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Here&amp;#8217;s the full release notes for this version&amp;#8230;&amp;#8203;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Allow date format used to be customised via configuration&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Switched to Pegdown Markdown processor&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Added support for rendering sitemap.xml&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Added character encoding to configuration which is used for rendering&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;AsciiDoc related improvements&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Addressed multiple issues in default templates&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Cleaned up imports and unused variables&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;A big thank you goes out to &lt;a href=&quot;https://github.com/Vad1mo&quot;&gt;Vad1mo&lt;/a&gt;, &lt;a href=&quot;https://github.com/kurochenko&quot;&gt;Andrej Kuročenko&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/ksclarke&quot;&gt;Kevin S. Clarke&lt;/a&gt;, &lt;a href=&quot;https://github.com/w32blaster&quot;&gt;w32blaster&lt;/a&gt;, &lt;a href=&quot;https://github.com/yarixxx&quot;&gt;Yaroslav Karandashev&lt;/a&gt;
+and &lt;a href=&quot;https://github.com/lefou&quot;&gt;Tobias Roeser&lt;/a&gt; for contributions included in this release.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This release should also be available via Maven Central in the next few days.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Download &lt;strong&gt;&lt;a href=&quot;/download.html&quot;&gt;JBake v2.2.1&lt;/a&gt;&lt;/strong&gt; now and get baking!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+	</description>
+    </item>
+    <item>
+      <title>JBake v2.2.0 released</title>
+      <link>http://jbake.org/news/jbake-v2-2-0-released.html</link>
+      <pubDate>Wed, 23 Oct 2013 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">news/jbake-v2-2-0-released.html</guid>
+      	<description>
+	&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;jbake_v2_2_0_released&quot;&gt;JBake v2.2.0 released&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I&amp;#8217;m pleased to announce that JBake v2.2.0 is now available for download! The big addition in this release
+is support for &lt;a href=&quot;http://asciidoc.org/&quot;&gt;AsciiDoc&lt;/a&gt; formatted content, thanks to the &lt;a href=&quot;http://asciidoctor.org&quot;&gt;Asciidoctor project&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Here&amp;#8217;s the full release notes for this version&amp;#8230;&amp;#8203;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Enhancements:&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Add support for AsciiDoc format&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add support for serving up baked site locally&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add automatic publishing based on date&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Look for jbake.properties as well&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add command line option to create required structure&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add version ouput when JBake is ran&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Speed up AsciiDoc rendering be reusing Asciidoctor object&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add support for .adoc extension&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Bugs:&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Content header is being picked up from middle of content file but it shouldn&amp;#8217;t be&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Date for AsciiDoc formatted files is last modified date instead of revision date&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Baking is considerably slow on large site (~250 pages across many sub-folders)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Updated &lt;a href=&quot;/docs/&quot;&gt;documentation&lt;/a&gt; has also been released for this release along with a refresh of
+this site. From this release onwards the project will be adopting the &lt;a href=&quot;http://semver.org/&quot;&gt;Semantic Versioning&lt;/a&gt;
+system.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This new release should also be available via Maven Central in the next few days.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Download &lt;strong&gt;&lt;a href=&quot;/download.html&quot;&gt;JBake v2.2.0&lt;/a&gt;&lt;/strong&gt; now and get baking!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+	</description>
+    </item>
+    <item>
+      <title>JBake now has a logo</title>
+      <link>http://jbake.org/news/jbake-now-has-a-logo.html</link>
+      <pubDate>Tue, 15 Oct 2013 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">news/jbake-now-has-a-logo.html</guid>
+      	<description>
+	&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;jbake_now_has_a_logo&quot;&gt;JBake now has a logo&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;A lot&amp;#8217;s been happening behind the scenes of JBake recently, and thanks to a donation by
+&lt;a href=&quot;https://twitter.com/aldrinleal&quot;&gt;Aldrin Leal&lt;/a&gt; the JBake project now has a logo!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Here it is&amp;#8230;&amp;#8203;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;/img/jbake_128x128.png&quot; alt=&quot;JBake logo&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Work is still on-going for the v2.2 release, which should be out soon once documentation is ready. I&amp;#8217;m
+also pleased to announce that the project has now had contributions from Brazil, Italy, India as well as China.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+	</description>
+    </item>
+    <item>
+      <title>JBake artifact available on Maven Central</title>
+      <link>http://jbake.org/news/jbake-artifact-available-on-maven-central.html</link>
+      <pubDate>Mon, 23 Sep 2013 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">news/jbake-artifact-available-on-maven-central.html</guid>
+      	<description>
+	&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;jbake_artifact_available_on_maven_central&quot;&gt;JBake artifact available on Maven Central&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I&amp;#8217;m pleased to announce that JBake v2.1 is now available on &lt;a href=&quot;http://search.maven.org/#artifactdetails%7Corg.jbake%7Cjbake-core%7C2.1.1%7Cjar&quot;&gt;Maven Central&lt;/a&gt;.
+Thanks go to &lt;a href=&quot;https://twitter.com/aldrinleal&quot;&gt;Aldrin Leal&lt;/a&gt; for helping guide me through the release process.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;If you&amp;#8217;d like to use JBake in your project then here&amp;#8217;s the dependency information you&amp;#8217;ll need:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre&gt;&amp;lt;dependency&amp;gt;
+	&amp;lt;groupId&amp;gt;org.jbake&amp;lt;/groupId&amp;gt;
+	&amp;lt;artifactId&amp;gt;jbake-core&amp;lt;/artifactId&amp;gt;
+	&amp;lt;version&amp;gt;2.1.1&amp;lt;/version&amp;gt;
+&amp;lt;/dependency&amp;gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;More news soon about the upcoming v2.2 release and maybe a little more on Maven.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+	</description>
+    </item>
+    <item>
+      <title>Mailing lists</title>
+      <link>http://jbake.org/news/mailing-lists.html</link>
+      <pubDate>Sun, 15 Sep 2013 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">news/mailing-lists.html</guid>
+      	<description>
+	&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;mailing_lists&quot;&gt;Mailing lists&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;JBake now has 2 mailing lists for users and developers.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;http://groups.google.com/group/jbake-user&quot;&gt;Mailing list for users&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;http://groups.google.com/group/jbake-dev&quot;&gt;Mailing list for developers&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;If you want to ask a question about how to use JBake then the users list is the one for you. If you&amp;#8217;re a developer
+wanting to get involved then join the developers list.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+	</description>
+    </item>
+    <item>
+      <title>JBake v2.1 released</title>
+      <link>http://jbake.org/news/jbake-v2-1-released.html</link>
+      <pubDate>Tue, 30 Apr 2013 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">news/jbake-v2-1-released.html</guid>
+      	<description>
+	&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;jbake_v2_1_released&quot;&gt;JBake v2.1 released&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Added unit tests&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Added post baking stats&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Command line arguments are now optional&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Standardised the data model available to templates&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Changed packaging&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Added OS specific launch scripts&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;See the &lt;a href=&quot;/docs/&quot;&gt;documentation&lt;/a&gt; for updated usage information of this release.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/mismatch&quot;&gt;mismatch&lt;/a&gt; for contributions in this release.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Download &lt;a href=&quot;http://hash.to/2F.info&quot;&gt;JBake v2.1&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+	</description>
+    </item>
+
+  </channel> 
+</rss>

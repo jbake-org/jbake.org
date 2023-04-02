@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JBake - Java based open source static site/blog generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="JBake is a Java based, open source, static site/blog generator for developers." />
+    <meta name="author" content="Jonathan Bullock" />
+    <meta name="keywords" content="java, baking, open source, generator, web site" />
+    <meta name="google-site-verification" content="Fy5-c09PlgYztOz2_xH6-FsoQ7K0jpprkk4cyJHCRh8" />
+    <meta name="generator" content="JBake"/>
+    <meta name="generation" content="Apr 2, 2023, 10:41:53 PM" />
+
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+
+    <!-- Le styles -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/asciidoctor.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="/css/prettify.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 20px;
+        padding-bottom: 40px;
+      }
+
+      /* Custom container */
+      .container-narrow {
+        margin: 0 auto;
+        max-width: 700px;
+      }
+      .container-narrow > hr {
+        margin: 30px 0;
+      }
+
+      /* Main marketing message and sign up button */
+      .jumbotron {
+        margin: 60px 0;
+        text-align: center;
+      }
+      .jumbotron h1 {
+        font-size: 72px;
+        line-height: 1;
+      }
+      .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+      }
+
+      /* Supporting marketing content */
+      .marketing {
+        margin: 30px 0;
+      }
+      .marketing p + h4 {
+        margin-top: 28px;
+      }
+
+      /*.navbar .btn-navbar {
+      	float: left;
+      }*/
+      .navbar-fixed-top .container {
+        width: 700px;
+      }
+      @media (max-width: 979px) {
+      .navbar-fixed-top .container {
+       width: auto;
+       }
+    </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <!--<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="../assets/ico/favicon.png">-->
+  </head>
+  <body onload="prettyPrint()">
+    <div class="container-narrow">
+	<div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <img style="display: block; float: left; padding: 5px 10px 0 0px" src="/img/jbake_logo.png" />
+            <a class="brand" href="/">JBake</a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li><a href="/news/">News</a></li>
+                <li><a href="/download.html">Download</a></li>
+                <li><a href="/docs/">Documentation</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Development <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="https://github.com/jbake-org/jbake/">Source Code</a></li>
+                    <li><a href="https://github.com/jbake-org/jbake/issues">Issue Tracker</a></li>
+                  </ul>
+                </li>
+                <li><a href="/community/index.html">Community</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </div>
+      </div>	
+	<div class="row-fluid marketing">
+		<div class="span12">
+			<p><div class="sect1">
+<h2 id="jbake_v2_6_0_released">JBake v2.6.0 released</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>I&#8217;m happy to announce that <a href="/download.html">JBake v2.6.0</a> has been released. This is a major release that includes a number of new features as well as bug fixes and changes.</p>
+</div>
+<div class="paragraph">
+<p>Here are a few of the major changes included in this release:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Java 7 is now required to run JBake</p>
+</li>
+<li>
+<p>Project has switched to Gradle for build</p>
+</li>
+<li>
+<p>Improved execution scripts inc. support for additional JAR files</p>
+</li>
+<li>
+<p>Asset and Content directories can be marked to be ignored from processing</p>
+</li>
+<li>
+<p>Static files such as images can be included in the Content directory tree</p>
+</li>
+<li>
+<p>Server mode now watches for changes to Asset and Template directories</p>
+</li>
+<li>
+<p>Relative image src values are now automatically updated</p>
+</li>
+<li>
+<p>Added more data variables for use in templates when paging</p>
+</li>
+<li>
+<p>AsciidoctorJ-Diagram is included in binary distribution (not declared as a dependency though) so you can include diagrams in your AsciiDoc content</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+If you are using pagination for the index page i.e. <code>index.paginate=true</code>, then please verify that you are using <code>published_posts</code> or equivalent <code>published_{contentType}</code> model instead of <code>posts</code> model. See this <a href="https://github.com/jbake-org/jbake/issues/389" target="_blank" rel="noopener">bug fix</a> for details.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+The value to persist the content store to disk has changed from <code>local</code> to <code>plocal</code>, so the configuration option should be: <code>db.store=plocal</code>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>You can find the complete changelog for this release here: <a href="https://github.com/jbake-org/jbake/milestone/14?closed=1" class="bare">https://github.com/jbake-org/jbake/milestone/14?closed=1</a></p>
+</div>
+<div class="paragraph">
+<p>Thanks to everyone who has contributed something to this new release, and especially to <a href="https://github.com/ancho">Frank Becker</a> and <a href="https://github.com/manikmagar">Manik Magar</a>
+who put a tremendous amount of work into this release. I&#8217;m also pleased to say they have recently joined the <a href="/community/team.html">JBake team</a>.</p>
+</div>
+<div class="paragraph">
+<p>This release should also be available via Maven Central, SDKMAN and Homebrew in the next few days.</p>
+</div>
+<div class="paragraph">
+<p>Download <strong><a href="/download.html">JBake v2.6.0</a></strong> now and get baking!</p>
+</div>
+</div>
+</div></p>
+			<p>By <em>Jonathan Bullock</em> - <em>04 March 2018</em></p>
+			<div id="share"><!-- Google Plus -->
+<div class="g-plusone" data-size="medium"></div>
+<script type="text/javascript">
+  window.___gcfg = {lang: 'en-GB'};
+
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+<!-- Twitter -->
+<a href="https://twitter.com/share" class="twitter-share-button" data-dnt="true">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<!-- Facebook -->
+<div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="true"></div>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script></div>
+        </div>
+	</div>
+
+	<hr>
+      <div class="footer">
+        <p>&copy; <a href="/community/team.html">JBake Team</a> 2012-<script>document.write(new Date().getFullYear());</script> | <a href="/privacy.html">Privacy Policy</a> | Mixed with <a href="http://getbootstrap.com/">Bootstrap v2.3.1</a> | Baked with <a href="http://jbake.org">JBake v2.7.0-rc.6</a></p>
+      </div>
+
+    </div> <!-- /container -->
+
+	<div class="github hidden-phone hidden-tablet">
+		<a href="https://github.com/jbake-org/jbake"><img style="position: fixed; top: 0; right: 0; border: 0; z-index: 1050;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+	</div>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/js/jquery-1.9.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/prettify.js"></script>
+    
+    <script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-38992729-1']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	
+	</script>
+	
+	<script>
+	  ((window.gitter = {}).chat = {}).options = {
+	    room: 'jbake-org/jbake'
+	  };
+	</script>
+	<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+	
+  </body>
+</html>

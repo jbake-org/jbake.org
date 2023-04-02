@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JBake - Java based open source static site/blog generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="JBake is a Java based, open source, static site/blog generator for developers." />
+    <meta name="author" content="Jonathan Bullock" />
+    <meta name="keywords" content="java, baking, open source, generator, web site" />
+    <meta name="google-site-verification" content="Fy5-c09PlgYztOz2_xH6-FsoQ7K0jpprkk4cyJHCRh8" />
+    <meta name="generator" content="JBake"/>
+    <meta name="generation" content="Apr 2, 2023, 10:41:52 PM" />
+
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+
+    <!-- Le styles -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/asciidoctor.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="/css/prettify.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 20px;
+        padding-bottom: 40px;
+      }
+
+      /* Custom container */
+      .container-narrow {
+        margin: 0 auto;
+        max-width: 700px;
+      }
+      .container-narrow > hr {
+        margin: 30px 0;
+      }
+
+      /* Main marketing message and sign up button */
+      .jumbotron {
+        margin: 60px 0;
+        text-align: center;
+      }
+      .jumbotron h1 {
+        font-size: 72px;
+        line-height: 1;
+      }
+      .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+      }
+
+      /* Supporting marketing content */
+      .marketing {
+        margin: 30px 0;
+      }
+      .marketing p + h4 {
+        margin-top: 28px;
+      }
+
+      /*.navbar .btn-navbar {
+      	float: left;
+      }*/
+      .navbar-fixed-top .container {
+        width: 700px;
+      }
+      @media (max-width: 979px) {
+      .navbar-fixed-top .container {
+       width: auto;
+       }
+    </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <!--<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="../assets/ico/favicon.png">-->
+  </head>
+  <body onload="prettyPrint()">
+    <div class="container-narrow">
+
+	<div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <img style="display: block; float: left; padding: 5px 10px 0 0px" src="/img/jbake_logo.png" />
+            <a class="brand" href="/">JBake</a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li><a href="/news/">News</a></li>
+                <li><a href="/download.html">Download</a></li>
+                <li><a href="/docs/">Documentation</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Development <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="https://github.com/jbake-org/jbake/">Source Code</a></li>
+                    <li><a href="https://github.com/jbake-org/jbake/issues">Issue Tracker</a></li>
+                  </ul>
+                </li>
+                <li><a href="/community/index.html">Community</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid marketing">
+        <div class="span12">
+          <h1>Usage</h1>
+          
+          <p><div class="sect1">
+<h2 id="usage">Usage</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Running jbake without arguments is equivalent to running jbake with <code>-h</code>, and will display the usage instructions.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ jbake</pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="bake_command">Bake command</h3>
+<div class="paragraph">
+<p>The bake command mixes your source content with your templates and cooks it all into a fully baked web site. You have a number of different ways to execute the bake
+command to suite your requirements.</p>
+</div>
+<div class="paragraph">
+<p>The <code>-b</code> option without any parameters will assume your source content is in the current working directory and will place the baked output into a directory named <code>output</code>
+in the current directory:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ jbake -b</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+JBake will create this <code>output</code> directory if it does not already exist.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>If you specify only the source directory as a parameter then the output directory will automatically be generated inside the source directory:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ jbake -b &lt;source&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can also specify your source directory and output directory to enable you to have full control over the baking process:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ jbake -b &lt;source&gt; &lt;output&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can even omit the <code>-b</code> option if you supply the source directory and output directory parameters:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ jbake &lt;source&gt; &lt;output&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="initialisation_command">Initialisation command</h3>
+<div class="paragraph">
+<p>The initialisation command will seed your project directory with the required project structure along with a number of sample content files and templates. You do have the
+option to choose what template engine is used though.</p>
+</div>
+<div class="paragraph">
+<p>The <code>-i</code> option will seed the current working directory and use the <a href="http://freemarker.org">Freemarker</a> template engine by default:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ jbake -i</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can also specify the directory to initialise by supplying an additional parameter:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ jbake -i &lt;directory&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To specify the template engine you can use the <code>-t</code> option along with another parameter:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ jbake -i -t &lt;freemarker|groovy|groovy-mte|thymeleaf|jade&gt;</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+The template engines available are <a href="http://freemarker.org">Freemarker</a>, <a href="http://www.groovy-lang.org/">Groovy Simple and Markup</a>, <a href="http://www.thymeleaf.org/">Thymeleaf</a>
+and <a href="https://github.com/neuland/jade4j">Jade</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="example_project_structures">Example Project Structures</h4>
+<div class="paragraph">
+<p>The example project structure and sample templates are stored in your JBake installation folder in the files:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>example_project_freemarker.zip</code></p>
+</li>
+<li>
+<p><code>example_project_groovy.zip</code></p>
+</li>
+<li>
+<p><code>example_project_groovy-mte.zip</code></p>
+</li>
+<li>
+<p><code>example_project_thymeleaf.zip</code></p>
+</li>
+<li>
+<p><code>example_project_jade.zip</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If you&#8217;d like to change the structure or sample templates in some way then you can extract the contents of these files, update
+as required, then ZIP them back up and replace the original ZIP file with your updated file. Then JBake will use your updated
+project structure and templates when ever it initialises a new folder from then on.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="server_command">Server command</h3>
+<div class="paragraph">
+<p>The server command will allow you to see what your baked site looks like when served out by a HTTP web server, great for when you want to preview your site using
+your local web browser.</p>
+</div>
+<div class="paragraph">
+<p>The <code>-s</code> option will start JBake in server mode allowing you to preview your baked site at <a href="http://localhost:8820/" class="bare">http://localhost:8820/</a> by default it will serve out the contents of the
+<code>output</code> directory in the current working directory:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ jbake -s</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+The local port used can be changed via the configuration file.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>You can specify the directory to serve out by supplying an additional parameter:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ jbake -s &lt;directory&gt;</pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="overriding_site_host">Overriding <code>site.host</code></h4>
+<div class="paragraph">
+<p>The <code>site.host</code> property in your <code>jbake.properties</code> will be automatically be overridden with the following value when using the server command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>site.host=http://localhost:8820</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+If you have altered the port from the default it will be reflected in this value too.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="watch_mode">Watch mode</h4>
+<div class="paragraph">
+<p>While the server is running JBake will watch the content, assets and templates folders for any changes (new files as well as changes to existing content) and automatically trigger a bake. So
+you can refresh your browser to see the changes to the output.</p>
+</div>
+<div class="paragraph">
+<p>This mode is best used in conjunction with incremental rendering, for details on how to enable this please see the <a href="#persistent_content_store">[persistent_content_store]</a> configuration option.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="combining_commands">Combining commands</h3>
+<div class="paragraph">
+<p>It is possible to combine certain JBake commands together like so:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ jbake -b -s</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This will bake your site first and then serve the output out using the built in server, using the defaults mentioned above.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="environment_variable">Environment Variable</h3>
+<div class="paragraph">
+<p>You can use the JBake environment variable <code>JBAKE_OPTS</code> to set JVM system properties such as <code>user.language</code> for when JBake executes:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ export JBAKE_OPTS="-Duser.language=DE"</pre>
+</div>
+</div>
+</div>
+</div>
+</div></p>
+        </div>
+
+      </div>
+
+      <hr>
+
+      <div class="footer">
+        <p>&copy; <a href="/community/team.html">JBake Team</a> 2012-<script>document.write(new Date().getFullYear());</script> | <a href="/privacy.html">Privacy Policy</a> | Mixed with <a href="http://getbootstrap.com/">Bootstrap v2.3.1</a> | Baked with <a href="http://jbake.org">JBake v2.7.0-rc.6</a></p>
+      </div>
+
+    </div> <!-- /container -->
+
+	<div class="github hidden-phone hidden-tablet">
+		<a href="https://github.com/jbake-org/jbake"><img style="position: fixed; top: 0; right: 0; border: 0; z-index: 1050;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+	</div>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/js/jquery-1.9.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/prettify.js"></script>
+    
+    <script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-38992729-1']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	
+	</script>
+	
+	<script>
+	  ((window.gitter = {}).chat = {}).options = {
+	    room: 'jbake-org/jbake'
+	  };
+	</script>
+	<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+	
+  </body>
+</html>

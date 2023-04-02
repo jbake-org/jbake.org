@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JBake - Java based open source static site/blog generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="JBake is a Java based, open source, static site/blog generator for developers." />
+    <meta name="author" content="Jonathan Bullock" />
+    <meta name="keywords" content="java, baking, open source, generator, web site" />
+    <meta name="google-site-verification" content="Fy5-c09PlgYztOz2_xH6-FsoQ7K0jpprkk4cyJHCRh8" />
+    <meta name="generator" content="JBake"/>
+    <meta name="generation" content="Apr 2, 2023, 10:41:53 PM" />
+
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+
+    <!-- Le styles -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/asciidoctor.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="/css/prettify.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 20px;
+        padding-bottom: 40px;
+      }
+
+      /* Custom container */
+      .container-narrow {
+        margin: 0 auto;
+        max-width: 700px;
+      }
+      .container-narrow > hr {
+        margin: 30px 0;
+      }
+
+      /* Main marketing message and sign up button */
+      .jumbotron {
+        margin: 60px 0;
+        text-align: center;
+      }
+      .jumbotron h1 {
+        font-size: 72px;
+        line-height: 1;
+      }
+      .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+      }
+
+      /* Supporting marketing content */
+      .marketing {
+        margin: 30px 0;
+      }
+      .marketing p + h4 {
+        margin-top: 28px;
+      }
+
+      /*.navbar .btn-navbar {
+      	float: left;
+      }*/
+      .navbar-fixed-top .container {
+        width: 700px;
+      }
+      @media (max-width: 979px) {
+      .navbar-fixed-top .container {
+       width: auto;
+       }
+    </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <!--<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="../assets/ico/favicon.png">-->
+  </head>
+  <body onload="prettyPrint()">
+    <div class="container-narrow">
+
+	<div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <img style="display: block; float: left; padding: 5px 10px 0 0px" src="/img/jbake_logo.png" />
+            <a class="brand" href="/">JBake</a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li><a href="/news/">News</a></li>
+                <li><a href="/download.html">Download</a></li>
+                <li><a href="/docs/">Documentation</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Development <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="https://github.com/jbake-org/jbake/">Source Code</a></li>
+                    <li><a href="https://github.com/jbake-org/jbake/issues">Issue Tracker</a></li>
+                  </ul>
+                </li>
+                <li><a href="/community/index.html">Community</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid marketing">
+        <div class="span12">
+          <h1>Templates</h1>
+          
+          <p><div class="sect1">
+<h2 id="templates">Templates</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="default_templates">Default Templates</h3>
+<div class="paragraph">
+<p>There are default template files defined in JBake that are used to render a number of special pages that require no content files to be present, these are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>index</code> - used to render an index.html file</p>
+</li>
+<li>
+<p><code>archive</code> - used to render an archive.html file</p>
+</li>
+<li>
+<p><code>feed</code> - used to render a feed.xml file</p>
+</li>
+<li>
+<p><code>tag</code> - used to render a HTML file for each tag used</p>
+</li>
+<li>
+<p><code>sitemap</code> - used to render a sitemap.xml file</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If you don&#8217;t require any of these special pages to be rendered then you can turn off the rendering of them by adding the following lines to your
+<code>jbake.properties</code> file:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>...
+render.index=false
+render.archive=false
+render.feed=false
+render.tags=false
+render.sitemap=false
+...</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>There are also two default templates files defined in JBake that are used to render content files, these are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>page</code> - used to render any content file marked with a type of 'page'</p>
+</li>
+<li>
+<p><code>post</code> - used to render any content file marked with a type of 'post'</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="custom_templates">Custom Templates</h3>
+<div class="paragraph">
+<p>You also have the ability to define new custom templates that can be used when rendering different types of content files.</p>
+</div>
+<div class="paragraph">
+<p>First add the following line to your <code>jbake.properties</code> file:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>...
+template.&lt;customtype&gt;.file=templateXYZ.ftl
+...</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then create your template file and place it into the 'templates' folder inside your project, after that you can create your content files making sure
+that the metadata header has the following entry:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>...
+type=&lt;customtype&gt;
+...</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you&#8217;d like the content files to be rendered with your custom template file using a different extension then add the following to your <code>jbake.properties</code> file:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>...
+template.&lt;customtype&gt;.extension=.xml
+...</pre>
+</div>
+</div>
+</div>
+</div>
+</div></p>
+        </div>
+
+      </div>
+
+      <hr>
+
+      <div class="footer">
+        <p>&copy; <a href="/community/team.html">JBake Team</a> 2012-<script>document.write(new Date().getFullYear());</script> | <a href="/privacy.html">Privacy Policy</a> | Mixed with <a href="http://getbootstrap.com/">Bootstrap v2.3.1</a> | Baked with <a href="http://jbake.org">JBake v2.7.0-rc.6</a></p>
+      </div>
+
+    </div> <!-- /container -->
+
+	<div class="github hidden-phone hidden-tablet">
+		<a href="https://github.com/jbake-org/jbake"><img style="position: fixed; top: 0; right: 0; border: 0; z-index: 1050;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+	</div>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/js/jquery-1.9.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/prettify.js"></script>
+    
+    <script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-38992729-1']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	
+	</script>
+	
+	<script>
+	  ((window.gitter = {}).chat = {}).options = {
+	    room: 'jbake-org/jbake'
+	  };
+	</script>
+	<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+	
+  </body>
+</html>

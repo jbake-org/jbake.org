@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JBake - Java based open source static site/blog generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="JBake is a Java based, open source, static site/blog generator for developers." />
+    <meta name="author" content="Jonathan Bullock" />
+    <meta name="keywords" content="java, baking, open source, generator, web site" />
+    <meta name="google-site-verification" content="Fy5-c09PlgYztOz2_xH6-FsoQ7K0jpprkk4cyJHCRh8" />
+    <meta name="generator" content="JBake"/>
+    <meta name="generation" content="Apr 2, 2023, 10:41:53 PM" />
+
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+
+    <!-- Le styles -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/asciidoctor.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="/css/prettify.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 20px;
+        padding-bottom: 40px;
+      }
+
+      /* Custom container */
+      .container-narrow {
+        margin: 0 auto;
+        max-width: 700px;
+      }
+      .container-narrow > hr {
+        margin: 30px 0;
+      }
+
+      /* Main marketing message and sign up button */
+      .jumbotron {
+        margin: 60px 0;
+        text-align: center;
+      }
+      .jumbotron h1 {
+        font-size: 72px;
+        line-height: 1;
+      }
+      .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+      }
+
+      /* Supporting marketing content */
+      .marketing {
+        margin: 30px 0;
+      }
+      .marketing p + h4 {
+        margin-top: 28px;
+      }
+
+      /*.navbar .btn-navbar {
+      	float: left;
+      }*/
+      .navbar-fixed-top .container {
+        width: 700px;
+      }
+      @media (max-width: 979px) {
+      .navbar-fixed-top .container {
+       width: auto;
+       }
+    </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <!--<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="../assets/ico/favicon.png">-->
+  </head>
+  <body onload="prettyPrint()">
+    <div class="container-narrow">
+
+	<div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <img style="display: block; float: left; padding: 5px 10px 0 0px" src="/img/jbake_logo.png" />
+            <a class="brand" href="/">JBake</a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li><a href="/news/">News</a></li>
+                <li><a href="/download.html">Download</a></li>
+                <li><a href="/docs/">Documentation</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Development <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="https://github.com/jbake-org/jbake/">Source Code</a></li>
+                    <li><a href="https://github.com/jbake-org/jbake/issues">Issue Tracker</a></li>
+                  </ul>
+                </li>
+                <li><a href="/community/index.html">Community</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid marketing">
+        <div class="span12">
+          <h1>Content Files</h1>
+          
+          <p><div class="sect1">
+<h2 id="content_files">Content Files</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="metadata_header">Metadata Header</h3>
+<div class="paragraph">
+<p>The metadata header defines some basic information that JBake uses when baking the content file.</p>
+</div>
+<div class="paragraph">
+<p>Each raw HTML or Markdown content file <strong>must</strong> have a metadata header in it which looks like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>title=Weekly Links #2
+date=2013-02-01
+type=post
+tags=weekly links, java
+status=published
+~~~~~~</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the header you <strong>must</strong> have at least the <strong>status</strong> &amp; <strong>type</strong> fields, the rest are optional. The only exception to this rule is if
+you define a default status in your <a href="#configuration">configuration</a> file.</p>
+</div>
+<div class="paragraph">
+<p>If you leave the <strong>date</strong> field out then the files last modified timestamp will be used instead.</p>
+</div>
+<div class="paragraph">
+<p>For an AsciiDoc formatted content file the metadata header section is optional, the JBake metadata can be defined in the AsciiDoc document header itself like so:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>= Project Structure
+Jonathan Bullock
+2013-10-17
+:jbake-type: page
+:jbake-tags: documentation, manual
+:jbake-status: published</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+JBake related attributes included in the AsciiDoc header require the <code>jbake-</code> prefix to avoid any collisions.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="status">Status</h4>
+<div class="paragraph">
+<p>You have 3 options for the status field:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>draft</code> - drafts are rendered the same as published content however they are given a "-draft" suffix, for example <code>first-post-draft.html</code>, but not included in any published collections</p>
+</li>
+<li>
+<p><code>published</code>  - published content is rendered and included in the published collections</p>
+</li>
+<li>
+<p><code>published-date</code> - providing content date is equal to or past current date content will be considered published and included in the published collections</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="type">Type</h4>
+<div class="paragraph">
+<p>You can choose what template file your content file will be mixed with by changing the value of the <code>type</code> field. By default there are 2 standard types:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>type=post</code> will mean the content file will be mixed with the template: post.ftl</p>
+</li>
+<li>
+<p><code>type=page</code> will mean the content file will be mixed with the template: page.ftl</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can also define more types in your project configuration to give you more flexibility in your project, for details of this please see <a href="#custom_templates">[custom_templates]</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="custom_metadata">Custom Metadata</h4>
+<div class="paragraph">
+<p>You can also define custom metadata in the header that can be exposed to the templates, for example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>summary=This is a summary of the larger post</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And access it in the templates like so:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;p&gt;${content.summary}&lt;/p&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This feature is extremely useful when you want to control the rendering of extra market in the templates such as <a href="https://disqus.com/">Disqus</a> for comments
+on certain posts/pages or to display images using some JavaScript library like <a href="https://jquery.com/">jQuery</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="complex_custom_metadata">Complex Custom Metadata</h4>
+<div class="paragraph">
+<p>If you need to define a complex structure of metadata you can use JSON format to achieve this, here&#8217;s an example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>type=page
+og={"description": "Something"}</pre>
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+The JSON content must be contained within a single line and cannot span multiple lines.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>This complex data is then accessible from the templates like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;#if content?? &amp;&amp; content.og??&gt; <b class="conum">(1)</b>
+	&lt;meta property="og:description" content="${content.og.description}"/&gt; <b class="conum">(2)</b>
+&lt;/#if&gt;</pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Checks the <code>content</code> map is not null and that the <code>content.og</code> map is not null</p>
+</li>
+<li>
+<p>Outputs the <code>description</code> value from the <code>content.og</code> map</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="content_body">Content Body</h3>
+<div class="paragraph">
+<p>Everything after the metadata header is considered the content body and made available to the templates, after being converted to HTML if required in the case of
+Markdown or AsciiDoc.</p>
+</div>
+<div class="sect3">
+<h4 id="images_path">Images Path</h4>
+<div class="paragraph">
+<p>When images are included in the content, relative source URL of the image is changed to the absolute URL. The value specified in <code>site.host</code> property is used as FQDN, unless site is running in local.
+If image URL in the content is relative to the post (for example, specified as ./first.png), then posts resolved path is prefixed to the image.</p>
+</div>
+<div class="paragraph">
+<p>Assuming the post URI is <code>blog/2017/05/first_post.html</code> and <code>site.host</code> is <code><a href="http://example.com" class="bare">http://example.com</a></code>, below are some examples to show content url and resulting output url -</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>./first.png</code> &#8594; <code><a href="http://example.com/blog/2017/05/first.png" class="bare">http://example.com/blog/2017/05/first.png</a></code></p>
+</li>
+<li>
+<p><code>/blog/2017/05/first.jpg</code> &#8594; <code><a href="http://example.com/blog/2017/05/first.png" class="bare">http://example.com/blog/2017/05/first.png</a></code></p>
+</li>
+<li>
+<p><code><a href="http://example.com/common/images/second.png" class="bare">http://example.com/common/images/second.png</a></code> &#8594; <code><a href="http://example.com/common/images/second.png" class="bare">http://example.com/common/images/second.png</a></code> (Nothing changed as the URL is absolute already.)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div></p>
+        </div>
+
+      </div>
+
+      <hr>
+
+      <div class="footer">
+        <p>&copy; <a href="/community/team.html">JBake Team</a> 2012-<script>document.write(new Date().getFullYear());</script> | <a href="/privacy.html">Privacy Policy</a> | Mixed with <a href="http://getbootstrap.com/">Bootstrap v2.3.1</a> | Baked with <a href="http://jbake.org">JBake v2.7.0-rc.6</a></p>
+      </div>
+
+    </div> <!-- /container -->
+
+	<div class="github hidden-phone hidden-tablet">
+		<a href="https://github.com/jbake-org/jbake"><img style="position: fixed; top: 0; right: 0; border: 0; z-index: 1050;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+	</div>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/js/jquery-1.9.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/prettify.js"></script>
+    
+    <script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-38992729-1']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	
+	</script>
+	
+	<script>
+	  ((window.gitter = {}).chat = {}).options = {
+	    room: 'jbake-org/jbake'
+	  };
+	</script>
+	<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+	
+  </body>
+</html>

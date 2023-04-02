@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JBake - Java based open source static site/blog generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="JBake is a Java based, open source, static site/blog generator for developers." />
+    <meta name="author" content="Jonathan Bullock" />
+    <meta name="keywords" content="java, baking, open source, generator, web site" />
+    <meta name="google-site-verification" content="Fy5-c09PlgYztOz2_xH6-FsoQ7K0jpprkk4cyJHCRh8" />
+    <meta name="generator" content="JBake"/>
+    <meta name="generation" content="Apr 2, 2023, 10:41:53 PM" />
+
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+
+    <!-- Le styles -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/asciidoctor.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="/css/prettify.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 20px;
+        padding-bottom: 40px;
+      }
+
+      /* Custom container */
+      .container-narrow {
+        margin: 0 auto;
+        max-width: 700px;
+      }
+      .container-narrow > hr {
+        margin: 30px 0;
+      }
+
+      /* Main marketing message and sign up button */
+      .jumbotron {
+        margin: 60px 0;
+        text-align: center;
+      }
+      .jumbotron h1 {
+        font-size: 72px;
+        line-height: 1;
+      }
+      .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+      }
+
+      /* Supporting marketing content */
+      .marketing {
+        margin: 30px 0;
+      }
+      .marketing p + h4 {
+        margin-top: 28px;
+      }
+
+      /*.navbar .btn-navbar {
+      	float: left;
+      }*/
+      .navbar-fixed-top .container {
+        width: 700px;
+      }
+      @media (max-width: 979px) {
+      .navbar-fixed-top .container {
+       width: auto;
+       }
+    </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <!--<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="../assets/ico/favicon.png">-->
+  </head>
+  <body onload="prettyPrint()">
+    <div class="container-narrow">
+
+	<div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <img style="display: block; float: left; padding: 5px 10px 0 0px" src="/img/jbake_logo.png" />
+            <a class="brand" href="/">JBake</a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li><a href="/news/">News</a></li>
+                <li><a href="/download.html">Download</a></li>
+                <li><a href="/docs/">Documentation</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Development <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="https://github.com/jbake-org/jbake/">Source Code</a></li>
+                    <li><a href="https://github.com/jbake-org/jbake/issues">Issue Tracker</a></li>
+                  </ul>
+                </li>
+                <li><a href="/community/index.html">Community</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid marketing">
+        <div class="span12">
+          <h1>Project Structure</h1>
+          
+          <p><div class="sect1">
+<h2 id="project_structure">Project Structure</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Here is an example source folder structure:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>.
+|-- assets
+|   |-- favicon.gif
+|   |-- robots.txt
+|   |-- css
+|       |-- style.css
+|-- content
+|   |-- about.html
+|   |-- 2013
+|       |-- 02
+|           |-- weekly-links-1.html
+|           |-- weekly-links-2.md
+|-- templates
+|   |-- index.ftl
+|   |-- page.ftl
+|   |-- post.ftl
+|   |-- feed.ftl
+|-- jbake.properties</pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="assets_folder">Assets Folder</h3>
+<div class="paragraph">
+<p>Place your static files in this folder and they will be copied to the root of the destination
+folder. Any folder structure you create will be maintained.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="content_folder">Content Folder</h3>
+<div class="paragraph">
+<p>Place your dynamic content in this folder, the content in the files in this folder will be "mixed"
+with the templates to generate your site. Again any folder structure you create will be maintained in the destination folder.</p>
+</div>
+<div class="paragraph">
+<p>The extension of the file determines what content it contains:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>.html</code> = raw HTML content</p>
+</li>
+<li>
+<p><code>.md</code> = <a href="http://daringfireball.net/projects/markdown/syntax">Markdown</a> formatted content</p>
+</li>
+<li>
+<p><code>.ad</code> = <a href="http://www.methods.co.nz/asciidoc/">AsciiDoc</a> formatted content</p>
+</li>
+<li>
+<p><code>.adoc</code> = <a href="http://www.methods.co.nz/asciidoc/">AsciiDoc</a> formatted content</p>
+</li>
+<li>
+<p><code>.asciidoc</code> = <a href="http://www.methods.co.nz/asciidoc/">AsciiDoc</a> formatted content</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>JBake uses the <a href="http://asciidoctor.org/docs/install-and-use-asciidoctor-java-integration/">Java integration library</a>
+of the <a href="http://asciidoctor.org/">Asciidoctor</a> project to support the AsciiDoc format.</p>
+</div>
+<div class="sect3">
+<h4 id="header">Header</h4>
+<div class="paragraph">
+<p>Each raw HTML or Markdown content file <strong>must</strong> have a meta-data header in it:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>title=Weekly Links #2
+date=2013-02-01
+type=post
+tags=weekly links, java
+status=published
+~~~~~~</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the header you <strong>must</strong> have at least the <strong>status</strong> &amp; <strong>type</strong> fields, the rest are optional.</p>
+</div>
+<div class="paragraph">
+<p>For an AsciiDoc content file the meta-data header section is optional, the JBake meta-data can be included
+in the AsciiDoc header itself like so:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>= Project Structure
+Jonathan Bullock
+2013-10-17
+:jbake-type: page
+:jbake-tags: documentation, manual
+:jbake-status: published</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note: JBake related attributes included in the AsciiDoc header require the <code>jbake-</code> prefix.</p>
+</div>
+<div class="sect4">
+<h5 id="status">Status</h5>
+<div class="paragraph">
+<p>You have 3 options for the status field:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>draft</code> - drafts are rendered along with published posts however they are given a "-draft" suffix, for example <code>first-post-draft.html</code>, but not included in the published posts or pages arrays</p>
+</li>
+<li>
+<p><code>published</code>  - published content is rendered and included in the published posts or pages arrays</p>
+</li>
+<li>
+<p><code>published-date</code> - providing content date is equal to or past current date content will be included in published posts or pages array</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="type">Type</h5>
+<div class="paragraph">
+<p>You can choose what template file your content file will be rendered or mixed with by changing the value
+of the <code>type</code> field:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>type=post</code> will use post.ftl</p>
+</li>
+<li>
+<p><code>type=page</code> will use page.ftl</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="expandable_header">Expandable Header</h4>
+<div class="paragraph">
+<p>You can also include extra meta data in the header that is also exposed to the templates:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>summary=This is a summary of the larger post</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And access it from the template like so:</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;p&gt;${content.summary}&lt;/p&gt;</code></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="templates_folder">Templates Folder</h3>
+<div class="paragraph">
+<p>This is the folder where your <a href="http://freemarker.org">Freemarker</a> templates go. Each template file
+must have a <code>.ftl</code> extension. For more information on what you can do in Freemarker templates see the
+<a href="http://freemarker.org/docs/index.html">Manual</a>.</p>
+</div>
+</div>
+</div>
+</div></p>
+        </div>
+
+      </div>
+
+      <hr>
+
+      <div class="footer">
+        <p>&copy; <a href="/community/team.html">JBake Team</a> 2012-<script>document.write(new Date().getFullYear());</script> | <a href="/privacy.html">Privacy Policy</a> | Mixed with <a href="http://getbootstrap.com/">Bootstrap v2.3.1</a> | Baked with <a href="http://jbake.org">JBake v2.7.0-rc.6</a></p>
+      </div>
+
+    </div> <!-- /container -->
+
+	<div class="github hidden-phone hidden-tablet">
+		<a href="https://github.com/jbake-org/jbake"><img style="position: fixed; top: 0; right: 0; border: 0; z-index: 1050;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+	</div>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/js/jquery-1.9.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/prettify.js"></script>
+    
+    <script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-38992729-1']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	
+	</script>
+	
+	<script>
+	  ((window.gitter = {}).chat = {}).options = {
+	    room: 'jbake-org/jbake'
+	  };
+	</script>
+	<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+	
+  </body>
+</html>

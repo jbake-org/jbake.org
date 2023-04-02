@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JBake - Java based open source static site/blog generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="JBake is a Java based, open source, static site/blog generator for developers." />
+    <meta name="author" content="Jonathan Bullock" />
+    <meta name="keywords" content="java, baking, open source, generator, web site" />
+    <meta name="google-site-verification" content="Fy5-c09PlgYztOz2_xH6-FsoQ7K0jpprkk4cyJHCRh8" />
+    <meta name="generator" content="JBake"/>
+    <meta name="generation" content="Apr 2, 2023, 10:41:53 PM" />
+
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+
+    <!-- Le styles -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/asciidoctor.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="/css/prettify.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 20px;
+        padding-bottom: 40px;
+      }
+
+      /* Custom container */
+      .container-narrow {
+        margin: 0 auto;
+        max-width: 700px;
+      }
+      .container-narrow > hr {
+        margin: 30px 0;
+      }
+
+      /* Main marketing message and sign up button */
+      .jumbotron {
+        margin: 60px 0;
+        text-align: center;
+      }
+      .jumbotron h1 {
+        font-size: 72px;
+        line-height: 1;
+      }
+      .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+      }
+
+      /* Supporting marketing content */
+      .marketing {
+        margin: 30px 0;
+      }
+      .marketing p + h4 {
+        margin-top: 28px;
+      }
+
+      /*.navbar .btn-navbar {
+      	float: left;
+      }*/
+      .navbar-fixed-top .container {
+        width: 700px;
+      }
+      @media (max-width: 979px) {
+      .navbar-fixed-top .container {
+       width: auto;
+       }
+    </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <!--<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="../assets/ico/favicon.png">-->
+  </head>
+  <body onload="prettyPrint()">
+    <div class="container-narrow">
+
+	<div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <img style="display: block; float: left; padding: 5px 10px 0 0px" src="/img/jbake_logo.png" />
+            <a class="brand" href="/">JBake</a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li><a href="/news/">News</a></li>
+                <li><a href="/download.html">Download</a></li>
+                <li><a href="/docs/">Documentation</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Development <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="https://github.com/jbake-org/jbake/">Source Code</a></li>
+                    <li><a href="https://github.com/jbake-org/jbake/issues">Issue Tracker</a></li>
+                  </ul>
+                </li>
+                <li><a href="/community/index.html">Community</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid marketing">
+        <div class="span12">
+          <h1>Sites using JBake</h1>
+          
+          <p><div class="paragraph">
+<p>To help others see what&#8217;s possible with JBake add your JBake powered site to the list below by making a <a href="https://github.com/jbake-org/jbake.org/blob/master/content/community/sites.adoc">pull request</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://guate-jug.net/javaday2017">GuateJUG Java Day Conference</a> (<a href="https://github.com/guatejug/files/tree/master/JavaDay2017/site">source</a>)</p>
+</li>
+<li>
+<p><a href="https://siddheshrane.github.io">Siddhesh Rane&#8217;s blog</a> (<a href="https://github.com/SiddheshRane/blog">source</a>) (<a href="https://github.com/SiddheshRane/jbake-clean-blog-template">theme template</a>)</p>
+</li>
+<li>
+<p><a href="https://andinoacara.com/">Andinoacara.com</a></p>
+</li>
+<li>
+<p><a href="http://luisgc.github.io/blog/">Luiyología - LuisGC&#8217;s blog</a> (<a href="https://github.com/luisgc/blog/">source</a>)</p>
+</li>
+<li>
+<p><a href="http://www.ute-camper.co.uk">Ute Camper UK</a></p>
+</li>
+<li>
+<p><a href="http://www.joern-karthaus.de">Joern&#8217;s Blog in German about Java RPI and Making</a></p>
+</li>
+<li>
+<p><a href="http://manik.magar.me">Manik&#8217;s Blog - Proudly Baked with JBake</a></p>
+</li>
+<li>
+<p><a href="http://jaxsta.com">Jaxsta</a></p>
+</li>
+<li>
+<p><a href="http://www.nextflow.io">Nextflow</a> (<a href="https://github.com/nextflow-io/website">source</a>)</p>
+</li>
+<li>
+<p><a href="http://app-southcitychurch.rhcloud.com/">SouthCityChurch, Spring Boot &amp; Gradle &amp; Travis CI with to Openshift 2.x </a></p>
+</li>
+<li>
+<p><a href="http://luistrigueiros.com/">Luis Trigueiros, Gradle &amp; GitHub Pages host</a></p>
+</li>
+<li>
+<p><a href="http://farahnaj.github.io/">Farahnaj Inamdar</a></p>
+</li>
+<li>
+<p><a href="http://there4.co/sabina/">Sabina - A small web framework for Java</a></p>
+</li>
+<li>
+<p><a href="http://joshlong.com/">Josh Long&#8217;s Blog</a></p>
+</li>
+<li>
+<p><a href="http://jdmartinho.com/blog/">João Martinho&#8217;s Blog</a></p>
+</li>
+<li>
+<p><a href="http://blogs.steeplesoft.com/">Steeplesoft - Coming Up For Air</a></p>
+</li>
+<li>
+<p><a href="http://coffeaelectronica.com/">CoffeaElectronica.com</a></p>
+</li>
+<li>
+<p><a href="http://www.functionaljava.org/">Functional Java</a></p>
+</li>
+<li>
+<p><a href="http://mrhaki.com/">mrhaki.com</a></p>
+</li>
+<li>
+<p><a href="http://droid-at-screen.org/">Droid @ Screen</a></p>
+</li>
+<li>
+<p><a href="http://ppalazon.github.io/">Pablo Palazón</a></p>
+</li>
+<li>
+<p><a href="http://nabedge.mixer2.org">nabedge&#8217;s blog</a> (<a href="https://github.com/nabedge/blog">source</a>)</p>
+</li>
+<li>
+<p><a href="http://vorozco.com">Víctor Orozco&#8217;s blog</a> (<a href="https://github.com/tuxtor/the-j">source</a>)</p>
+</li>
+<li>
+<p><a href="http://transparent-canada.ca/">Transparent Canada</a></p>
+</li>
+<li>
+<p><a href="http://hyunlabs.com/">hyunlabs</a> (<a href="https://github.com/danhyun/blog">source</a>)</p>
+</li>
+<li>
+<p><a href="http://msgilligan.github.io">Sean Gilligan&#8217;s blog</a> (<a href="https://github.com/msgilligan/msgilligan.github.io">source</a>)</p>
+</li>
+<li>
+<p><a href="http://grycman.eu">Daniel Grycman&#8217;s blog (German)</a></p>
+</li>
+<li>
+<p><a href="http://knes1.github.io">Teh Artikli - Krešimir Nesek&#8217;s blog</a></p>
+</li>
+<li>
+<p><a href="http://jerkar.github.io/">Jerkar</a></p>
+</li>
+<li>
+<p><a href="http://www.whoop.ee/">Whoop.ee</a></p>
+</li>
+<li>
+<p><a href="http://ja-gaeta.github.io/">Ponto G++</a></p>
+</li>
+<li>
+<p><a href="http://willis7.github.io/blog/">Sion&#8217;s Blog</a></p>
+</li>
+<li>
+<p><a href="http://babun.github.io/">Babun - a windows shell you will love!</a></p>
+</li>
+<li>
+<p><a href="http://werval.io">Werval HTTP services toolkit</a></p>
+</li>
+<li>
+<p><a href="http://niels.nu/">Niels.Nu</a></p>
+</li>
+<li>
+<p><a href="http://jonzajac.com/">Jon Zajac&#8217;s Journal</a></p>
+</li>
+<li>
+<p><a href="http://codenameone.com/">Codename One</a></p>
+</li>
+<li>
+<p><a href="http://rohitvvv.github.io/">Rohit Vaidya</a></p>
+</li>
+<li>
+<p><a href="http://unitsofmeasurement.github.io/">Units of Measurement | JSR 363</a> (<a href="https://github.com/unitsofmeasurement/unitsofmeasurement-jbake">source</a>)</p>
+</li>
+<li>
+<p><a href="http://matthurne.com/">Matt Hurne</a></p>
+</li>
+<li>
+<p><a href="http://marisarias.org">Mari Arias</a></p>
+</li>
+<li>
+<p><a href="http://auprefs.info">Visualise Your Vote</a></p>
+</li>
+<li>
+<p><a href="http://jprante.github.io/">Jörg Prante</a></p>
+</li>
+<li>
+<p><a href="http://www.jug-berlin-brandenburg.de">JUG Berlin-Brandenburg</a></p>
+</li>
+<li>
+<p><a href="http://davesmith.me">Dave Smith</a></p>
+</li>
+<li>
+<p><a href="http://rundis.github.io/blog/">Rundis</a></p>
+</li>
+<li>
+<p><a href="http://robertmcintosh.me/">Mac&#8217;s Blog</a></p>
+</li>
+<li>
+<p><a href="http://www.mikemcgarr.com/">Mike McGarr</a></p>
+</li>
+<li>
+<p><a href="http://blog.gladwell.me/">Grey Area - Ricardo Gladwell&#8217;s Blog</a></p>
+</li>
+<li>
+<p><a href="http://jdpgrailsdev.github.io/blog/">Jonathan Pearlin&#8217;s Blog</a></p>
+</li>
+<li>
+<p><a href="http://www.crashub.org/">CRaSH the shell for the Java Platform</a></p>
+</li>
+<li>
+<p><a href="http://juzuweb.org">Juzu Web Framework</a></p>
+</li>
+<li>
+<p><a href="http://jfairy.org/">jFairy</a> (<a href="https://github.com/Codearte/jfairy-site/tree/master">source</a>)</p>
+</li>
+<li>
+<p><a href="http://mariuszs.github.io/">MariuszS</a> (<a href="https://github.com/mariuszs/mariuszs.github.com/tree/jbake">source</a>)</p>
+</li>
+<li>
+<p><a href="http://www.orany.cz/">Vladimír Oraný</a> (<a href="https://github.com/musketyr/www.orany.cz">source</a>)</p>
+</li>
+<li>
+<p><a href="http://akhikhl.github.io/gretty-doc">Gretty Documentation</a></p>
+</li>
+<li>
+<p><a href="http://new.griffon-framework.org/">Griffon Framework</a></p>
+</li>
+<li>
+<p><a href="http://reqt.org/">reqT</a></p>
+</li>
+<li>
+<p><a href="http://www.ybonnel.fr/">JustAnOtherDevBlog</a></p>
+</li>
+<li>
+<p><a href="http://mperry.github.io/">Software Matters!</a></p>
+</li>
+<li>
+<p><a href="http://javamoney.org">JavaMoney | JSR 354</a> (<a href="https://github.com/JavaMoney/JavaMoney-template-bootstrap">source</a>)</p>
+</li>
+<li>
+<p><a href="http://jonathanpearlin.com">Jonathan Pearlin</a> (<a href="https://github.com/jdpgrailsdev/blog/">source</a>)</p>
+</li>
+<li>
+<p><a href="http://sbuild.org">SBuild</a> (<a href="https://github.com/SBuild-org/site-sbuild-org">source</a>)</p>
+</li>
+<li>
+<p><a href="http://fisiu.github.io/">System.out.println</a> (<a href="https://github.com/Fisiu/fisiu.github.io">source</a>)</p>
+</li>
+<li>
+<p><a href="http://moandjiezana.com/">Moandji Ezana</a></p>
+</li>
+<li>
+<p><a href="http://clairtonluz.github.io/">Clairton Luz</a> (<a href="https://github.com/clairtonluz/tp_blog">source</a>)</p>
+</li>
+<li>
+<p><a href="http://timyates.github.io/groovy-stream/">Groovy-stream</a> (<a href="https://github.com/timyates/groovy-stream/tree/master/docs">source</a>)</p>
+</li>
+<li>
+<p><a href="http://melix.github.io/blog/">Cédric Champeau&#8217;s blog</a> (<a href="https://github.com/melix/blog/">source</a>)</p>
+</li>
+<li>
+<p><a href="http://blog.ackx.net/">foo::bar @YouriAckx/</a></p>
+</li>
+<li>
+<p><a href="http://lhuet.github.io/blog/">Java dans le hard(ware)</a> (<a href="https://github.com/lhuet/blog">source</a>)</p>
+</li>
+<li>
+<p><a href="http://konik.io/">Konik</a></p>
+</li>
+<li>
+<p><a href="http://ingramchen.io">Xexex&#8217;s Java</a></p>
+</li>
+<li>
+<p><a href="http://kcm85.fr/">Karaté Club Montaigu</a></p>
+</li>
+<li>
+<p><a href="http://www.nappysack.co.uk">nappysack</a></p>
+</li>
+<li>
+<p><a href="http://docs.ingenieux.com.br/">Ingenieux Labs</a> (<a href="https://bitbucket.org/ingenieux/docs.ingenieux.com.br">source</a>)</p>
+</li>
+<li>
+<p><a href="http://jbake.org">JBake.org</a> (<a href="https://github.com/jbake-org/jbake.org">source</a>)</p>
+</li>
+<li>
+<p><a href="http://jonathanbullock.com">Jonathan Bullock</a></p>
+</li>
+<li>
+<p><a href="https://jconfdominicana.org">JConf Dominicana</a> (<a href="https://github.com/JavaDominicano/conference">source</a>)</p>
+</li>
+<li>
+<p><a href="https://clojure.org">Clojure</a> (<a href="https://github.com/clojure/clojure-site">source</a>)</p>
+</li>
+<li>
+<p><a href="https://www.optaplanner.org">OptaPlanner AI</a> (<a href="https://github.com/kiegroup/optaplanner-website">source</a>)</p>
+</li>
+<li>
+<p><a href="https://roboquant.org">roboquant</a> (<a href="https://github.com/neurallayer/roboquant.org">source</a>)</p>
+</li>
+<li>
+<p><a href="https://eudriscabrera.com">Eudris Cabrera&#8217;s Personal site</a> (<a href="https://github.com/ecabrerar/eudriscabreradotcom">source</a>)</p>
+</li>
+<li>
+<p><a href="https://doctoolchain.org/">docToolchain</a> (<a href="https://github.com/docToolchain/docToolchain">source</a>)</p>
+</li>
+<li>
+<p><a href="https://aim42.github.io/htmlSanityCheck">Html Sanity Check</a> (<a href="https://github.com/aim42/htmlSanityCheck/tree/master/src/docs">source</a>)</p>
+</li>
+</ul>
+</div></p>
+        </div>
+
+      </div>
+
+      <hr>
+
+      <div class="footer">
+        <p>&copy; <a href="/community/team.html">JBake Team</a> 2012-<script>document.write(new Date().getFullYear());</script> | <a href="/privacy.html">Privacy Policy</a> | Mixed with <a href="http://getbootstrap.com/">Bootstrap v2.3.1</a> | Baked with <a href="http://jbake.org">JBake v2.7.0-rc.6</a></p>
+      </div>
+
+    </div> <!-- /container -->
+
+	<div class="github hidden-phone hidden-tablet">
+		<a href="https://github.com/jbake-org/jbake"><img style="position: fixed; top: 0; right: 0; border: 0; z-index: 1050;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+	</div>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/js/jquery-1.9.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/prettify.js"></script>
+    
+    <script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-38992729-1']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	
+	</script>
+	
+	<script>
+	  ((window.gitter = {}).chat = {}).options = {
+	    room: 'jbake-org/jbake'
+	  };
+	</script>
+	<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+	
+  </body>
+</html>

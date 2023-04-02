@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JBake - Java based open source static site/blog generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="JBake is a Java based, open source, static site/blog generator for developers." />
+    <meta name="author" content="Jonathan Bullock" />
+    <meta name="keywords" content="java, baking, open source, generator, web site" />
+    <meta name="google-site-verification" content="Fy5-c09PlgYztOz2_xH6-FsoQ7K0jpprkk4cyJHCRh8" />
+    <meta name="generator" content="JBake"/>
+    <meta name="generation" content="Apr 2, 2023, 10:41:53 PM" />
+
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+
+    <!-- Le styles -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/asciidoctor.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="/css/prettify.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 20px;
+        padding-bottom: 40px;
+      }
+
+      /* Custom container */
+      .container-narrow {
+        margin: 0 auto;
+        max-width: 700px;
+      }
+      .container-narrow > hr {
+        margin: 30px 0;
+      }
+
+      /* Main marketing message and sign up button */
+      .jumbotron {
+        margin: 60px 0;
+        text-align: center;
+      }
+      .jumbotron h1 {
+        font-size: 72px;
+        line-height: 1;
+      }
+      .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+      }
+
+      /* Supporting marketing content */
+      .marketing {
+        margin: 30px 0;
+      }
+      .marketing p + h4 {
+        margin-top: 28px;
+      }
+
+      /*.navbar .btn-navbar {
+      	float: left;
+      }*/
+      .navbar-fixed-top .container {
+        width: 700px;
+      }
+      @media (max-width: 979px) {
+      .navbar-fixed-top .container {
+       width: auto;
+       }
+    </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <!--<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="../assets/ico/favicon.png">-->
+  </head>
+  <body onload="prettyPrint()">
+    <div class="container-narrow">
+
+	<div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <img style="display: block; float: left; padding: 5px 10px 0 0px" src="/img/jbake_logo.png" />
+            <a class="brand" href="/">JBake</a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li><a href="/news/">News</a></li>
+                <li><a href="/download.html">Download</a></li>
+                <li><a href="/docs/">Documentation</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Development <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="https://github.com/jbake-org/jbake/">Source Code</a></li>
+                    <li><a href="https://github.com/jbake-org/jbake/issues">Issue Tracker</a></li>
+                  </ul>
+                </li>
+                <li><a href="/community/index.html">Community</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid marketing">
+        <div class="span12">
+          <h1>Configuration</h1>
+          
+          <p><div class="sect1">
+<h2 id="configuration">Configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>jbake.properties</code> file (or legacy file custom.properties) allows you to customise the configuration of JBake for your project.
+For example you can change the name of the folder that stores your content or templates, decide whether to generate a
+RSS feed or not. The following sections detail the complete list of configuration options available to you. JBake ships
+with a default configuration file (<a href="https://github.com/jbake-org/jbake/blob/master/src/main/resources/default.properties">default.properties</a>)
+that defines the defaults for these options however you can choose to override these by defining options in your <code>jbake.properties</code> file.</p>
+</div>
+<div class="paragraph">
+<p>So in the absence of these options in your jbake.properties the default value provided by JBake will be used.</p>
+</div>
+<div class="paragraph">
+<p>You can also comment out any configuration options by adding a hash or number sign as the first character on a line in your file.</p>
+</div>
+<div class="sect2">
+<h3 id="built_in_options">Built in options</h3>
+<div class="sect3">
+<h4 id="default_assets_directory">Default assets directory</h4>
+<div class="paragraph">
+<p>This option defines the folder that holds the assets for your project. This can be a relative path from the root of your project or an absolute path reference.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># folder that contains all asset files
+asset.folder=assets</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="default_content_directory">Default content directory</h4>
+<div class="paragraph">
+<p>This option defines the folder that holds the content files for your project. This can be a relative path from the root of your project or an absolute path reference.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># folder that contains all content files
+content.folder=content</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="default_outputdestination_directory">Default output/destination directory</h4>
+<div class="paragraph">
+<p>This option defines the name of the directory that will be used for the baked output to be placed in.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># path to destination folder by default
+destination.folder=output</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="default_template_directory">Default template directory</h4>
+<div class="paragraph">
+<p>This option defines the folder that holds the template files for your project. This can be a relative path from the root of your project or an absolute path reference.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># folder that contains all template files
+template.folder=templates</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="default_index_template_file">Default index template file</h4>
+<div class="paragraph">
+<p>This option defines the default template file that will be used to render the index file</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># filename of masterindex template file
+template.masterindex.file=index.ftl</pre>
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+In past releases this option was known as: <code>template.index.file</code>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="default_archive_template_file">Default archive template file</h4>
+<div class="paragraph">
+<p>This option defines the default template file that will be used to render an archive file</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># filename of archive template file
+template.archive.file=archive.ftl</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="default_feed_template_file">Default feed template file</h4>
+<div class="paragraph">
+<p>This option defines the default template file that will be used to render a feed file</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># filename of feed template file
+template.feed.file=feed.ftl</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="default_sitemap_template_file">Default sitemap template file</h4>
+<div class="paragraph">
+<p>This option defines the default template file that will be used to render a sitemap file</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># filename of sitemap template file
+template.sitemap.file=sitemap.ftl</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="default_tags_template_file">Default tags template file</h4>
+<div class="paragraph">
+<p>This option defines the default template file that will be used when rendering a file for each tag</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># filename of tag template file
+template.tag.file=tags.ftl</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="default_page_template_file">Default page template file</h4>
+<div class="paragraph">
+<p>This option defines the default template file that will be used when rendering a file of type=page</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># filename of page template file
+template.page.file=page.ftl</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="default_post_template_file">Default post template file</h4>
+<div class="paragraph">
+<p>This option defines the default template file that will be used when rendering a file of type=post</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># filename of post template file
+template.post.file=post.ftl</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="default_encoding_for_templates">Default encoding for templates</h4>
+<div class="paragraph">
+<p>This option defines the character encoding that should be used when reading in the template files</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># character encoding MIME name used in templates.
+# use one of http://www.iana.org/assignments/character-sets/character-sets.xhtml
+template.encoding=UTF-8</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="render_index_file">Render index file</h4>
+<div class="paragraph">
+<p>This option defines whether an index file should be rendered or not</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># render index file?
+render.index=true</pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+This option is useful when you want to use a content file as your index file allowing you to define specific content for the page instead of just using
+the template.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="render_archive_file">Render archive file</h4>
+<div class="paragraph">
+<p>This option defines whether an archive file should be rendered or not</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># render archive file?
+render.archive=true</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="render_feed_file">Render feed file</h4>
+<div class="paragraph">
+<p>This option defines whether a feed file should be rendered or not</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># render feed file?
+render.feed=true</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="render_sitemap_file">Render sitemap file</h4>
+<div class="paragraph">
+<p>This option defines whether a sitemap file should be rendered or not</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># render sitemap.xml file?
+render.sitemap=false</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="render_tag_files">Render tag files</h4>
+<div class="paragraph">
+<p>This option defines whether tag files are rendered or not</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># render tag files?
+render.tags=true</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="default_index_output_filename">Default index output filename</h4>
+<div class="paragraph">
+<p>This option defines the output filename to be used when rendering the index file</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># filename to use for index file
+index.file=index.html</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="default_archive_output_filename">Default archive output filename</h4>
+<div class="paragraph">
+<p>This option defines the output filename to be used when rendering the archive file</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># filename to use for archive file
+archive.file=archive.html</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="default_feed_output_filename">Default feed output filename</h4>
+<div class="paragraph">
+<p>This option defines the output filename to be used when rendering the feed file</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># filename to use for feed
+feed.file=feed.xml</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="default_sitemap_output_filename">Default sitemap output filename</h4>
+<div class="paragraph">
+<p>This option defines the output filename to be used when rendering the sitemap file</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># filename to use for sitemap file
+sitemap.file=sitemap.xml</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="default_tag_output_directory">Default tag output directory</h4>
+<div class="paragraph">
+<p>This option defines the output directory to be used when rendering the tag files</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># folder name to use for tag files
+tag.path=tags</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="sanitize_tag_value">Sanitize tag value</h4>
+<div class="paragraph">
+<p>This option defines whether the tag value should be santized before being used as a filename (i.e. replace spaces with hypens)</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># sanitize tag value before it is used as filename (i.e. replace spaces with hyphens)
+tag.sanitize=false</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When this option is set to true it will mean a tag value of <code>west wing</code> will be changed to <code>west-wing</code>, the tag file generated will be <code>west-wing.html</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="default_encoding_when_rendering">Default encoding when rendering</h4>
+<div class="paragraph">
+<p>This option defines the character encoding that should be used when rendering files</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># character encoding MIME name used for rendering.
+# use one of http://www.iana.org/assignments/character-sets/character-sets.xhtml
+render.encoding=UTF-8</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="default_output_file_extension">Default output file extension</h4>
+<div class="paragraph">
+<p>This option defines the default file extension that should be used when rendering content files</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># file extension for output content files
+output.extension=.html</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="default_suffix_for_draft_content">Default suffix for draft content</h4>
+<div class="paragraph">
+<p>This option defines the default suffix to be used when rendering draft content files</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># draft content suffix
+draft.suffix=-draft</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="default_port_for_server_mode">Default port for server mode</h4>
+<div class="paragraph">
+<p>This option defines the default port the server will listen on</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># default server port
+server.port=8820</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="default_freemarker_project_file">Default Freemarker project file</h4>
+<div class="paragraph">
+<p>This option defines the filename of the ZIP containing the example project that uses Freemarker templates</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># zip file containing example project structure using freemarker templates
+example.project.freemarker=example_project_freemarker.zip</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="default_groovy_simpletemplateengine_project_file">Default Groovy SimpleTemplateEngine project file</h4>
+<div class="paragraph">
+<p>This option defines the filename of the ZIP containing the example project that uses Groovy SimpleTemplateEngine templates</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># zip file containing example project structure using groovy templates
+example.project.groovy=example_project_groovy.zip</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="default_groovy_markuptempateengine_project_file">Default Groovy MarkupTempateEngine project file</h4>
+<div class="paragraph">
+<p>This option defines the filename of the ZIP containing the example project that uses Groovy MarkupTemplateEngine templates</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># zip file containing example project structure using groovy markup templates
+example.project.groovy-mte=example_project_groovy-mte.zip</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="default_thymeleaf_project_file">Default Thymeleaf project file</h4>
+<div class="paragraph">
+<p>This option defines the filename of the ZIP containing the example project that uses Thymeleaf templates</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># zip file containing example project structure using thymeleaf templates
+example.project.thymeleaf=example_project_thymeleaf.zip</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="default_asciidoctor_attributes">Default Asciidoctor attributes</h4>
+<div class="paragraph">
+<p>This option defines a set of default Asciidoctor attributes that are used whenever AsciiDoc formatted content is rendered</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># default asciidoctor options
+asciidoctor.attributes=source-highlighter=prettify</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The value for this configuration option is a comma separated list of key-value pairs. The default value defines Prettify as the source highlighter to be used.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="export_jbake_configuration_to_asciidoctor_content">Export JBake configuration to Asciidoctor content</h4>
+<div class="paragraph">
+<p>This option defines if the JBake configuration options should be exported to Asciidoctor as attributes so they are accessible from within AsciiDoc formatted content.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># should JBake config options be exported to Asciidoctor engine?
+asciidoctor.attributes.export=false</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+By default this option is disabled in default.properties
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>You can also define an additional prefix for the JBake configuration options, this is useful to avoid any collisions with existing AsciiDoc attributes</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># prefix that should be used when JBake config options are exported
+asciidoctor.attributes.export.prefix=</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+By default this option is disabled in default.properties
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="default_content_status">Default Content Status</h4>
+<div class="paragraph">
+<p>This option defines a default status for content files, allowing you to avoid having to define the status value in each of your content files. This value is ONLY
+used if a status value hasn&#8217;t been defined in the metadata header though.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># default status
+#default.status=published</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+By default this option is disabled in default.properties
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="default_date_format_for_content_files">Default date format for content files</h4>
+<div class="paragraph">
+<p>This option defines the default date format that is used when JBake tries to parse the date defined in the metadata header of content files.</p>
+</div>
+<div class="paragraph">
+<p>The format is specified using pattern letters, details of what is available can be found in the
+<a href="https://docs.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html">Java API docs</a>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># default date format used in content files
+date.format=yyyy-MM-dd</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="markdown_extensions">Markdown extensions</h4>
+<div class="paragraph">
+<p>This option defines what Markdown extensions are enabled when content created in the Markdown format is rendered. Each extension required should be separated by a comma.
+For details on what extensions are available please see the <a href="https://github.com/vsch/flexmark-java">flexmark-java docs</a>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># comma delimited default markdown extensions
+markdown.extensions=HARDWRAPS,AUTOLINKS,FENCED_CODE_BLOCKS,DEFINITIONS</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can use the alias <code>ALL</code> to enable all available extensions. You can also disable specific extensions by prefixing the extension name with a hyphen:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># comma delimited default markdown extensions
+markdown.extensions=ALL,-HARDWRAPS</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="markdown_parsing_timeout">Markdown parsing timeout</h4>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+This option is now obsolete as flexmark-java is used.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>This option defines the parsing timeout value in milliseconds for the Pegdown parser that is used for Markdown format support. This value limits the time spent
+parsing each piece of Markdown content.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># millis to parse single markdown page. See PegDown Parse configuration for details
+markdown.maxParsingTimeInMillis=2000</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="persistent_content_store">Persistent content store</h4>
+<div class="paragraph">
+<p>This option defines whether the content store built while parsing your content files is persisted to disk or not. When it is persisted to disk the next time you
+perform a bake only those content files that have changed will be rendered speeding up the process. When it is not persisted to disk, i.e. kept in memory, a full bake
+of all content is performed every time.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># database store (plocal, memory)
+db.store=memory</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>plocal = content store is persisted to disk</p>
+</li>
+<li>
+<p>memory = content store is held only in memory during bake</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+Prior to v2.6.0 the option to persist to disk was <code>local</code>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="persistent_content_store_path">Persistent content store path</h4>
+<div class="paragraph">
+<p>This option defines the directory that is used to persist the content store to disk. It is only relevant when the content store is persisted to disk.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># database path
+db.path=cache</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="thymeleaf_locale">Thymeleaf Locale</h4>
+<div class="paragraph">
+<p>This option defines the locale to be used when rendering Thymeleaf templates.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># thymeleaf locale
+thymeleaf.locale=en</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="thymeleaf_template_mode">Thymeleaf Template Mode</h4>
+<div class="paragraph">
+<p>This option defines the <a href="http://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#textual-template-modes">Thymeleaf Template Mode</a> to be used when rendering
+Thymeleaf templates for the specified <code>type</code> which is set in the content files themselves, e.g. <code>type=page</code>. Defaults to <code>HTML</code> if not set.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># thymeleaf template mode
+template_&lt;type&gt;_thymeleaf_mode=HTML</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="ignore_hidden_asset_files">Ignore hidden asset files</h4>
+<div class="paragraph">
+<p>This option defines whether hidden asset files should be ignored or not as part of the baking process. When set to <code>true</code> it means files such as <code>.DS_Store</code> or
+<code>desktop.ini</code> won&#8217;t be included in your baked output.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>asset.ignore=false</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="enable_paging_on_index_page">Enable paging on index page</h4>
+<div class="paragraph">
+<p>This option enables paging on the index page output when set to <code>true</code>. To be used in conjunction with the next option.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>index.paginate=false</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="posts_per_page">Posts per page</h4>
+<div class="paragraph">
+<p>This option defines how many posts will be output on each index page.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>index.posts_per_page=10</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="enable_extensionless_uris">Enable extensionless URI&#8217;s</h4>
+<div class="paragraph">
+<p>This option enables extensionless URI&#8217;s, so instead of /blog/2014/03/26/post.html JBake will output to /blog/2014/03/26/post/index.html allowing you to
+refer to the URI without an extension.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>uri.noExtension=false</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Requires the following option to be set to define a prefix.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="enable_extensionless_uris_prefix">Enable extensionless URI&#8217;s prefix</h4>
+<div class="paragraph">
+<p>This option defines the prefix to apply extensionless URI&#8217;s for.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>uri.noExtension.prefix=/blog/</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="default_type_value_for_content_files">Default type value for content files</h4>
+<div class="paragraph">
+<p>This option allows you to set a default type for content files that&#8217;s used when content files don&#8217;t explicity set the value.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>default.type=page</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="custom_configuration_options">Custom configuration options</h3>
+<div class="paragraph">
+<p>You can also define additional options in your <code>jbake.properties</code> file for use in your project, especially in your template files. A great example is provided in the
+sample projects that have an option called <code>site.host</code> which defines the host URL for the site:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>site.host=http://jbake.org</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This custom option is then used from within the feed template like so:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>...
+&lt;title&gt;&lt;#escape x as x?xml&gt;${post.title}&lt;/#escape&gt;&lt;/title&gt;
+&lt;link&gt;${config.site_host}/${post.uri}&lt;/link&gt;
+&lt;pubDate&gt;${post.date?string("EEE, d MMM yyyy HH:mm:ss Z")}&lt;/pubDate&gt;
+...</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To provide an absolute URI for use in a link.</p>
+</div>
+</div>
+</div>
+</div></p>
+        </div>
+
+      </div>
+
+      <hr>
+
+      <div class="footer">
+        <p>&copy; <a href="/community/team.html">JBake Team</a> 2012-<script>document.write(new Date().getFullYear());</script> | <a href="/privacy.html">Privacy Policy</a> | Mixed with <a href="http://getbootstrap.com/">Bootstrap v2.3.1</a> | Baked with <a href="http://jbake.org">JBake v2.7.0-rc.6</a></p>
+      </div>
+
+    </div> <!-- /container -->
+
+	<div class="github hidden-phone hidden-tablet">
+		<a href="https://github.com/jbake-org/jbake"><img style="position: fixed; top: 0; right: 0; border: 0; z-index: 1050;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+	</div>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/js/jquery-1.9.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/prettify.js"></script>
+    
+    <script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-38992729-1']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	
+	</script>
+	
+	<script>
+	  ((window.gitter = {}).chat = {}).options = {
+	    room: 'jbake-org/jbake'
+	  };
+	</script>
+	<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+	
+  </body>
+</html>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JBake - Java based open source static site/blog generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="JBake is a Java based, open source, static site/blog generator for developers." />
+    <meta name="author" content="Jonathan Bullock" />
+    <meta name="keywords" content="java, baking, open source, generator, web site" />
+    <meta name="google-site-verification" content="Fy5-c09PlgYztOz2_xH6-FsoQ7K0jpprkk4cyJHCRh8" />
+    <meta name="generator" content="JBake"/>
+    <meta name="generation" content="Apr 2, 2023, 10:41:52 PM" />
+
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+
+    <!-- Le styles -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/asciidoctor.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="/css/prettify.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 20px;
+        padding-bottom: 40px;
+      }
+
+      /* Custom container */
+      .container-narrow {
+        margin: 0 auto;
+        max-width: 700px;
+      }
+      .container-narrow > hr {
+        margin: 30px 0;
+      }
+
+      /* Main marketing message and sign up button */
+      .jumbotron {
+        margin: 60px 0;
+        text-align: center;
+      }
+      .jumbotron h1 {
+        font-size: 72px;
+        line-height: 1;
+      }
+      .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+      }
+
+      /* Supporting marketing content */
+      .marketing {
+        margin: 30px 0;
+      }
+      .marketing p + h4 {
+        margin-top: 28px;
+      }
+
+      /*.navbar .btn-navbar {
+      	float: left;
+      }*/
+      .navbar-fixed-top .container {
+        width: 700px;
+      }
+      @media (max-width: 979px) {
+      .navbar-fixed-top .container {
+       width: auto;
+       }
+    </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <!--<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="../assets/ico/favicon.png">-->
+  </head>
+  <body onload="prettyPrint()">
+    <div class="container-narrow">
+
+	<div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <img style="display: block; float: left; padding: 5px 10px 0 0px" src="/img/jbake_logo.png" />
+            <a class="brand" href="/">JBake</a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li><a href="/news/">News</a></li>
+                <li><a href="/download.html">Download</a></li>
+                <li><a href="/docs/">Documentation</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Development <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="https://github.com/jbake-org/jbake/">Source Code</a></li>
+                    <li><a href="https://github.com/jbake-org/jbake/issues">Issue Tracker</a></li>
+                  </ul>
+                </li>
+                <li><a href="/community/index.html">Community</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid marketing">
+        <div class="span12">
+          <h1>Download</h1>
+          
+          <p><div class="sect1">
+<h2 id="latest_distribution">Latest Distribution</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The binary distribution runs on Windows, Linux and Mac and only requires a Java Runtime Environment (JRE) 8 and above to run.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Version</th>
+<th class="tableblock halign-left valign-top">SHA1</th>
+<th class="tableblock halign-left valign-top">Download Link</th>
+<th class="tableblock halign-left valign-top">Release Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">v2.6.7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fd07b833104f2889fde9a07d0c0bf09f0fdecbf6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbake-org/jbake/releases/download/v2.6.7/jbake-2.6.7-bin.zip">GitHub</a> 72.3MB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.6.7">Changelog</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="sdkman">SDKMAN</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can also install JBake via <a href="http://sdkman.io/">SDKMAN</a> (Software Development Kit Manager - formerly known as GVM) if you are running a Bash based platform (Mac OSX, Unix, Linux, Cygwin or Solaris etc.).
+SDKMAN will take care of downloading the latest distribution, installing it and configuring your environment for you.</p>
+</div>
+<div class="paragraph">
+<p>After you have SDKMAN installed enter the following command to install the latest version of JBake:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ sdk install jbake</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Once complete you can then get baking!</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="homebrew">Homebrew</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can also install JBake via <a href="http://brew.sh/">Homebrew</a> if you are running OS X. After you have installed Homebrew enter the following command to install the
+latest version of JBake:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ brew install jbake</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Once complete you can then get baking!</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="docker">Docker</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>An official <a href="https://hub.docker.com/r/jbake/jbake">Docker image</a> is available if you would prefer to run JBake in a Docker container. To execute a bake using the Docker image run the following command from your project folder:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ docker run --rm -u jbake -v "$PWD":/mnt/site jbake/jbake:latest</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This command will execute using the jbake user to avoid running as root and will mount the current working directory as /mnt/site in the Docker container where
+JBake is expecting your project files to be. By default the Docker image will execute a bake (-b) only. If you want to bake and serve your project using the Docker
+image then you&#8217;ll need to override the default command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ docker run --rm -u jbake -v "$PWD":/mnt/site -p 8820:8820 jbake/jbake:latest -b -s</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This command will also expose port 8820 from the container, however you will also need to set the <a href="https://jbake.org/docs/latest/#default_hostname_for_server_mode">default hostname</a>
+in your jbake.properties file.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="maven">Maven</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>JBake artifacts are available from the Maven central repository:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code data-lang="xml">&lt;dependency&gt;
+	&lt;groupId&gt;org.jbake&lt;/groupId&gt;
+	&lt;artifactId&gt;jbake-core&lt;/artifactId&gt;
+	&lt;version&gt;${jbakeVersion}&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+When using the core library make sure you declare the <a href="https://jbake.org/docs/latest/#use_as_library">optional dependencies</a> you require.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="archived_distributions">Archived Distributions</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Version</th>
+<th class="tableblock halign-left valign-top">SHA1</th>
+<th class="tableblock halign-left valign-top">Download Link</th>
+<th class="tableblock halign-left valign-top">Release Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">v2.6.6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">42240ddf03111fa74cd8be6198b917bdac23a462</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbake-org/jbake/releases/download/v2.6.6/jbake-2.6.6-bin.zip">GitHub</a> 71.6MB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.6.6">Changelog</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">v2.6.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">c7eadd00afc768383a7b1482fdefa3cba180cdf1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbake-org/jbake/releases/download/v2.6.5/jbake-2.6.5-bin.zip">GitHub</a> 69.32MB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.6.5">Changelog</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">v2.6.4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">df6926721202e036f84079b830859d176a2c1a32</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbake-org/jbake/releases/download/v2.6.4/jbake-2.6.4-bin.zip">GitHub</a> 53.34MB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.6.4">Changelog</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">v2.6.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4f661742db1bb82d24ee370d387e8c77f2d2d57d</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbake-org/jbake/releases/download/v2.6.3/jbake-2.6.3-bin.zip">GitHub</a> 52.8MB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.6.3">Changelog</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">v2.6.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4244352c489813a4cf6e342a44d49a0e3c515811</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbake-org/jbake/releases/download/v2.6.2/jbake-2.6.2-bin.zip">GitHub</a> 52.72MB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.6.2">Changelog</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">v2.6.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ba29c2fbf4090042fc8ffb16165255680621cb32</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbake-org/jbake/releases/download/v2.6.1/jbake-2.6.1-bin.zip">GitHub</a> 53.3MB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.6.1">Changelog</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">v2.6.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7bfc0760d826b608793b6d4e90db4dd5198bc37d</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbake-org/jbake/releases/download/v2.6.0/jbake-2.6.0-bin.zip">GitHub</a> 69MB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.6.0">Changelog</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">v2.5.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">91c00c4eb94a25ca11b6f72792e8ed02707f57bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbake-org/jbake/releases/download/v2.5.1/jbake-2.5.1-bin.zip">GitHub</a> 40MB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.5.1">Changelog</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">v2.5.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">e563aa423f362237c268d20dd67b00fa0e9c6719</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbake-org/jbake/releases/download/v2.5.0/jbake-2.5.0-bin.zip">GitHub</a> 40MB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.5.0">Changelog</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">v2.4.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">e53633c6cd6ba714a8876cadc02fe41e7790c5db</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbake-org/jbake/releases/download/v2.4.0/jbake-2.4.0-bin.zip">GitHub</a> 39.1MB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.4.0">Changelog</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">v2.3.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8daa2603b0277ee92ba216cf1d7e2d706f489382</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbake-org/jbake/releases/download/v2.3.2/jbake-2.3.2-bin.zip">GitHub</a> 65.3MB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.3.2+is%3Aclosed">Changelog</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">v2.3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">b429a89a66c021a70394e0207d71a703de58d85b</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbake-org/jbake/releases/download/v2.3.1/jbake-2.3.1-bin.zip">GitHub</a> 42.4MB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbake-org/jbake/issues?milestone=8&amp;state=closed">Changelog</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">v2.3.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ea4c676ca59a9dcdc84727410ab01c88c21ec917</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbake-org/jbake/releases/download/v2.3.0/jbake-2.3.0-bin.zip">GitHub</a> 41.6MB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbake-org/jbake/issues?milestone=3&amp;state=closed">Changelog</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">v2.2.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0e225ab850cb98b7451082f818e991c1cfb7defb</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbake-org/jbake/releases/download/v2.2.1/jbake-2.2.1-bin.zip">GitHub</a> 27.5MB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbake-org/jbake/issues?milestone=7&amp;state=closed">Changelog</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">v2.2.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fe8d557a562ef9da2b9fea092ac7b5ab524a69db</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbake-org/jbake/releases/download/v2.2.0/jbake-2.2.0-bin.zip">GitHub</a> 27.1MB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbake-org/jbake/issues?milestone=2&amp;state=closed">Changelog</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></p>
+        </div>
+
+      </div>
+
+      <hr>
+
+      <div class="footer">
+        <p>&copy; <a href="/community/team.html">JBake Team</a> 2012-<script>document.write(new Date().getFullYear());</script> | <a href="/privacy.html">Privacy Policy</a> | Mixed with <a href="http://getbootstrap.com/">Bootstrap v2.3.1</a> | Baked with <a href="http://jbake.org">JBake v2.7.0-rc.6</a></p>
+      </div>
+
+    </div> <!-- /container -->
+
+	<div class="github hidden-phone hidden-tablet">
+		<a href="https://github.com/jbake-org/jbake"><img style="position: fixed; top: 0; right: 0; border: 0; z-index: 1050;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+	</div>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/js/jquery-1.9.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/prettify.js"></script>
+    
+    <script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-38992729-1']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	
+	</script>
+	
+	<script>
+	  ((window.gitter = {}).chat = {}).options = {
+	    room: 'jbake-org/jbake'
+	  };
+	</script>
+	<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+	
+  </body>
+</html>
