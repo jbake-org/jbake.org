@@ -95,7 +95,7 @@ The plugin was originally created by http://melix.github.io/blog/[Cédric Champe
 
 == mill Plugin
 
-There is a https://www.lihaoyi.com/mill/[mill] plugin that integrates site generation with JBake into mill.
+There is a https://com-lihaoyi.github.io/mill/[mill] plugin that integrates site generation with JBake into mill.
 
 * https://github.com/lefou/mill-jbake[Plugin on GitHub]
 
