@@ -31,7 +31,7 @@ $ jbake -b -s
       <div class="row-fluid marketing">
         <div class="span6">
           <h4>Open Source</h4>
-          <p>Source available on <a href="http://github.com">GitHub</a>, licensed under MIT License</p>
+          <p>Source available on <a href="https://github.com/jbake-org/jbake">GitHub</a>, licensed under MIT License</p>
 
           <h4>Cross platform support</h4>
           <p>The binary distribution runs on Windows, Unix/Linux and Mac OS X.</p>
